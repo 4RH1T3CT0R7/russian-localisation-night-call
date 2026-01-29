@@ -1,0 +1,113 @@
+%% Scene Name: " Game Over: Empty Tank "
+
+%% Эта сцена будет воспроизведена, если в последнюю ночь уровень бензина в такси достигнет 0.
+
+%% ANIMATIONS
+
+		%% $$ anim: IDLE_DRIVER $$
+
+		%% $$ anim: IDLE_WINDOW $$
+
+		%% $$ anim: IDLE_DRIVER_LOW $$
+
+		%% $$ anim: IDLE_ANGER $$
+
+		%% $$ anim-link: DRIVER_2_WINDOW $$
+
+		%% $$ anim-link: WINDOW_2_DRIVER $$
+
+		%% $$ anim-link: WINDOW_2_LOW $$
+
+		%% $$ anim-link: DRIVER_2_LOW $$
+
+		%% $$ anim-link: LOW_2_WINDOW $$
+
+		%% $$ anim-link: LOW_2_ANGER $$
+
+		%% $$ anim-link: LOW_2_DRIVER $$
+
+		%% $$ anim-link: ANGER_2_LOW $$
+
+%% DATA
+
+		+++ passengercall: N/A
+
+		+++ anim-link: DRIVER_2_WINDOW -> LOOKING_WINDOW, IDLE_WINDOW
+
+		+++ anim-link: WINDOW_2_DRIVER -> LOOKING_WINDOW_REV, IDLE_DRIVER
+
+		+++ anim-link: WINDOW_2_LOW -> LOWERING_HAND, IDLE_DRIVER_LOW
+
+		+++ anim-link: DRIVER_2_LOW -> LOOKING_WINDOW, LOWERING_HAND, IDLE_DRIVER_LOW
+
+		+++ anim-link: LOW_2_WINDOW -> LOWERING_HAND_REV, IDLE_WINDOW
+
+		+++ anim-link: LOW_2_ANGER -> ANGERING, IDLE_ANGER
+
+		+++ anim-link: LOW_2_DRIVER -> LOWERING_HAND_REV, LOOKING_WIND
+
+=== gameover-gas-start
+
+$$ movie: black $$
+Двигатель останавливается. Ваш бак пуст.
+Вы знали... и ничего не предприняли.
+По позвоночнику и шее пробегает холодок.
+Вы смотрите на время. Вы не успеете добраться до места встречи вовремя.
+Вы выходите из машины.
+От ледяного холодного воздуха перехватывает дыхание. Вас медленно обдает туманной моросью, слякотью или полурасплавленным градом... вы уже не знаете.
+Еще одна секунда.
+Дышите.
+Несколько минут вы стоите неподвижно. Вдалеке слышен голос Бюссе.
+$$ dialogspeed: fast $$
+БУССЕ: "Что за идиот!"
+$$ dialogspeed: normal $$
+Она подбегает к вам. Надевает на вас наручники. Толкает вас на землю.
+-> _Killer.Is.Judge = 1 ? gameover-gas-judge
+-> _Killer.Is.Sandman = 1 ? gameover-gas-sand
+-> _Killer.Is.Angel = 1 ? gameover-gas-angel
+
+
+=== gameover-gas-judge
+
+БУССЕ: "Ты только что все испортил! Судья сбежал... он в бегах."
+В ее голосе слышна грусть.
+-> gameover-gas-end
+
+
+=== gameover-gas-sand
+
+БУССЕ: "Все пошло прахом! Песочный человек исчез. Исчез в воздухе!"
+$$ dialogspeed: slow $$
+БУССЕ: "ИСЧЕЗ!"
+$$ dialogspeed: normal $$
+-> gameover-gas-end
+
+
+=== gameover-gas-angel
+
+БУССЕ: "Мы потеряли след нашего подозреваемого."
+$$ dialogspeed: slow $$
+БУССЕ: "Словно кто-то... предупредил..."
+$$ dialogspeed: normal $$
+Вы качаете головой: "Нет".
+БУССЕ: "Не говори ни слова... Это все твоя вина."
+-> gameover-gas-end
+
+
+=== gameover-gas-end
+
+Ее теплое дыхание согревает вас. Вы дрожите.
+БУССЕ: "Мне... придется тебя посадить."
+$$ dialogspeed: slow $$
+БУССЕ: "Господи, я же тебя предупреждала!"
+$$ dialogspeed: normal $$
+Она поднимает вас на ноги. Вы никогда бы не подумали, что она настолько сильна.
+Что дальше? Она тащит вас в участок. Обвиняет вас во всём. Все ей верят. Доказательства, которые она предоставляет...
+...ложь...
+На следующий день ваше лицо появляется на страницах газет, ваше имя у всех на устах... Вы — убийца, которого они ждали...
+Вы в полной жопе...
+В жопе...
+...
+-> END
+
+

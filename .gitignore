@@ -1,0 +1,28 @@
+# Build artifacts
+src/Mod/bin/
+src/Mod/obj/
+src/Installer/bin/
+src/Installer/obj/
+installer_build/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.vs/
+.idea/
+*.user
+*.suo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temp
+*.bak
+*.backup
+build_repo.py
+
+# Built installer (upload to GitHub Releases, not to repo)
+NightCallRussian-Setup.exe

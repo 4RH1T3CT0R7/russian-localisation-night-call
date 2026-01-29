@@ -1,0 +1,106 @@
+%% Scene Name: Gas Station Shop Ticket
+
+=== gasstations-shop-ticket-losinghub
+
+-> ??gasstations-shop-ticket-losingA | gasstations-shop-ticket-losingB | gasstations-shop-ticket-losingC | gasstations-shop-ticket-losingD
+
+
+=== gasstations-shop-ticket-losingA
+
+Потеря билета... не повезло.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-losingB
+
+...не пойдет.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-losingC
+
+...нельзя победить всех.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-losingD
+
+...вы вздыхаете.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-win-low-hub
+
+-> ??gasstations-shop-ticket-win-lowA | gasstations-shop-ticket-win-lowB | gasstations-shop-ticket-win-lowC
+
+
+=== gasstations-shop-ticket-win-lowA
+
+Вы забираете свой выигрыш... Немного может уйти надолго.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-win-lowB
+
+...лучше, чем ничего.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-win-lowC
+
+...не судьбоносный... но, тем не менее, приятный сюрприз.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-win-good-hub
+
+-> ??gasstations-shop-ticket-win-goodA | gasstations-shop-ticket-win-goodB | gasstations-shop-ticket-win-goodC
+
+
+=== gasstations-shop-ticket-win-goodA
+
+...вот такие новости вы любите получать.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-win-goodB
+
+...внезапно сегодняшняя ночь кажется не такой уж плохой.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-win-goodC
+
+...по вашему лицу расплывается намек на улыбку.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-win-great
+
+...улыбка сияет на вашем лице.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-win-amazing
+
+...вы ухмыляетесь продавцу в магазине.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-win-superb
+
+$$ reveal: 000_08 $$
+...некоторое время вы молчите. Кассир, явно раздраженный, пытается вам улыбнуться.
+ПРОДАВЕЦ: "Тебе очень повезло, да?"
+Вы не можете удержаться от смеха.
+Язвительный... болезненный смех.
+"Точно, повезло... вот так."
+Кассир, похоже, ничего не понял. Он предпочитает игнорировать ваше замечание.
+-> gasstations-shop-ticket-end
+
+
+=== gasstations-shop-ticket-end
+
+-> END
+
+

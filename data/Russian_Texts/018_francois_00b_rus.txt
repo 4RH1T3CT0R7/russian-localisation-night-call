@@ -1,0 +1,13 @@
+
+=== francois-00b-start
+
+$$ movie: lamparo_on, display_passenger $$
+$$ anim: IDLE_THINKING $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+В ваше такси садится "знаменитый" полемист Франсуа де ла Нере, которого вы уже подвозили раньше.
+Похоже, он вас не узнаёт... Вообще-то, он едва на вас смотрит...
+$$ travel: start $$
+$$ music-control: 0 $$
+Вы начинаете движение.
+
+

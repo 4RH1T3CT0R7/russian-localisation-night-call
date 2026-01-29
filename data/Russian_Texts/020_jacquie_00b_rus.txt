@@ -1,0 +1,52 @@
+
+=== jacquie-00b-start
+
+$$ music-control: 0 $$
+$$ movie: lamparo_on, display_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+$$ anim: IDLE_NAILS $$
+Дверь открывается. Жаки устраивается на заднем сиденье. Она постоянная клиентка.
+"Рада тебя видеть, дорогой..."
+$$ travel: start $$
+Вы улыбаетесь и заводите такси.
+
+
+=== jacquie-00b-hub01
+
+
+
+=== jacquie-00b-hub02
+
+
+
+=== jacquie-00b-hub03
+
+
+
+=== jacquie-00b-killer02
+
+"Я спросила одного своего клиента, который работает в мэрии."
+"Из тех, кто знает всё..."
+$$ movie: black $$
+Она наклоняется вперёд. Вы чувствуете запах её духов.
+Она начинает рассказывать.
+Связь очевидна...
+$$ anim-link: DRIVER_2_WINDOW $$
+$$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10, clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_customer_rumor_03, clue_angel_customer_rumor_04, clue_angel_customer_rumor_05, clue_angel_customer_rumor_06, clue_angel_customer_rumor_07, clue_angel_customer_rumor_08, clue_angel_customer_rumor_09, clue_angel_customer_rumor_10, clue_angel_customer_rumor_11, clue_angel_customer_rumor_12, clue_angel_customer_rumor_13, clue_angel_customer_rumor_14, clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
+"Не уверена, поможет ли тебе это."
+"Ещё как поможет."
+
+
+=== jacquie-00b-killer03
+
+"В общем, я порасспрашивала. Ничего особо убедительного..."
+"Поначалу."
+"...поначалу."
+"А потом один клиент, молодой парень из Министерства обороны."
+$$ movie: black $$
+Она понижает голос. Вы наклоняетесь друг к другу.
+$$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10, clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_customer_rumor_03, clue_angel_customer_rumor_04, clue_angel_customer_rumor_05, clue_angel_customer_rumor_06, clue_angel_customer_rumor_07, clue_angel_customer_rumor_08, clue_angel_customer_rumor_09, clue_angel_customer_rumor_10, clue_angel_customer_rumor_11, clue_angel_customer_rumor_12, clue_angel_customer_rumor_13, clue_angel_customer_rumor_14, clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
+Она рассказывает вам всё, что узнала. Вы сразу видите связь с вашим делом.
+$$ anim-link: DRIVER_2_WINDOW $$
+
+

@@ -1,0 +1,336 @@
+%% SCENE NAME: " Judge Crime Scene 1: Parking "
+
+%% CONTEXT
+
+  %% Игрок может посетить это место во время расследования дела судьи.
+
+%% LOCATION
+
+		%% Bougrain’s Parking
+
+  %% Подсказка о парковке № 1: у жертвы 2 в бумажнике был сувенир времен Второй мировой войны, а денег не было.
+
+  %% Подсказка о парковке № 2: Эрве работал на Жертву 2 в 90-х.
+
+  %% Подсказка о парковке №3: Эрве вернулся на место преступления 2 после убийства.
+
+%% DATA
+
+		VAR parking = 0
+
+		VAR entrance = 0
+
+		VAR angry = 0
+
+=== judge-crimescene01-start
+
+$$ movie: black $$
+$$ sfx: sfx_gameplay_car_openclose_from_int $$
+Вы оставляете такси и идете к зданию, где находилась последняя жертва.
+Шарль Бугрен-Феррер был убит на своей парковке...
+$$ movie: Parking $$
+$$ music-control: 0 $$
+Большая металлическая дверь гаража плотно закрыта.
+{ _Judge_Location_1 = 1 }
+*(Подождать машину.) -> judge-crimescene01-start-parking
+*(Поискать другой вход.) -> judge-crimescene01-entrance-intro
+*(Вернуться к такси.) -> judge-crimescene01-taxi-quick
+
+
+=== judge-crimescene01-start-parking
+
+$$ music-control: 20 $$
+Слева от вас есть тенистый уголок, где можно незаметно присматривать за дверью, не привлекая внимания.
+-> judge-crimescene01-parking-intro
+
+
+=== judge-crimescene01-parking-intro
+
+{ parking = 1 }
+{ entrance = 0 }
+Вы ёжитесь и терпеливо ждёте...
+Время от времени вы притопываете на месте, чтобы согреться.
+Ваше укрытие, вероятно, то же самое, где прятался убийца несколько недель назад.
+С каждой минутой вы чувствуете его присутствие. Пока...
+Ворота гаража начинают трястись. Металлические планки начинают подниматься. Из гаража внезапно выезжает автомобиль.
+Воспользовавшись случаем, вы проскальзываете внутрь.
+-> judge-crimescene01-parking
+
+
+=== judge-crimescene01-parking
+
+Вашим глазам требуется несколько секунд, чтобы привыкнуть к темноте.
+Вы спускаетесь по пандусу в гараж. Здесь около 30 мест, и почти все они заняты.
+Машины роскошные: седаны, кабриолеты, ярко-красный спорткар.
+Богатый район.
+Согласно полицейскому отчету, Шарль Бугрен-Феррер был убит прямо здесь, на этой пустой парковке.
+В прошлом он был известным лидером правоэкстремистской партии.
+Когда его убили в возрасте 84 лет, уже после ухода из политики, это стало неожиданностью для всех.
+Вы освещаете место преступления фонариком телефона. На стене перед вами всё ещё остаётся коричневое пятно.
+Написанное мелом послание было смыто.
+В гараже раздается голос.
+-> judge-crimescene01-concierge
+
+
+=== judge-crimescene01-entrance-intro
+
+{ entrance = 1 }
+Вы обходите заднюю часть здания и осматриваете различные входы: главный, дверь гаража и дверь для обслуживания мусорных баков.
+$$ music-control: 20 $$
+*(Войти через главный вход.) -> judge-crimescene01-entrance-concierge
+*(Войти через служебный вход.) -> judge-crimescene01-entrance-concierge
+*(Вернуться и подождать у гаража.) -> judge-crimescene01-entrance-parking
+*(Вернуться к такси.) -> judge-crimescene01-taxi-quick
+
+
+=== judge-crimescene01-entrance-concierge
+
+Вы едва успели сделать шаг, как вас окликнул голос.
+-> judge-crimescene01-concierge
+
+
+=== judge-crimescene01-entrance-parking
+
+Устройтесь в укромном месте. Если машина въедет или выедет, вы сможете незаметно пробраться внутрь...
+-> judge-crimescene01-parking-intro
+
+
+=== judge-crimescene01-concierge
+
+КОНСЬЕРЖ : "Эй! Что вы делаете? Это частная собственность!"
+Вы оборачиваетесь и видите довольно пожилого мужчину... вероятно, консьержа. Он светит фонариком в вашу сторону.
+*" Я журналист." -> judge-crimescene01-concierge-journalist
+*" Я водитель такси." -> judge-crimescene01-concierge-driver
+*" Я фанат." -> judge-crimescene01-concierge-fan
+*" Я заблудился." -> judge-crimescene01-concierge-lost
+
+
+=== judge-crimescene01-concierge-journalist
+
+%% Консьерж здесь очень вежлив и официален с водителем.
+КОНСЬЕРЖ : "Журналист?"
+"Да... Я пишу статью о судье и его жертвах... включая мистера Бугрен-Феррера."
+Он колеблется.
+КОНСЬЕРЖ : "Простите, но я не имею права вам ничего говорить."
+"Мне нужно всего две минуты вашего времени..."
+Он нервно кивает... или, может быть, в испуге.
+-> judge-crimescene01-concierge-driver2
+
+
+=== judge-crimescene01-concierge-fan
+
+%% Консьерж здесь очень вежлив и официален с водителем.
+КОНСЬЕРЖ : "Фанат?"
+Его фонарик колеблется, затем падает. Он оглядывает вас с ног до головы.
+КОНСЬЕРЖ : "Не каждый день такое услышишь... Особенно от..."
+Он качает головой. Он чуть не сказал "араб".
+КОНСЬЕРЖ : "У вас нет права находиться здесь. Вы создадите себе проблемы."
+"Я просто хотел посмотреть, где он жил... посмотреть, где его убили."
+Он делает паузу, колеблется, затем...
+КОНСЬЕРЖ : "Я ничего не имею против тебя... Ты знаешь, что это я нашёл его?"
+$$ music-control: 40 $$
+Волна гордости разливается по его лицу.
+КОНСЬЕРЖ : "Он лежал так, будто его затравили, как собаку. Он не был святым, но, думаю, заслуживал лучшей участи..."
+*" Вы что-нибудь видели?" -> judge-crimescene01-concierge-fan-see-intro
+*:silence: (Дать ему выговориться.) -> judge-crimescene01-concierge-fan-talk
+
+
+=== judge-crimescene01-concierge-fan-see-intro
+
+Он вздыхает.
+-> parking = 1 ? judge-crimescene01-concierge-fan-seeA
+-> judge-crimescene01-concierge-fan-seeB
+
+
+=== judge-crimescene01-concierge-fan-seeA
+
+$$ clue: clue_judge_park_01 $$
+{ _Found.Clue.Today = 1 }
+КОНСЬЕРЖ : "Его бумажник лежал на земле... пустой. У него никогда не было при себе наличных, так что убийца, должно быть, забрал его медаль."
+$$ dialogspeed: slow $$
+КОНСЬЕРЖ : "Это было на войне..."
+$$ dialogspeed: normal $$
+Он качает головой.
+КОНСЬЕРЖ : "Поэтому я и сказал полиции, что это должен быть тот бездомный."
+"Бездомный парень?"
+$$ clue: clue_judge_park_02 $$
+{ _Found.Clue.Today = 1 }
+КОНСЬЕРЖ : "Да... У господина Бугрен-Феррера когда-то был помощник... А этот парень? Ну, теперь он бродяга."
+КОНСЬЕРЖ : "Он приходил время от времени, просил денег..."
+-> judge-crimescene01-concierge-fan-herve
+
+
+=== judge-crimescene01-concierge-fan-seeB
+
+КОНСЬЕРЖ : "Я не могу ничего сказать. Вы должны понять. Я здесь швейцар..."
+-> judge-crimescene01-concierge-fan-outro
+
+
+=== judge-crimescene01-concierge-fan-talk
+
+КОНСЬЕРЖ : "Если хотите знать моё мнение, это сделал бездомный, который иногда приходил клянчить деньги у господина Бугрен-Феррера."
+-> judge-crimescene01-concierge-fan-herve
+
+
+=== judge-crimescene01-concierge-fan-herve
+
+$$ clue: clue_judge_park_03 $$
+{ _Found.Clue.Today = 1 }
+Он поспешно описывает бездомного. Это Эрве, вы в этом уверены.
+-> judge-crimescene01-concierge-fan-outro
+
+
+=== judge-crimescene01-concierge-fan-outro
+
+КОНСЬЕРЖ : "Ладно, мне придется попросить вас уйти. Я не хочу никаких проблем..."
+Он выглядит разочарованным.
+-> judge-crimescene01-leave-hub
+
+
+=== judge-crimescene01-concierge-driver
+
+%% Консьерж здесь не формальный и вежливый, более агрессивный.Во французском языке он использует "tu" вместо "vous".
+{ angry += 1 }
+КОНСЬЕРЖ : "Такси дри..."
+КОНСЬЕРЖ : "Тебе здесь делать нечего!"
+*" Я расследую дело господина Бугрен-Феррера." -> judge-crimescene01-concierge-driver2
+*" Могу я задать вам вопрос?" -> judge-crimescene01-concierge-driver2
+*(Подчиниться.) -> judge-crimescene01-leave-hub
+
+
+=== judge-crimescene01-concierge-driver2
+
+{ angry += 1 }
+Вы с трудом можете разобрать его лицо, но видите, что его глаза выпучены.
+$$ dialogspeed: fast $$
+КОНСЬЕРЖ : "Уходи! Убирайтесь отсюда, пока я не вызвал полицию!"
+$$ dialogspeed: normal $$
+-> judge-crimescene01-leave-hub
+
+
+=== judge-crimescene01-concierge-lost
+
+%% Консьерж здесь не формальный и вежливый, более агрессивный.Во французском языке он использует "tu" вместо "vous".
+{ angry += 1 }
+$$ dialogspeed: fast $$
+КОНСЬЕРЖ : "Потерялся? Ты думаешь, я идиот... Иди! Убирайся отсюда или я вызову копов!"
+$$ dialogspeed: normal $$
+-> judge-crimescene01-leave-hub
+
+
+=== judge-crimescene01-leave-hub
+
+-> parking = 1 ? judge-crimescene01-leave-parking
+-> entrance = 1 ? judge-crimescene01-leave-entrance
+
+
+=== judge-crimescene01-leave-parking
+
+Вы поднимаетесь по пандусу к выходу. Консьерж открывает дверь гаража.
+Выйдя на улицу, вы слышите, как консьерж говорит...
+-> angry = 2 ? judge-crimescene01-leave-angryA
+-> angry = 1 ? judge-crimescene01-leave-angryB
+-> judge-crimescene01-outro
+
+
+=== judge-crimescene01-leave-entrance
+
+Вы выходите из вестибюля. Консьерж следует за вами и проверяет, плотно ли закрыта за вами дверь.
+-> angry = 2 ? judge-crimescene01-leave-angryA
+-> angry = 1 ? judge-crimescene01-leave-angryB
+-> judge-crimescene01-outro
+
+
+=== judge-crimescene01-leave-angryA
+
+КОНСЬЕРЖ : "Уходите, убирайтесь к чертовой матери! Сейчас же!"
+-> judge-crimescene01-outro
+
+
+=== judge-crimescene01-leave-angryB
+
+КОНСЬЕРЖ : "Если я еще раз увижу тебя здесь, я вызову полицию!"
+-> judge-crimescene01-outro
+
+
+=== judge-crimescene01-outro
+
+$$ music-control: 60 $$
+$$ movie: black $$
+Вы возвращаетесь к своему такси.
+-> angry > 0 ? judge-crimescene01-bad
+-> judge-crimescene01-good
+
+
+=== judge-crimescene01-bad
+
+Вы оглядываетесь на здание. Разъяренный консьерж исчез...
+-> judge-crimescene01-end
+
+
+=== judge-crimescene01-good
+
+Вы бросаете последний взгляд на здание. Вашего нового друга нигде не видно...
+-> judge-crimescene01-end
+
+
+=== judge-crimescene01-end
+
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+Вы садитесь за руль, тяжело дыша.
+-> judge-reveal1
+
+
+=== judge-crimescene01-taxi-quick
+
+$$ music-control: 60 $$
+$$ movie: black $$
+Вы возвращаетесь туда, откуда пришли... к своему такси. Стало ещё холоднее.
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+Вы садитесь за руль.
+Проходит минута, и вы возвращаетесь к своей смене.
+-> judge-reveal1
+
+
+=== judge-reveal1
+
+-> _Judge_Location_1 = 1 ? judge-reveal2
+-> judge-conclusion
+
+
+=== judge-reveal2
+
+-> _Judge_Location_2 = 1 ? judge-reveal3
+-> judge-conclusion
+
+
+=== judge-reveal3
+
+-> _Judge_Location_3 = 1 ? judge-reveal4
+-> judge-conclusion
+
+
+=== judge-reveal4
+
+-> _Judge_Location_4 = 1 ? judge-reveal5
+-> judge-conclusion
+
+
+=== judge-reveal5
+
+-> _Judge_Location_5 = 1 ? judge-reveal-final
+-> judge-conclusion
+
+
+=== judge-reveal-final
+
+$$ reveal: 000_20 $$
+-> judge-conclusion
+
+
+=== judge-conclusion
+
+$$ movie: stop $$
+-> END
+
+

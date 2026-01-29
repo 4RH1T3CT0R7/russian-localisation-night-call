@@ -1,0 +1,1408 @@
+%% Scene name: Newspapers
+
+%% DATA
+
+		VAR turn = 0
+
+		VAR test_client_01 = 0
+
+		VAR test_client_02 = 0
+
+		VAR test_client_03 = 0
+
+		VAR test_client_04 = 0
+
+		VAR test_client_05 = 0
+
+		VAR test_client_06 = 0
+
+		VAR test_client_07 = 0
+
+		VAR test_client_08 = 0
+
+		VAR test_client_09 = 0
+
+		VAR test_client_10 = 0
+
+		VAR test_client_11 = 0
+
+		VAR test_client_12 = 0
+
+		VAR test_client_13 = 0
+
+		VAR test_client_14 = 0
+
+		VAR test_client_15 = 0
+
+		VAR news_miscA = 0
+
+		VAR news_miscB = 0
+
+		VAR news_miscC = 0
+
+		VAR news_miscD = 0
+
+		VAR test_clue_sand01 = 0
+
+		VAR test_clue_sand02 = 0
+
+		VAR test_clue_sand03 = 0
+
+		VAR test_clue_sand04 = 0
+
+		VAR test_clue_sand05 = 0
+
+		VAR test_clue_sand06 = 0
+
+		VAR test_clue_sand07 = 0
+
+		VAR test_clue_sand08 = 0
+
+		VAR test_clue_sand09 = 0
+
+		VAR test_clue_sand10 = 0
+
+		VAR test_clue_judge01 = 0
+
+		VAR test_clue_judge02 = 0
+
+		VAR test_clue_judge03 = 0
+
+		VAR test_clue_judge04 = 0
+
+		VAR test_clue_judge05 = 0
+
+		VAR test_clue_judge06 = 0
+
+		VAR test_clue_judge07 = 0
+
+		VAR test_clue_judge08 = 0
+
+		VAR test_clue_judge09 = 0
+
+		VAR test_clue_angel01 = 0
+
+		VAR test_clue_angel02 = 0
+
+		VAR test_clue_angel03 = 0
+
+		VAR test_clue_angel04 = 0
+
+		VAR test_clue_angel05 = 0
+
+		VAR test_clue_angel06 = 0
+
+		VAR test_clue_angel07 = 0
+
+		VAR test_clue_angel08 = 0
+
+		VAR test_clue_angel09 = 0
+
+		VAR test_clue_angel10 = 0
+
+=== news-intro-reading
+
+{ _Journal.Read = 1 }
+$$ movie: ReadingNewspaper_Loop $$
+Вы достаете из бардачка газету и начинаете листать ее... В конце концов что-то привлекает ваше внимание...
+-> news-logic
+
+
+=== news-logic
+
+-> turn = 0 ? news-hub01
+-> turn = 1 ? news-hub01-outro
+-> turn = 10 ? news-hub02-intro
+-> turn = 20 ? news-hub02-outro
+-> turn = 30 ? news-hub03-intro
+-> turn = 40 ? news-outro
+-> news-outro
+
+
+=== news-hub01
+
+{ turn = 1 }
+-> ?? news-hub-misc | news-hub-misc | news-hub-misc | news-hub-clients | news-hub-clients | news-hub-clients | news-hub-killer
+
+
+=== news-hub01-outro
+
+{ turn = 10 }
+Вы переворачиваете страницу и останавливаетесь... Вы прочитали примерно треть газеты.
+*(Продолжить чтение.) -> news-hub02-intro
+*:negative: (Прекратить чтение.) -> news-outro
+
+
+=== news-hub02-intro
+
+{ turn = 20 }
+$$ time: 0.5 $$
+Вы прекращаете читать и возвращаетесь на несколько страниц назад... вам показалось, что вы что-то увидели...
+-> news-hub02
+
+
+=== news-hub02-outro
+
+{ turn = 30 }
+$$ time: 0.5 $$
+Вам осталось прочитать только треть...
+*(Читать полностью.) -> news-hub03-intro
+*:negative: (Прекратить чтение.) -> news-outro
+
+
+=== news-hub02
+
+-> ?? news-hub-misc | news-hub-misc | news-hub-clients | news-hub-clients | news-hub-killer
+
+
+=== news-hub03-intro
+
+{ turn = 40 }
+Как только вы переходите на страницу, вы останавливаетесь. Инстинкт подсказывает вам, что нужно посмотреть на...
+-> news-hub03
+
+
+=== news-hub03
+
+-> ?? news-hub-misc | news-hub-clients | news-hub-killer
+
+
+=== news-hub-misc
+
+-> ?? news-hub-misc01 | news-hub-misc02 | news-hub-misc03
+
+
+=== news-hub-misc01
+
+-> news_miscA = 0 ? news-hub-miscA
+-> news_miscC = 0 ? news-hub-miscC
+-> News-Misc-22
+
+
+=== news-hub-misc02
+
+-> news_miscD = 0 ? news-hub-miscD
+-> news_miscC = 0 ? news-hub-miscC
+-> news_miscB = 0 ? news-hub-miscB
+-> news_miscA = 0 ? news-hub-miscA
+-> News-Misc-22
+
+
+=== news-hub-misc03
+
+-> news_miscB = 0 ? news-hub-miscB
+-> news_miscD = 0 ? news-hub-miscD
+-> News-Misc-22
+
+
+=== news-hub-miscA
+
+{ news_miscA = 1 }
+-> ?? News-Misc-01 | News-Misc-02 | News-Misc-03 | News-Misc-04 | News-Misc-05 | News-Misc-06
+
+
+=== news-hub-miscB
+
+{ news_miscB = 1 }
+-> ?? News-Misc-07 | News-Misc-08 | News-Misc-09 | News-Misc-10 | News-Misc-11
+
+
+=== news-hub-miscC
+
+{ news_miscC = 1 }
+-> ?? News-Misc-12 | News-Misc-13 | News-Misc-14 | News-Misc-15 | News-Misc-16
+
+
+=== news-hub-miscD
+
+{ news_miscD = 1 }
+-> ?? News-Misc-17 | News-Misc-18 | News-Misc-19 | News-Misc-20 | News-Misc-21
+
+
+=== news-hub-clients
+
+-> test_client_01 = 0 ? News-Client-01-test
+-> test_client_02 = 0 ? News-Client-02-test
+-> test_client_03 = 0 ? News-Client-03-test
+-> test_client_04 = 0 ? News-Client-04-test
+-> test_client_05 = 0 ? News-Client-05-test
+-> test_client_06 = 0 ? News-Client-06-test
+-> test_client_07 = 0 ? News-Client-07-test
+-> test_client_08 = 0 ? News-Client-08-test
+-> test_client_09 = 0 ? News-Client-09-test
+-> test_client_10 = 0 ? News-Client-10-test
+-> test_client_11 = 0 ? News-Client-11-test
+-> test_client_12 = 0 ? News-Client-12-test
+-> test_client_13 = 0 ? News-Client-13-test
+-> test_client_14 = 0 ? News-Client-14-test
+-> test_client_15 = 0 ? News-Client-15-test
+-> news-hub-misc
+
+
+=== News-Client-01-test
+
+{ test_client_01 = 1 }
+-> _News.Client.01 = 0 ? News-Client-01-test02
+-> news-hub-clients
+
+
+=== News-Client-02-test
+
+{ test_client_02 = 1 }
+-> _News.Client.02 = 0 ? News-Client-02-test02
+-> news-hub-clients
+
+
+=== News-Client-03-test
+
+{ test_client_03 = 1 }
+-> _News.Client.03 = 0 ? News-Client-03-test02
+-> news-hub-clients
+
+
+=== News-Client-04-test
+
+{ test_client_04 = 1 }
+-> _News.Client.04 = 0 ? News-Client-04-test02
+-> news-hub-clients
+
+
+=== News-Client-05-test
+
+{ test_client_05 = 1 }
+-> _News.Client.05 = 0 ? News-Client-05-test02
+-> news-hub-clients
+
+
+=== News-Client-06-test
+
+{ test_client_06 = 1 }
+-> _News.Client.06 = 0 ? News-Client-06-test02
+-> news-hub-clients
+
+
+=== News-Client-07-test
+
+{ test_client_07 = 1 }
+-> _News.Client.07 = 0 ? News-Client-07-test02
+-> news-hub-clients
+
+
+=== News-Client-08-test
+
+{ test_client_08 = 1 }
+-> _News.Client.08 = 0 ? News-Client-08-test02
+-> news-hub-clients
+
+
+=== News-Client-09-test
+
+{ test_client_09 = 1 }
+-> _News.Client.09 = 0 ? News-Client-09-test02
+-> news-hub-clients
+
+
+=== News-Client-10-test
+
+{ test_client_10 = 1 }
+-> _News.Client.10 = 0 ? News-Client-10-test02
+-> news-hub-clients
+
+
+=== News-Client-11-test
+
+{ test_client_11 = 1 }
+-> _News.Client.11 = 0 ? News-Client-11-test02
+-> news-hub-clients
+
+
+=== News-Client-12-test
+
+{ test_client_12 = 1 }
+-> _News.Client.12 = 0 ? News-Client-12-test02
+-> news-hub-clients
+
+
+=== News-Client-13-test
+
+{ test_client_13 = 1 }
+-> _News.Client.13 = 0 ? News-Client-13-test02
+-> news-hub-clients
+
+
+=== News-Client-14-test
+
+{ test_client_14 = 1 }
+-> _News.Client.14 = 0 ? News-Client-14-test02
+-> news-hub-clients
+
+
+=== News-Client-15-test
+
+{ test_client_15 = 1 }
+-> _News.Client.15 = 0 ? News-Client-15-test02
+-> news-hub-clients
+
+
+=== News-Client-01-test02
+
+-> _Driver.Met.Jerome = 1 ? News-Client-01
+-> news-hub-clients
+
+
+=== News-Client-02-test02
+
+-> _Driver.Met.Santa = 1 ? News-Client-02
+-> news-hub-clients
+
+
+=== News-Client-03-test02
+
+-> _Driver.Met.Ultra = 1 ? News-Client-03
+-> news-hub-clients
+
+
+=== News-Client-04-test02
+
+-> _Driver.Met.Camille = 1 ? News-Client-04
+-> news-hub-clients
+
+
+=== News-Client-05-test02
+
+-> _Driver.Met.Julian = 1 ? News-Client-05
+-> news-hub-clients
+
+
+=== News-Client-06-test02
+
+-> _Driver.Met.Vincent = 1 ? News-Client-06
+-> news-hub-clients
+
+
+=== News-Client-07-test02
+
+-> _Driver.Met.Salim = 1 ? News-Client-07
+-> news-hub-clients
+
+
+=== News-Client-08-test02
+
+-> _Killer.Is.Sandman = 1 ? News-Client-08
+-> news-hub-clients
+
+
+=== News-Client-09-test02
+
+-> _Driver.Met.Alicia = 1 ? News-Client-09
+-> news-hub-clients
+
+
+=== News-Client-10-test02
+
+-> _Driver.Met.Phil = 1 ? News-Client-10
+-> news-hub-clients
+
+
+=== News-Client-11-test02
+
+-> _Driver.Met.Djena = 1 ? News-Client-11
+-> news-hub-clients
+
+
+=== News-Client-12-test02
+
+-> _Driver.Met.Mathieu = 1 ? News-Client-12
+-> news-hub-clients
+
+
+=== News-Client-13-test02
+
+-> _Killer.Is.Judge = 1 ? News-Client-13
+-> news-hub-clients
+
+
+=== News-Client-14-test02
+
+-> _Killer.Is.Sandman = 0 ? News-Client-14
+-> news-hub-clients
+
+
+=== News-Client-15-test02
+
+-> _Pierrette.Restaurant.Known = 1 ? News-Client-15
+-> news-hub-clients
+
+
+=== news-hub-killer
+
+-> _Killer.Is.Sandman = 1 ? news-hub-killer-sandman
+-> _Killer.Is.Judge = 1 ? news-hub-killer-judge
+-> _Killer.Is.Angel = 1 ? news-hub-killer-angel
+-> news-hub-clients
+
+
+=== news-hub-killer-sandman
+
+-> ?? news-hub-killer-sandmanA | news-hub-killer-sandmanB | news-hub-killer-sandmanC
+
+
+=== news-hub-killer-sandmanA
+
+-> test_clue_sand01 = 0 ? News-Killer-Sand-01-test
+-> test_clue_sand03 = 0 ? News-Killer-Sand-03-test
+-> test_clue_sand05 = 0 ? News-Killer-Sand-05-test
+-> test_clue_sand07 = 0 ? News-Killer-Sand-07-test
+-> test_clue_sand09 = 0 ? News-Killer-Sand-09-test
+
+
+=== news-hub-killer-sandmanB
+
+-> test_clue_sand02 = 0 ? News-Killer-Sand-02-test
+-> test_clue_sand04 = 0 ? News-Killer-Sand-04-test
+-> test_clue_sand06 = 0 ? News-Killer-Sand-06-test
+-> test_clue_sand08 = 0 ? News-Killer-Sand-08-test
+-> test_clue_sand10 = 0 ? News-Killer-Sand-10-test
+
+
+=== news-hub-killer-sandmanC
+
+-> test_clue_sand10 = 0 ? News-Killer-Sand-10-test
+-> test_clue_sand09 = 0 ? News-Killer-Sand-09-test
+-> test_clue_sand08 = 0 ? News-Killer-Sand-08-test
+-> test_clue_sand07 = 0 ? News-Killer-Sand-07-test
+-> test_clue_sand06 = 0 ? News-Killer-Sand-06-test
+-> test_clue_sand05 = 0 ? News-Killer-Sand-05-test
+-> test_clue_sand04 = 0 ? News-Killer-Sand-04-test
+-> test_clue_sand03 = 0 ? News-Killer-Sand-03-test
+-> test_clue_sand02 = 0 ? News-Killer-Sand-02-test
+-> test_clue_sand01 = 0 ? News-Killer-Sand-01-test
+
+
+=== news-hub-killer-judge
+
+-> ?? news-hub-killer-judgeA | news-hub-killer-judgeB | news-hub-killer-judgeC
+
+
+=== news-hub-killer-judgeA
+
+-> test_clue_judge02 = 0 ? News-Killer-Judge-02-Test
+-> test_clue_judge04 = 0 ? News-Killer-Judge-04-Test
+-> test_clue_judge06 = 0 ? News-Killer-Judge-06-Test
+-> test_clue_judge08 = 0 ? News-Killer-Judge-08-Test
+
+
+=== news-hub-killer-judgeB
+
+-> test_clue_judge01 = 0 ? News-Killer-Judge-01-Test
+-> test_clue_judge03 = 0 ? News-Killer-Judge-03-Test
+-> test_clue_judge05 = 0 ? News-Killer-Judge-05-Test
+-> test_clue_judge07 = 0 ? News-Killer-Judge-07-Test
+-> test_clue_judge09 = 0 ? News-Killer-Judge-09-Test
+
+
+=== news-hub-killer-judgeC
+
+-> test_clue_judge09 = 0 ? News-Killer-Judge-09-Test
+-> test_clue_judge08 = 0 ? News-Killer-Judge-08-Test
+-> test_clue_judge07 = 0 ? News-Killer-Judge-07-Test
+-> test_clue_judge06 = 0 ? News-Killer-Judge-06-Test
+-> test_clue_judge05 = 0 ? News-Killer-Judge-05-Test
+-> test_clue_judge04 = 0 ? News-Killer-Judge-04-Test
+-> test_clue_judge03 = 0 ? News-Killer-Judge-03-Test
+-> test_clue_judge02 = 0 ? News-Killer-Judge-02-Test
+-> test_clue_judge01 = 0 ? News-Killer-Judge-01-Test
+
+
+=== news-hub-killer-angel
+
+-> ?? news-hub-killer-angelA | news-hub-killer-angelB | news-hub-killer-angelC
+
+
+=== news-hub-killer-angelA
+
+-> test_clue_angel02 = 0 ? News-Killer-Angel-02-Test
+-> test_clue_angel04 = 0 ? News-Killer-Angel-04-Test
+-> test_clue_angel06 = 0 ? News-Killer-Angel-06-Test
+-> test_clue_angel08 = 0 ? News-Killer-Angel-08-Test
+-> test_clue_angel10 = 0 ? News-Killer-Angel-10-Test
+
+
+=== news-hub-killer-angelB
+
+-> test_clue_angel01 = 0 ? News-Killer-Angel-01-Test
+-> test_clue_angel03 = 0 ? News-Killer-Angel-03-Test
+-> test_clue_angel05 = 0 ? News-Killer-Angel-05-Test
+-> test_clue_angel07 = 0 ? News-Killer-Angel-07-Test
+-> test_clue_angel09 = 0 ? News-Killer-Angel-09-Test
+
+
+=== news-hub-killer-angelC
+
+-> test_clue_angel10 = 0 ? News-Killer-Angel-10-Test
+-> test_clue_angel09 = 0 ? News-Killer-Angel-09-Test
+-> test_clue_angel08 = 0 ? News-Killer-Angel-08-Test
+-> test_clue_angel07 = 0 ? News-Killer-Angel-07-Test
+-> test_clue_angel06 = 0 ? News-Killer-Angel-06-Test
+-> test_clue_angel05 = 0 ? News-Killer-Angel-05-Test
+-> test_clue_angel04 = 0 ? News-Killer-Angel-04-Test
+-> test_clue_angel03 = 0 ? News-Killer-Angel-03-Test
+-> test_clue_angel02 = 0 ? News-Killer-Angel-02-Test
+-> test_clue_angel01 = 0 ? News-Killer-Angel-01-Test
+
+
+=== News-Killer-Sand-01-test
+
+{ test_clue_sand_01 = 1 }
+-> _News.Clue.Sand.01 = 0 ? News-Killer-Sandman-01
+-> news-hub-killer-sandman
+
+
+=== News-Killer-Sand-02-test
+
+{ test_clue_sand_02 = 1 }
+-> _News.Clue.Sand.02 = 0 ? News-Killer-Sandman-02
+-> news-hub-killer-sandman
+
+
+=== News-Killer-Sand-03-test
+
+{ test_clue_sand_03 = 1 }
+-> _News.Clue.Sand.03 = 0 ? News-Killer-Sandman-03
+-> news-hub-killer-sandman
+
+
+=== News-Killer-Sand-04-test
+
+{ test_clue_sand_04 = 1 }
+-> _News.Clue.Sand.04 = 0 ? News-Killer-Sandman-04
+-> news-hub-killer-sandman
+
+
+=== News-Killer-Sand-05-test
+
+{ test_clue_sand_05 = 1 }
+-> _News.Clue.Sand.05 = 0 ? News-Killer-Sandman-05
+-> news-hub-killer-sandman
+
+
+=== News-Killer-Sand-06-test
+
+{ test_clue_sand_06 = 1 }
+-> _News.Clue.Sand.06 = 0 ? News-Killer-Sandman-06
+-> news-hub-killer-sandman
+
+
+=== News-Killer-Sand-07-test
+
+{ test_clue_sand_07 = 1 }
+-> _News.Clue.Sand.07 = 0 ? News-Killer-Sandman-07
+-> news-hub-killer-sandman
+
+
+=== News-Killer-Sand-08-test
+
+{ test_clue_sand_08 = 1 }
+-> _News.Clue.Sand.08 = 0 ? News-Killer-Sandman-08
+-> news-hub-killer-sandman
+
+
+=== News-Killer-Sand-09-test
+
+{ test_clue_sand_09 = 1 }
+-> _News.Clue.Sand.09 = 0 ? News-Killer-Sandman-09
+-> news-hub-killer-sandman
+
+
+=== News-Killer-Sand-10-test
+
+{ test_clue_sand_10 = 1 }
+-> _News.Clue.Sand.10 = 0 ? News-Killer-Sandman-10
+-> news-hub-killer-sandman
+
+
+=== News-Killer-Judge-01-Test
+
+{ test_clue_judge_01 = 1 }
+-> _News.Clue.Judge.01 = 0 ? News-Killer-Judge-01
+-> news-hub-killer-judge
+
+
+=== News-Killer-Judge-02-Test
+
+{ test_clue_judge_02 = 1 }
+-> _News.Clue.Judge.02 = 0 ? News-Killer-Judge-02
+-> news-hub-killer-judge
+
+
+=== News-Killer-Judge-03-Test
+
+{ test_clue_judge_03 = 1 }
+-> _News.Clue.Judge.03 = 0 ? News-Killer-Judge-03
+-> news-hub-killer-judge
+
+
+=== News-Killer-Judge-04-Test
+
+{ test_clue_judge_04 = 1 }
+-> _News.Clue.Judge.04 = 0 ? News-Killer-Judge-04
+-> news-hub-killer-judge
+
+
+=== News-Killer-Judge-05-Test
+
+{ test_clue_judge_05 = 1 }
+-> _News.Clue.Judge.05 = 0 ? News-Killer-Judge-05
+-> news-hub-killer-judge
+
+
+=== News-Killer-Judge-06-Test
+
+{ test_clue_judge_06 = 1 }
+-> _News.Clue.Judge.06 = 0 ? News-Killer-Judge-06
+-> news-hub-killer-judge
+
+
+=== News-Killer-Judge-07-Test
+
+{ test_clue_judge_07 = 1 }
+-> _News.Clue.Judge.07 = 0 ? News-Killer-Judge-07
+-> news-hub-killer-judge
+
+
+=== News-Killer-Judge-08-Test
+
+{ test_clue_judge_08 = 1 }
+-> _News.Clue.Judge.08 = 0 ? News-Killer-Judge-08
+-> news-hub-killer-judge
+
+
+=== News-Killer-Judge-09-Test
+
+{ test_clue_judge_09 = 1 }
+-> _News.Clue.Judge.09 = 0 ? News-Killer-Judge-09
+-> news-hub-killer-judge
+
+
+=== News-Killer-Angel-01-Test
+
+{ test_clue_angel_01 = 1 }
+-> _News.Clue.Angel.01 = 0 ? News-Killer-Angel-01
+-> news-hub-killer-angel
+
+
+=== News-Killer-Angel-02-Test
+
+{ test_clue_angel_02 = 1 }
+-> _News.Clue.Angel.02 = 0 ? News-Killer-Angel-02
+-> news-hub-killer-angel
+
+
+=== News-Killer-Angel-03-Test
+
+{ test_clue_angel_03 = 1 }
+-> _News.Clue.Angel.03 = 0 ? News-Killer-Angel-03
+-> news-hub-killer-angel
+
+
+=== News-Killer-Angel-04-Test
+
+{ test_clue_angel_04 = 1 }
+-> _News.Clue.Angel.04 = 0 ? News-Killer-Angel-04
+-> news-hub-killer-angel
+
+
+=== News-Killer-Angel-05-Test
+
+{ test_clue_angel_05 = 1 }
+-> _News.Clue.Angel.05 = 0 ? News-Killer-Angel-05
+-> news-hub-killer-angel
+
+
+=== News-Killer-Angel-06-Test
+
+{ test_clue_angel_06 = 1 }
+-> _News.Clue.Angel.06 = 0 ? News-Killer-Angel-06
+-> news-hub-killer-angel
+
+
+=== News-Killer-Angel-07-Test
+
+{ test_clue_angel_07 = 1 }
+-> _News.Clue.Angel.07 = 0 ? News-Killer-Angel-07
+-> news-hub-killer-angel
+
+
+=== News-Killer-Angel-08-Test
+
+{ test_clue_angel_08 = 1 }
+-> _News.Clue.Angel.08 = 0 ? News-Killer-Angel-08
+-> news-hub-killer-angel
+
+
+=== News-Killer-Angel-09-Test
+
+{ test_clue_angel_09 = 1 }
+-> _News.Clue.Angel.09 = 0 ? News-Killer-Angel-09
+-> news-hub-killer-angel
+
+
+=== News-Killer-Angel-10-Test
+
+{ test_clue_angel_10 = 1 }
+-> _News.Clue.Angel.10 = 0 ? News-Killer-Angel-10
+-> news-hub-killer-angel
+
+
+=== news-outro
+
+Вы закрываете газету. Сегодня вечером она окажется в мусорном ведре.
+Если вы вспомните, что она там. В противном случае она проведёт остаток дней в вашем бардачке.
+-> END
+
+
+=== News-Client-01
+
+%% О Жероме.Надо познакомиться первым.
+{ _News.Client.01 = 1 }
+Это всего лишь небольшая заметка между двумя основными статьями, но в ней упоминается новый президент одной из крупнейших французских импортно-экспортных групп.
+Он принимает бизнес от своего отца, которого отправил в тюрьму после того, как предоставил полиции неопровержимые доказательства того, что его отец занимался растратой...
+-> news-logic
+
+
+=== News-Client-02
+
+%% О Санте.Надо познакомиться первым.
+{ _News.Client.02 = 1 }
+Всего несколько строк - забавный анекдот: человека, переодетого в Санта-Клауса, пожарным пришлось снимать с крыши здания.
+Он был сильно пьян и заявил, что не знает, как он туда попал...
+-> news-logic
+
+
+=== News-Client-03
+
+%% Об Ультра Скатерце.Надо познакомиться первым.
+{ _News.Client.03 = 1 }
+Забавный анекдот: пять молодых людей из Бретани были арестованы за нарушение общественного порядка.
+Они были одеты как персонажи японского сериала о супергероях...
+-> news-logic
+
+
+=== News-Client-04
+
+%% О Камилле.Надо познакомиться первым.
+{ _News.Client.04 = 1 }
+Вы натыкаетесь на яркую рекламу начинающего такси-ресторана. Его название?
+Мобильный дом.
+Вы вздыхаете...
+-> news-logic
+
+
+=== News-Client-05
+
+%% О Джулиане.Надо познакомиться первым.
+{ _News.Client.05 = 1 }
+Это длинное интервью с одним из разоблачителей, с которого начался печально известный скандал "PoliceLeaks", о котором все говорят.
+Фотография не очень удачная, но вы узнаете своего пассажира...
+-> news-logic
+
+
+=== News-Client-06
+
+%% О Винсенте.Надо познакомиться первым.
+{ _News.Client.06 = 1 }
+По сути... это... подробная история о коррумпированных министрах и членах парламента. Во врезке объясняется, как газета получила документы...
+Упоминание о вас - "неприметный таксист" - и все.
+-> news-logic
+
+
+=== News-Client-07
+
+%% О Салиме.Надо познакомиться первым.
+{ _News.Client.07 = 1 }
+Это увлекательная статья об одном дне судебного процесса над террористом, которого защищал ваш пассажир... пассажир из вашего списка подозреваемых.
+Все согласны с тем, что террорист не был самой яркой звездой на небосклоне.
+Один из прокуроров сказал: "Он - деревенский идиот. Пять веков назад мы бы бросили его в колодец".
+Вы сжимаете зубы.
+-> news-logic
+
+
+=== News-Client-08
+
+%% Речь идет о пожаре Альбатроса.Уникально для расследования Песочного человека.
+{ _News.Client.08 = 1 }
+Это подробная статья об "Альбатросе", вышедшая через шесть месяцев после трагедии. Все очень туманно и не дает никакой новой информации.
+Еще более тревожно, что тон довольно циничный, даже злой, когда журналист обращается к ассоциациям арендаторов...
+-> news-logic
+
+
+=== News-Client-09
+
+%% Речь идет об Алисии.Клиента необходимо встретить заранее.
+{ _News.Client.09 = 1 }
+Вы бросаете взгляд на рецензию на последний сборник стихов великой Алисии Клеф.
+Критик явно в восторге, но задаётся вопросом, что могло вдохновить её на создание этого шедевра...
+-> news-logic
+
+
+=== News-Client-10
+
+%% Статья о пикаперах. Фил.
+{ _News.Client.10 = 1 }
+Это длинная статья о пикаперах.
+Почти в каждом предложении видно, что журналист высмеивает их. Он даже дает советы, как от них избавиться.
+Лучше бы вы прочитали статью до того, как этот пассажир сел в ваше такси...
+-> news-logic
+
+
+=== News-Client-11
+
+%% Доступно после встречи с Дженой или Матье 01 и 02.
+{ _News.Client.11 = 1 }
+В статье подробно рассказывается о недостатке финансирования государственных больниц.
+Число смертей в результате несчастных случаев растет, особенно среди пожилых людей и во время родов.
+Правительство утверждает, что ничего не может сделать, и вкладывает деньги в частные клиники...
+-> news-logic
+
+
+=== News-Client-12
+
+%% Смерть отца Матье. Матье.
+{ _News.Client.12 = 1 }
+В нескольких строках поспешно упоминается смерть доктора Видаля, который посвятил свою жизнь государственным больницам и своим пациентам более 40 лет.
+Ваши мысли обращены к его сыну...
+-> news-logic
+
+
+=== News-Client-13
+
+%% О PoliceLeaks.
+{ _News.Client.13 = 1 }
+Это довольно увлекательная статья о печально известном деле "PoliceLeaks": кто, почему и как все эти конфиденциальные данные были обнародованы.
+Министерство юстиции теперь занимается коррумпированными и жестокими полицейскими, которые, как известно, переходят границы дозволенного. Обеспокоенные ассоциации аплодируют их прозрачности.
+И все же, чем больше читаешь, тем больше складывается впечатление, что журналист не согласен с их методами...
+-> news-logic
+
+
+=== News-Client-14
+
+%% Забастовка сотрудников Confiseries du Marais.
+{ _News.Client.14 = 1 }
+Это короткая статья о забастовке, которую возглавила горстка сотрудников Confiseries du Marais, бренда элитных конфет.
+Работники требуют повышения зарплаты. Владельцы - Groupe Diamant - угрожают перенести свои фабрики за границу.
+-> news-logic
+
+
+=== News-Client-15
+
+%% Рецензия на ресторан "Ла Пьер".
+{ _News.Client.15 = 1 }
+Это обстоятельная рецензия на "Ла Пьер"... По мнению критика, проблема не в кухне, а в маркетинге ресторана.
+Когда вы тратите время на погоню за звездами и наградами, вы забываете, зачем вообще открыли ресторан.
+Тон статьи печальный и мрачный.
+-> news-logic
+
+
+=== News-Killer-Angel-01
+
+%% Подсказка = Жертва 4 = отдала часть своего состояния на благотворительность
+{ _News.Clue.Angel.01 = 1 }
+Еще одна статья об Ангеле Смерти...
+Читая между строк, вы понимаете, что четвертая жертва оставила все свое состояние на благотворительность.
+Примите к сведению...
+$$ clue: clue_angel_journal01_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Angel-02
+
+%% Подсказка = Жертва 3 = Свидетель слышал женские голоса
+{ _News.Clue.Angel.02 = 1 }
+Это статья об Ангеле Смерти и актрисе Зите Вельпо, третьей жертве.
+Ее соседка, очевидно, слышала женские голоса, доносившиеся из квартиры жертвы в ночь убийства.
+$$ clue: clue_angel_journal02_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Angel-03
+
+%% Подсказка = Убийца нацелился на политических активистов
+{ _News.Clue.Angel.03 = 1 }
+Это длинная статья, в которой журналист задает вопросы криминологу. Его теория интересна, и вы записываете ее в уголок своего сознания...
+Он считает, что убийца нацелился на радикальных активистов.
+Сделать убийства... политическими?
+$$ clue: clue_angel_journal03_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Angel-04
+
+%% Подсказка = Все больше и больше крайне правых студентов в университетах
+{ _News.Clue.Angel.04 = 1 }
+Это небольшая статья, написанная преподавателями университета. Они заметили, что все больше и больше студентов становятся членами альт-правых...
+Клубов... групп... ассоциаций... становится все больше, и это нужно остановить.
+Может быть, есть связь между подозреваемым студентом и убийствами?
+$$ clue: clue_angel_journal04_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Angel-05
+
+%% Подсказка = Жертва 3 = атакована крайне правыми в 90-е годы
+{ _News.Clue.Angel.05 = 1 }
+В одной из статей рассказывается о жизни Зиты Вельпо, третьей жертвы Ангела Смерти.
+Вы узнаете, что в 1990-х годах она подверглась нападению... радикальных правых активистов...
+$$ clue: clue_angel_journal05_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Angel-06
+
+%% Подсказка = Жертва 2 = лучший друг убит скинхедом во время протеста
+{ _News.Clue.Angel.06 = 1 }
+В статье о второй жертве, Жюле Лиме, рассказывается о его детстве.
+Среди нескольких бесполезных анекдотов вы узнаете, что его лучший друг был убит скинхедом во время акции протеста.
+Содержание расплывчато, но... может быть полезным.
+$$ clue: clue_angel_journal06_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Angel-07
+
+%% Подсказка = Жертвы впустили убийцу, должны выглядеть безобидно
+{ _News.Clue.Angel.07 = 1 }
+По словам бывшего полицейского, взявшего интервью для этой статьи, жертвы, несомненно, впустили Ангела Смерти в свои дома.
+Таким образом, убийца должен казаться безобидным и заслуживающим доверия, даже посреди ночи.
+Очаровательно...
+$$ clue: clue_angel_journal07_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Angel-08
+
+%% Подсказка = Учёные утверждают, что мы живём в симуляции
+{ _News.Clue.Angel.08 = 1 }
+Это длинная и довольно загадочная статья... В общем, ученые на 99% уверены, что мы живем в симулированном мире.
+Их объяснения недоступны вашему пониманию. Но вы все равно готовы им поверить...
+$$ clue: clue_angel_journal08_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Angel-09
+
+%% Подсказка = Количество взломов растет.
+{ _News.Clue.Angel.09 = 1 }
+Статистика Министерства внутренних дел свидетельствует о росте числа краж со взломом.
+В статье говорится, что эта информация может раскрыть тайну, связанную с личностью Ангела Смерти...
+Почему бы и нет?
+$$ clue: clue_angel_journal09_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Angel-10
+
+%% Подсказка = Жертва 2 = экотеррорист
+{ _News.Clue.Angel.10 = 1 }
+Согласно этой весьма злобной статье, Жюль Лима, вторая жертва Ангела Смерти, был экотеррористом...
+Бороться любой ценой за то, чтобы люди не ели мясо и не пользовались автомобилями.
+Вы улыбаетесь, дочитывая текст... Хотя термин "экотеррорист" несколько чрезмерен, это может кое-что объяснить...
+$$ clue: clue_angel_journal10_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Judge-01
+
+%% Подсказка: Жертва 3 = подозреваемый участник Процесса + Жертва 3 сбежала из Аргентины в 80-х годах.
+{ _News.Clue.Judge.01 = 1 }
+Это сенсационная статья о третьей жертве, Саймоне Городишере.
+Считается, что ему удалось бежать из Аргентины в 1980-х годах, поскольку он был членом "Процесса" - военной диктатуры, находившейся у власти.
+Довольно важная информация, на ваш взгляд.
+$$ clue: clue_judge_journal01_01 $$
+$$ clue: clue_judge_journal01_02 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Judge-02
+
+%% Подсказка: жертвы риктодина все еще требуют возмездия
+{ _News.Clue.Judge.02 = 1 }
+Она посвящена спорной теме: жертвы риктодина подали апелляцию в международный коллективный иск. Они до сих пор не получили ни цента компенсации.
+В статье рассказывается о сотнях людей, страдающих частичным или полным параличом, повреждением нервов, болезнью Паркинсона...
+Жертвы готовы бороться столько, сколько потребуется...
+$$ clue: clue_judge_journal02_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Judge-03
+
+%% Подсказка: Жертва 4 = никогда не судилась за скандал со здоровьем
+{ _News.Clue.Judge.03 = 1 }
+Это статья, в которой обозреватель задается вопросом, почему Даниэль Пети-Рено никогда не подозревали в деле Риктодена.
+По ее мнению, бывший министр несет ответственность...
+$$ clue: clue_judge_journal03_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Judge-04
+
+%% Подсказка: Жертва 2 убила алжирца, так и не была арестована
+{ _News.Clue.Judge.04 = 1 }
+В статье о предстоящих европейских выборах журналист вскользь сообщает о прошлом второй жертвы, Шарля Бугрена.
+Долгое время его подозревали в убийстве алжирца во время марша протеста нелегальных иммигрантов.
+Примите к сведению...
+$$ clue: clue_judge_journal04_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Judge-05
+
+%% Подсказка: Салим = защищал мафию в суде + Жертва 1 = защищал мэр Сент-Уана.
+{ _News.Clue.Judge.05 = 1 }
+Это длинная и впечатляющая статья о Салиме Вадьяне, адвокате террориста... который когда-то защищал мафию в суде.
+За текстом трудно уследить из-за многочисленных ссылок на события, о которых вы ничего не знаете. Внезапно в глаза бросается имя первой жертвы.
+Считается, что Ронана Бессона защищал мэр Сент-Уэна, один из соперников Салима Вадьяна.
+Вы принимаете к сведению все, не зная, куда это может вас привести.
+$$ clue: clue_judge_journal05_01 $$
+$$ clue: clue_judge_journal05_02 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Judge-06
+
+%% Подсказка: Убийца = профессионал
+{ _News.Clue.Judge.06 = 1 }
+Это своего рода обзор дела Судьи. Криминологи, бывшие полицейские и журналисты высказывают свое мнение.
+Один из них, учитывая улики, убежден, что убийца - профессионал.
+Вы киваете, обрабатывая информацию...
+$$ clue: clue_judge_journal06_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Judge-07
+
+%% Подсказка: Рост убийцы < 170 см
+{ _News.Clue.Judge.07 = 1 }
+Это рассказ очевидца, написанный женщиной, которая утверждает, что видела убийцу. "Убийца невысокого роста, менее 170 см".
+Вы запоминаете это... Почему этой информации не было в деле, которое вам передала Бюссе?
+$$ clue: clue_judge_journal07_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Judge-08
+
+%% Подсказка: первые три жертвы = подозреваются, но так и не арестованы.
+{ _News.Clue.Judge.08 = 1 }
+Это подробная статья о деле судьи.
+Журналист быстро, но четко упоминает, что все первые три жертвы были подозреваемыми по другим делам... но так и не были арестованы.
+Совпадение...? Кто знает...
+$$ clue: clue_judge_journal08_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Judge-09
+
+%% Подсказка: Дела первых 3 жертв = часть утечки из полиции 2 года назад
+{ _News.Clue.Judge.09 = 1 }
+Это статья о недавнем инциденте "PoliceLeaks"... в которой прослеживается еще одна утечка данных.
+Два года назад была случайно обнародована куча конфиденциальных полицейских документов.
+Документы о Ронане Бессоне, Шарле Бугрене и Саймоне Городишере - первых трех жертвах судьи.
+Интригующе...
+$$ clue: clue_judge_journal09_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Sandman-01
+
+%% Подсказка: Жертву 1 уволили из Groupe Diamant за несколько лет до Альбатроса
+{ _News.Clue.Sand.01 = 1 }
+В статье, которую вы рассматриваете, подробно рассказывается о карьере первой жертвы Песочного человека...
+Он был уволен из Groupe Diamant еще до пожара в Albatros.
+Вы мысленно записываете эту информацию...
+$$ clue: clue_sand_journal01_01 $$
+-> news-logic
+
+
+=== News-Killer-Sandman-02
+
+%% Подсказка: миорелаксант исчез из больницы в ночь пожара.
+{ _News.Clue.Sand.02 = 1 }
+Они упоминают название больницы, где работала одна из ваших пассажирок, Джена.
+Из статьи вы узнаете, что пропало много лекарств... в том числе бромид панкурония...
+$$ clue: clue_sand_journal02_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Sandman-03
+
+%% Подсказка: Жертва 3 = выдающийся журналист
+{ _News.Clue.Sand.03 = 1 }
+Это письмо, написанное редакцией газеты...
+Они хотят еще раз отдать дань уважения выдающейся журналистке Микаэле Блан.
+Текст трогательный... хотя вы надеялись узнать личность Песочного человека.
+$$ clue: clue_sand_journal03_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Sandman-04
+
+%% Подсказка: У убийцы = низкий голос, звучал как пожилой
+{ _News.Clue.Sand.04 = 1 }
+В статье рассказывается о расследовании "Песочного человека"...
+Новый свидетель утверждает, что слышал, как вторая жертва разговаривала с мужчиной. У него был глубокий голос, и он казался довольно старым.
+Почему Бюссе ничего не сказала об этом?
+$$ clue: clue_sand_journal04_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Sandman-05
+
+%% Подсказка: Убийца = женский голос, притворяющийся мужским
+{ _News.Clue.Sand.05 = 1 }
+В статье предпринята попытка подвести итоги дела Песочного человека...
+Новый свидетель рассказывает, что одна из соседок Микаэлы Блан слышала женские голоса в ночь убийства...
+И что убийца пытался говорить более низким голосом, похожим на мужской.
+Интригующе...
+$$ clue: clue_sand_journal05_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Sandman-06
+
+%% Подсказка: Жертва 3 = плохой журналист
+{ _News.Clue.Sand.06 = 1 }
+Это фотография третьей жертвы, журналиста.
+Прочитав статью, вы обнаруживаете, что многие не считают Микаэлу Блан настоящей журналисткой.
+Текст гневный и почти неловкий. Вы не уверены, что поняли смысл.
+Но вы принимаете это к сведению. Никогда не знаешь.
+$$ clue: clue_sand_journal06_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Sandman-07
+
+%% Подсказка: Жертва 3 = монеты во рту
+{ _News.Clue.Sand.07 = 1 }
+Это чересчур детальная статья о деле Песочного человека.
+В частности, журналист подробно описывает монеты, найденные во рту второй жертвы...
+Вам становится не по себе.
+$$ clue: clue_sand_journal07_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Sandman-08
+
+%% Подсказка: Жертвы = связаны через сайт эскорт-услуг
+{ _News.Clue.Sand.08 = 1 }
+По словам частного детектива, которого допрашивают... жертвы познакомились друг с другом на сайте эскорт-услуг.
+К сожалению, журналист не указал название сайта, но у вас есть несколько идей...
+$$ clue: clue_sand_journal08_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Sandman-09
+
+%% Подсказка: гибель жертв = плохо для Groupe Diamant
+{ _News.Clue.Sand.09 = 1 }
+Это статья в финансовом разделе об Albatros.
+Один из страховщиков объясняет, что убийства Песочного человека гораздо более трагичны, чем пожар на Альбатросе...
+Из-за них стоимость акций Groupe Diamant рушится.
+Его тон настолько холоден, что вам становится не по себе.
+$$ clue: clue_sand_journal09_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Killer-Sandman-10
+
+%% Подсказка: завещание Жертвы 4 блокирует наследование в случае убийства.
+{ _News.Clue.Sand.10 = 1 }
+Это статья о наследовании и богатстве во Франции. В ней упоминается Анри дю Тилье.
+Журналист объясняет, почему исполнение его завещания было заблокировано с момента его убийства.
+Это заставляет задуматься. Информация не очень вяжется с теорией о том, что убийца убивал ради денег...
+$$ clue: clue_sand_journal10_01 $$
+{ _Found.Clue.Today = 1 }
+-> news-logic
+
+
+=== News-Misc-01
+
+%% Открывает новый пункт назначения на карте.
+{ _Rumor.Soliles = 1 }
+Это довольно позитивная критика бара под названием "Soliles".
+-> News-Misc-010203-outro
+
+
+=== News-Misc-02
+
+%% Открывает новый пункт назначения на карте.
+{ _Rumor.Napo = 1 }
+Это довольно восторженная статья о баре под названием "Напо".
+-> News-Misc-010203-outro
+
+
+=== News-Misc-03
+
+%% Открывает новый пункт назначения на карте.
+{ _Rumor.Furiosa = 1 }
+По мнению этого критика, "Фуриоса" — это нынешний модный бар.
+-> News-Misc-010203-outro
+
+
+=== News-Misc-010203-outro
+
+Вы с интересом принимаете информацию к сведению. В вашей работе такие вещи всегда могут пригодиться.
+-> news-logic
+
+
+=== News-Misc-05
+
+В короткой, довольно лаконичной статье журналист рассказывает о том, что в Париже только что открылась 200-я кофейня в американском стиле.
+Она сожалеет об исчезновении настоящих, аутентичных бистро.
+Вы вздыхаете.
+-> news-logic
+
+
+=== News-Misc-06
+
+Это плохо написанная и очень злая статья о том, как мэр Парижа сделал один из районов полностью пешеходным.
+Очевидно, что эта идея не нравится всем... кроме туристов.
+-> news-logic
+
+
+=== News-Misc-07
+
+Забавные строки: некие рабочие обнаружили в чьем-то подвале бочку вина 1789 года.
+Они собираются разливать вино по бутылкам и продавать его, а все вырученные средства направлять непосредственно в пенсионные фонды рабочих.
+-> news-logic
+
+
+=== News-Misc-08
+
+Красочная иллюстрация сообщает, что Париж побил все свои рекорды по уровню загрязнения окружающей среды. Виной тому особенно холодная и влажная зима.
+Вы неосознанно начинаете кашлять.
+-> news-logic
+
+
+=== News-Misc-09
+
+Спутниковая карта показывает, что к острову Реюньон движется ураган.
+Они ожидают серьезных разрушений.
+На маленькой фотографии изображены улыбающиеся дети, которые рады, что им не нужно ходить в школу.
+-> news-logic
+
+
+=== News-Misc-10
+
+Это крошечная статья в углу одной страницы: продолжающиеся протесты в маленькой южноамериканской стране Французская Гвиана парализуют территорию уже два месяца.
+Вы поднимаете голову. До сих пор вы ничего не слышали об этих протестах...
+-> news-logic
+
+
+=== News-Misc-11
+
+Короткое, очень саркастическое сообщение сообщает, что в эти выходные ваши коллеги-таксисты собираются провести акцию протеста против использования автомобилей по найму.
+Вы пожимаете плечами. Ваш босс относится к вам гораздо лучше, чем в большинстве компаний...
+-> news-logic
+
+
+=== News-Misc-12
+
+Это короткая, довольно грязная статья, засунутая между двумя рекламными объявлениями, в которой сообщается, что полиция доставила на допрос руководителя предвыборного штаба президента.
+Его обвиняют в расхождениях в отчетности кампании...
+-> news-logic
+
+
+=== News-Misc-13
+
+Плохо обрамлённая фотография и краткая заметка сообщают, что священнослужительница уходит в отставку по личным причинам.
+Её заменит её правая рука, по совместительству муж.
+Её лицо вам совершенно незнакомо. Вам кажется, что вы никогда её раньше не видели.
+-> news-logic
+
+
+=== News-Misc-14
+
+Из небольшой заметки вы узнаёте, что скоро откроется фотовыставка о парижских таксистах.
+Интересно, пойдёт ли кто-нибудь из настоящих таксистов на неё посмотреть...
+-> news-logic
+
+
+=== News-Misc-15
+
+Это обычная мелкая новость, которую вы читаете каждую неделю: мечеть в пригороде облили краской.
+На фотографии оскорбления, нанесенные граффити, видны во всей красе.
+-> news-logic
+
+
+=== News-Misc-16
+
+Это тот тип незначительных новостей, которые можно прочитать в каждом номере...
+Двое молодых людей были арестованы за нападение на евреев на улице. Статья написана наспех и без эмоций...
+-> news-logic
+
+
+=== News-Misc-18
+
+Это фотография французской футбольной команды, которая только что выиграла матч у команды из...
+Вануату.
+Вы понятия не имеете, где находится Вануату.
+-> news-logic
+
+
+=== News-Misc-19
+
+Это фотография важного французского спортсмена - известного теннисиста.
+Он только что был арестован в Швейцарии за хищение миллионов евро, полученных за права на воспроизведение изображений.
+Вы вздыхаете.
+-> news-logic
+
+
+=== News-Misc-20
+
+Это статья, написанная группой французских спортсменов...
+Они хотят, чтобы баскская пелота стала официальным видом спорта на Олимпийских играх 2024 года.
+-> news-logic
+
+
+=== News-Misc-21
+
+Это рецензия на фильм. Подача и актёры, которые кажутся вам смутно знакомыми, вызывают желание сходить посмотреть.
+Вы не можете вспомнить, когда в последний раз были в кино.
+Если уж сидеть в темноте два часа, то с таким же успехом можно вести такси.
+-> news-logic
+
+
+=== News-Misc-22
+
+Это восторженная рецензия на новую видеоигру об уберизации общества.
+Вы пробегаете текст глазами и слегка теряетесь. Видеоигра про таксиста?
+Звучит неплохо.
+-> news-logic
+
+

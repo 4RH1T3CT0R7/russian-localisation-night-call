@@ -1,0 +1,9 @@
+
+=== frag-00a-start
+
+$$ anim: IDLE_WINDOW $$
+$$ movie: lamparo_on, display_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+Ваш следующий пассажир садится в такси. Мужчина средних лет с прямой осанкой.
+
+

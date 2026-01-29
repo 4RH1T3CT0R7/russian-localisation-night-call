@@ -1,0 +1,579 @@
+Scene name: " Story : Outro "
+
+%% Эта сцена будет воспроизведена в конце игры, если игрок успешно нашел Убийцу, после титров.
+
+%% DATA
+
+		VAR neutral = 0
+
+=== 990-ending-start
+
+$$ movie: black $$
+$$ travel: start $$
+$$ hide_passenger $$
+$$ music-control: 0 $$
+-> 990-ending-start-test01
+
+
+=== 990-ending-start-test01
+
+-> _Journal.Read = 1 ? 990-ending-start-test-journal
+-> 990-ending-start-test02
+
+
+=== 990-ending-start-test-journal
+
+$$ reveal: 000_14 $$
+-> 990-ending-start-test02
+
+
+=== 990-ending-start-test02
+
+-> _Radio.Listen = 1 ? 990-ending-start-test-radio
+-> 990-ending-start2
+
+
+=== 990-ending-start-test-radio
+
+$$ reveal: 000_15 $$
+-> 990-ending-start2
+
+
+=== 990-ending-start2
+
+Солнце вот-вот взойдет.
+%% Если Драйвер встретил Шоре или нет.
+-> _Driver.Met.Shohreh = 1 ? 990-ending-start-radio
+-> 990-ending-youdrive
+
+
+=== 990-ending-youdrive
+
+Вы всю ночь ехали с открытым окном.
+-> 990-ending-normandy
+
+
+=== 990-ending-start-radio
+
+$$ sfx: sfx_gameplay_car_shohreh_radio $$
+Вы ехали всю ночь с открытым окном и радио, настроенным на эту фантомную частоту.
+Электрические разряды не давали вам уснуть...
+-> 990-ending-normandy
+
+
+=== 990-ending-normandy
+
+Вы так устали, что у вас защемило в груди и потяжелели глаза, но вы не можете остановиться.
+Не сейчас.
+Скоро у вас закончится бензин.
+Лампочка бензина загорелась километров 20 назад. Вы где-то в Нормандии.
+%% Если Водитель встретил и высадил Круки на вокзале.
+-> _Driver.Crouky = 1 ? 990-ending-normandy-cat
+-> 990-ending-stop
+
+
+=== 990-ending-normandy-cat
+
+Может быть, вы встретите того кота, которого подвезли однажды ночью...
+Вы улыбаетесь и расслабляетесь при этой мысли.
+-> 990-ending-stop
+
+
+=== 990-ending-stop
+
+$$ sfx: !sfx_gameplay_car_shohreh_radio $$
+$$ travel: stop $$
+$$ sfx: sfx_gameplay_car_openclose_from_int $$
+$$ music-control: 20 $$
+Вы съезжаете на обочину и выходите из машины.
+Движения почти нет. Вы перешагиваете через ограждение, пока ваши глаза привыкают к красочному рассвету.
+$$ movie: OutroForest_loop $$
+Скоро солнце поднимется над горизонтом.
+Вы достаете телефон и набираете номер.
+Не звонит. Сразу на голосовую почту.
+%% Голос мужской.
+Голос просит вас оставить сообщение... после сигнала...
+-> 990-ending-call01
+
+
+=== 990-ending-call01
+
+"Эй... Я... Я хотел..."
+Вы переводите дыхание.
+"Когда Эйд сказала мне, что хранит твой телефон, чтобы слышать твой голос... Я подумал, что это глупо."
+"Но теперь..."
+Солнце медленно поднимается, и его краски заливают пейзаж.
+Голый кустарник, крошечная деревушка, затерянная в тумане, вершина холма, сверкающая росой.
+Этот вид кажется вам чужим.
+-> 990-ending-call02
+
+
+=== 990-ending-call02
+
+"Я хотел... поблагодарить тебя за то, что ты дал мне возможность искупить свою вину."
+"Спасибо..."
+Это слово вызывает у вас отвращение, но уже слишком поздно.
+"Благодаря тебе я сделал кое-что важное. Я имею в виду... Я думаю. Кто знает?"
+Тишина. У вас голова идет кругом. Вы не разговаривали с братом уже много лет.
+Ну... в некотором роде... Вы усмехаетесь.
+*" Эйд - молодец." -> 990-ending-call-ade
+*" Я в порядке." -> 990-ending-call-imgood
+*" Твои дети в порядке." -> 990-ending-call-kidsaregood
+*(Положить трубку.) -> 990-ending-call-hangup
+
+
+=== 990-ending-call-ade
+
+"У нее все лучше... Ее дела идут хорошо."
+"Она больше не думает о тебе так часто. Она сейчас с кем-то встречается... Я думаю... Она не все мне рассказывает."
+-> 990-ending-call-end
+
+
+=== 990-ending-call-imgood
+
+"Я думаю, да."
+"Это... странно слышать твой голос... но мне тоже приятно."
+-> 990-ending-call-end
+
+
+=== 990-ending-call-kidsaregood
+
+"Они так быстро растут. Эйд иногда показывает мне фотографии, но я никогда не захожу в дом."
+"Это было бы слишком сложно для всех."
+"Но у них все хорошо."
+"Они... очень похожи на папу. По крайней мере... мне так кажется."
+-> 990-ending-call-end
+
+
+=== 990-ending-call-end
+
+Вы делаете паузу.
+В нескольких метрах от вас проезжает грузовик.
+"Я думал, когда все закончится... то есть... я думал, что смогу нормально поспать."
+"Закрыть глаза и заснуть... по-настоящему заснуть... наконец-то..."
+"Но сон... это всего лишь передышка. Он не ставит точку. Все начнется снова, как только..."
+Голос прерывает вас.
+Автоответчик: "Вы достигли максимального лимита времени. Пожалуйста..."
+-> 990-ending-end-what
+
+
+=== 990-ending-call-hangup
+
+"Позже..."
+-> 990-ending-end-what
+
+
+=== 990-ending-end-what
+
+Вы кладете трубку. Телефон кажется тяжелым в руке.
+Что вам теперь делать? Перед вами сломанный забор, ведущий к небольшой тропинке в лес.
+Позади вас проходит шоссе, ведущее к морю.
+%% Хаб будет меняться в зависимости от встреченных во время игры клиентов.
+-> _Driver.Met.Pierrette = 1 ? 990-ending-customer-hub-pierretteA
+-> _Driver.Met.Ade = 1 ? 990-ending-customer-hub-adeA
+-> _Driver.Met.Jacquie = 1 ? 990-ending-customer-hub-jacquieA
+-> _Driver.Heard.Deal = 1 ? 990-ending-customer-hub-lucieemilie
+-> _Driver.Met.Christophe = 1 ? 990-ending-customer-hub-christophe
+-> 990-ending-customer-hub
+
+
+=== 990-ending-customer-hub-pierretteA
+
+-> _Driver.Heard.Deal = 1 ? 990-ending-customer-hub-pierrette-le
+-> _Driver.Met.Christophe = 1 ? 990-ending-customer-hub-pierrette-christophe
+-> _Driver.Met.Ade = 1 ? 990-ending-customer-hub-pierrette-ade
+-> 990-ending-customer-hub-pierrette
+
+
+=== 990-ending-customer-hub-adeA
+
+-> _Driver.Heard.Deal = 1 ? 990-ending-customer-hub-ade-le
+-> _Driver.Met.Christophe = 1 ? 990-ending-customer-hub-ade-christophe
+-> _Driver.Met.Jacquie = 1 ? 990-ending-customer-hub-ade-jacquie
+-> 990-ending-customer-hub-ade
+
+
+=== 990-ending-customer-hub-jacquieA
+
+-> _Driver.Heard.Deal = 1 ? 990-ending-customer-hub-jacquie-le
+-> _Driver.Met.Christophe = 1 ? 990-ending-customer-hub-jacquie-christophe
+-> 990-ending-customer-hub-jacquie
+
+
+=== 990-ending-customer-hub
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+
+
+=== 990-ending-customer-hub-pierrette
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Пьеретте, шеф-повару.) -> 990-ending-end-pierrette-intro
+
+
+=== 990-ending-customer-hub-pierrette-le
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Пьеретте, шеф-повару.) -> 990-ending-end-pierrette-intro
+*(Позвонить Люси и Эмили.) -> 990-ending-end-lucieemilie-intro
+
+
+=== 990-ending-customer-hub-pierrette-christophe
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Пьеретте, шеф-повару.) -> 990-ending-end-pierrette-intro
+*(Позвонить Кристофу, священнику.) -> 990-ending-end-christophe-intro
+
+
+=== 990-ending-customer-hub-pierrette-ade
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Пьеретте, шеф-повару.) -> 990-ending-end-pierrette-intro
+*(Позвонить Эйд, невестке.) -> 990-ending-end-ade-intro
+
+
+=== 990-ending-customer-hub-lucieemilie
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Люси и Эмили.) -> 990-ending-end-lucieemilie-intro
+
+
+=== 990-ending-customer-hub-christophe
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Кристофу, священнику.) -> 990-ending-end-christophe-intro
+
+
+=== 990-ending-customer-hub-ade
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Эйд, невестке.) -> 990-ending-end-ade-intro
+
+
+=== 990-ending-customer-hub-ade-le
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Эйд, невестке.) -> 990-ending-end-ade-intro
+*(Позвонить Люси и Эмили.) -> 990-ending-end-lucieemilie-intro
+
+
+=== 990-ending-customer-hub-ade-christophe
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Эйд, невестке.) -> 990-ending-end-ade-intro
+*(Позвонить Кристофу, священнику.) -> 990-ending-end-christophe-intro
+
+
+=== 990-ending-customer-hub-ade-jacquie
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Эйд, невестке.) -> 990-ending-end-ade-intro
+*(Позвонить Жаки.) -> 990-ending-end-jacquie-intro
+
+
+=== 990-ending-customer-hub-jacquie
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Жаки.) -> 990-ending-end-jacquie-intro
+
+
+=== 990-ending-customer-hub-jacquie-le
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Жаки.) -> 990-ending-end-jacquie-intro
+*(Позвонить Люси и Эмили.) -> 990-ending-end-lucieemilie-intro
+
+
+=== 990-ending-customer-hub-jacquie-christophe
+
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+*(Позвонить Жаки.) -> 990-ending-end-jacquie-intro
+*(Позвонить Кристофу, священнику.) -> 990-ending-end-christophe-intro
+
+
+=== 990-ending-end-intro-drive
+
+$$ movie: black $$
+Вы вздыхаете и возвращаетесь... По другую сторону ограждения вы находите своё перегретое такси.
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+Следующая заправка находится не так далеко.
+$$ music-control: 40 $$
+Вы медленно поворачиваете ключ в замке зажигания.
+$$ travel: start $$
+-> 990-ending-end
+
+
+=== 990-ending-end-intro-disappear
+
+$$ movie: OutroForestWalk $$
+$$ movie: black $$
+Вы начинаете идти.
+Быстрыми руками, почти механически, вы бросаете телефон влево... а ключи от машины - вправо.
+С каждым шагом вы чувствуете себя свободнее. Легче.
+$$ music-control: 40 $$
+Еще несколько шагов, и вы исчезнете в лесу.
+Деревья медленно расступаются, словно пропуская вас вперед.
+-> 990-ending-end
+
+
+=== 990-ending-end
+
+$$ movie: black $$
+Где-то там наверняка найдётся что-то для вас...
+Там, вдали.
+-> END
+%% ENDINGS
+
+
+=== 990-ending-end-pierrette-intro
+
+Вы набираете ее номер, размышляя о своем разговоре.
+Она почти сразу же берет трубку.
+ПЬЕРЕТТА: "Алло?"
+На заднем плане слышна рыночная суета.
+*" Это я." -> 990-ending-end-pierrette-me
+*" Это Хуссин." -> 990-ending-end-pierrette-name
+*:silence: (Ничего не говорить.) -> 990-ending-end-pierrette-silence
+
+
+=== 990-ending-end-pierrette-me
+
+Она удивленно вскрикнула.
+ПЬЕРЕТТА: "Водитель такси?"
+-> 990-ending-end-pierrette-chat
+
+
+=== 990-ending-end-pierrette-name
+
+Она кажется удивленной.
+ПЬЕРЕТТА: "Я... Как ты?"
+-> 990-ending-end-pierrette-chat
+
+
+=== 990-ending-end-pierrette-silence
+
+ПЬЕРЕТТА: "Алло... Алло?"
+*:smile: "Это я..." -> 990-ending-end-pierrette-me
+*" Это звонит Хуссин." -> 990-ending-end-pierrette-name
+*:silence: (Положить трубку.) -> 990-ending-end-intro-disappear
+
+
+=== 990-ending-end-pierrette-chat
+
+"Удобно говорить?"
+ПЬЕРЕТТА: "Да... я... я на рынке Рунгис."
+*(Говорить прямо.) -> 990-ending-end-pierrette-chat-direct
+*(Ходить вокруг да около.) -> 990-ending-end-pierrette-chat-vague
+
+
+=== 990-ending-end-pierrette-chat-direct
+
+"Я бы хотел увидеть вас снова."
+Вы слышите, как она хихикает на другом конце провода. А может, вам это только показалось.
+-> 990-ending-end-pierrette-date
+
+
+=== 990-ending-end-pierrette-chat-vague
+
+"Я... я только что уволился с работы и... я не знаю, что делать сегодня. Обычно я сплю днем, но..."
+"Мне больше не хочется спать."
+-> 990-ending-end-pierrette-date
+
+
+=== 990-ending-end-pierrette-date
+
+ПЬЕРЕТТА: "Полдень. У меня. Адрес ещё помнишь?"
+"Да."
+ПЬЕРЕТТА: "Хорошо... Увидимся."
+Вы уже собираетесь повесить трубку, когда она останавливает вас.
+ПЬЕРЕТТА: "Подождите... Подождите."
+"Что?"
+ПЬЕРЕТТА: "Любите ли вы рыбу?"
+Вы ухмыляетесь.
+"Да."
+ПЬЕРЕТТА: "Хорошо."
+Она вешает трубку.
+-> 990-ending-end-intro-drive
+
+
+=== 990-ending-end-christophe-intro
+
+Вы набираете номер священника, с которым разговаривали... Звонок.
+-> _Christophe.Ending.Bad = 1 ? 990-ending-end-christophe-ending-bad
+-> _Christophe.Ending.Good = 1 ? 990-ending-end-christophe-ending-good
+-> _Christophe.Ending.Great = 1 ? 990-ending-end-christophe-ending-great
+-> 990-ending-end-christophe-answer
+
+
+=== 990-ending-end-christophe-ending-bad
+
+Может, он откажется с вами разговаривать после той последней поездки?
+-> 990-ending-end-christophe-answer
+
+
+=== 990-ending-end-christophe-ending-good
+
+Вы думаете о его ситуации... Он будет хорошим слушателем. Несмотря ни на что.
+-> 990-ending-end-christophe-answer
+
+
+=== 990-ending-end-christophe-ending-great
+
+В конце концов, вы ему помогли. Теперь его очередь слушать. Помочь вам.
+-> 990-ending-end-christophe-answer
+
+
+=== 990-ending-end-christophe-answer
+
+Он берет трубку. По голосу можно понять, что вы его не разбудили.
+КРИСТОФ: "Алло? Да?"
+Вы делаете глубокий вдох. Что-то в вашем горле... сжалось... затрудняет дыхание.
+КРИСТОФ: "Привет?"
+*(Ответить.) -> 990-ending-end-christophe-name
+*:silence: (Положить трубку.) -> 990-ending-end-christophe-hangup
+
+
+=== 990-ending-end-christophe-name
+
+"Это я. Хуссин. Водитель такси."
+Он приостанавливается... ненадолго. Он сразу же узнает вас.
+КРИСТОФ: "О! Я рад вас слышать..."
+$$ music-control: 40 $$
+$$ movie: OutroForestWalk $$
+$$ movie: black $$
+Все чувства, которые вы хоронили внутри, готовы вырваться наружу... Ваши колени дрожат.
+"Мне нужно поговорить с тобой."
+"Это срочно."
+-> END
+
+
+=== 990-ending-end-christophe-hangup
+
+Вы вешаете трубку. Вы переводите дыхание, медленно, неотрывно глядя на горизонт.
+Вам нужно время, чтобы собраться с мыслями.
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+
+
+=== 990-ending-end-lucieemilie-intro
+
+Вы набираете номер одного из своих бывших пассажиров. То поспешное предложение, как только они вышли из вашего такси...
+Мысль о том, что вы станете отцом... снова... проносится у вас в голове.
+Кто-то берёт трубку... младшая из двух.
+ЛЮСИ: "Да?"
+"Это я. Хуссин. Водитель такси."
+Вы слышите улыбку на другом конце линии. Вы уверены в этом.
+ЛЮСИ: "Ах. Какой сюрприз... особенно так рано..."
+"Извините за беспокойство, но я подумал о вашем предложении."
+ЛЮСИ: "И?"
+Солнце отражается от часовой башни вдалеке. Кажется, что она горит.
+*:positive: "Я принимаю." -> 990-ending-end-lucieemilie-yes
+*:negative: "Я не могу." -> 990-ending-end-lucieemilie-no
+
+
+=== 990-ending-end-lucieemilie-yes
+
+$$ music-control: 40 $$
+$$ reveal: 027_04 $$
+$$ movie: OutroForestWalk $$
+$$ movie: black $$
+Проходит около 10 секунд, прежде чем она наконец реагирует...
+ЛЮСИ: "Спасибо... Хуссин."
+-> END
+
+
+=== 990-ending-end-lucieemilie-no
+
+ЛЮСИ: "Я понимаю."
+Ее голос не изменился. Она быстро объясняет, что ей нужно идти, и через пять секунд вешает трубку.
+Вам нужно время, чтобы собраться с мыслями.
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+
+
+=== 990-ending-end-ade-intro
+
+Вы набираете номер Эйда. Вы знаете его наизусть: ваш брат повторял его снова и снова, когда они только начали встречаться.
+Вы единственный человек, который знал, что он влюблен в нее... В то время вы все еще думали, что он способен на любовь.
+АДЕ: "Да?"
+Вы подносите телефон к уху.
+*(Ответить.) -> 990-ending-end-ade-name-introA
+*:silence: (Ничего не говорить.) -> 990-ending-end-ade-silence
+*(Положить трубку.) -> 990-ending-end-ade-hangup
+
+
+=== 990-ending-end-ade-silence
+
+Вы не можете вымолвить ни слова.
+АДЕ: "Хуссин? Это ты?"
+*(Ответить.) -> 990-ending-end-ade-name-introB
+*(Положить трубку.) -> 990-ending-end-ade-hangup
+
+
+=== 990-ending-end-ade-hangup
+
+Вы прерываете разговор... выключаете телефон...
+У вас голова идет кругом.
+О чём вы думали? Что вы теперь делаете?
+*:taxi: (Вернуться в машину.) -> 990-ending-end-intro-drive
+*(Исчезнуть в лесу.) -> 990-ending-end-intro-disappear
+
+
+=== 990-ending-end-ade-name-introA
+
+"Это я. Это Хуссин."
+АДЕ: "Я знаю."
+-> 990-ending-end-ade-name
+
+
+=== 990-ending-end-ade-name-introB
+
+"Да."
+АДЕ: "Что происходит?"
+-> 990-ending-end-ade-name
+
+
+=== 990-ending-end-ade-name
+
+$$ music-control: 40 $$
+"Можно... можно мне вернуться домой?"
+Ваше последнее слово звучит так, будто его скомкали и выбросили в сточную канаву.
+АДЕ: "Когда захочешь, Хуссин."
+$$ movie: OutroForestWalk $$
+$$ movie: black $$
+АДЕ: "Когда захочешь."
+-> END
+
+
+=== 990-ending-end-jacquie-intro
+
+Вы набираете номер Жакки. Она отвечает на первом же звонке.
+Ее теплый голос сразу же успокаивает вас, несмотря на то, что она звучит обеспокоенно.
+ЖАКИ: "Эй, малыш? Ты в порядке?"
+"Привет, Жакки... Я тебя разбудил?"
+ЖАКИ: "Ты никогда не звонишь. Что случилось?"
+Ваше горло сжимается.
+$$ music-control: 40 $$
+"Я думаю, мне... мне нужно поспать."
+ЖАКИ: "Малыш... приходи. Я приготовлю тебе завтрак... что-нибудь сытное..."
+Она продолжает говорить, но вы уже не слушаете. Ее слова смешиваются.
+$$ movie: OutroForestWalk $$
+$$ movie: black $$
+Наконец-то вы... свободны.
+-> END
+
+

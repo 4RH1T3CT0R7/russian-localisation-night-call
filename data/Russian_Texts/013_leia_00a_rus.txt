@@ -1,0 +1,15 @@
+
+=== leia-00a-start
+
+$$ movie: lamparo_on, display_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+$$ anim: IDLE_BASIC $$
+$$ reveal: 013_00 $$
+Ваша следующая пассажирка не просто садится, она бросается внутрь.
+Энергичная, живая, болтливая, она выглядит так, будто никогда не останавливается.
+Она дает вам свой адрес и тяжело вздыхает.
+$$ travel: start $$
+$$ music-control: 0 $$
+Вы начинаете движение.
+
+

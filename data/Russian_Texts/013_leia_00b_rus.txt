@@ -1,0 +1,14 @@
+
+=== leia-00b-start
+
+$$ movie: lamparo_on, display_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+$$ anim: IDLE_BASIC $$
+Вы узнаёте девушку, садящуюся в ваше такси...
+Та самая юная киноманка, которая не может перестать двигаться, говорить, думать.
+Она поднимает взгляд, узнаёт вас и радостно хлопает в ладоши.
+$$ travel: start $$
+$$ music-control: 0 $$
+Вы начинаете движение.
+
+

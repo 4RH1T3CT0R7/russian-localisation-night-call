@@ -1,0 +1,12 @@
+
+=== ade-00b-start
+
+$$ anim: IDLE_BASIC $$
+$$ movie: lamparo_on, display_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+Пассажирка, вошедшая в такси, — постоянная клиентка: Аде, экстрасенс, которую вы знаете уже... много лет.
+Она снова называет вам свой адрес, награждая привычным "спасибо, малыш!"
+$$ travel: start $$
+$$ music-control: 0 $$
+
+

@@ -1,0 +1,22 @@
+%% Scene Name: " Gas Station Outro "
+
+=== gasstation-leave-intro
+
+-> _GasStation.Visit = 0 ? gasstation-leave-reveal
+-> gasstation-leave
+
+
+=== gasstation-leave-reveal
+
+Раскрытие %% разблокировано: вы посетили свою первую заправочную станцию.
+-> gasstation-leave
+
+
+=== gasstation-leave
+
+%% SOUND FX: door closing.
+{ _GasStation.Visit += 1 }
+Вы садитесь в такси и уезжаете.
+-> END
+
+

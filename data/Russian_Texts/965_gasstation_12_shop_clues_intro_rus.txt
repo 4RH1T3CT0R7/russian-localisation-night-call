@@ -1,0 +1,124 @@
+%% Scene Name: Gas Station Shop Clues Intro
+
+%% Сцена, когда игрок спрашивает у клерка заправочной станции информацию об Убийце.
+
+=== gasstation-clue-intro-hub
+
+-> _GasStation.Clue.Left > 0 ? gasstation-clue-clue-hub
+-> gasstation-clue-noclue-hub
+
+
+=== gasstation-clue-clue-hub
+
+-> ??gasstation-clue-introA | gasstation-clue-introB | gasstation-clue-introC | gasstation-clue-introD | gasstation-clue-introE
+
+
+=== gasstation-clue-noclue-hub
+
+-> ??gasstation-clue-noclueA | gasstation-clue-noclueB | gasstation-clue-noclueC
+
+
+=== gasstation-clue-introA
+
+{ _GasStation.Clue.Left -= 1 }
+"Скажите... Такой парень, как вы, который проводит здесь почти все ночи... Вы ведь должны что-то знать об убийце, верно?"
+Он поднимает голову и, кажется, почти счастлив, что вы затронули эту тему...
+-> _Killer.Is.Judge = 1 ? gasstation-clue-judge
+-> _Killer.Is.Sandman = 1 ? gasstation-clue-sandman
+-> _Killer.Is.Angel = 1 ? gasstation-clue-angel
+
+
+=== gasstation-clue-introB
+
+{ _GasStation.Clue.Left -= 1 }
+"Мне интересно..."
+Вы сразу же заговорили о серийном убийце. Кассир поднимает глаза, явно взволнованный этой темой...
+-> _Killer.Is.Judge = 1 ? gasstation-clue-judge
+-> _Killer.Is.Sandman = 1 ? gasstation-clue-sandman
+-> _Killer.Is.Angel = 1 ? gasstation-clue-angel
+
+
+=== gasstation-clue-introC
+
+{ _GasStation.Clue.Left -= 1 }
+"Вы читали газеты? Они только о нем и говорят..."
+Просто случайное замечание о серийном убийце. Парень за прилавком, похоже, интересуется этим делом...
+-> _Killer.Is.Judge = 1 ? gasstation-clue-judge
+-> _Killer.Is.Sandman = 1 ? gasstation-clue-sandman
+-> _Killer.Is.Angel = 1 ? gasstation-clue-angel
+
+
+=== gasstation-clue-introD
+
+{ _GasStation.Clue.Left -= 1 }
+"Этот серийный убийца - безумие..."
+Клерк прерывает вас, указывая сердитым пальцем на выставленные перед ним газеты.
+ПРОДАВЕЦ: "Вы видели, как полиция хреново его ловит?"
+Вы улыбаетесь... и позволяете ему продолжать говорить...
+-> _Killer.Is.Judge = 1 ? gasstation-clue-judge
+-> _Killer.Is.Sandman = 1 ? gasstation-clue-sandman
+-> _Killer.Is.Angel = 1 ? gasstation-clue-angel
+
+
+=== gasstation-clue-introE
+
+{ _GasStation.Clue.Left -= 1 }
+Вы изучаете обложки газет и журналов. Серийный убийца - на первых страницах всех из них.
+"Это безумие, не так ли? Можно подумать, они уже поймали его..."
+Клерк улыбается... Вы замечаете блеск в его глазах: этот парень хочет вам что-то сказать...
+-> _Killer.Is.Judge = 1 ? gasstation-clue-judge
+-> _Killer.Is.Sandman = 1 ? gasstation-clue-sandman
+-> _Killer.Is.Angel = 1 ? gasstation-clue-angel
+
+
+=== gasstation-clue-judge
+
+$$ clue: clue_judge_gas_01, clue_judge_gas_02, clue_judge_gas_03, clue_judge_gas_04, clue_judge_gas_05 $$
+{ _Found.Clue.Today = 1 }
+-> END
+
+
+=== gasstation-clue-sandman
+
+$$ clue: clue_sand_gas_01, clue_sand_gas_02, clue_sand_gas_03, clue_sand_gas_04, clue_sand_gas_05 $$
+{ _Found.Clue.Today = 1 }
+-> END
+
+
+=== gasstation-clue-angel
+
+$$ clue: clue_angel_gas_01, clue_angel_gas_02, clue_angel_gas_03, clue_angel_gas_04, clue_angel_gas_05 $$
+{ _Found.Clue.Today = 1 }
+-> END
+
+
+=== gasstation-clue-noclueA
+
+Клерк пожимает плечами, когда вы задаете вопрос о серийном убийце.
+ПРОДАВЕЦ: "Ну... я ничего не знаю."
+Его фраза затягивается до патетики.
+ПРОДАВЕЦ: "Я просто продаю кофе и бензин."
+Вы понимающе киваете.
+%% Вернуться в меню магазина.
+-> END
+
+
+=== gasstation-clue-noclueB
+
+Клерк пристально смотрит вам в глаза.
+ПРОДАВЕЦ: "В какой именно момент вы подумали... что меня это волнует?"
+Вы пожимаете плечами. Он тоже, наверное, просто чтобы позлить вас.
+%% Вернуться в меню магазина.
+-> END
+
+
+=== gasstation-clue-noclueC
+
+ПРОДАВЕЦ: "Я... Я не знаю, чувак."
+Он опускает глаза и внезапно выглядит немного пристыженным.
+ПРОДАВЕЦ: "Обычно со мной никто не разговаривает. Ты первый за... месяц? Что-то в этом роде."
+Вы сочувственно улыбаетесь ему.
+%% Вернуться в меню магазина.
+-> END
+
+

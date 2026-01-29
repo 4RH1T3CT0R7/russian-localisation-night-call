@@ -1,0 +1,729 @@
+Рост = 1м89.
+Шеф-повар ресторана La Pierre в Париже.
+В финансовых затруднениях.
+В молодости была активисткой.
+Часть культа "Лунная плоть".
+clue_sand_customer_geraldine_02.title
+Groupe Diamant - сомнительная компания
+UI.INVESTIGATION.INVESTIGATE
+Удерживайте, чтобы исследовать
+UI.ROOM.TOOLTIP.DOCUMENT.INVESTIGATE
+Придержите, чтобы расследовать
+GC.SUSPECT.NAME.HERVE
+clue_angel_fileherve_02.title
+Эрве якобы ограбил продавца рыбы.
+clue_judge_julian_04.title
+Эрве получил деньги от суда над Риктодином
+clue_judge_park_02.title
+Эрве работал на "Жертву 2" в 90-е годы.
+clue_judge_park_03.title
+Эрве просил деньги у Жертвы 2
+GC.SUSPECT.TT.HERVE
+Бездомный в течение последних десяти лет, Эрве несколько раз подвергался арестам и тюремному заключению за кражи со взломом и воровство.
+clue_angel_fileherve_01.title
+Эрве подозревается во многих взломах.
+clue_angel_fileherve_01.source
+Полицейское досье Эрве
+clue_angel_fileherve_02.source
+Полицейское досье Эрве
+doc_angel_fileherve.title
+Полицейское досье Эрве
+clue_angel_customer_herve_01.source
+Свидетельство Эрве
+clue_judge_customer_herve_01.source
+Свидетельство Эрве
+clue_sand_customer_herve_01.source
+Свидетельство Эрве
+clue.source.driver
+clue_angel_radioshow01_01.source
+Слышал по радио...
+clue_angel_radioshow02_01.source
+Слышал по радио...
+clue_angel_radioshow02_02.source
+Слышал по радио...
+clue_angel_radioshow03_01.source
+Слышал по радио...
+clue_angel_radioshow03_02.source
+Слышал по радио...
+clue_judge_radioshow01_01.source
+Слышал по радио...
+clue_judge_radioshow01_02.source
+Слышал по радио...
+clue_judge_radioshow02_01.source
+Слышал по радио...
+clue_judge_radioshow03_01.source
+Слышал по радио...
+clue_judge_radioshow04_01.source
+Слышал по радио...
+clue_judge_radioshow04_02.source
+Слышал по радио...
+clue_sand_radioshow01_01.source
+Слышал по радио...
+clue_sand_radioshow02_01.source
+Слышал по радио...
+clue_sand_radioshow03_01.source
+Слышал по радио...
+clue_sand_radioshow04_01.source
+Слышал по радио...
+clue_angel_customer_rumor_01.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_02.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_03.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_04.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_05.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_06.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_07.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_08.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_09.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_10.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_11.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_12.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_13.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_14.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_01.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_02.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_03.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_04.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_05.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_06.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_07.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_08.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_09.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_10.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_01.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_02.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_03.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_04.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_05.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_06.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_07.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_08.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_09.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_10.source
+Слышал в вашем такси...
+UI.ROOM.CLUE.DISCOVERED.HELP
+Доступно в вашем номере
+clue_angel_journal09_01.title
+Количество взломов растет
+clue_angel_journal04_01.title
+Все больше ультраправых студентов в университетах
+clue_angel_radionews01_01.source
+Слышал в новостях...
+clue_angel_radionews02_01.source
+Слышал в новостях...
+clue_angel_radionews03_01.source
+Слышал в новостях...
+clue_angel_radionews04_01.source
+Слышал в новостях...
+clue_angel_radionews05_01.source
+Слышал в новостях...
+clue_angel_radionews06_01.source
+Слышал в новостях...
+clue_angel_radionews06_02.source
+Слышал в новостях...
+clue_angel_radionews06_03.source
+Слышал в новостях...
+clue_angel_radionews07_01.source
+Слышал в новостях...
+clue_angel_radionews08_01.source
+Слышал в новостях...
+clue_judge_radionews01_01.source
+Слышал в новостях...
+clue_judge_radionews02_01.source
+Слышал в новостях...
+clue_judge_radionews03_01.source
+Слышал в новостях...
+clue_judge_radionews04_01.source
+Слышал в новостях...
+clue_judge_radionews05_01.source
+Слышал в новостях...
+clue_judge_radionews06_01.source
+Слышал в новостях...
+clue_judge_radionews07_01.source
+Слышал в новостях...
+clue_judge_radionews08_01.source
+Слышал в новостях...
+clue_judge_radionews08_02.source
+Слышал в новостях...
+clue_sand_radionews01_01.source
+Слышал в новостях...
+clue_sand_radionews02_01.source
+Слышал в новостях...
+clue_sand_radionews03_01.source
+Слышал в новостях...
+clue_sand_radionews04_01.source
+Слышал в новостях...
+clue_sand_radionews04_02.source
+Слышал в новостях...
+clue_sand_radionews05_01.source
+Слышал в новостях...
+clue_sand_radionews06_01.source
+Слышал в новостях...
+clue_sand_radionews07_01.source
+Слышал в новостях...
+clue_sand_radionews08_01.source
+Слышал в новостях...
+clue_angel_journal01_01.source
+Прочитайте в газете...
+clue_angel_journal02_01.source
+Прочитайте в газете...
+clue_angel_journal03_01.source
+Прочитайте в газете...
+clue_angel_journal04_01.source
+Прочитайте в газете...
+clue_angel_journal05_01.source
+Прочитайте в газете...
+clue_angel_journal06_01.source
+Прочитайте в газете...
+clue_angel_journal07_01.source
+Прочитайте в газете...
+clue_angel_journal08_01.source
+Прочитайте в газете...
+clue_angel_journal09_01.source
+Прочитайте в газете...
+clue_angel_journal10_01.source
+Прочитайте в газете...
+clue_judge_journal01_01.source
+Прочитайте в газете...
+clue_judge_journal01_02.source
+Прочитайте в газете...
+clue_judge_journal02_01.source
+Прочитайте в газете...
+clue_judge_journal03_01.source
+Прочитайте в газете...
+clue_judge_journal04_01.source
+Прочитайте в газете...
+clue_judge_journal05_01.source
+Прочитайте в газете...
+clue_judge_journal05_02.source
+Прочитайте в газете...
+clue_judge_journal06_01.source
+Прочитайте в газете...
+clue_judge_journal07_01.source
+Прочитайте в газете...
+clue_judge_journal08_01.source
+Прочитайте в газете...
+clue_judge_journal08_02.source
+Прочитайте в газете...
+clue_sand_journal01_01.source
+Прочитайте в газете...
+clue_sand_journal02_01.source
+Прочитайте в газете...
+clue_sand_journal03_01.source
+Прочитайте в газете...
+clue_sand_journal04_01.source
+Прочитайте в газете...
+clue_sand_journal05_01.source
+Прочитайте в газете...
+clue_sand_journal06_01.source
+Прочитайте в газете...
+clue_sand_journal07_01.source
+Прочитайте в газете...
+clue_sand_journal08_01.source
+Прочитайте в газете...
+clue_sand_journal09_01.source
+Прочитайте в газете...
+clue_sand_journal10_01.source
+Прочитайте в газете...
+clue_angel_church_02.source
+В церкви Гильды
+GC.CLUE.NAME.CHURCH.LINK.VIC01
+Связано с церковью
+GC.CLUE.NAME.CHURCH.LINK.VIC02
+Связано с церковью
+UI.CREDITS.INTRO.COLLABORATION
+в сотрудничестве с
+clue_judge_customer_claudia_01.source
+Информация о Клаудии
+clue_sand_suspectsintel_01.source
+Подозреваемые Интеллект
+clue_sand_suspectsintel_02.source
+Подозреваемые Интеллект
+clue_sand_suspectsintel_03.source
+Подозреваемые Интеллект
+doc_sand_suspectsintel.title
+Подозреваемые Интеллект
+poi_sand_newsroom.title
+Отдел новостей ИнфоТВ
+guess_angel_sus01_01.title
+Является ли Убийца религиозным человеком?
+GC.SUSPECT.NAME.JONAS
+clue_angel_hacker_02.title
+Джонас = лидер темной веб-группы
+clue_angel_hacker_01.title
+Джонас = опасный человек
+clue_angel_hacker_03.title
+Джонас = проверка теории
+clue_angel_customer_jonas_01.title
+Джонас считает, что мы находимся в симуляции.
+clue_judge_julian_01.source
+Файлы Джулиана
+clue_judge_julian_02.source
+Файлы Джулиана
+clue_judge_julian_03.source
+Файлы Джулиана
+clue_judge_julian_04.source
+Файлы Джулиана
+clue_judge_julian_05.source
+Файлы Джулиана
+doc_judge_julian.title
+Файлы Джулиана
+UI.STATION.SHOP.BUY
+clue_angel_kcase_04.title
+ОД = перерезанное горло, слова написаны кровью, кровь отсутствует
+clue_judge_autopsy03_01.title
+Никаких признаков насилия
+clue_judge_autopsy04_01.title
+Никаких признаков насилия
+UI.TAXI.NEWSPAPER.HOW
+Газета отсутствует
+clue_angel_customer_ludwig_01.title
+Запах свечи во время разговора с Людвигом
+
+=== pierrette-01-start
+
+$$ anim: IDLE_DRIVER $$
+$$ movie: lamparo_on, display_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+$$ tip: medium $$
+Ваш следующий пассажир забирается в кабину и хлопает дверью. Все такси трясется несколько секунд.
+$$ anim-link: DRIVER_2_WINDOW $$
+Когда она говорит вам, куда хочет пойти, ее голос прорезает ночь. У нее довольно выраженный испанский акцент… и интонация, которую вы сразу узнаете.
+$$ travel: start $$
+$$ reveal: 072_00 $$
+$$ music-control: 0 $$
+"Вы из Марселя?"
+$$ anim-link: WINDOW_2_DRIVER $$
+Она поднимает глаза на тебя.
+ПЬЕРЕТТА: "Да…"
+Ты уловишь удивление в ее голосе.
+ПЬЕРЕТТА: "Откуда ты это знаешь?"
+"Я узнал ваш акцент."
+Пьеретта: "Никто не узнает моего акцента. Журналисты до сих пор думают, что я испанец…"
+
+
+=== pierrette-01-whoiam
+
+"Журналисты?"
+$$ anim-link: DRIVER_2_SAD $$
+Она смотрит на вас с кинжалами, а затем обрушивает на вас шквал гнева.
+$$ music-control: 20 $$
+"Я должна знать, кто вы?"
+ПЬЕРЕТТА: "Я Пьеретта Мандерас."
+:silence: (Пусть продолжает говорить.)
+ПЬЕРЕТТА: "Я шеф-повар в "La Pierre"."
+Вы киваете.
+
+
+=== pierrette-01-whoiam-knowrestaurant
+
+$$ reveal: 072_02 $$
+"Я слышал об этом…"
+ПЬЕРЕТТА: "От других пассажиров? Вероятно, они были последними…"
+$$ anim-link: SAD_2_DRIVER $$
+
+
+=== pierrette-01-whoiam-dontknow
+
+$$ anim-link: SAD_2_DRIVER $$
+"Не знаю его."
+$$ anim-link: DRIVER_2_SMILE $$
+Вы даже не успели закончить фразу, как она улыбнулась вам.
+ПЬЕРЕТТА: "Не переживайте. Сейчас уже слишком поздно."
+$$ anim-link: SMILE_2_DRIVER $$
+
+
+=== pierrette-01-closing
+
+ПЬЕРЕТТА: "Я закрываю ресторан."
+*"Мало клиентов?" -> pierrette-01-closing-notenough
+*"Слишком много работы?" -> pierrette-01-closing-work
+*Он делает глубокий вдох. -> pierrette-01-closing-why
+
+
+=== pierrette-01-closing-notenough
+
+ПЬЕРЕТТА: "Нет, нет… Наоборот."
+ПЬЕРЕТТ: "У нас есть резервы на книги на несколько недель вперед…"
+
+
+=== pierrette-01-closing-work
+
+ПЬЕРЕТТА: "Частично…"
+ПЬЕРЕТТА: "Это сложная профессия… требующая… никаких перерывов… никаких простоев. Всегда есть чем заняться."
+
+
+=== pierrette-01-closing-why
+
+ПЬЕРЕТТА: "Мы…"
+
+
+=== pierrette-01-closing-explanation
+
+Она делает паузу, пытаясь подобрать слова.
+$$ anim-link: DRIVER_2_SAD $$
+ПЬЕРЕТТА: "Видите ли… мы потеряли звезду."
+ПЬЕРЕТТА: "Раньше у нас было две… а теперь только одна."
+ПЬЕРЕТТА: "Я знаю, это кажется мелочью — всего лишь звезда от ресторанного критика. Но это начало конца… медленной и мучительной смерти."
+$$ movie $$
+ПЬЕРЕТТА: "Я не хочу через это проходить."
+ПЬЕРЕТТА: "Поэтому я закрываюсь. Сегодня вечером я всем сказала: доработаем неделю и сворачиваемся."
+ПЬЕРЕТТА: "Я выплачу всем зарплату за два месяца, чтобы они могли насладиться праздниками и немного отдохнуть…"
+$$ anim-link: SAD_2_WINDOW $$
+Что-то снаружи привлекает её внимание.
+$$ movie: stop $$
+ПЬЕРЕТТА: "Нам всем действительно нужен перерыв."
+*"Вы уйдёте, не дав бой?" -> pierrette-01-fightback
+*:puzzled: "Тяжёлая профессия?" -> pierrette-01-workplace-intro
+*:silence: (Ничего не говорить.) -> pierrette-01-workplace
+
+
+=== pierrette-01-fightback
+
+ПЬЕРЕТТА: "Устроить драку?"
+Вы задели чувства пассажира. Вы можете сказать, что она злится… что она делает глубокие вдохи, чтобы подавить гнев.
+ПЬЕРЕТТА: "Я не буду говорить тебе, как делать твою работу… И я не собираюсь жаловаться."
+$$ dialogspeed: slow $$
+ПЬЕРЕТТА: "Не может быть и речи."
+$$ dialogspeed: normal $$
+Она отводит взгляд — видно, что она успокаивается.
+
+
+=== pierrette-01-workplace-intro
+
+ПЬЕРЕТТА: "Очень. Это безжалостно: выживают лучшие, все остальные сдаются."
+Она отворачивает голову, как будто хочет дистанцироваться от того, что говорит.
+
+
+=== pierrette-01-workplace
+
+ПЬЕРЕТТА: "Как и вы… мы работаем в неурочные часы. Выходные. Праздники. В течение всего лета."
+ПЬЕРЕТТА: "Я знаю, ты понимаешь."
+$$ anim-link: WINDOW_2_SAD $$
+Она тихо всхлипывает.
+ПЬЕРЕТТА: "Я хорошо зарабатываю. Но что еще важнее, я думаю, это жизнь, которую я выбрал."
+$$ movie $$
+ПЬЕРЕТТА: "Надеюсь, ты тоже живешь той жизнью, которую выбрал…"
+
+
+=== pierrette-01-pressure
+
+Она цокает языком и ругается, хотя не совсем слышно, что она сказала.
+ПЬЕРЕТТА: "Давление… невероятное."
+ПЬЕРЕТТ: "Это то, что заставляет нас усердно работать, проявлять творческий подход, постоянно совершенствоваться… Но когда теряешь звезду…"
+$$ movie: stop $$
+Она берет перерыв… столь необходимый. Ее голос вот-вот сорвется.
+Пьеретта: "Весь твой бизнес развалится, когда ты потеряешь звезду. Все ваши сомнения возвращаются, чтобы преследовать вас."
+ПЬЕРЕТТА: "Что бы вы ни делали, это битва проигрышная."
+ПЬЕРЕТТ: "Если вы попытаетесь сохранить качество вашего заведения, вас назовут слепым и недееспособным."
+Пьеретта: "Если ты попытаешься что-то по-настоящему изменить, они скажут, что ты несерьёзен… что ты нестабилен."
+$$ anim-link: SAD_2_DRIVER $$
+Ее голос — не более чем шепот.
+ПЬЕРЕТТА: "Вот почему я заканчиваю."
+*"Это проигрышная битва…" -> pierrette-01-pressure-future
+*"Нет больше энергии…" -> pierrette-01-pressure-strength
+*:smile: (Кивок.) -> pierrette-01-pressure-silence
+
+
+=== pierrette-01-pressure-future
+
+ПЬЕРЕТТА: "Да, кости явно загружены…"
+
+
+=== pierrette-01-pressure-strength
+
+ПЬЕРЕТТА: "Нет больше желания. Больше никаких гивашитов."
+
+
+=== pierrette-01-pressure-silence
+
+ПЬЕРЕТТ: "Я думаю, дни одной карьеры в жизни прошли. Наши родители…"
+Она пересекает ваш взгляд в зеркале заднего вида… и быстро поправляется.
+ПЬЕРЕТТА: "Мои родители всю жизнь работали на ОДНОЙ работе. Даже когда они приехали жить в Марсель… Для меня это другое."
+
+
+=== pierrette-01-pressure-end
+
+$$ anim-link: DRIVER_2_WINDOW $$
+Она пожимает плечами. Она смотрит на дорогу, идущую мимо.
+*"Что ты собираешься делать теперь?" -> pierrette-01-future-now
+*"Собираетесь ли сменить профессию?" -> pierrette-01-future-newjob
+*:silence: (Ничего не говорить.) -> pierrette-01-future-silence
+
+
+=== pierrette-01-future-now
+
+ПЬЕРЕТТА: "Продолжай готовить."
+
+
+=== pierrette-01-future-newjob
+
+ПЬЕРЕТТА: "Я? Сменить профессию?"
+$$ anim-link: WINDOW_2_SMILE $$
+У нее восхитительный смех.
+ПЬЕРЕТТА: "Никогда!"
+$$ anim-link: SMILE_2_WINDOW $$
+
+
+=== pierrette-01-future-silence
+
+ПЬЕРЕТТА: "Теперь мне нужно решить будущее…"
+ПЬЕРЕТТА: "Конечно, я не собираюсь все останавливать. Мне просто нужно подзарядить батарейки…"
+ПЬЕРЕТТА: "Вообще-то, это такая парижская штука… Подзарядка батареек."
+ПЬЕРЕТ: "На юге Франции никому не нужно подзаряжать батарейки."
+$$ anim-link: WINDOW_2_SMILE $$
+Она смеется.
+$$ anim-link: SMILE_2_WINDOW $$
+
+
+=== pierrette-01-future
+
+ПЬЕРЕТТА: "Я начала готовить, потому что любила рыбу и морепродукты. Я не собираюсь останавливаться из-за всех этих… тупоголовых парижан."
+ПЬЕРЕТТА: "Я вернусь к готовке на МОЕЙ кухне и буду делать то, что хочу."
+$$ music-control: 40 $$
+ПЬЕРЕТТА: "Море… в нём столько красоты… Я хочу вернуться к рыбалке, понимаете? Погрузить руки в рыбу…"
+Она замолкает. Вы замечаете искренность в её голосе… Она говорит с вами как с другом.
+ПЬЕРЕТТА: "Вы тоже из Марселя? Да?"
+Вы киваете.
+$$ anim-link: WINDOW_2_DRIVER $$
+ПЬЕРЕТТА: "Из какого района?"
+*(Сказать правду.) -> pierrette-01-marseille-truth
+*:puzzled: (Замешкаться.) -> pierrette-01-marseille-hesitate
+*Вы улыбаетесь. -> pierrette-01-marseille-lie
+
+
+=== pierrette-01-marseille-truth
+
+$$ reveal: 072_03 $$
+"Ла Тимоне."
+Ваш район. Ваше детство.
+Ваш пассажир издает небольшой шум в ответ.
+Пьеретта: "Я полагаю, это не лучший район для моего детства? Что там с шоссе…"
+Она вздыхает. На секунду вы слышите, как над вашей головой гудит шоссе. Машины ездят туда и обратно, днем ​​и ночью.
+ПЬЕРЕТТА: "Хотя… не самое худшее."
+
+
+=== pierrette-01-marseille-hesitate
+
+"Я… Это сложно."
+Время от времени она произносит какое-нибудь слово.
+ПЬЕРЕТТА: "Простите, если я слишком любопытна…"
+*(Сказать правду.) -> pierrette-01-marseille-truth
+*:silence: (Ничего не говорить.) -> pierrette-01-end-intro
+*Вы улыбаетесь. -> pierrette-01-marseille-lie
+
+
+=== pierrette-01-marseille-lie
+
+$$ reveal: 072_04 $$
+"Обань."
+ПЬЕРЕТТА: "Ах. Хороший район. Хорошая жизнь, да?"
+Она подмигивает.
+
+
+=== pierrette-01-end-intro
+
+$$ movie $$
+"Что вы поете?"
+Ваша пассажирка начинает говорить тихим голосом. Вы не можете понять, говорит она с вами или сама с собой…
+ПЬЕРЕТТА: "Я хочу найти уютное местечко у побережья."
+ПЬЕРЕТТА: "У меня есть деньги. Есть время. Есть желание. У меня есть всё."
+$$ anim-link: DRIVER_2_SAD $$
+Её голос понижается.
+$$ movie: stop $$
+ПЬЕРЕТТА: "Я пошлю их всех к чёрту."
+Она смеётся глубоким, утробным смехом.
+$$ anim-link: SAD_2_DRIVER $$
+
+
+=== pierrette-01-end
+
+$$ travel: stop $$
+Вы паркуетесь перед неприметным серым зданием. Ваша пассажирка собирается заплатить.
+ПЬЕРЕТТА: "Я живу в крошечной квартире… минимум вещей… Обычно я ужинаю примерно в это время."
+Она вздыхает.
+$$ reveal: 072_05 $$
+$$ anim-link: DRIVER_2_SMILE $$
+ПЬЕРЕТТА: "Хотите подняться?"
+Вы смотрите прямо на неё.
+*"Не могу." -> pierrette-01-end-cant
+*:positive: "Ладно, но ненадолго." -> pierrette-01-end-nottoolong
+*"Нет, спасибо." -> pierrette-01-end-nothanks
+*:silence: (Ничего не говорить.) -> pierrette-01-end-silence
+
+
+=== pierrette-01-end-cant
+
+$$ reveal: 072_07 $$
+Она откровенно улыбается.
+$$ anim-link: SMILE_2_DRIVER $$
+ПЬЕРЕТТА: "Хорошо. Оставьте сдачу и… хорошего вечера."
+
+
+=== pierrette-01-end-nottoolong
+
+$$ reveal: 072_06 $$
+Она одаривает тебя теплой улыбкой.
+
+
+=== pierrette-01-end-silence
+
+$$ reveal: 072_07 $$
+Проходит секунда.
+$$ anim-link: SMILE_2_DRIVER $$
+ПЬЕРЕТТА: "Ладно…"
+
+
+=== pierrette-01-end-nothanks
+
+$$ reveal: 072_07 $$
+На лице у нее вымученная улыбка.
+$$ anim-link: SMILE_2_DRIVER $$
+ПЬЕРЕТТА: "Хорошего вечера."
+
+
+=== pierrette-01-end-taxi
+
+$$ movie: lamparo_off, hide_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_int $$
+$$ tip: high $$
+$$ music-control: 60 $$
+Ваш пассажир хлопает дверью и уходит. Она исчезает в своем здании, не оглядываясь.
+
+
+=== pierrette-01-end-upstairs
+
+$$ movie: lamparo_off, hide_passenger $$
+$$ movie: black $$
+$$ sfx: sfx_gameplay_car_openclose_from_int $$
+Вы запираете такси и следуете за ней в здание.
+Она не врала о своем жилище: маленьком, простом, без каких-либо украшений. Строгий минимум.
+Она начинает двигаться по кухне.
+ПЬЕРЕТТА: "Хочешь чего-нибудь выпить?"
+*:positive: (Принять.) -> pierrette-01-end-upstairs-wine
+*:negative: "Нет." -> pierrette-01-end-upstairs-nowine
+
+
+=== pierrette-01-end-upstairs-nowine
+
+ПЬЕРЕТТА: "Ах, да… ты за рулем."
+Она откупоривает бутылку и наливает себе стакан.
+
+
+=== pierrette-01-end-upstairs-wine
+
+Смотришь, как она откупоривает бутылку и наливает два стакана… ты не упускаешь ни одного движения.
+ПЬЕРЕТТА: "Буш дю Рон. Ничего особенного, но должно сработать…"
+Вы ничего не знаете о вине… но считаете его исключительным.
+
+
+=== pierrette-01-end-upstairs2
+
+Пока она быстро готовит ужин, вы осматриваете ее жилище.
+Пока ничего подозрительного — похоже, это место принадлежит человеку, который много работает.
+Это прекрасный повод немного покопаться… но ты боишься оставить ее одну.
+*"Не возражаете, если я осмотрюсь?" -> pierrette-01-end-upstairs2-visit
+*"Где твоя ванная?" -> pierrette-01-end-upstairs2-toilets
+*(Смотрите на нее.) -> pierrette-01-end-upstairs2-watch
+
+
+=== pierrette-01-end-upstairs2-visit
+
+ПЬЕРЕТТА: "Оглядеться вокруг?"
+ПЬЕРЕТТА: "Да… я имею в виду… Осмотр моего особняка не займет много времени!"
+Вы решаете убедиться в этом сами.
+
+
+=== pierrette-01-end-upstairs2-toilets
+
+ПЬЕРЕТТА: "У входной двери, сразу за спальней…"
+Вы киваете и начинаете ходить.
+Это действительно маленькое место.
+
+
+=== pierrette-01-end-upstairs2-check
+
+Спальня выглядит настолько же узкой, насколько и удобной. Ванная чистая и простая. Вот и все.
+Ничего подозрительного. Никаких сюрпризов.
+Когда ты вернешься, она уже закончила готовить.
+
+
+=== pierrette-01-end-upstairs2-watch
+
+Она продолжает готовить и болтать. Голос ее звучит устало, но движения очень точны.
+
+
+=== pierrette-01-end-upstairs3
+
+ПЬЕРЕТТА: "Готово."
+Вы наблюдаете за её руками, пока она готовит вашу тарелку: мягкие, умелые, уверенные движения. Она профессионал.
+Она пододвигает к вам тарелку: рубинового цвета филе тунца, обжаренное с одной стороны, сырое с другой.
+Каперсы. Морковь. Белый овощ, который вы не можете узнать.
+ПЬЕРЕТТА: "О… Это засахаренная груша с имбирём."
+Вы пробуете блюдо: освежающее, лёгкое… немного пряное. Обычно вы не едите ничего настолько изысканного.
+Вы видите блеск в её глазах.
+Она кажется…
+Счастливой.
+Трахается...
+
+
+=== pierrette-01-end-downstairs
+
+$$ clue: clue_angel_customer_pierrette_01 $$
+$$ tip: none $$
+$$ music-control: 60 $$
+Через час вы спускаетесь вниз.
+Впервые за несколько месяцев... вы чувствуете себя спокойно.
+
+
+=== pierrette-01-end-downstairswine
+
+$$ reveal: 072_08 $$
+Голова немного кружится — как раз в меру.
+
+
+=== pierrette-01-end-downstairs2
+
+$$ movie: stop $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+Вы возвращаетесь в свое такси.
+Во рту вы по-прежнему можете ощутить все разнообразие вкусов.
+
+
+=== pierrette-01-departure
+
+Вы крепко держитесь за руль в течение минуты, прежде чем тронуться с места.
+
+

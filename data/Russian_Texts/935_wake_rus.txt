@@ -1,0 +1,157 @@
+%% Scene name: " Sleep: Wake Up "
+
+%% Эта сцена будет воспроизведена, когда Водитель проснется в своей комнате.
+
+=== wake-start
+
+$$ movie: black $$
+Вы открываете один глаз...
+-> _Day.Number = 7 ? wake-day7
+-> _Day.Number = 6 ? wake-day6
+-> wake-hub
+
+
+=== wake-day7
+
+У вас была тяжелая ночь. Беспокойная.
+Создается впечатление, что вы постарели на пять лет за несколько часов...
+-> ??wake-dream-hub | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro
+
+
+=== wake-day6
+
+Вы плохо спали... Иногда вы так устаете, что не можете отдохнуть.
+Вы хотели бы понять, как это вообще возможно...
+-> ??wake-dream-hub | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro | wake-good-outro
+
+
+=== wake-hub
+
+-> ??wake-dream-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub | wake-good-hub
+
+
+=== wake-dream-hub
+
+Фрагменты сна ещё не рассеялись...
+-> ??wake-dreamA | wake-dreamB | wake-dreamC | wake-dreamD | wake-dreamE | wake-dreamF | wake-dreamG
+
+
+=== wake-dreamA
+
+Незнакомая женщина предложила накормить вас семенами, которые упали с неба.
+-> wake-dream-outro
+
+
+=== wake-dreamB
+
+Странное животное, наполовину олень, наполовину морской конек, пыталось поцеловать вас в губы.
+-> wake-dream-outro
+
+
+=== wake-dreamC
+
+Вы рожали кошку.
+-> wake-dream-outro
+
+
+=== wake-dreamD
+
+Вы убирались в такси... и нашли кредитную карту без лимита. Но полиция остановила вас прежде, чем вы успели ею воспользоваться.
+-> wake-dream-outro
+
+
+=== wake-dreamE
+
+Сестры-близнецы приставали к вам в баре, но каждый раз, когда вы упоминали о своей работе, кто-то ронял стакан.
+В конце концов им это надоело, и они ушли.
+-> wake-dream-outro
+
+
+=== wake-dreamF
+
+Вы выступали в цирке... может быть, пантомимой?
+Теперь вы не так уверены.
+-> wake-dream-outro
+
+
+=== wake-dreamG
+
+Странная музыка заставила вас забраться на крышу вашей квартиры...
+Вы нашли Бюссе и весь её отряд там, прямо над вашей головой.
+"Ну... это было чертовски страшно."
+-> wake-dream-outro
+
+
+=== wake-dream-outro
+
+Вы быстро встаете, чтобы забыть обо всем этом.
+-> wake-end-intro
+
+
+=== wake-good-hub
+
+-> ??wake-goodA | wake-goodB | wake-goodC | wake-goodD | wake-goodE | wake-goodF | wake-goodG | wake-goodH
+
+
+=== wake-goodA
+
+Вы медленно потягиваетесь. На улице уже ночь.
+-> wake-good-outro
+
+
+=== wake-goodB
+
+На улице кромешная тьма. Пора на работу.
+-> wake-good-outro
+
+
+=== wake-goodC
+
+На секунду вы понадеялись, что доска с уликами - это тоже сон... но вы различили ее в тени.
+-> wake-good-outro
+
+
+=== wake-goodD
+
+У вас болит спина. Вам хочется закрыть глаза и снова заснуть.
+-> wake-good-outro
+
+
+=== wake-goodE
+
+Вы обращаете внимание на крики наверху. Хлопает дверь. Типично.
+-> wake-good-outro
+
+
+=== wake-goodF
+
+Вы начинаете насвистывать. Какую-то песню, которая звучит у вас в голове с тех пор, как вы проснулись, хотя вы не знаете, почему.
+Это будет долгая ночь.
+-> wake-good-outro
+
+
+=== wake-goodG
+
+Ваша студия действует на вас успокаивающе. Есть что-то особенное в жизни на мансарде... словно это последнее место перед небом.
+-> wake-good-outro
+
+
+=== wake-goodH
+
+Кто-то спускает воду в туалете, и вы слышите, как дрожат трубы. Одна из них проходит под вашей кроватью.
+Этот звук действует на вас... успокаивающе.
+-> wake-good-outro
+
+
+=== wake-good-outro
+
+Вы быстро встаете.
+-> wake-end-intro
+
+
+=== wake-end-intro
+
+...и через несколько минут вы уже выходите из своей студии.
+-> END
+
+

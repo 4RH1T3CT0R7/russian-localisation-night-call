@@ -1,0 +1,76 @@
+%% Название сцены: "Игра окончена: ты разрушен!"
+
+%% Эта сцена будет воспроизведена, когда игрок достигнет денежного лимита в -250 евро.На следующий день, когда он вернется домой…
+
+%% ANIMATIONS
+
+		%% $$ anim: IDLE_DRIVER $$
+
+		%% $$ anim: IDLE_WINDOW $$
+
+		%% $$ anim: IDLE_ARM $$
+
+		%% $$ anim: IDLE_SAD $$
+
+		%% $$ anim-link: DRIVER_2_WINDOW $$
+
+		%% $$ anim-link: WINDOW_2_DRIVER $$
+
+		%% $$ anim-link: WINDOW_2_SAD $$
+
+		%% $$ anim-link: SAD_2_WINDOW $$
+
+		%% $$ anim-link: DRIVER_2_ARM $$
+
+		%% $$ anim-link: ARM_2_DRIVER $$
+
+%% DATA
+
+  +++вызов пассажира: ДЛЯ ЭТОЙ СЦЕНЫ НЕТ ПАССАЖИРСКОГО ВЫЗОВА.
+
+		+++ anim-link: DRIVER_2_WINDOW -> TURNING_HEAD, IDLE_WINDOW
+
+		+++ anim-link: WINDOW_2_DRIVER -> TURNING_HEAD_REV, IDLE_DRIVER
+
+		+++ anim-link: WINDOW_2_SAD -> IDLE_SAD
+
+		+++ anim-link: SAD_2_WINDOW -> IDLE_WINDOW
+
+		+++ anim-link: DRIVER_2_ARM -> RAISING_ARM, IDLE_ARM
+
+		+++ anim-link: ARM_2_DRIVER -> LOWERING_ARM, IDLE_DRIVER
+
+=== gameover-ruined-01-start
+
+$$ movie: black $$
+Вы паркуетесь перед своим домом. Кто-то стучит в окно. Вы оглядываетесь и видите своего босса.
+Он садится на заднее сиденье с отсутствующим выражением лица.
+*" Какие-то проблемы, босс?" -> gameover-ruined-01-problem
+*" Все в порядке?" -> gameover-ruined-01-problem
+*:silence: (Ничего не говорить.) -> gameover-ruined-01-silence
+
+
+=== gameover-ruined-01-problem
+
+БОСС : "Я не знаю, как это сказать... но..."
+-> gameover-ruined-01-silence
+
+
+=== gameover-ruined-01-silence
+
+Он медленно вздыхает.
+БОСС : "У вас в банке не осталось ни одного евро, какого... Какого черта вы натворили?"
+"Я собираюсь расплатиться..."
+БОСС : "Нет. Слишком поздно... Простите, но... У меня нет выбора, мне нужно..."
+БОСС : "Мне нужно, чтобы вы сдали свое такси и разрешение. Так уж сложилось."
+У вас кружится голова. Вы едва слышите голос своего босса.
+Через несколько минут такси уезжает без вас. Вскоре появится полиция... Бюссе...
+Ваше лицо будет во всех газетах. Вся Франция будет уверена, что вы - убийца.
+Вы в полной жопе...
+$$ dialogspeed: fast $$
+В жопе...
+...
+$$ dialogspeed: normal $$
+-> END
+
+
