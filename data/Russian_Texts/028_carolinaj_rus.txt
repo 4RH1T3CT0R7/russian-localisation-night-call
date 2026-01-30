@@ -20,7 +20,7 @@ $$ music-control: 0 $$
 === customer-add-clue-outro
 
 КАРОЛИНА: — Сегодня на улице довольно холодно, не так ли?
-Вы кивете.Есть пассажиры, как эта пожилая женщина, которая сразу же нравится.
+Вы кивете. Есть пассажиры, как эта пожилая женщина, которая сразу же нравится.
 $$ anim-link: SAD_2_BASIC $$
 КАРОЛИНА: "Я почти чувствую, как холодный воздух окутывает уголки моего рта…"
 КАРОЛИНА: "Это забавное чувство, но чашка горячего чая может быстро его развеять".
@@ -265,6 +265,11 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 === customer-add-clue-judge
 
 $$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10 $$
+
+
+=== customer-add-clue-sandman
+
+$$ clue: clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
 
 
 === customer-add-clue-angel

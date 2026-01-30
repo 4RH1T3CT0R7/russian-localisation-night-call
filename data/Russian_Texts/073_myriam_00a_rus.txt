@@ -17,14 +17,34 @@ $$ anim: IDLE_WINDOW $$
 Через несколько минут вы решаете, что она, должно быть, няня: молодая, не обязательно обеспеченная, с выражением полнейшей скуки на лице.
 Вы часто подвозите таких, особенно в хороших районах.
 $$ anim: IDLE_DRIVER $$
+
+
+=== customer-add-clue
+
 Вы чувствуете, что ваша пассажирка хочет поговорить об убийце. Все просто: после первого убийства все думают, что им что-то известно.
 Все думают, что что-то видели.
 И эта пассажирка... не исключение...
-$$ anim: IDLE_DRIVER $$
+
+
+=== customer-add-clue-judge
+
+$$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10 $$
 
 
 === customer-add-clue-sandman
 
+$$ clue: clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
+
+
+=== customer-add-clue-angel
+
+$$ clue: clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_customer_rumor_03, clue_angel_customer_rumor_04, clue_angel_customer_rumor_05, clue_angel_customer_rumor_06, clue_angel_customer_rumor_07, clue_angel_customer_rumor_08, clue_angel_customer_rumor_09, clue_angel_customer_rumor_10, clue_angel_customer_rumor_11, clue_angel_customer_rumor_12, clue_angel_customer_rumor_13, clue_angel_customer_rumor_14 $$
+
+
+=== customer-add-clue-outro
+
+*"Хороший вечер?" -> myriam-00-evening
+*(Оставить ее в покое.) -> myriam-00-silence
 
 
 === myriam-00-evening

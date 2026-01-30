@@ -114,7 +114,7 @@ _Driver.Met.Fragonard=1?cop-06-mic-judge-met;;cop-06-mic-judge-unknown
 
 === cop-06-mic-sandman-met
 
-Бюссе: "Наш подозреваемый — опасный человек, раненое животное.Мне нужен кто-то спокойный, кто-то, кому я могу доверять." cop-06-mic-sandman-hub J _Driver.Met.Alexandre=1?cop-06-mic-sandman-met;;cop-06-mic-sandman-unknown $$ anim-link: SMILE
+Бюссе: "Наш подозреваемый — опасный человек, раненое животное. Мне нужен кто-то спокойный, кто-то, кому я могу доверять." cop-06-mic-sandman-hub J _Driver.Met.Alexandre=1?cop-06-mic-sandman-met;;cop-06-mic-sandman-unknown $$ anim-link: SMILE
 Z
 
 

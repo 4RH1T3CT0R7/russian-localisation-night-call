@@ -12,16 +12,19 @@ $$ reveal: 030_00 $$
 
 === customer-add-clue
 
+Обмениваются несколько слов... погода, налоги, пробки.
 Но тут... кто-то упоминает серийного убийцу. Вы наклоняетесь, чтобы послушать...
-Слухи.
-Может пригодиться.
+Обрывки информации, слухи, подслушанные разговоры.
+Вы запоминаете услышанное... Кто знает? Может пригодиться...
 
 
 === customer-add-clue-outro
 
-Ваш разум блуждает.Твои глаза смутно сканируют витрины магазинов.
-Вы включаете радио, нажимаете на циферблат, чтобы найти станцию, которая вам нравится.
-Рок-баллада 80-х... слишком мягкая.
+Ваш разум блуждает. Ваши глаза рассеянно скользят по витринам магазинов.
+Натриевый свет уличных фонарей словно капает в ваш мозг.
+Вы засыпаете. Вам нужно немного музыки, чтобы не уснуть...
+*:radio: (Включить музыку.) -> Peter-01-radio-intro
+*(Спросить пассажира.) -> Peter-01-start-sorry
 
 
 === Peter-01-start-sorry
@@ -293,6 +296,11 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 === customer-add-clue-judge
 
 $$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10 $$
+
+
+=== customer-add-clue-sandman
+
+$$ clue: clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
 
 
 === customer-add-clue-angel

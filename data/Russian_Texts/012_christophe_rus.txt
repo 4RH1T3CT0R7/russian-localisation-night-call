@@ -1017,6 +1017,11 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 $$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10 $$
 
 
+=== customer-add-clue-sandman
+
+$$ clue: clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
+
+
 === customer-add-clue-angel
 
 $$ clue: clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_customer_rumor_03, clue_angel_customer_rumor_04, clue_angel_customer_rumor_05, clue_angel_customer_rumor_06, clue_angel_customer_rumor_07, clue_angel_customer_rumor_08, clue_angel_customer_rumor_09, clue_angel_customer_rumor_10, clue_angel_customer_rumor_11, clue_angel_customer_rumor_12, clue_angel_customer_rumor_13, clue_angel_customer_rumor_14 $$

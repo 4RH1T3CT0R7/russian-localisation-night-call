@@ -13,6 +13,7 @@ $$ anim-link: SAD_2_PHONE $$
 
 === customer-add-clue
 
+Разговор переходит к обычным темам... изменение климата... политика... цены на недвижимость в Париже...
 Но тут... кто-то упоминает серийного убийцу. Вы наклоняетесь, чтобы послушать...
 Слухи.
 Может пригодиться.
@@ -220,8 +221,21 @@ $$ movie: lamparo_off, hide_passenger $$
 $$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10 $$
 
 
+=== customer-add-clue-sandman
+
+$$ clue: clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
+
+
 === customer-add-clue-angel
 
 $$ clue: clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_customer_rumor_03, clue_angel_customer_rumor_04, clue_angel_customer_rumor_05, clue_angel_customer_rumor_06, clue_angel_customer_rumor_07, clue_angel_customer_rumor_08, clue_angel_customer_rumor_09, clue_angel_customer_rumor_10, clue_angel_customer_rumor_11, clue_angel_customer_rumor_12, clue_angel_customer_rumor_13, clue_angel_customer_rumor_14 $$
+
+
+=== customer-add-clue-outro
+
+Пассажирка достает телефон... Но экран остается выключенным.
+Вы время от времени бросаете на нее взгляд в зеркало заднего вида.
+Она явно расстроена... встревожена... грустна.
+$$ anim-link: PHONE_2_SAD $$
 
 

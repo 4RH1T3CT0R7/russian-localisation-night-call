@@ -1399,6 +1399,20 @@ namespace NightCallRussian
                         }
                     }
 
+                    // Compute object base name for per-object passage lookup
+                    // e.g., "034_phil_01" -> "034_phil", "068_sonny_02" -> "068_sonny"
+                    string objBase = objName;
+                    {
+                        int lastUs = objBase.LastIndexOf('_');
+                        if (lastUs > 0)
+                        {
+                            string suffix = objBase.Substring(lastUs + 1);
+                            int dummy;
+                            if (int.TryParse(suffix, out dummy))
+                                objBase = objBase.Substring(0, lastUs);
+                        }
+                    }
+
                     // Replace lines per-passage with per-passage speaker mapping
                     int objReplacedCount = 0;
                     for (int pi = 0; pi < passages.Count; pi++)
@@ -1410,8 +1424,13 @@ namespace NightCallRussian
                         if (object.ReferenceEquals(titleObj, null)) continue;
                         string passageTitle = titleObj.ToString();
 
-                        List<string> russianLines;
-                        if (!RussianPassages.TryGetValue(passageTitle, out russianLines))
+                        // Per-object qualified lookup first (prevents cross-contamination
+                        // of shared passages like customer-add-clue-outro between passengers)
+                        List<string> russianLines = null;
+                        RussianPassages.TryGetValue(objBase + ":" + passageTitle, out russianLines);
+                        if (russianLines == null)
+                            RussianPassages.TryGetValue(passageTitle, out russianLines);
+                        if (russianLines == null)
                         {
                             // Sequential fallback: try raw Russian blocks
                             // Find the base name for this object (e.g., "001_patricia" from "001_patricia_02")
@@ -1548,6 +1567,25 @@ namespace NightCallRussian
                         {
                             string processedLine = rl;
 
+                            // Navigation data: pass through as-is (preserve Ink engine conditionals)
+                            if (processedLine.Contains(";;"))
+                            {
+                                origLines.Add(processedLine);
+                                continue;
+                            }
+
+                            // Choice echo artifact: strip emote tag prefix (:silence:, :anger:, etc.)
+                            if (processedLine.StartsWith(":"))
+                            {
+                                int emoteEnd = processedLine.IndexOf(":", 1);
+                                if (emoteEnd > 0)
+                                {
+                                    string afterEmote = processedLine.Substring(emoteEnd + 1).Trim();
+                                    if (afterEmote.Length > 0)
+                                        processedLine = afterEmote;
+                                }
+                            }
+
                             // Use ENGLISH speaker name so the game's dialogue parser recognizes it
                             // (game parser only accepts Latin uppercase names for dialogue rendering)
                             // TMP_Text interceptor will translate the displayed name to Russian via JSON
@@ -1603,8 +1641,11 @@ namespace NightCallRussian
                                     // Build per-passage link map
                                     Dictionary<string, List<string>> localLinkMap = new Dictionary<string, List<string>>();
                                     Dictionary<string, int> localConsumed = new Dictionary<string, int>();
-                                    List<string[]> ruChoices;
-                                    if (RussianChoices.TryGetValue(passageTitle, out ruChoices))
+                                    List<string[]> ruChoices = null;
+                                    RussianChoices.TryGetValue(objBase + ":" + passageTitle, out ruChoices);
+                                    if (ruChoices == null)
+                                        RussianChoices.TryGetValue(passageTitle, out ruChoices);
+                                    if (ruChoices != null)
                                     {
                                         for (int ci = 0; ci < ruChoices.Count; ci++)
                                         {
@@ -3566,11 +3607,19 @@ namespace NightCallRussian
                             {
                                 if (currentLines != null && currentLines.Count > 0)
                                 {
-                                    RussianPassages[currentPassage] = currentLines;
+                                    // Per-object qualified key (prevents cross-contamination)
+                                    RussianPassages[assetNameRaw + ":" + currentPassage] = currentLines;
+                                    // Global fallback (first file wins)
+                                    if (!RussianPassages.ContainsKey(currentPassage))
+                                        RussianPassages[currentPassage] = currentLines;
                                     passageCount++;
                                 }
                                 if (currentChoices != null && currentChoices.Count > 0)
-                                    RussianChoices[currentPassage] = currentChoices;
+                                {
+                                    RussianChoices[assetNameRaw + ":" + currentPassage] = currentChoices;
+                                    if (!RussianChoices.ContainsKey(currentPassage))
+                                        RussianChoices[currentPassage] = currentChoices;
+                                }
                             }
                             currentPassage = line.Substring(3).Trim();
                             currentLines = new List<string>();
@@ -3623,6 +3672,52 @@ namespace NightCallRussian
                         // Also skip lines like "passagename" that reference passages in other files
                         if (RussianPassages.ContainsKey(trimmed)) continue;
 
+                        // Skip navigation data conditionals (Ink branching logic)
+                        // These are NOT part of compiled passage _lines[] and inflate line count
+                        if (trimmed.Contains(";;")) continue;
+
+                        // Skip choice echo artifacts (:silence:, :anger:, :puzzled:, etc.)
+                        // These are choice display texts that leaked into extraction;
+                        // NOT part of compiled passage _lines[] — they inflate line count
+                        if (trimmed.StartsWith(":"))
+                        {
+                            int emoteEnd = trimmed.IndexOf(":", 1);
+                            if (emoteEnd > 1)
+                            {
+                                bool isTag = true;
+                                for (int ti = 1; ti < emoteEnd; ti++)
+                                {
+                                    char tc = trimmed[ti];
+                                    if (tc < 'a' || tc > 'z')
+                                    {
+                                        isTag = false;
+                                        break;
+                                    }
+                                }
+                                if (isTag) continue;
+                            }
+                        }
+
+                        // Fix missing spaces after punctuation before Cyrillic letters
+                        // (skip $$ commands and repeated punctuation like ... or ?? or !!)
+                        if (!trimmed.StartsWith("$$"))
+                        {
+                            var sb = new StringBuilder();
+                            for (int ci = 0; ci < trimmed.Length; ci++)
+                            {
+                                char ch = trimmed[ci];
+                                sb.Append(ch);
+                                if ((ch == '.' || ch == '?' || ch == '!') &&
+                                    ci + 1 < trimmed.Length &&
+                                    trimmed[ci + 1] >= '\u0400' && trimmed[ci + 1] <= '\u04FF' &&
+                                    (ci == 0 || trimmed[ci - 1] != ch))
+                                {
+                                    sb.Append(' ');
+                                }
+                            }
+                            trimmed = sb.ToString();
+                        }
+
                         currentLines.Add(trimmed);
                     }
 
@@ -3630,11 +3725,17 @@ namespace NightCallRussian
                     {
                         if (currentLines != null && currentLines.Count > 0)
                         {
-                            RussianPassages[currentPassage] = currentLines;
+                            RussianPassages[assetNameRaw + ":" + currentPassage] = currentLines;
+                            if (!RussianPassages.ContainsKey(currentPassage))
+                                RussianPassages[currentPassage] = currentLines;
                             passageCount++;
                         }
                         if (currentChoices != null && currentChoices.Count > 0)
-                            RussianChoices[currentPassage] = currentChoices;
+                        {
+                            RussianChoices[assetNameRaw + ":" + currentPassage] = currentChoices;
+                            if (!RussianChoices.ContainsKey(currentPassage))
+                                RussianChoices[currentPassage] = currentChoices;
+                        }
                     }
                 }
                 catch (Exception e)
