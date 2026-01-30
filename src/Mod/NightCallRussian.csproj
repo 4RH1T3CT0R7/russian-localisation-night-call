@@ -4,50 +4,51 @@
     <AssemblyName>NightCallRussian</AssemblyName>
     <LangVersion>5</LangVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GameDir Condition="'$(GameDir)' == ''">F:\SteamLibrary\steamapps\common\Night Call</GameDir>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BepInEx">
-      <HintPath>..\BepInEx\core\BepInEx.dll</HintPath>
+      <HintPath>$(GameDir)\BepInEx\core\BepInEx.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>..\BepInEx\core\0Harmony.dll</HintPath>
+      <HintPath>$(GameDir)\BepInEx\core\0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\Night Call_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>$(GameDir)\Night Call_Data\Managed\UnityEngine.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\Night Call_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(GameDir)\Night Call_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\Night Call_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>$(GameDir)\Night Call_Data\Managed\UnityEngine.UI.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\Night Call_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>$(GameDir)\Night Call_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>..\Night Call_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>$(GameDir)\Night Call_Data\Managed\UnityEngine.UIModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="TextMeshPro">
-      <HintPath>..\Night Call_Data\Managed\TextMeshPro-2017.3-1.0.56-Runtime.dll</HintPath>
+      <HintPath>$(GameDir)\Night Call_Data\Managed\TextMeshPro-2017.3-1.0.56-Runtime.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\Night Call_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>$(GameDir)\Night Call_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>..\Night Call_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>$(GameDir)\Night Call_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>..\Night Call_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>$(GameDir)\Night Call_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

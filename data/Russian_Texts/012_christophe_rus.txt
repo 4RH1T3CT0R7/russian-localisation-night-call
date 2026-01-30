@@ -994,6 +994,7 @@ $$ anim-link: SMI2DRI $$
 === christophe-01-no
 
 :negative: "Нет, невозможно..."
+$$ tip: low $$
 driverstoryfirst=1?christophe-01-christturn;;driverstoryfirst=0?christophe-01-afterdriverstory;;christophe-01-afterdriverstory
 !
 $$ anim-link: SMI2DRI $$

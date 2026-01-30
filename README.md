@@ -53,7 +53,16 @@ Night Call/
 
 ## Сборка из исходников
 
-### Мод
+### Полная сборка (рекомендуется)
+
+```bash
+build.bat
+```
+
+Скрипт выполнит все шаги: соберёт мод, упакует data.zip, соберёт установщик.
+Результат: `NightCallRussian-Setup.exe` в корне репозитория.
+
+### Только мод
 
 ```bash
 cd src/Mod
@@ -62,7 +71,7 @@ dotnet build -c Release
 
 Результат: `bin/Release/net46/NightCallRussian.dll` — скопировать в `BepInEx/plugins/`.
 
-### Установщик
+### Только установщик
 
 ```bash
 cd src/Installer
@@ -79,8 +88,7 @@ dotnet publish -c Release
 │   └── Installer/              # Установщик (C#, .NET 4.7.2)
 ├── data/                       # Файлы мода для установки
 ├── scripts/                    # Утилиты (Python)
-├── DOCUMENTATION_RU.md         # Техническая документация
-├── RUSSIAN_LOCALIZATION_DOCS.md # Документация шрифтов
+├── DOCUMENTATION_RU.md         # Техническая документация (включая шрифты и SDF)
 ├── CRITICAL_ISSUES_REPORT.txt  # Известные проблемы
 └── LICENSE                     # CC BY 4.0
 ```

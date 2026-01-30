@@ -58,6 +58,7 @@ $$ reveal: 047_03 $$
 
 
 === amelie-01-firstcontact-lie
+$$ reveal: 047_02 $$
 
 (Солгать.)
 

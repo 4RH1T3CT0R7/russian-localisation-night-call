@@ -15,7 +15,7 @@ using UnityEngine.UI;
 
 namespace NightCallRussian
 {
-    [BepInPlugin("com.nightcall.russian", "Night Call Russian", "6.0.0")]
+    [BepInPlugin("com.nightcall.russian", "Night Call Russian", "6.1.0")]
     public class RussianLocalization : BaseUnityPlugin
     {
         internal static ManualLogSource Log;
@@ -23,6 +23,7 @@ namespace NightCallRussian
         internal static Dictionary<string, string> KeyTranslations = new Dictionary<string, string>();
         internal static Dictionary<string, string> DialogueTexts = new Dictionary<string, string>();
         internal static HashSet<string> LoggedMissing = new HashSet<string>();
+        internal static Dictionary<string, string> RuToEngSpeaker = new Dictionary<string, string>();
         internal static bool IsInitialized = false;
 
         // Static empty array to avoid Array.Empty optimization issues with .NET 4.6
@@ -52,7 +53,7 @@ namespace NightCallRussian
         {
             Instance = this;
             Log = Logger;
-            Log.LogInfo("Night Call Russian Localization v6.0.0 - Starting...");
+            Log.LogInfo("Night Call Russian Localization v6.1.0 - Starting...");
 
             // Load font scale config
             FontScaleConfig = Config.Bind("Font", "FontScale", 1.15f,
@@ -1597,17 +1598,40 @@ namespace NightCallRussian
                                 {
                                     string engSp;
                                     if (!passageRuToEng.TryGetValue(ruSp, out engSp))
-                                        engSp = ruSp; // fallback: keep Russian if no mapping
+                                    {
+                                        // Global fallback: reverse lookup from full_translation_mapping.json
+                                        if (!RuToEngSpeaker.TryGetValue(ruSp, out engSp))
+                                            engSp = ruSp; // last resort: keep Russian
+                                    }
                                     processedLine = engSp + " : " + textPart;
                                 }
                             }
                             else
                             {
-                                // Narrative line (no speaker, not a command) — wrap in italic
                                 string t = processedLine.Trim();
                                 if (t.Length > 0 && !t.StartsWith("$$"))
                                 {
-                                    processedLine = "<i>" + processedLine + "</i>";
+                                    // Driver speech: convert "..." to « ... » so game parser
+                                    // recognizes it as dialogue (not narration)
+                                    if (t.StartsWith("\"") || t.StartsWith("\u201c"))
+                                    {
+                                        string inner = t.Substring(1);
+                                        if (inner.EndsWith("\"") || inner.EndsWith("\u201d"))
+                                            inner = inner.Substring(0, inner.Length - 1);
+                                        else if (inner.Length > 1)
+                                        {
+                                            int lastQ = inner.LastIndexOf('"');
+                                            if (lastQ < 0) lastQ = inner.LastIndexOf('\u201d');
+                                            if (lastQ >= 0)
+                                                inner = inner.Substring(0, lastQ) + inner.Substring(lastQ + 1);
+                                        }
+                                        processedLine = "\u00ab " + inner.Trim() + " \u00bb";
+                                    }
+                                    else if (!t.StartsWith("\u00ab"))
+                                    {
+                                        // Narrative line — wrap in italic
+                                        processedLine = "<i>" + processedLine + "</i>";
+                                    }
                                 }
                             }
 
@@ -1756,18 +1780,20 @@ namespace NightCallRussian
             if (trimmed.StartsWith("*")) return null; // choice
             if (trimmed.StartsWith("{")) return null; // variable
 
-            // Try patterns: " : X", ": X" where X is ", «, \u201c
+            // Try patterns: " : X", ": X" where X is ", «, \u201c, \u2018
             int idx = -1;
             // Pattern 1: " : X" (space-colon-space-quote)
             idx = trimmed.IndexOf(" : \"");
             if (idx < 0) idx = trimmed.IndexOf(" : \u00ab");
             if (idx < 0) idx = trimmed.IndexOf(" : \u201c");
+            if (idx < 0) idx = trimmed.IndexOf(" : \u2018");
             if (idx < 0)
             {
                 // Pattern 2: ": X" (colon-space-quote, no space before)
                 idx = trimmed.IndexOf(": \"");
                 if (idx < 0) idx = trimmed.IndexOf(": \u00ab");
                 if (idx < 0) idx = trimmed.IndexOf(": \u201c");
+                if (idx < 0) idx = trimmed.IndexOf(": \u2018");
             }
             if (idx <= 0) return null;
 
@@ -3546,6 +3572,35 @@ namespace NightCallRussian
                 }
 
                 Log.LogInfo(string.Format("Loaded {0} UI translations (+{1} normalized)", originalCount, normalizedToAdd.Count));
+
+                // Build reverse mapping (Russian -> English) for speaker name recovery
+                // Used as fallback when per-passage positional mapping fails
+                RuToEngSpeaker.Clear();
+                foreach (var kvp in Translations)
+                {
+                    string ek = kvp.Key;
+                    string rv = kvp.Value;
+                    if (ek.Length < 2 || ek.Length > 30 || rv.Length < 2 || rv.Length > 30) continue;
+                    if (ek.IndexOf(' ') >= 0 || rv.IndexOf(' ') >= 0) continue;
+                    bool keyValid = true;
+                    for (int i = 0; i < ek.Length; i++)
+                    {
+                        char c = ek[i];
+                        if (!char.IsUpper(c) && c != '-') { keyValid = false; break; }
+                    }
+                    if (!keyValid) continue;
+                    bool valValid = true;
+                    for (int i = 0; i < rv.Length; i++)
+                    {
+                        char c = rv[i];
+                        bool cyrUpper = (c >= '\u0410' && c <= '\u042F') || c == '\u0401';
+                        if (!cyrUpper && c != '-') { valValid = false; break; }
+                    }
+                    if (!valValid) continue;
+                    if (!RuToEngSpeaker.ContainsKey(rv) || ek.Length > RuToEngSpeaker[rv].Length)
+                        RuToEngSpeaker[rv] = ek;
+                }
+                Log.LogInfo(string.Format("Built reverse speaker map: {0} entries", RuToEngSpeaker.Count));
             }
             catch (Exception e)
             {

@@ -392,6 +392,7 @@ $$ dialogspeed: normal $$
 
 
 === patricia-sorry
+$$ tip: low $$
 
 :silence: (Ничего не говорить.)
 Кажется, она немного озадачена вашим молчанием.
@@ -431,6 +432,7 @@ $$ dialogspeed: normal $$
 
 
 === patricia-02-end-silence
+$$ tip: low $$
 
 (Кивок.)
 :silence: (Ничего не говорить.)
@@ -467,6 +469,7 @@ $$ movie: black $$
 
 
 === patricia-02-end-note-read
+$$ reveal: 001_02 $$
 
 (Прочитать.)
 

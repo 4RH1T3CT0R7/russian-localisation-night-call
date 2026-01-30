@@ -214,6 +214,7 @@ $$ anim-link: REACT_2_BASIC_L $$
 
 
 === le-01-joke-awkward
+$$ tip: low $$
 
 (Смутиться.)
 
