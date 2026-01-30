@@ -101,7 +101,7 @@ dotnet publish -c Release
 
 ## Автор
 
-**Artem Lytkin** ([4RH1T3CT0R](https://github.com/4RH1T3CT0R))
+**Artem Lytkin** ([4RH1T3CT0R](https://github.com/4RH1T3CT0R7))
 
 ## Лицензия
 
