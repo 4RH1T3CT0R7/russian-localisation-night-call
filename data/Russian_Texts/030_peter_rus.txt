@@ -310,6 +310,6 @@ $$ clue: clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_
 
 === Peter-01-radio02A
 
-        Peter-01-radio02)  _Driver.Met.Alicia=1?Peter-01-radio02A;;_Driver.Met.Julian=1?Peter-01-radio02B;;_Driver.Met.Shohreh=1?Peter-01-radio02C;;_Killer.Is.Sandman=1?Peter-01-radio02-killer-sandman;;_Killer.Is.Judge=1?Peter-01-
+_Driver.Met.Alicia=1?Peter-01-radio02A;;_Driver.Met.Julian=1?Peter-01-radio02B;;_Driver.Met.Shohreh=1?Peter-01-radio02C;;_Killer.Is.Sandman=1?Peter-01-radio02-killer-sandman;;_Killer.Is.Judge=1?Peter-01-radio02-killer-judge;;_Killer.Is.Angel=1?Peter-01-radio02-killer-angel;;Peter-01-radio02-outro
 
 

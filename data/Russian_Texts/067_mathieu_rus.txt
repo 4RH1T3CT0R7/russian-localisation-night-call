@@ -307,9 +307,9 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 $$ music-control: 20 $$
 Возможно, это шанс поговорить с ним… чтобы узнать больше…
-*Он вздыхает. -> mathieu-02-alt-night
+*"Всё в порядке?" -> mathieu-02-alt-night
 *:smile: "Тяжелый вечер?" -> mathieu-02-alt-night
-*— Я хорошо знаю эту больницу. -> mathieu-02-alt-hospital
+*"Я хорошо знаю эту больницу." -> mathieu-02-alt-hospital
 *:silence: (Ничего не говорить.) -> mathieu-02-alt-silence
 
 

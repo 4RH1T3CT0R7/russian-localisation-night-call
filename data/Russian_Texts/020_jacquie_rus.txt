@@ -565,7 +565,7 @@ $$ anim-link: DRIVER_2_WINDOW $$
 ЖАКИ: "Ты знаешь, что их теперь тоже заставят ходить на занятия?"
 $$ music-control: 20 $$
 *"Класс?" -> jacquie-02-stage-intro
-*— Он не боялся приехать к тебе? -> jacquie-02-stage-scared
+*"Он не боялся приехать к тебе?" -> jacquie-02-stage-scared
 *(Кивок.) -> jacquie-02-stage-yes
 
 
@@ -754,9 +754,9 @@ $$ music-control: 20 $$
 ЖАКИ: "Иногда я задаюсь вопросом, не занимаюсь ли я неправильной работой. Мне следовало бы стать... трактирщиком. Вы понимаете, о чем я?"
 $$ anim-link: DRIVER_2_NAILS $$
 ЖАКИ: "У меня будет свое жилье… Дюжина кроватей или около того… На кухне всегда что-то кипит…"
-*— Почему ты так говоришь, Джеки? -> jacquie-03-start-why
-*— Конечно, почему бы и нет? -> jacquie-03-start-whynot
-*Она делает глубокий вдох. -> jacquie-03-cooking-intro
+*"Почему ты так говоришь, Джеки?" -> jacquie-03-start-why
+*"Конечно, почему бы и нет?" -> jacquie-03-start-whynot
+*(Пусть продолжает.) -> jacquie-03-cooking-intro
 
 
 === jacquie-03-start-why
@@ -932,7 +932,7 @@ $$ anim-link: DRIVER_2_NAILS $$
 Ничего особенного… В последнее время твоя голова была где-то в другом месте.
 $$ music-control: 20 $$
 ЖАКИ: "Очень влиятельный политик…"
-*— Нет, я так не думаю. -> jacquie-04-story-notlistening
+*"Нет, я так не думаю." -> jacquie-04-story-notlistening
 *"Звучит знакомо…" -> jacquie-04-story-holdon
 *"Кто он?" -> jacquie-04-story-secret
 *(Пожать плечами.) -> jacquie-04-story-intro
@@ -981,9 +981,9 @@ $$ anim-link: SMILE_2_DRIVER $$
 $$ anim-link: SMILE_2_WINDOW $$
 ЖАКИ: В любом случае, как только он уйдет, я открою заднюю дверь.
 ЖАКИ: "Два парня забираются в фургон и начинают осматриваться…"
-*— Ты не боялся? -> jacquie-04-story-scared
+*"Ты не боялась?" -> jacquie-04-story-scared
 *"Такие вещи случаются только с тобой…" -> jacquie-04-story-classic
-*Она делает глубокий вдох. -> jacquie-04-story2
+*(Пусть продолжает.) -> jacquie-04-story2
 
 
 === jacquie-04-story-scared

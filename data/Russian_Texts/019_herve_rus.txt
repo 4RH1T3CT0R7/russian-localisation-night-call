@@ -873,7 +873,7 @@ $$ anim-link: COMFY_2_COLD $$
 Внезапно сквозь стиснутые зубы он шипит…
 ЭРВЕ: "...сука..."
 Вы поднимаете взгляд.
-*Сэр, пожалуйста... Не поощряйте его! -> herve-03-end-intro-yes
+*"Правда?" -> herve-03-end-intro-yes
 *"Что вы сказали?" -> herve-03-end-intro-whore
 *:silence: (Ничего не говорить.) -> end-intro-silence
 
@@ -1008,7 +1008,7 @@ $$ movie $$
 Поездка продолжается в молчании. Время от времени в зеркале заднего вида вы замечаете его осунувшееся лицо и движения тела, скованного болью.
 $$ music-control: 40 $$
 *(Продолжайте игнорировать его.) -> herve-04-ignore2
-*— Ты уверен, что с тобой все в порядке? -> herve-04-ignore-ok
+*"Ты уверен, что с тобой всё в порядке?" -> herve-04-ignore-ok
 
 
 === herve-04-ignore2
@@ -1168,8 +1168,8 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 
 $$ movie $$
 Ваш пассажир продолжает оглядываться через плечо, явно обеспокоенный.
-*— Все в порядке, Эрве? -> herve-05-intro-ok
-*Правда? -> herve-05-intro-ok
+*"Всё в порядке, Эрве?" -> herve-05-intro-ok
+*"Что-то не так?" -> herve-05-intro-ok
 *(Ничего не говорит) -> herve-05-cop01-intro
 
 
@@ -1442,8 +1442,8 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 
 $$ music-control: 80 $$
 *"Ей это приятно". -> herve-03-story2-goodforher
-*— Ты не ревнуешь? -> herve-03-story2-jealous
-*— Как ты узнал? -> herve-03-story2-howdoyouknow
+*"Ты не ревнуешь?" -> herve-03-story2-jealous
+*"Как ты узнал?" -> herve-03-story2-howdoyouknow
 *:silence: (Ничего не говорить.) -> herve-03-story2-silence
 
 

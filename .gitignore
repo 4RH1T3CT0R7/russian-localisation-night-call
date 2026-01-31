@@ -22,7 +22,9 @@ Thumbs.db
 # Temp
 *.bak
 *.backup
-build_repo.py
+
+# Dev utilities (scripts, logs, reference dumps)
+_dev/
 
 # Build outputs
 bin/

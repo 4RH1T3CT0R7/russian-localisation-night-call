@@ -212,6 +212,22 @@ namespace NightCallRussian
             return text;
         }
 
+        // Strip diacritics/accents from text (e.g. HERVÉ -> HERVE, GÉRARD -> GERARD)
+        internal static string StripAccents(string text)
+        {
+            if (string.IsNullOrEmpty(text)) return text;
+            string decomposed = text.Normalize(System.Text.NormalizationForm.FormD);
+            var sb = new System.Text.StringBuilder(decomposed.Length);
+            for (int i = 0; i < decomposed.Length; i++)
+            {
+                char c = decomposed[i];
+                if (System.Globalization.CharUnicodeInfo.GetUnicodeCategory(c) !=
+                    System.Globalization.UnicodeCategory.NonSpacingMark)
+                    sb.Append(c);
+            }
+            return sb.ToString().Normalize(System.Text.NormalizationForm.FormC);
+        }
+
         // Check if text is a currency amount or time (shouldn't be translated)
         internal static bool IsCurrencyOrTimeString(string text)
         {
@@ -330,6 +346,16 @@ namespace NightCallRussian
                 {
                     return translation;
                 }
+            }
+
+            // Try accent-stripped version (e.g. HERVÉ -> HERVE, GÉRARD -> GERARD)
+            string stripped = StripAccents(text);
+            if (stripped != text)
+            {
+                if (Translations.TryGetValue(stripped, out translation))
+                    return translation;
+                if (Translations.TryGetValue(stripped.ToUpperInvariant(), out translation))
+                    return translation;
             }
 
             // Try multi-line translation: split by newlines, translate each line

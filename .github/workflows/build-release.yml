@@ -2,8 +2,11 @@ name: Build and Release
 
 on:
   push:
+    branches: [main]
     tags:
       - 'v*'
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: write
@@ -14,6 +17,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate text files
+        run: python scripts/validate_texts.py
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -44,11 +55,13 @@ jobs:
           Compress-Archive -Path "data/*" -DestinationPath "NightCallRussian-Data.zip" -Force
 
       - name: Get version from tag
+        if: startsWith(github.ref, 'refs/tags/v')
         id: version
         shell: bash
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.version.outputs.VERSION }}

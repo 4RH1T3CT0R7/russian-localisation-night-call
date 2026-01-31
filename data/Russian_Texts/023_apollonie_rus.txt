@@ -583,7 +583,7 @@ $$ anim-link: FACE_2_KNEE $$
 *:negative: карло-ли+=1 -> apollonie-drive2-no
 *:puzzled: Нет... Почему вы спрашиваете? " -> apollonie-drive2-why
 *:positive: "Да." -> apollonie-drive2-yes
-*:тишина: (Нет ответа.) -> apollonie-drive2-silence
+*:silence: (Нет ответа.) -> apollonie-drive2-silence
 
 
 === apollonie-drive2-no
