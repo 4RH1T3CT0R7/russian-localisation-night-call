@@ -332,6 +332,56 @@ namespace NightCallRussian
                 }
             }
 
+            // Try multi-line translation: split by newlines, translate each line
+            if (text.IndexOf('\n') >= 0)
+            {
+                string[] parts = text.Split(new char[] { '\n' });
+                if (parts.Length >= 2 && parts.Length <= 20)
+                {
+                    bool allTranslated = true;
+                    string[] translated_parts = new string[parts.Length];
+                    for (int pi = 0; pi < parts.Length; pi++)
+                    {
+                        string part = parts[pi].Trim('\r');
+                        if (string.IsNullOrEmpty(part) || part.Trim().Length == 0)
+                        {
+                            translated_parts[pi] = part;
+                            continue;
+                        }
+                        // Skip lines already in Cyrillic
+                        bool hasCyr = false;
+                        foreach (char ch in part)
+                        {
+                            if (ch >= 0x0400 && ch <= 0x04FF) { hasCyr = true; break; }
+                        }
+                        if (hasCyr)
+                        {
+                            translated_parts[pi] = part;
+                            continue;
+                        }
+                        string partNorm = NormalizeText(part);
+                        string partTrimmed = part.Trim();
+                        string ptrans;
+                        if (Translations.TryGetValue(part, out ptrans) ||
+                            Translations.TryGetValue(partNorm, out ptrans) ||
+                            Translations.TryGetValue(partTrimmed, out ptrans) ||
+                            Translations.TryGetValue(NormalizeText(partTrimmed), out ptrans))
+                        {
+                            translated_parts[pi] = ptrans;
+                        }
+                        else
+                        {
+                            allTranslated = false;
+                            break;
+                        }
+                    }
+                    if (allTranslated)
+                    {
+                        return string.Join("\n", translated_parts);
+                    }
+                }
+            }
+
             return null;
         }
 
@@ -1563,6 +1613,22 @@ namespace NightCallRussian
                             }
                         }
 
+                        // Detect separator format from ORIGINAL ENGLISH lines
+                        // Game parser is format-sensitive: "NAME: " vs "NAME : " per dialogue object
+                        bool engSpaceColon = false;
+                        for (int li = 0; li < origLines.Count; li++)
+                        {
+                            string el = origLines[li] as string;
+                            if (el == null) continue;
+                            if (el.IndexOf(" : \"") >= 0 || el.IndexOf(" : \u00ab") >= 0 ||
+                                el.IndexOf(" : \u201c") >= 0 || el.IndexOf(" : \u2018") >= 0)
+                            { engSpaceColon = true; break; }
+                            if (el.IndexOf(": \"") >= 0 || el.IndexOf(": \u00ab") >= 0 ||
+                                el.IndexOf(": \u201c") >= 0 || el.IndexOf(": \u2018") >= 0)
+                            { engSpaceColon = false; break; }
+                        }
+                        string engSep = engSpaceColon ? " : " : ": ";
+
                         origLines.Clear();
                         foreach (string rl in russianLines)
                         {
@@ -1603,7 +1669,7 @@ namespace NightCallRussian
                                         if (!RuToEngSpeaker.TryGetValue(ruSp, out engSp))
                                             engSp = ruSp; // last resort: keep Russian
                                     }
-                                    processedLine = engSp + " : " + textPart;
+                                    processedLine = engSp + engSep + textPart;
                                 }
                             }
                             else
@@ -1611,10 +1677,48 @@ namespace NightCallRussian
                                 string t = processedLine.Trim();
                                 if (t.Length > 0 && !t.StartsWith("$$"))
                                 {
-                                    // Driver speech: convert "..." to « ... » so game parser
-                                    // recognizes it as dialogue (not narration)
-                                    if (t.StartsWith("\"") || t.StartsWith("\u201c"))
+                                    // Check for unquoted speaker line: "NAME: text" without quotes
+                                    // Some Russian text files omit quotes around speaker dialogue
+                                    string unqName = null;
+                                    int unqIdx = t.IndexOf(": ");
+                                    if (unqIdx > 0 && unqIdx <= 30)
                                     {
+                                        string nm = t.Substring(0, unqIdx).Trim();
+                                        if (nm.Length >= 2 && nm.Length <= 30)
+                                        {
+                                            bool nmOk = true;
+                                            for (int ci = 0; ci < nm.Length; ci++)
+                                            {
+                                                char c = nm[ci];
+                                                if (!char.IsUpper(c) && c != '-' && c != ' ')
+                                                { nmOk = false; break; }
+                                            }
+                                            if (nmOk && (RuToEngSpeaker.ContainsKey(nm) || passageRuToEng.ContainsKey(nm)))
+                                                unqName = nm;
+                                        }
+                                    }
+
+                                    if (unqName != null)
+                                    {
+                                        // Unquoted speaker — restore English name, add quotes
+                                        string engN;
+                                        if (!passageRuToEng.TryGetValue(unqName, out engN))
+                                        {
+                                            if (!RuToEngSpeaker.TryGetValue(unqName, out engN))
+                                                engN = unqName;
+                                        }
+                                        string txt = t.Substring(unqIdx + 2).Trim();
+                                        // Strip leading em-dash or stray single quote
+                                        if (txt.StartsWith("\u2014") || txt.StartsWith("\u2013"))
+                                            txt = txt.Substring(1).Trim();
+                                        if (txt.StartsWith("'"))
+                                            txt = txt.Substring(1).Trim();
+                                        processedLine = engN + engSep + "\"" + txt + "\"";
+                                    }
+                                    else if (t.StartsWith("\"") || t.StartsWith("\u201c"))
+                                    {
+                                        // Driver speech: convert "..." to « ... » so game parser
+                                        // recognizes it as dialogue (not narration)
                                         string inner = t.Substring(1);
                                         if (inner.EndsWith("\"") || inner.EndsWith("\u201d"))
                                             inner = inner.Substring(0, inner.Length - 1);

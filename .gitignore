@@ -25,8 +25,11 @@ Thumbs.db
 build_repo.py
 
 # Build outputs
+bin/
 *.pdb
 src/Installer/data.zip
+NightCallRussian-Data.zip
+publish/
 
 # Built installer (upload to GitHub Releases, not to repo)
 NightCallRussian-Setup.exe

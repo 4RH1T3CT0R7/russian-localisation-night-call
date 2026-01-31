@@ -76,7 +76,7 @@ $$ anim: IDLE_DRIVER $$
 
 === ludwig-chat-known-seehim
 
-R
+Она останавливается и смотрит на вас.
 Она вдруг заговорила глубоким, почти мучительным голосом.
 РОКСАНА : "Но, отвечая на ваш вопрос, нет. Нет, я его не вижу. Я никогда его не видела".
 
@@ -111,7 +111,7 @@ R
 _Driver.Met.Ludwig=1?ludwig-chat-known;;ludwig-chat-unknown
 :silence: (Ничего не говорить.)
 :silence: (Ничего не говорить.)
-7
+(Ничего не говорить.)
 
 
 === roksana-intro
@@ -203,7 +203,7 @@ _Driver.Met.Ludwig=1?roksana-secondadvice-ludwigknown;;roksana-secondadvice-ludw
 
 === roksana-exit
 
-N
+$$ tip: low $$
 $$ anim: IDLE_CLOSER $$
 РОКСАНА : "Он - существо, живущее веками".
 РОКСАНА : "Демон. Опасный. Жестокий".

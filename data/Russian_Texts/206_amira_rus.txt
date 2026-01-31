@@ -89,7 +89,7 @@ $$ anim: IDLE_DRIVER $$
 
 === amira-01-story02
 
-B
+АМИРА : «Я отказалась… нет, история начинается не с этого.»
 Она делает глубокий вдох.
 $$ music-control: 40 $$
 $$ anim: looking_driver_REV $$
@@ -162,7 +162,7 @@ $$ anim: IDLE_HIDE $$
 === amira-01-story02-game01-silence
 
 :silence: (Оставить ее в покое.)
-b
+(Оставить ее в покое.)
 
 
 === amira-01-story02-game02
@@ -175,7 +175,7 @@ $$ anim: IDLE_DRIVER $$
 === amira-01-story02-outro
 
 china=1?amira-01-story02-outro;;amira-01-story02-china-introB
-.
+Двое мужчин сидят и курят на морозе перед киоском с овощами и фруктами.
 Она переводит дыхание. Закрывает глаза.
 Снаружи все расплывается. Город словно исчезает. Его уносят эмоции, переполняющие вашу пассажирку.
 $$ dialogspeed: fast $$
@@ -279,6 +279,6 @@ $$ sfx: sfx_gameplay_car_openclose_from_ext $$
 
 === amira-01-story02-game-introB
 
-W
+АМИРА : «И проблема в том, что Battles of Lost Legend финансируется китайской компанией.»
 
 

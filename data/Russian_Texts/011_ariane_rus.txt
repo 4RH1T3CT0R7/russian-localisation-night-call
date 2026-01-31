@@ -74,7 +74,7 @@ $$ dialogspeed: normal $$
 
 === ariane-01-crisis
 
-)
+$$ anim-link: DRIVER2ANGER $$
 АРИАН : "Она сбежала."
 Её голос ранит.
 $$ anim-link: DRIVER2ANGER $$
@@ -113,7 +113,7 @@ $$ anim-link: WINDOW2DRIVER $$
 
 === ariane-01-daughterno
 
-+
+$$ anim-link: DRIVER2ANGER $$
 $$ dialogspeed: slow $$
 АРИАН : "Я знаю, что ты знаешь."
 $$ dialogspeed: normal $$
@@ -216,7 +216,7 @@ $$ music-control: 60 $$
 === ariane-01-redlightno
 
 (Не проезжать на красный свет.)
-S
+(Не проезжать на красный свет.)
 $$ anim-link: WINDOW2DRIVER $$
 АРИАН : "Я успею на поезд?"
 Вы киваете. Вы справитесь, но только с трудом.

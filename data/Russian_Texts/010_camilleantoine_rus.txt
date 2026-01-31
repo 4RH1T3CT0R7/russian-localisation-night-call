@@ -85,7 +85,7 @@ $$ camfocus: driver, normal $$
 
 === ca-question
 
-o
+$$ anim-link: PROTECT2LOOK $$
 АНТУАН : "С двуспальной кроватью."
 КАМИЛЬ : "Всем плевать на двуспальную кровать, Антуан... Ему плевать."
 $$ music-control: 60 $$
@@ -159,7 +159,7 @@ $$ movie: stop $$
 === ca-hotel-perfect
 
 hotel=1?ca-hotel-perfect;;hotel=5?ca-hotel-average;;ca-hotel-average
-4
+Парень пытается говорить низким, торжественным голосом — тщетно.
 Тем не менее, он производит тёплое и уютное впечатление.
 $$ anim-link: PROTECT2WHISPER $$
 КАМИЛЬ : "Это он?"
@@ -172,7 +172,7 @@ $$ anim-link: PROTECT2WHISPER $$
 === ca-end-great-trust1or3
 
 trust=1?ca-end-great-trust1or3;;trust=3?ca-end-great-trust1or3;;trust=5?ca-end-great-trust5;;ca-end-good-trust1or3
-,
+«Давай.»
 АНТУАН : "Давай."
 $$ movie: lamparo_off, hide_passenger $$
 $$ sfx: sfx_gameplay_car_openclose_from_int $$
@@ -203,7 +203,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 
 === ca-hotel-average
 
-"
+$$ anim-link: PROTECT2LOOK $$
 Фасад непривлекателен. Растение тихо умирает на парижском холоде.
 Пара не решается выйти из такси.
 

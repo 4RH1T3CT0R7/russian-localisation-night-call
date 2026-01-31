@@ -118,7 +118,7 @@ $$ anim-link: ANGER_2_FINGER $$
 
 === ludivine-01-story3
 
-&
+Она грозит вам обвиняющим пальцем.
 $$ dialogspeed: fast $$
 ЛЮДИВИН: "27 октября прошлого года..."
 ЛЮДИВИН: "Вы ехали в этом самом такси... оплачивали проезд... и совершили преступление..."
@@ -174,7 +174,7 @@ $$ dialogspeed: fast $$
 
 === ludivine-01-story5-interruption2
 
-прерывания>3?ludivine-01-story5-interruption2;;ludivine-01-story5-interruptionB
+interruptions>3?ludivine-01-story5-interruption2;;ludivine-01-story5-interruptionB
 ЛЮДИВИН: "Может, ты просто... Заткнись! ЭТО Я ГОВОРЮ!"
 $$ dialogspeed: normal $$
 Вы вздыхаете. Ваша голова начинает пульсировать. Ее голос повышается.
@@ -213,7 +213,7 @@ $$ dialogspeed: normal $$
 === ludivine-01-story7
 
 :silence: (Ничего не говорить.)
-прерывания>5?ludivine-01-story6-interruption2;;ludivine-01-story7
+interruptions>5?ludivine-01-story6-interruption2;;ludivine-01-story7
 $$ dialogspeed: fast $$
 $$ music-control: 40 $$
 ЛЮДИВИН: "На следующий день..."
@@ -249,7 +249,7 @@ $$ anim-link: FINGER_2_ANGER $$
 
 === ludivine-01-story-outro
 
-:
+Она пожимает плечами. Её голос немного смягчился.
 ЛЮДИВИН: "Просто... чтобы плюнуть тебе в лицо... или что-то такое".
 ЛЮДИВИН: "А потом я подумала... "Нет, Людивин. Может, этот парень заслуживает шанса. Никогда не знаешь".
 $$ camfocus: default, normal $$
@@ -264,7 +264,7 @@ $$ anim-link: ANGER_2_FINGER $$
 
 === ludivine-01-story-outroB
 
-прерывания>4?ludivine-01-story-outroB;;ludivine-01-story-outroA
+interruptions>4?ludivine-01-story-outroB;;ludivine-01-story-outroA
 
 
 === ludivine-01-story-outro2
@@ -353,7 +353,7 @@ $$ anim-link: ANGER_2_FINGER $$
 
 === ludivine-01-excuses03-outro
 
-N
+Она собирается что-то добавить, но… останавливается.
 Она не заканчивает фразу.
 
 
@@ -413,7 +413,7 @@ excuse-classic>2?ludivine-01-excuses-end-classic;;excuse-real>2?ludivine-01-excu
 
 "Вообще-то, нет".
 :silence: (Ничего не говорить.)
-'
+\"Вообще-то, нет\".
 
 
 === ludivine-01-attack
@@ -535,7 +535,7 @@ $$ anim-link: FINGER_2_ANGER $$
 === ludivine-01-getout-sorry
 
 "Мне очень жаль, но... ты должна уйти."
-M
+ЛЮДИВИН : «Жаль, что всё сложилось иначе. Правда. Я была готова…»
 Она качает головой.
 
 
@@ -604,7 +604,7 @@ _Killer.Is.Judge=1?ludivine-01-story-killer-judge;;_Killer.Is.Sandman=1?ludivine
 === ludivine-01-story5-interruption
 
 $$ dialogspeed: normal $$
-`
+“I’m…”
 
 
 === ludivine-01-end-interruptions

@@ -918,7 +918,7 @@ christstoryfirst=0
 
 === christophe-01-driverconfession
 
-A
+Эта история преследует вас… вы думаете о ней регулярно…
 $$ camfocus: driver, slow $$
 И не только из-за всего, что произошло потом.
 $$ reveal: 012_01 $$
@@ -943,7 +943,7 @@ $$ movie: stop $$
 
 === christophe-01-driverconfession3
 
-/
+Машина проносится перед вами. Вы прекращаете говорить.
 $$ anim-link: DRI2WIN $$
 КРИСТОФ : "Как безрассудно..."
 Вы смотрите на счётчик, на зелёный свет, на зеркало заднего вида.
@@ -956,7 +956,7 @@ $$ anim-link: WIN2DRI $$
 
 === christophe-01-driverconfession4
 
-L
+«Она вышла первой, пошла к зданию, не дожидаясь его.»
 "Он заплатил мне, опустив глаза."
 Ему нужна секунда, чтобы осмыслить историю. Он держит вас в поле зрения, сцепив руки.
 КРИСТОФ : "Впечатляет. Очень впечатляет."
@@ -996,7 +996,7 @@ $$ anim-link: SMI2DRI $$
 :negative: "Нет, невозможно..."
 $$ tip: low $$
 driverstoryfirst=1?christophe-01-christturn;;driverstoryfirst=0?christophe-01-afterdriverstory;;christophe-01-afterdriverstory
-!
+driverstoryfirst=1?christophe-01-christturn;;driverstoryfirst=0?christophe-01-afterdriverstory;;christophe-01-afterdriverstory
 $$ anim-link: SMI2DRI $$
 КРИСТОФ : "Простите меня."
 $$ anim-link: DRI2WIN $$

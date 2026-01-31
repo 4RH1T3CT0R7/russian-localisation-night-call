@@ -1,7 +1,7 @@
 
 === Nina-01-start
 
-*
+$$ anim: IDLE_SHAME $$
 $$ sfx: sfx_gameplay_car_openclose_from_ext $$
 Дверь открывается, и следующая пассажирка запрыгивает на заднее сиденье.
 НИНА: "Рю де Левис."

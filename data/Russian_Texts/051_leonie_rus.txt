@@ -72,7 +72,7 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 === leonie-01-question-music-classical
 
-+
+Молодая женщина неуверенно замирает, потом…
 ЛЕОНИ: "Прекрасно. Я редко слушаю классику".
 Вы нажимаете на кнопку поиска радиоприемника, чтобы найти классическую станцию...
 И попадаете в центр симфонического взрыва...
@@ -299,7 +299,7 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 === leonie-01-thesis4
 
-"
+Она нерешительно поднимает руку.
 ЛЕОНИ: "Но это я выбрала свою диссертацию".
 ЛЕОНИ: "Я и никто другой".
 $$ anim-link: DRIVER_2_MOUTH $$
@@ -448,7 +448,7 @@ $$ camfocus: default, slow $$
 === leonie-01-job-outro3-classical
 
 music-classical=1?leonie-01-job-outro3-classical;;music-jazz=1?leonie-01-job-outro3-jazz;;music-rock=1?leonie-01-job-outro3-rock;;music-africa=1?leonie-01-job-outro3-africa;;leonie-01-end1
-C
+music-classical=1?leonie-01-job-outro3-classical;;music-jazz=1?leonie-01-job-outro3-jazz;;music-rock=1?leonie-01-job-outro3-rock;;music-africa=1?leonie-01-job-outro3-africa;;leonie-01-end1
 $$ movie: RadioOFF $$
 Вы выключаете радио.
 ЛЕОНИ: "Думаю, мне нужно подумать о чем-то помимо Малера... обо всех этих затянутых, пьянящих симфониях".

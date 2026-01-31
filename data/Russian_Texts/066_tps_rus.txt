@@ -3,9 +3,8 @@
 
 $$ anim: IDLE_SHAINE_BOARD $$
 $$ anim: IDLE_BASIC $$
-*
 $$ movie: lamparo_on, display_passenger $$
-.
+$$ movie: lamparo_on, display_passenger $$
 $$ sfx: sfx_gameplay_car_openclose_from_ext $$
 $$ tip: low $$
 $$ reveal: 066_00 $$
@@ -50,7 +49,7 @@ $$ anim-link: PI_SMILE_2_SHAINE $$
 
 === tps-01-start-offer
 
-<
+ШЕЙН : «Вы… когда-нибудь играли в ролевую игру?»
 ШЕЙН: "Вы когда-нибудь играли в..."
 $$ dialogspeed: fast $$
 ПЬЕР: "Подожди, что ты делаешь, Шайн?"
@@ -80,14 +79,14 @@ $$ anim-link: SH_BOARD_2_DRIVER $$
 
 === tps-01-start-offer-ihavetodrive
 
-]
+ШЕЙН : «Вам не нужно ничего читать или делать. Я всё сделаю за вас.»
 ПЬЕР: "Вам просто нужно принимать решения... а она... э-э... позаботится обо всем остальном!"
 
 
 === tps-01-start-offer-xenofesses
 
 "Ксанакс?"
-"
+\"Что-нибудь, что я хочу?\"
 $$ anim-link: SH_DRIVER_2_BOARD $$
 Девушка улыбается; мальчик слегка откидывает голову назад.
 ПЬЕР: "Xenofex! Кровожадный диктатор... Он же Локмастер! Сокрушитель всех королевств!"
@@ -98,7 +97,7 @@ $$ anim-link: PI_BASIC_2_DRIVER $$
 
 === tps-01-start-offer2
 
-(
+Их взгляды одновременно устремляются на вас.
 Их глаза встречаются с вашим.
 ШЕЙН: "Давай, пожалуйста. Это было бы так круто."
 $$ anim-link: SH_DRIVER_2_BOARD $$
@@ -118,11 +117,11 @@ $$ anim-link: SH_BOARD_2_DRIVER $$
 === tps-01-start-offer3
 
 :silence: (Ничего не говорить.)
-5
+(Ничего не говорить.)
 У девушки вдруг в глазах появился блеск удивления.
-"
+5
 $$ anim-link: PI_DRIVER_2_BASIC $$
-G
+ПЬЕР : «Шейн…»
 ШЕЙН: "Итак?"
 $$ anim-link: PI_BASIC_2_SHAINE $$
 Мальчик тянет своего друга к себе. С заднего сиденья слышен шепот.
@@ -147,7 +146,7 @@ $$ anim-link: PI_BASIC_2_DRIVER $$
 
 === tps-01-start-no2
 
-&
+Температура в салоне падает на градус.
 "Извините, но это просто невозможно."
 6
 ПЬЕР: "Это все из-за мамы Родольфа..."
@@ -167,7 +166,6 @@ $$ anim-link: PI_BASIC_2_DRIVER $$
 === tps-01-start-yes1
 
 "Почему бы и нет?"
-"
 $$ anim-link: SH_DRIVER_2_BOARD $$
 $$ anim-link: SH_BOARD_2_PIERRE $$
 $$ anim-link: PI_DRIVER_2_BASIC $$
@@ -182,13 +180,12 @@ $$ anim-link: SH_PIERRE_2_SMILE $$
 === tps-01-start-yes2
 
 shaine-love+=4
-"
 $$ anim-link: SH_DRIVER_2_BOARD $$
 $$ anim-link: SH_BOARD_2_PIERRE $$
 $$ anim-link: PI_DRIVER_2_BASIC $$
 $$ anim-link: PI_BASIC_2_SHAINE $$
 $$ anim-link: PI_SHAINE_2_SMILE $$
-+
+shaine-love+=4
 Их лица светятся от радости.
 $$ anim-link: SH_PIERRE_2_SMILE $$
 ШЕЙН: "Серьезно? Я имею в виду..."
@@ -199,15 +196,14 @@ $$ anim-link: SH_PIERRE_2_SMILE $$
 === tps-01-start-yes-nomoney
 
 shaine-love+=3
-,
+shaine-love+=3
 Улыбки не сходят с их лиц.
-"
 $$ anim-link: SH_DRIVER_2_BOARD $$
 $$ anim-link: SH_BOARD_2_PIERRE $$
 $$ anim-link: PI_DRIVER_2_BASIC $$
 $$ anim-link: PI_BASIC_2_SHAINE $$
 $$ anim-link: PI_SHAINE_2_SMILE $$
-+
+\"Давайте сыграем. Сколько вы заплатите?\"
 Их лица светятся от радости.
 $$ anim-link: SH_PIERRE_2_SMILE $$
 ШЕЙН: "Это очень мило с вашей стороны."
@@ -222,10 +218,10 @@ $$ anim-link: SH_PIERRE_2_SMILE $$
 shaine-love+=2
 $$ tip: high $$
 Девушка наклоняется к вам.
-%
+ШЕЙН : «Ладно. Пока мы играем, мы едем… И я заплачу полный тариф в конце. Как вам?»
 ШЕЙН: "Вы принимаете кредитные карты?"
 Вы медленно киваете.
-m
+Вы киваете.
 ШЕЙН: "Хорошо. Пока мы играем, мы едем... И я заплачу полную стоимость проезда в конце. Как это?"
 "Идеально."
 
@@ -237,9 +233,9 @@ $$ movie $$
 $$ reveal: 066_01 $$
 6
 "Но... вам придется объяснить мне правила."
-`
+«Его выравнивание?»
 ШЕЙН: "Не волнуйтесь... вы можете играть персонажем Родольфа. Так будет быстрее."
-S
+«Мы подождем, пока не вернемся домой.»
 ШЕЙН: "Я скажу вам, что делать... и вы делаете, как хотите. Звучит просто, нет?"
 "Что-нибудь, что я хочу?"
 ПЬЕР: "А... нет... не ЛЮБОЙ. Это ролевая игра... ты должен играть роль... быть своим персонажем, уважать его выравнивание."
@@ -253,7 +249,7 @@ $$ movie: stop $$
 
 === tps-01-game-rules1
 
-K
+Она принимает очень серьёзный тон, слегка подчёркивая свой акцент.
 Она принимает на себя роль гейм-мастера.
 $$ anim-link: SH_PIERRE_2_BOARD $$
 ШЕЙН: "Послушайте, я вам сейчас все объясню. Если возникнет проблема, бросьте этот кубик."
@@ -316,11 +312,8 @@ $$ anim-link: PI_SHAINE_2_SMILE $$
 "Кто же научил вас играть?"
 rules-whotaughtyou=0?tps-01-game-rules1-hub2;;tps-01-game-rules1-hub3
 rules-fouryears=1
-c
 ШЕЙН: "Есть руководства и Интернет... Я играла в Нью-Йорке, где я жила раньше."
-S
 ПЬЕР: "А когда она пришла в нашу школу, она привела Родольфа и меня!"
-S
 ШЕЙН: "Раньше мы играли с Ингрид..."
 Мальчик вздохнул с сожалением.
 ПЬЕР: "Ее священник был невероятным. Она столько раз спасала нам жизнь."
@@ -342,9 +335,9 @@ rules-whotaughtyou=1
 8
 ШЕЙН: "Мы должны рассказать вам о вашем персонаже!"
 Мальчик кивает.
-"
+Друг Пьера следует его примеру.
 $$ anim-link: PI_SMILE_2_SHAINE $$
-;
+Друг Пьера следует его примеру.
 ПЬЕР: "Его зовут Чубакк. Он - вор!"
 ШЕЙН: "Ты... ЧУБАКК, хаотичный добрый вор. Вы - полугоблин."
 "Полугоблин?"
@@ -369,9 +362,9 @@ $$ anim-link: SH_BOARD_2_DRIVER $$
 
 === tps-01-game-rules2-dadkiller
 
-(
+ШЕЙН: «Я знаю, это звучит странно… но ты фактически освободил целую провинцию от тирании кровожадного человека.»
 :puzzled: "Я убил собственного отца?!"
-z
+Кинжал раскален добела. Ваши мозолистые руки позволяют удержать его.\"
 ПЬЕР: "Мы стали героями благодаря этому..."
 Поскольку вы, похоже, не убеждены, мальчик привнесет в разговор новую кровь.
 ПЬЕР: "Если вам станет легче, я убил свою жену в приступе ярости, вызванном проклятием мумии альбиноса..."
@@ -393,7 +386,7 @@ z
 
 === tps-01-game-rules3-pickpocket
 
--
+«Вы играете в нее уже четыре года?»
 ПЬЕР: "Но я не думаю, что это сильно поможет вам в данном случае."
 Девушка качает головой.
 ШЕЙН: "Никогда не знаешь, Пьер..."
@@ -401,9 +394,9 @@ z
 
 === tps-01-game-rules4
 
-!
+В задней части кабины нарастает напряжение.
 :silence: (Пусть продолжает говорить.)
-"
+В задней части кабины нарастает напряжение.
 $$ anim-link: SH_BOARD_2_DRIVER $$
 ШЕЙН: "Он владеет волшебным кинжалом под названием "Зуб кобры"."
 $$ anim-link: PI_DRIVER_2_BASIC $$
@@ -426,7 +419,7 @@ $$ anim-link: PI_SHAINE_2_SMILE $$
 
 === tps-01-game-start
 
-+
+Девушка резко хлопает в ладоши.
 Девушка хлопает в ладоши.
 $$ dialogspeed: fast $$
 ШЕЙН: "Хорошо! Поехали!"
@@ -441,7 +434,7 @@ $$ movie $$
 
 === tps-01-game-start2
 
-D
+Она смотрит на вас взглядом, который говорит: «Ты в деле?» Вы киваете.
 Она начинает переходить на голос рассказчика.
 ШЕЙН: "Вы изучаете обстановку, проводите пальцами по тяжелым гобеленам, покрывающим темные стены."
 ШЕЙН: "Перед вами ворота Ксенофекса - почтенная стена, выточенная из лучшего дерева Нертта."
@@ -460,8 +453,7 @@ $$ anim-link: PI_DRIVER_2_BASIC $$
 
 === tps-01-game-start-choubakk
 
-?
-ШЕЙН: "Это... ваш персонаж. Это... персонаж Родольфа."
+ШЕЙН: «Это… ваш персонаж. Полугоблин-вор?»
 "Ах, конечно. Извините!"
 
 
@@ -483,13 +475,13 @@ $$ dialogspeed: normal $$
 === tps-01-game-corridor1-lock
 
 ПЬЕР: "Разве ты не пытаешься взломать замок?"
-"
+ПЬЕР: «Разве ты не пытаешься взломать замок?»
 $$ anim-link: SH_DRIVER_2_BOARD $$
 $$ anim-link: SH_BOARD_2_PIERRE $$
 $$ anim-link: PI_BASIC_2_SHAINE $$
-/
+ШЕЙН : «Вы осматриваете дверь. Проводите пальцами по толстому дереву. Ни замка. Ни стыка. Ни петли.»
 Девушка бросает на него грязный взгляд, чтобы заставить замолчать.
-k
+$$ anim-link: SH_PIERRE_2_BOARD $$
 ШЕЙН: "В любом случае, если тебе нужна будет моя помощь, просто скажи..."
 $$ anim-link: PI_SHAINE_2_BASIC $$
 $$ anim-link: SH_PIERRE_2_BOARD $$
@@ -540,7 +532,7 @@ $$ anim-link: SH_PIERRE_DICE_BOARD $$
 
 === tps-01-game-corridor1-lock-bad
 
-,
+Девушка опускает взгляд на свои записи.
 ШЕЙН: "Осмотр двери не дал вам никакой новой информации."
 " О?"
 ПЬЕР: "Число на кубике было недостаточно велико, чтобы активировать вашу способность восприятия..."
@@ -558,7 +550,7 @@ $$ anim-link: SH_BOARD_2_DRIVER $$
 
 === tps-01-game-corridor1-lock-good
 
-Th
+Девушка подмигивает.
 ШЕЙН: "Отлично сыграно."
 $$ anim-link: SH_BOARD_2_DRIVER $$
 Она прочищает горло и снова начинает использовать свой голос гейм-мастера.
@@ -630,7 +622,7 @@ $$ movie: stop $$
 
 === tps-01-game-corridor1-secretlock-lich
 
-"
+$$ anim-link: PI_SHAINE_2_BASIC $$
 ПЬЕР: "Личи, мой друг... это сбой в мире магии. Это маги, которые жили слишком долго и погрязли во тьме, насилии, смерти..."
 Он выдерживает драматическую паузу.
 $$ anim-link: PI_BASIC_2_DRIVER $$
@@ -664,13 +656,13 @@ $$ anim-link: PI_SMILE_2_SHAINE $$
 
 === tps-01-game-corridor1-secretlock-straight
 
-$
+«Может, у меня есть что-нибудь, чем можно вскрыть замок?»
 :silence: (Оставаться в стороне.)
 
 
 === tps-01-game-corridor1-secretlock3
 
-!
+ШЕЙН : «Вы вдруг замечаете, что кинжал на вашем поясе слегка светится.»
 Вы вытаскиваете кинжал с удивленным возгласом... он раскален добела! Чем выше вы его поднимаете, чем ближе он к медальону, тем горячее он становится."
 ПЬЕР: "Принцесса была права! Она сказала нам, что змея - это союзник, который откроет нам двери!"
 $$ anim-link: SH_BOARD_2_PIERRE $$
@@ -681,7 +673,7 @@ $$ anim-link: SH_BOARD_2_PIERRE $$
 
 === tps-01-game-corridor1-secretlock3-take
 
-!
+$$ anim-link: SH_DRIVER_2_BOARD $$
 Вы вытаскиваете кинжал с удивленным возгласом... он раскален добела! Чем выше вы его поднимаете, чем ближе он к медальону, тем горячее он становится."
 ПЬЕР: "Принцесса была права! Она сказала нам, что змея - это союзник, который откроет нам двери!"
 $$ anim-link: SH_BOARD_2_PIERRE $$
@@ -689,7 +681,7 @@ $$ anim-link: SH_BOARD_2_PIERRE $$
 
 === tps-01-game-corridor1-secretlock3-throw
 
-"
+Вы думаете про себя: «Если я пошевелюсь, он, скорее всего, усилит хватку на моем горле. Если я останусь неподвижен, моему напарнику будет легче прицелиться.»
 Кинжал падает на пол. Лезвие красно-желтое, словно только что побывало в пламени кузнечного горна."
 ПЬЕР: "Подожди, Чубакк! Принцесса..."
 " Какая принцесса?"
@@ -737,7 +729,7 @@ $$ anim-link: PI_SHAINE_2_BASIC $$
 
 === tps-01-game-xenofex-entrance
 
-"
+Их голоса становятся все более отдаленными, чем дольше длится спор.
 $$ anim-link: SH_DRIVER_2_BOARD $$
 ШЕЙН: "Вы медленно входите в комнату Ксенофекса..."
 ШЕЙН: "Одинокий факел освещает комнату..."
@@ -755,24 +747,23 @@ $$ camfocus: passenger, slow $$
 
 === tps-01-game-xenofex-entrance-silentattack
 
-g
+ШЕЙН : «Вы подходите к кровати… Поднимаете кинжал и вонзаете его в спящую фигуру.»
 ШЕЙН: "Вы набрасываетесь на него с кинжалом в руках."
 Она делает паузу.
 ШЕЙН: "Одеяло рушится."
 ПЬЕР: "О-о..."
 "Что?"
 ПЬЕР: "Это была ловушка..."
-"
+«Что?»
 :violence: "Я атакую Ксенофекса."
-)
 
 
 === tps-01-game-xenofex-entrance-movingtobed
 
 "Я медленно двигаюсь к кровати."
-"
 Вы слышите, как мальчик что-то бормочет.
-0
+Вы слышите, как мальчик что-то бормочет.
+*«Я осматриваю окрестности.» -> tps-01-game-xenofex-entrance-analyse
 ПЬЕР: "Это слишком просто... слишком просто."
 *(Пусть Сангренат играет.) -> tps-01-game-xenofex-entrance-analyse
 *"Осмотр двери не дал вам никакой новой информации." -> tps-01-game-xenofex-entrance-silentattack
@@ -793,32 +784,32 @@ $$ anim-link: SH_BOARD_DICE_PIERRE $$
 
 ??tps-01-game-xenofex-entrance-analyse-dice01|tps-01-game-xenofex-entrance-analyse-dice02|tps-01-game-xenofex-entrance-analyse-dice03|tps-01-game-xenofex-entrance-analyse-dice04|tps-01-game-xenofex-entrance-analyse-dice05|tps-01-game-xenofex-entrance-analyse-dice06
 ПЬЕР: "Черт. 1."
-+
+??tps-01-game-xenofex-entrance-analyse-dice01|tps-01-game-xenofex-entrance-analyse-dice02|tps-01-game-xenofex-entrance-analyse-dice03|tps-01-game-xenofex-entrance-analyse-dice04|tps-01-game-xenofex-entrance-analyse-dice05|tps-01-game-xenofex-entrance-analyse-dice06
 
 
 === tps-01-game-xenofex-entrance-analyse-dice02
 
 ПЬЕР: "Арг... 2."
-+
+ПЬЕР: «Арг... 2.»
 
 
 === tps-01-game-xenofex-entrance-analyse-dice03
 
 ПЬЕР: "Нет, 3!"
-+
+ПЬЕР: «Нет, 3!»
 
 
 === tps-01-game-xenofex-entrance-analyse-dice04
 
 ПЬЕР: "Фух! 4!"
-+
+ПЬЕР: «Фух! 4!»
 
 
 === tps-01-game-xenofex-entrance-analyse-dice05
 
 ПЬЕР: "5!"
 ШЕЙН: "Неплохо..."
-+
+ПЬЕР: «5!»
 
 
 === tps-01-game-xenofex-entrance-analyse-dice06
@@ -828,10 +819,10 @@ $$ anim-link: SH_BOARD_DICE_PIERRE $$
 
 === tps-01-game-xenofex-entrance-analyse-dice-fail
 
-.
-.
-.
-"
+$$ anim-link: SH_PIERRE_DICE_BOARD $$
+$$ anim-link: SH_BOARD_2_DRIVER $$
+Гейммастер принимает глубокий, торжественный тон — её акцент становится чуть заметнее.
+ШЕЙН : «Вы не видите ничего необычного. Что вы делаете?»
 $$ anim-link: SH_BOARD_2_DRIVER $$
 Гейм-мастер переходит на глубокий, официальный тон - ее акцент становится более заметным.
 ШЕЙН: "Вы не видите ничего необычного. Что вы делаете?"
@@ -841,11 +832,11 @@ $$ anim-link: SH_BOARD_2_DRIVER $$
 
 === tps-01-game-xenofex-entrance-analyse-dice-good
 
-.
-.
-%
+$$ anim-link: SH_PIERRE_DICE_BOARD $$
+Гейммастер тут же снова принимает свой низкий голос…
+Мальчик издал громкий вопль.
 $$ anim-link: SH_DRIVER_2_BOARD $$
-?
+Лицо мальчика озаряется.
 Гейм-мастер тут же берет инициативу в свои руки.
 ШЕЙН: "Когда вы двигаетесь к кровати, что-то привлекает ваше внимание."
 ШЕЙН: "Дыхание под одеялом... оно повторяется... как петля... как струна нот, которую снова и снова играют на арфе."
@@ -858,7 +849,7 @@ $$ anim-link: SH_BOARD_2_DRIVER $$
 
 === tps-01-game-xenofex-entrance-analyse-dice-critical
 
-"
+ШЕЙН : «Критический удар!»
 $$ anim-link: SH_BOARD_2_DRIVER $$
 Гейм-мастер переходит на глубокий, официальный тон - ее акцент становится более заметным.
 ШЕЙН: "Вы не видите ничего необычного. Что вы делаете?"
@@ -867,9 +858,9 @@ $$ anim-link: SH_BOARD_2_DRIVER $$
 === tps-01-game-xenofex-entrance-pierreturn
 
 :silence: (Пусть мальчик решает.)
-%
+ПЬЕР : «Не бойтесь… Я точно знаю, что нужно делать.»
 :silence: (Пусть Сангренат играет.)
-'
+Тишина.
 (Пусть Сангренат играет.)
 xenofex-bed-illusion=1?tps-01-game-xenofex-entrance-reveal-counterattack;;xenofex-bed-illusion=0?tps-01-game-xenofex-entrance-reveal-nodamage
 ПЬЕР: "Не бойтесь... Я точно знаю, что нужно сделать."
@@ -922,13 +913,13 @@ $$ movie: stop $$
 
 === tps-01-game-xenofex-entrance-reveal-damage-pierre-D
 
-K
+\"Что же нам делать, Чубакк? Мы не можем дождаться выхода Xenofex the Terrible!\"
 Мальчик вытирает притворный пот со лба.
 
 
 === tps-01-game-xenofex-entrance-reveal-damage-driver
 
-K
+«Сангренат.»
 Мальчик вытирает притворный пот со лба.
 
 
@@ -977,7 +968,7 @@ $$ anim-link: SH_SMILE_2_PIERRE $$
 
 === tps-01-game-xenofex-entrance-reveal-counterattack
 
-@
+ШЕЙН : «Тень появляется из стены перед вами…»
 ПЬЕР: "Я атакую!"
 $$ movie $$
 Девушка взглянула на своего друга.
@@ -994,7 +985,7 @@ $$ movie $$
 
 ??tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes|tps-01-game-xenofex-entrance-reveal-counterattack-damage-no|tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes|tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes|tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes
 1
-a
+ШЕЙН : «Ладно, удар прошёл…»
 Он бросает кости.
 Вы на мгновение смотрите в окно. Сзади подсчитывают очки.
 
@@ -1158,7 +1149,7 @@ $$ anim-link: PI_DRIVER_2_BASIC $$
 
 === tps-01-game-xenofex-fight-start
 
-G
+Гейммастер бросает несколько кубиков, один за другим, молча.
 $$ anim-link: PI_BASIC_2_SHAINE $$
 ПЬЕР: "Что вы там делаете?"
 ШЕЙН: "Ничего... ничего."
@@ -1182,7 +1173,9 @@ $$ anim-link: SH_DRIVER_2_BOARD $$
 
 === tps-01-game-xenofex-fight-start-countdown-what
 
-.
+$$ anim-link: PI_SMILE_2_SHAINE $$
+$$ anim-link: PI_SHAINE_2_BASIC $$
+$$ anim-link: PI_BASIC_2_DRIVER $$
 Мальчик поворачивается к вам, заметно взволнованный... но с ободряющей улыбкой на лице.
 
 
@@ -1235,7 +1228,7 @@ $$ movie: stop $$
 === tps-01-game-xenofex-fight-rules-life
 
 "Сколько очков жизни у меня осталось?"
-(
+«Да, продолжайте.»
 ШЕЙН: "Где мы находимся по жизненным точкам?"
 $$ anim-link: PI_SHAINE_2_BASIC $$
 ПЬЕР: "Я... э..."
@@ -1262,7 +1255,7 @@ driver-health=29?tps-01-game-xenofex-fight-rules-life-driver-health29;;driver-he
 
 === tps-01-game-xenofex-fight-rules-life-driver-health17
 
-H
+ПЬЕР : «16.»
 "Ксенофекс отшатывается назад и кричит."
 Мальчик поворачивается к вам.
 ШЕЙН: "Твой почерк не улучшился… Я буду с тобой честен. Это будет непросто."
@@ -1277,7 +1270,7 @@ H
 === tps-01-game-xenofex-fight-rules-life-driver-health14-help
 
 shaine-love>0?tps-01-game-xenofex-fight-rules-life-driver-health14-help;;tps-01-game-xenofex-fight-rules-life-driver-health14-outro
-&
+shaine-love>0?tps-01-game-xenofex-fight-rules-life-driver-health14-help;;tps-01-game-xenofex-fight-rules-life-driver-health14-outro
 $$ anim-link: SH_BOARD_2_DRIVER $$
 ШЕЙН: "Змея душит вас... ее клыки впиваются вам в горло... Вы вдруг чувствуете прилив сил."
 Она наклоняется к подруге.
@@ -1312,7 +1305,7 @@ driver-health+=5
 
 === tps-01-game-xenofex-fight-turn01p
 
-C
+ПЬЕР : «Я вижу, как мой друг Шубакк задыхается, и… я атакую.»
 ШЕЙН: "Ситуация ближнего боя... Если выпадет 1 или 2, вы попадете в Чубакка. 3 или 4 - вы промахнетесь. 5 или 6 - вы достигаете цели."
 "А-а-а..."
 ПЬЕР: "Не волнуйтесь. У меня есть бонус к ловкости."
@@ -1324,7 +1317,7 @@ $$ anim-link: SH_BOARD_DICE_PIERRE $$
 === tps-01-game-xenofex-fight-turn01p-dice-1
 
 ??tps-01-game-xenofex-fight-turn01p-dice-1|tps-01-game-xenofex-fight-turn01p-dice-2|tps-01-game-xenofex-fight-turn01p-dice-3|tps-01-game-xenofex-fight-turn01p-dice-4|tps-01-game-xenofex-fight-turn01p-dice-5|tps-01-game-xenofex-fight-turn01p-dice-6
-%
+??tps-01-game-xenofex-fight-turn01p-dice-1|tps-01-game-xenofex-fight-turn01p-dice-2|tps-01-game-xenofex-fight-turn01p-dice-3|tps-01-game-xenofex-fight-turn01p-dice-4|tps-01-game-xenofex-fight-turn01p-dice-5|tps-01-game-xenofex-fight-turn01p-dice-6
 $$ anim-link: PI_BASIC_2_DRIVER $$
 ШЕЙН: "Глаза на дорогу!"
 $$ anim-link: SH_DRIVER_2_BOARD $$
@@ -1476,7 +1469,7 @@ $$ anim-link: SH_PIERRE_2_BOARD $$
 
 === tps-01-game-xenofex-fight-turn01d-nothing
 
-*
+Девушке нужна секунда, чтобы понять.
 "Нет. Если я пошевелюсь, он усилит свою... хватку."
 ПЬЕР: "Тогда я перейду в следующий раунд?"
 Вы киваете.
@@ -1522,7 +1515,7 @@ driver-health<1?tps-01-game-xenofex-fight-xenofex-killed-driver;;tps-01-game-xen
 
 === tps-01-game-xenofex-fight-turn02
 
-*
+ШЕЙН : «Ладно, второй раунд обратного отсчёта смерти! Пьер… постарайся не убить нашего водителя, пожалуйста.»
 "Нет. Если я пошевелюсь, он усилит свою... хватку."
 ПЬЕР: "Тогда я перейду в следующий раунд?"
 Вы киваете.
@@ -1531,8 +1524,8 @@ driver-health<1?tps-01-game-xenofex-fight-xenofex-killed-driver;;tps-01-game-xen
 === tps-01-game-xenofex-fight-turn02p
 
 driver-health<1?tps-01-game-xenofex-fight-xenofex-killed-driver;;tps-01-game-xenofex-fight-turn01x-outro
-#
-ПЬЕР: "Я воин. Поэтому... я наношу удары."
+Он одаривает вас смущённой ухмылкой.
+ПЬЕР: «Я воин. Поэтому… я наношу удары.»
 ШЕЙН: "Пьер, будет очень жаль, если твой топор обезглавит нашего бедного друга."
 $$ movie $$
 $$ anim: IDLE_SHAINE_DRIVER $$
@@ -1546,7 +1539,7 @@ $$ anim: IDLE_PIERRE_DRIVER $$
 
 === tps-01-game-xenofex-fight-turn02p-attack
 
-$
+ШЕЙН : «Эй? Вы меня слышите?»
 $$ movie: stop $$
 Вы выныриваете из своих мыслей.
 "Простите?"
@@ -1569,8 +1562,8 @@ $$ movie: stop $$
 === tps-01-game-xenofex-fight-dem
 
 :silence: (Ничего не говорить.)
+(Ничего не говорить.)
 5
-k
 $$ anim-link: PI_BASIC_2_DRIVER $$
 ПЬЕР: "Но если вы используете его... ну... вы умрете."
 ПЬЕР: "Но Ксенофекс тоже умрет."
@@ -1608,13 +1601,12 @@ $$ anim-link: PI_DRIVER_2_BASIC $$
 
 === tps-01-game-xenofex-fight-dem-how
 
-!
+«Как именно мне… активировать кольцо?»
 "Как работает кольцо DEM?"
-'
-$
+*:puzzled: «Это кажется опасным…» -> tps-01-game-xenofex-fight-dem-joke
+«Как работает кольцо DEM?»
 "Что за кольцо?"
-tps-01-игра-xenofex-fight-dem-что
-H
+tps-01-game-xenofex-fight-dem-what
 ПЬЕР: "Чтобы привести кольцо в действие, достаточно повернуть его вокруг пальца."
 *:puzzled: "Это кажется опасным…" -> tps-01-game-xenofex-fight-dem-joke
 *:violence: "Я вращаю кольцо." -> tps-01-game-xenofex-fight-dem-scene01
@@ -1632,7 +1624,7 @@ H
 === tps-01-game-xenofex-fight-dem-scene01
 
 :violence: "Я вращаю кольцо."
-b
+«Так что +1 на каждый бросок...»
 ШЕЙН: "Ваши пальцы касаются металла..."
 Она говорит своим голосом ксенофекса.
 $$ movie: black $$
@@ -1646,7 +1638,7 @@ $$ movie: black $$
 
 === tps-01-game-xenofex-fight-dem-scene02
 
-!
+Она берёт себя в руки.
 Что?
 $$ anim: IDLE_PIERRE_DRIVER $$
 $$ anim: IDLE_SHAINE_DRIVER $$
@@ -1678,7 +1670,7 @@ $$ anim-link: PI_DRIVER_2_BASIC $$
 
 === tps-01-game-xenofex-fight-dem-scene02-catch
 
-+
+ШЕЙН : «Вы подходите к нему ближе. Он улыбается вам. Его кожа начинает рассыпаться, как горящая бумага.»
 (Ловить.)
 ШЕЙН: "Он успевает вымолвить только одно слово..."
 Драматическая пауза.
@@ -1703,7 +1695,7 @@ $$ anim-link: PI_SMILE_2_SHAINE $$
 === tps-01-game-xenofex-fight-turn02d-intro
 
 pierre-heatlh>0?tps-01-game-xenofex-pierrealive;;tps-01-end-alldead
-#
+pierre-heatlh>0?tps-01-game-xenofex-pierrealive;;tps-01-end-alldead
 ШЕЙН: "Пьер..."
 ПЬЕР: "Простите."
 Она говорит голосом Ксенофекса...
@@ -1767,7 +1759,7 @@ $$ movie: stop $$
 === tps-01-game-xenofex-fight-xenofex-killed-driver2
 
 "Ок."
-<
+ШЕЙН : «Шубакк падает на землю. Ксенофекс медленно поднимается… его очертания становятся чётче…»
 ШЕЙН: "Чубакк падает на землю. Ксенофекс медленно встает... его очертания становятся более четкими..."
 ШЕЙН: "Он говорит вам: "Пора тебе присоединиться к своему другу..." и разражается дьявольским хохотом."
 $$ movie: LightsOnRadio_Loop $$
@@ -1798,7 +1790,7 @@ $$ movie: stop $$
 
 === tps-01-crisis
 
-*
+«Чёрт… чёрт… чёрт… Простите.»
 Сзади дети выглядят удивленными.
 ШЕЙН: "Вы не ответили..."
 $$ anim-link: PI_DRIVER_2_BASIC $$
@@ -1816,7 +1808,7 @@ $$ travel: start $$
 
 === tps-01-defeat
 
-I
+$$ camfocus: default, slow $$
 "Итак... это конец?"
 Он пожимает плечами.
 $$ anim-link: SH_BOARD_2_PIERRE $$
@@ -1863,7 +1855,7 @@ $$ anim: PIERRE_IDLE_SMILE $$
 
 === tps-01-whatnow
 
-'
+Она замирает, закрывает глаза и улыбается.
 $$ movie: LightsOnRadio_Loop $$
 ШЕЙН: "Конец."
 "Все... закончилось?"
@@ -1932,7 +1924,7 @@ $$ anim-link: SH_SMILE_2_PIERRE $$
 
 === tps-01-nogame-song-wrote
 
-L
+ШЕЙН : «О, да. Я написала слова, а вот Пьер написал мелодию…»
 ПЬЕР: "И Родольф все устроил. Он очень хорош в этом."
 Он качает головой.
 ПЬЕР: "Конечно... Это неудивительно с его родителями."
@@ -1943,7 +1935,7 @@ L
 === tps-01-nogame-song-middleage
 
 "Это звучит как что-то из Средневековья..."
-E
+ШЕЙН: «Пьер...»
 
 
 === tps-01-nogame-song-goodjob
@@ -1960,7 +1952,7 @@ E
 
 === tps-01-nogame-song-outro
 
-E
+ШЕЙН : «Это была заглавная песня нашей кампании. Мы пели её каждый раз, начиная играть.»
 "Я просто хотела... сказать вам... что могу заплатить".
 ШЕЙН: "Было весело… мы действительно хорошо провели время, не так ли?"
 
@@ -2021,7 +2013,7 @@ $$ reveal: 066_03 $$
 
 === tps-01-end-shaine
 
-Шейн-любовь>2?tps-01-конец-шайн;;tps-01-конец-выход2
+shaine-love>2?tps-01-end-out-shaine;;tps-01-end-out2
 " Спасибо за игру."
 
 

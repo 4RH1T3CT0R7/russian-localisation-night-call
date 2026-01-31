@@ -59,7 +59,7 @@ $$ dialogspeed: normal $$
 :smile: "Я привыкла."
 "Он вас хорошо обработал."
 :taxi: (Начать движение.)
-*"Uh… ok." -> angel-00a-nice
+*"Эм… ладно." -> angel-00a-nice
 *:smile: "Я привык к этому." -> angel-00a-nice
 *"ЕШЬТЕ ДЕРЬМО." -> angel-00a-husband
 *:taxi: (Начать движение.) -> angel-00a-end

@@ -1,0 +1,63 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Build Mod DLL
+        run: dotnet build src/Mod/NightCallRussian.csproj -c Release
+
+      - name: Prepare data folder
+        shell: pwsh
+        run: |
+          # Copy built DLL into data/BepInEx/plugins/
+          Copy-Item "src/Mod/bin/Release/net46/NightCallRussian.dll" "data/BepInEx/plugins/NightCallRussian.dll" -Force
+
+      - name: Create data.zip for installer
+        shell: pwsh
+        run: |
+          Compress-Archive -Path "data/*" -DestinationPath "src/Installer/data.zip" -Force
+
+      - name: Build Installer EXE
+        run: dotnet build src/Installer/Installer.csproj -c Release
+
+      - name: Create release archive
+        shell: pwsh
+        run: |
+          # Also create a manual-install zip
+          Compress-Archive -Path "data/*" -DestinationPath "NightCallRussian-Data.zip" -Force
+
+      - name: Get version from tag
+        id: version
+        shell: bash
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.VERSION }}
+          name: Night Call Russian ${{ steps.version.outputs.VERSION }}
+          body: |
+            ## Night Call — Русская локализация ${{ steps.version.outputs.VERSION }}
+
+            ### Установка
+            **Вариант 1 (рекомендуется):** Скачайте `NightCallRussian-Setup.exe` и запустите.
+            **Вариант 2 (ручная):** Скачайте `NightCallRussian-Data.zip` и распакуйте в папку игры.
+          files: |
+            src/Installer/bin/Release/net472/NightCallRussian-Setup.exe
+            NightCallRussian-Data.zip
+          draft: false
+          prerelease: false
