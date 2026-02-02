@@ -1,0 +1,129 @@
+
+=== jacquie-00b-start
+
+$$ music-control: 0 $$
+$$ movie: lamparo_on, display_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+$$ anim: IDLE_NAILS $$
+Дверь открывается. Жаки устраивается на заднем сиденье. Она постоянная клиентка.
+ЖАКИ: «Рада тебя видеть, дорогой…»
+$$ travel: start $$
+Вы улыбаетесь и заводите такси.
+
+
+=== jacquie-00b-hub01
+
+
+
+=== jacquie-00b-hub02
+
+
+
+=== jacquie-00b-hub03
+
+
+
+=== jacquie-00b-youok01
+
+$$ anim-link: NAILS_2_DRIVER $$
+ЖАКИ: «Как ты? Надеюсь, всё хорошо…»
+«Справляюсь помаленьку, Жаки.»
+Она одаривает вас своей самой лучезарной улыбкой.
+ЖАКИ: «Я тоже… я тоже.»
+
+
+=== jacquie-00b-youok02
+
+$$ anim-link: NAILS_2_DRIVER $$
+ЖАКИ: «Такой чертовский холод… Не знаю, как ты это выдерживаешь — не двигаться… всю ночь… задницей прилипнув к сиденью…»
+«Я не из тех, кто жалуется.»
+Она улыбается — и улыбка явно искренняя.
+ЖАКИ: «Это точно.»
+
+
+=== jacquie-00b-youok03
+
+$$ anim-link: NAILS_2_DRIVER $$
+«Всё в порядке?»
+Она неуверенно кивает.
+ЖАКИ: «Да, наверное.»
+ЖАКИ: «Иногда… Знаешь… Голова как будто… в тумане.»
+«Знаю, о чём ты.»
+
+
+=== jacquie-00b-killer-intro
+
+ЖАКИ: «У меня для тебя новости…»
+«Давай.»
+$$ anim-link: NAILS_2_DRIVER $$
+Она пристально смотрит на вас.
+
+
+=== jacquie-00b-killer01
+
+ЖАКИ: «Не знаю, во что ты ввязался…»
+Она слегка наклоняется ближе. Её голос глубокий и тёплый. Он действует на вас гипнотически.
+$$ anim-link: DRIVER_2_WINDOW $$
+ЖАКИ: «В общем, слушай… Я знаю одного парня, который работает в…»
+$$ movie: black $$
+Она начинает рассказывать о нём. Сначала вы не видите связи с расследованием, но потом…
+До вас доходит.
+$$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10, clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_customer_rumor_03, clue_angel_customer_rumor_04, clue_angel_customer_rumor_05, clue_angel_customer_rumor_06, clue_angel_customer_rumor_07, clue_angel_customer_rumor_08, clue_angel_customer_rumor_09, clue_angel_customer_rumor_10, clue_angel_customer_rumor_11, clue_angel_customer_rumor_12, clue_angel_customer_rumor_13, clue_angel_customer_rumor_14, clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
+Закончив, она откидывается на спинку сиденья.
+
+
+=== jacquie-00b-killer-outro
+
+$$ reveal: 020_01 $$
+$$ movie: stop $$
+«Спасибо, Жаки. Я у тебя в долгу.»
+$$ anim-link: WINDOW_2_DRIVER $$
+ЖАКИ: «Да уж, знаю.»
+$$ fare: 0 $$
+Она подмигивает вам… Внезапно она становится задумчивой.
+*:puzzled: «Всё хорошо, Жаки?» -> jacquie-00b-thinking-ok
+*:silence: (Промолчать.) -> jacquie-00b-thinking-silence
+
+
+=== jacquie-00b-thinking-ok
+
+Звук вашего голоса заставляет её вздрогнуть.
+
+
+=== jacquie-00b-thinking-silence
+
+Через несколько мгновений она тяжело вздыхает.
+
+
+=== jacquie-00b-end
+
+ЖАКИ: «Да-да… всё нормально.»
+
+
+=== jacquie-00b-killer02
+
+ЖАКИ: «Я спросила одного своего клиента, который работает в мэрии.»
+«Из тех, кто знает всё…»
+$$ movie: black $$
+Она наклоняется вперёд. Вы чувствуете запах её духов.
+Она начинает рассказывать.
+Связь очевидна…
+$$ anim-link: DRIVER_2_WINDOW $$
+$$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10, clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_customer_rumor_03, clue_angel_customer_rumor_04, clue_angel_customer_rumor_05, clue_angel_customer_rumor_06, clue_angel_customer_rumor_07, clue_angel_customer_rumor_08, clue_angel_customer_rumor_09, clue_angel_customer_rumor_10, clue_angel_customer_rumor_11, clue_angel_customer_rumor_12, clue_angel_customer_rumor_13, clue_angel_customer_rumor_14, clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
+«Не уверена, поможет ли тебе это.»
+«Ещё как поможет.»
+
+
+=== jacquie-00b-killer03
+
+ЖАКИ: «В общем, я порасспрашивала. Ничего особо убедительного…»
+«Поначалу.»
+«…поначалу.»
+«А потом один клиент, молодой парень из Министерства обороны.»
+$$ movie: black $$
+Она понижает голос. Вы наклоняетесь друг к другу.
+$$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10, clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_customer_rumor_03, clue_angel_customer_rumor_04, clue_angel_customer_rumor_05, clue_angel_customer_rumor_06, clue_angel_customer_rumor_07, clue_angel_customer_rumor_08, clue_angel_customer_rumor_09, clue_angel_customer_rumor_10, clue_angel_customer_rumor_11, clue_angel_customer_rumor_12, clue_angel_customer_rumor_13, clue_angel_customer_rumor_14, clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
+Она рассказывает вам всё, что узнала. Вы сразу видите связь с вашим делом.
+$$ anim-link: DRIVER_2_WINDOW $$
+
+

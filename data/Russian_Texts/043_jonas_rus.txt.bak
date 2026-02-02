@@ -1,0 +1,736 @@
+Рост = 1 м81.
+Блестящий программист для нескольких стартапов и компаний.
+Пишет книги о "симуляции, в которой мы все живем".
+Уничтожил улики, когда полиция начала расследование.
+Рост = 1 м81.
+Почтальон на пенсии. Хорошее физическое состояние, несмотря на алкоголизм.
+Несколько месяцев назад он потерял внука в пожаре на "Альбатросе".
+Был одним из самых ярых протестующих после пожара на "Альбатросе".
+Напал на Аниту Вентимилья во время акции протеста. Она так и не выдвинула обвинений.
+Рост = 1м83.
+Бывший партнер Groupe Diamant, недавно уволенный из совета директоров.
+Хорошее физическое состояние.
+Год назад она потеряла отца.
+Прошла военную службу в Израиле. Умеет обращаться с оружием.
+Проблемы с управлением гневом. Несколько месяцев назад напала на полицейского.
+Рост = 1м89.
+Шеф-повар ресторана La Pierre в Париже.
+В финансовых затруднениях.
+В молодости была активисткой.
+Часть культа "Лунная плоть".
+clue_sand_customer_geraldine_02.title
+Groupe Diamant - сомнительная компания
+UI.INVESTIGATION.INVESTIGATE
+Удерживайте, чтобы исследовать
+UI.ROOM.TOOLTIP.DOCUMENT.INVESTIGATE
+Придержите, чтобы расследовать
+GC.SUSPECT.NAME.HERVE
+clue_angel_fileherve_02.title
+Эрве якобы ограбил продавца рыбы.
+clue_judge_julian_04.title
+Эрве получил деньги от суда над Риктодином
+clue_judge_park_02.title
+Эрве работал на "Жертву 2" в 90-е годы.
+clue_judge_park_03.title
+Эрве просил деньги у Жертвы 2
+GC.SUSPECT.TT.HERVE
+Бездомный в течение последних десяти лет, Эрве несколько раз подвергался арестам и тюремному заключению за кражи со взломом и воровство.
+clue_angel_fileherve_01.title
+Эрве подозревается во многих взломах.
+clue_angel_fileherve_01.source
+Полицейское досье Эрве
+clue_angel_fileherve_02.source
+Полицейское досье Эрве
+doc_angel_fileherve.title
+Полицейское досье Эрве
+clue_angel_customer_herve_01.source
+Свидетельство Эрве
+clue_judge_customer_herve_01.source
+Свидетельство Эрве
+clue_sand_customer_herve_01.source
+Свидетельство Эрве
+clue.source.driver
+clue_angel_radioshow01_01.source
+Слышал по радио...
+clue_angel_radioshow02_01.source
+Слышал по радио...
+clue_angel_radioshow02_02.source
+Слышал по радио...
+clue_angel_radioshow03_01.source
+Слышал по радио...
+clue_angel_radioshow03_02.source
+Слышал по радио...
+clue_judge_radioshow01_01.source
+Слышал по радио...
+clue_judge_radioshow01_02.source
+Слышал по радио...
+clue_judge_radioshow02_01.source
+Слышал по радио...
+clue_judge_radioshow03_01.source
+Слышал по радио...
+clue_judge_radioshow04_01.source
+Слышал по радио...
+clue_judge_radioshow04_02.source
+Слышал по радио...
+clue_sand_radioshow01_01.source
+Слышал по радио...
+clue_sand_radioshow02_01.source
+Слышал по радио...
+clue_sand_radioshow03_01.source
+Слышал по радио...
+clue_sand_radioshow04_01.source
+Слышал по радио...
+clue_angel_customer_rumor_01.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_02.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_03.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_04.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_05.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_06.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_07.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_08.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_09.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_10.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_11.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_12.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_13.source
+Слышал в вашем такси...
+clue_angel_customer_rumor_14.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_01.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_02.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_03.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_04.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_05.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_06.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_07.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_08.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_09.source
+Слышал в вашем такси...
+clue_judge_customer_rumor_10.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_01.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_02.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_03.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_04.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_05.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_06.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_07.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_08.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_09.source
+Слышал в вашем такси...
+clue_sand_customer_rumor_10.source
+Слышал в вашем такси...
+UI.ROOM.CLUE.DISCOVERED.HELP
+Доступно в вашем номере
+clue_angel_journal09_01.title
+Количество взломов растет
+clue_angel_journal04_01.title
+Все больше ультраправых студентов в университетах
+clue_angel_radionews01_01.source
+Слышал в новостях...
+clue_angel_radionews02_01.source
+Слышал в новостях...
+clue_angel_radionews03_01.source
+Слышал в новостях...
+clue_angel_radionews04_01.source
+Слышал в новостях...
+clue_angel_radionews05_01.source
+Слышал в новостях...
+clue_angel_radionews06_01.source
+Слышал в новостях...
+clue_angel_radionews06_02.source
+Слышал в новостях...
+clue_angel_radionews06_03.source
+Слышал в новостях...
+clue_angel_radionews07_01.source
+Слышал в новостях...
+clue_angel_radionews08_01.source
+Слышал в новостях...
+clue_judge_radionews01_01.source
+Слышал в новостях...
+clue_judge_radionews02_01.source
+Слышал в новостях...
+clue_judge_radionews03_01.source
+Слышал в новостях...
+clue_judge_radionews04_01.source
+Слышал в новостях...
+clue_judge_radionews05_01.source
+Слышал в новостях...
+clue_judge_radionews06_01.source
+Слышал в новостях...
+clue_judge_radionews07_01.source
+Слышал в новостях...
+clue_judge_radionews08_01.source
+Слышал в новостях...
+clue_judge_radionews08_02.source
+Слышал в новостях...
+clue_sand_radionews_01_01.source
+Слышал в новостях...
+clue_sand_radionews_02_01.source
+Слышал в новостях...
+clue_sand_radionews_03_01.source
+Слышал в новостях...
+clue_sand_radionews_04_01.source
+Слышал в новостях...
+clue_sand_radionews_04_02.source
+Слышал в новостях...
+clue_sand_radionews_05_01.source
+Слышал в новостях...
+clue_sand_radionews_06_01.source
+Слышал в новостях...
+clue_sand_radionews_07_01.source
+Слышал в новостях...
+clue_sand_radionews_08_01.source
+Слышал в новостях...
+clue_angel_journal01_01.source
+Прочитайте в газете...
+clue_angel_journal02_01.source
+Прочитайте в газете...
+clue_angel_journal03_01.source
+Прочитайте в газете...
+clue_angel_journal04_01.source
+Прочитайте в газете...
+clue_angel_journal05_01.source
+Прочитайте в газете...
+clue_angel_journal06_01.source
+Прочитайте в газете...
+clue_angel_journal07_01.source
+Прочитайте в газете...
+clue_angel_journal08_01.source
+Прочитайте в газете...
+clue_angel_journal09_01.source
+Прочитайте в газете...
+clue_angel_journal10_01.source
+Прочитайте в газете...
+clue_judge_journal01_01.source
+Прочитайте в газете...
+clue_judge_journal01_02.source
+Прочитайте в газете...
+clue_judge_journal02_01.source
+Прочитайте в газете...
+clue_judge_journal03_01.source
+Прочитайте в газете...
+clue_judge_journal04_01.source
+Прочитайте в газете...
+clue_judge_journal05_01.source
+Прочитайте в газете...
+clue_judge_journal05_02.source
+Прочитайте в газете...
+clue_judge_journal06_01.source
+Прочитайте в газете...
+clue_judge_journal07_01.source
+Прочитайте в газете...
+clue_judge_journal08_01.source
+Прочитайте в газете...
+clue_judge_journal08_02.source
+Прочитайте в газете...
+clue_sand_journal01_01.source
+Прочитайте в газете...
+clue_sand_journal02_01.source
+Прочитайте в газете...
+clue_sand_journal03_01.source
+Прочитайте в газете...
+clue_sand_journal04_01.source
+Прочитайте в газете...
+clue_sand_journal05_01.source
+Прочитайте в газете...
+clue_sand_journal06_01.source
+Прочитайте в газете...
+clue_sand_journal07_01.source
+Прочитайте в газете...
+clue_sand_journal08_01.source
+Прочитайте в газете...
+clue_sand_journal09_01.source
+Прочитайте в газете...
+clue_sand_journal10_01.source
+Прочитайте в газете...
+clue_angel_church_02.source
+В церкви Гильды
+GC.CLUE.NAME.CHURCH.LINK.VIC01
+Связано с церковью
+GC.CLUE.NAME.CHURCH.LINK.VIC02
+Связано с церковью
+UI.CREDITS.INTRO.COLLABORATION
+в сотрудничестве с
+clue_judge_customer_claudia_01.source
+Информация о Клаудии
+clue_sand_suspectsintel_01.source
+Данные о подозреваемых
+clue_sand_suspectsintel_02.source
+Данные о подозреваемых
+clue_sand_suspectsintel_03.source
+Данные о подозреваемых
+doc_sand_suspectsintel.title
+Данные о подозреваемых
+poi_sand_newsroom.title
+Отдел новостей ИнфоТВ
+guess_angel_sus01_01.title
+Является ли Убийца религиозным человеком?
+GC.SUSPECT.NAME. ДЖОНАС
+clue_angel_hacker_02.title
+Джонас = лидер темной веб-группы
+clue_angel_hacker_01.title
+Джонас = опасный человек
+clue_angel_hacker_03.title
+Джонас = проверка теории
+clue_angel_customer_jonas_01.title
+Джонас считает, что мы находимся в симуляции.
+clue_judge_julian_01.source
+Файлы Джулиана
+clue_judge_julian_02.source
+Файлы Джулиана
+clue_judge_julian_03.source
+Файлы Джулиана
+clue_judge_julian_04.source
+Файлы Джулиана
+clue_judge_julian_05.source
+Файлы Джулиана
+doc_judge_julian.title
+Файлы Джулиана
+UI.STATION.SHOP.BUY
+clue_angel_kcase_04.title
+ОД = перерезанное горло, слова написаны кровью, кровь отсутствует
+clue_judge_autopsy03_01.title
+Никаких признаков насилия
+clue_judge_autopsy04_01.title
+Никаких признаков насилия
+UI.TAXI.NEWSPAPER.HOW
+Газета отсутствует
+clue_angel_customer_ludwig_01.title
+Запах свечи во время разговора с Людвигом
+
+=== jonas-start
+
+$$ movie:lamparo_on, display_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
+$$ anim:IDLE_KEYBOARD $$
+$$ reveal: 043_00 $$
+Пассажир, садящийся в ваше такси, едва говорит "привет".
+Он бормочет адрес и зарывается с головой в ноутбук.
+$$ travel: start $$
+$$ music-control: 0 $$
+Он стучит по клавишам, не говоря ни слова, пока вы трогаетесь с места.
+Вы уже видели таких пассажиров, как он. Интроверты, молчуны, люди настолько поглощённые своим делом, что даже не замечают вас.
+Дорога пролетает мимо.
+Звук пальцев пассажира по клавиатуре напоминает звук дождя, бьющегося по капоту вашего автомобиля.
+*"Хороший вечер?" -> jonas-start-evening
+*:silence: (Ничего не говорить.) -> jonas-start-silence
+
+
+=== jonas-start-evening
+
+$$ music-control: 20 $$
+Он ворчит лаконичный ответ.
+Он снова погружается в экран своего компьютера.
+
+
+=== jonas-start-silence
+
+Вы наблюдаете за ним.
+Его пальцы летают по клавиатуре. Создаётся впечатление, что он печатает не полные предложения. Ритм слишком короткий, рваный.
+$$ music-control: 20 $$
+*"Вы пишете роман?" -> jonas-start-writer
+*"Вы программист?" -> jonas-start-coder
+*:silence: (Ничего не говорить.) -> jonas-question
+
+
+=== jonas-start-writer
+
+$$ anim:LOOKING_DRIVER $$
+$$ anim:IDLE_DRIVER $$
+Он поднимает голову и смотрит на вас.
+ЙОНАС: "Нет. Я пишу код."
+Лицо у него холодное, отстранённое — вы ему надоели.
+
+
+=== jonas-start-coder
+
+$$ anim:LOOKING_DRIVER $$
+$$ anim:IDLE_DRIVER $$
+$$ reveal: 043_01 $$
+Он поднимает голову и с интересом смотрит на вас.
+ЙОНАС: "В каком-то смысле... А как вы догадались?"
+"По тому, как вы печатали."
+Он делает паузу и слегка улыбается.
+ЙОНАС: "Очень наблюдательно..."
+
+
+=== jonas-question-intro
+
+$$ anim:LOOKING_DRIVER $$
+$$ anim:IDLE_KEYBOARD $$
+Он снова смотрит на свой компьютер и набирает на клавиатуре несколько строк...
+
+
+=== jonas-question
+
+$$ anim:LOOKING_DRIVER $$
+$$ anim:IDLE_DRIVERKEYBOARD $$
+Он внезапно поднимает голову.
+ЙОНАС: "Что ты думаешь об этом мире?"
+Он поднимает руку.
+ЙОНАС: "Извините, этот вопрос возник из ниоткуда…"
+$$ anim:IDLE_DRIVER $$
+ЙОНАС: "Как вы воспринимаете мир? Кто-то его создал? Бог? Много богов? Инопланетное существо?"
+$$ music-control: 40 $$
+Вы молчите какое-то время.
+*(Сказать правду.) -> jonas-question-truthanswer
+*(Не отвечать.) -> jonas-question-noanswer
+*:silence: (Избегайте этой темы.) -> jonas-question-avoidanswer
+
+
+=== jonas-question-truthanswer
+
+$$ reveal: 043_02 $$
+$$ camfocus: driver, slow $$
+"Раньше я верил. Но больше не верю."
+ЙОНАС: "В Бога? Яхве? Аллаха?"
+*(Сказать правду.) -> jonas-question-allah
+*(Не отвечать.) -> jonas-question-noanswer
+*:silence: (Избегайте этой темы.) -> jonas-question-avoidanswer
+*:angry: (Обиделся.) -> jonas-question-angryanswer
+
+
+=== jonas-question-allah
+
+"В Аллаха."
+Пассажир кивает.
+ЙОНАС: "Но уже нет?"
+*(Сказать правду.) -> jonas-question-allah2
+*(Не отвечать.) -> jonas-question-allah2-noanswer
+*:silence: (Избегайте этой темы.) -> jonas-question-allah2-avoidanswer
+*:angry: (Обиделся.) -> jonas-question-angryanswer
+
+
+=== jonas-question-allah2
+
+"Нет. Уже нет..."
+ЙОНАС: "Понимаю... В последнее время верующим приходится нелегко."
+"Я перестал верить задолго до этого."
+Он улыбается. Вы колеблетесь, затем говорите...
+
+
+=== jonas-question-allah2-noanswer
+
+Вы пытаетесь сохранять спокойствие.
+"Почему и как я поверил в Аллаха, не ваше дело…"
+ЙОНАС: "Верно."
+ЙОНАС: "Моё любопытство часто берёт надо мной верх."
+ЙОНАС: "Видите ли..."
+$$ anim:IDLE_DRIVERKEYBOARD $$
+
+
+=== jonas-question-allah2-avoidanswer
+
+"Можно сказать и так..."
+ЙОНАС: "Никогда не перестаёшь верить по-настоящему. Религия остаётся с тобой, прилипает, как клей."
+$$ anim:IDLE_DRIVERKEYBOARD $$
+
+
+=== jonas-question-noanswer
+
+Молчаливая пауза затягивается до тех пор, пока у вашего пассажира не появляется крошечная улыбка.
+ЙОНАС: "Я увлёкся... Простите."
+$$ anim:IDLE_DRIVERKEYBOARD $$
+Его улыбка ширится.
+
+
+=== jonas-question-avoidanswer
+
+"Мне просто это не интересно".
+Он улыбается вам.
+ЙОНАС: "Я понимаю…"
+$$ anim:IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "Я чувствую то же самое".
+
+
+=== jonas-question-angryanswer
+
+"Вы часто задаете людям этот вопрос?"
+Он выглядит так, будто размышляет об этом.
+ЙОНАС: "Да."
+$$ anim:IDLE_DRIVERKEYBOARD $$
+Вздох.
+
+
+=== jonas-reality
+
+ЙОНАС: "Лично… я считаю, что все это…"
+$$ anim:IDLE_DRIVER $$
+$$ camfocus: default, slow $$
+Он указывает на окружающий мир.
+ЙОНАС: "...не имеет абсолютно никакого значения."
+$$ anim:MOVING_HAND $$
+$$ anim:IDLE_MIND $$
+$$ movie: TunnelDriving_Loop $$
+ЙОНАС: "Мир не существует".
+ЙОНАС: "Земля, луна, солнце, то, что вы чувствовали, когда встали с постели этим утром… ничего из этого не существует".
+$$ anim:MOVING_HAND $$
+$$ anim:IDLE_MIND $$
+$$ movie: stop $$
+Он делает резкую паузу - невозможно понять, нарочно или нет.
+*:puzzled: В последнее время я только об этом и думаю... -> jonas-reality2
+*:silence: (Пусть продолжает говорить.) -> jonas-reality2
+
+
+=== jonas-reality2
+
+Он щелкает языком и смотрит на вас.
+$$ anim:MOVING_HAND_REV $$
+$$ anim:IDLE_DRIVER $$
+Вы чувствуете себя некомфортно.
+$$ clue: clue_angel_customer_jonas_01 $$
+ЙОНАС: "Все это симуляция".
+ЙОНАС: "Я искренне в это верю".
+*"Что-что?" -> jonas-simulation-question
+*"Компьютерная… симуляция?" -> jonas-simulation-intro
+
+
+=== jonas-simulation-question
+
+ЙОНАС: "Симуляция. Программа, если хотите. Механизм, который кто-то создал, а мы — шестерёнки, движущиеся детали."
+ЙОНАС: "Нет, правда, не машина".
+ЙОНАС: "Машина предназначена для того, чтобы что-то производить… Я не думаю, что мы что-то производим".
+ЙОНАС: "Нет, я полагаю, мы больше…"
+
+
+=== jonas-simulation-intro
+
+Он криво улыбнулся.
+ЙОНАС: "Именно."
+
+
+=== jonas-simulation
+
+ЙОНАС: "Мы скорее научный эксперимент... Ферма для майнинга криптовалюты..."
+$$ anim:IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "Или... может быть, даже случайность."
+ЙОНАС: "Не больше... не меньше..."
+$$ anim:IDLE_DRIVER $$
+Он делает паузу и смотрит на вас.
+ЙОНАС: "Каково это узнать, что мира не существует?"
+ЙОНАС: "Что наш… Бог… не более чем компьютерная программа?"
+*"Это грустно." -> jonas-simulation-sad
+*"Это одна из теорий." -> jonas-simulation-theory
+*"Это интересно." -> jonas-simulation-theory-intro
+*:silence: (Ничего не говорить.) -> jonas-simulation-silence
+
+
+=== jonas-simulation-sad
+
+ЙОНАС: "Грустно?"
+$$ anim:IDLE_DRIVERKEYBOARD $$
+Он удивлён вашим ответом.
+ЙОНАС: "И всё же... Это соответствует духу времени, тому, кто мы есть."
+$$ anim:IDLE_DRIVER $$
+ЙОНАС: "Всё это — пустота. Завтра всё может закончиться, если кто-нибудь выдернет вилку из розетки, выключит компьютер и перезагрузится."
+$$ anim:IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "Вот почему я работаю над своим проектом каждую минуту".
+
+
+=== jonas-simulation-theory-intro
+
+Он слегка повышает голос и кажется взволнованным.
+
+
+=== jonas-simulation-theory
+
+ЙОНАС: "Верно... это теория."
+Его лицо озаряется.
+ЙОНАС: "И мы, вероятно, никогда по-настоящему не узнаем…"
+$$ anim:IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "Вот почему я работаю над этим проектом…"
+
+
+=== jonas-simulation-silence
+
+ЙОНАС: "Когда думаешь об этом, это безумие".
+ЙОНАС: "Это разрушает наш образ мышления, весь наш образ жизни".
+$$ anim:IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "Именно поэтому я работаю над своим проектом".
+
+
+=== jonas-project
+
+Он смотрит на свой компьютер.
+$$ anim:LOOKING_DRIVER_REV $$
+$$ anim:IDLE_KEYBOARD $$
+ЙОНАС: "Я пытаюсь выяснить, действительно ли мы находимся в симуляции".
+ЙОНАС: "Мы живём, едим, спим, любим."
+ЙОНАС: "Но если мы намеренно попытаемся положить конец симуляции, мы можем исчезнуть".
+$$ anim:LOOKING_DRIVER $$
+$$ anim:IDLE_DRIVER $$
+Он пристально смотрит на вас.
+ЙОНАС: 'Мы.'
+Он щелкает пальцами.
+ЙОНАС: "Нас больше нет".
+Похоже, ему нравится эта часть его речи. Он наслаждается ею.
+$$ anim: IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "Как я могу это доказать?"
+ЙОНАС: "Ну, сначала мне нужно найти ошибку в системе".
+$$ anim: IDLE_DRIVER $$
+"Ошибку?"
+ЙОНАС: "Да, если мы симуляция, то нас запрограммировали".
+$$ anim: IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "А те, кто нас программировал, либо допустили ошибки, либо попытались сэкономить".
+*"Почему?" -> jonas-project-why
+*:silence: (Пусть продолжает говорить.) -> jonas-project2
+
+
+=== jonas-project-why
+
+ЙОНАС: "Потому что альтернативы — желание нас мучить, стыд или шутка — маловероятны."
+ЙОНАС: "Наше существование обходится дорого. Это просто должно быть так."
+
+
+=== jonas-project2
+
+ЙОНАС: "Так что нам просто нужно найти баг, слабое место, чтобы его взломать."
+ЙОНАС: "Мы должны разрушить симуляцию и умереть, чтобы понять нашу собственную реальность".
+$$ anim:IDLE_DRIVER $$
+ЙОНАС: "Это ужасная судьба, не так ли?"
+$$ anim:MOVING_HAND $$
+$$ anim:IDLE_MIND $$
+$$ dialogspeed: slow $$
+ЙОНАС: "Умереть, чтобы существовать."
+ЙОНАС: "Умереть, чтобы стать реальным."
+ЙОНАС: "Умереть, чтобы наше существование материализовалось".
+$$ dialogspeed: normal $$
+Он замолкает. Улыбается.
+$$ anim:MOVING_HAND_REV $$
+$$ anim:IDLE_DRIVER $$
+Пристально смотрит.
+ЙОНАС: "Каково это — узнавать все это?"
+ЙОНАС: "Вы злитесь? Разочарованы? Вам грустно? Чувствуете себя побеждённым? Готовы покончить с собой?"
+ЙОНАС: "Я прохожу через все эти фазы... каждый день."
+$$ anim:IDLE_DRIVERKEYBOARD $$
+Он вздыхает.
+ЙОНАС: "Я говорю себе, что мир еще не готов".
+ЙОНАС: "И все же наше будущее… открыть нашу реальность".
+Он опускает взгляд.
+$$ travel: stop $$
+Вы паркуете такси перед адресом, который он назвал. Он пристально смотрит вам в глаза.
+$$ anim:IDLE_DRIVER $$
+ЙОНАС: "Ну? Что вы чувствуете?"
+*"Вы сумасшедший…" -> jonas-theory-crazy
+*:puzzled: "Не знаю…" -> jonas-theory-knowing-intro
+*"Мне страшно." -> jonas-theory-fear
+*:silence: (Ничего не говорить.) -> jonas-end-bad
+
+
+=== jonas-theory-crazy
+
+$$ anim:IDLE_DRIVER $$
+ЙОНАС: "Отличный ответ. Это лишь подтверждает, что статистически я недалёк от истины."
+$$ anim:MOVING_HAND $$
+$$ anim:IDLE_MIND $$
+ЙОНАС: "Галилей, Ньютон, Коперник, Гипатия..."
+ЙОНАС: "Все великие мыслители слишком рано указывали на истину; они опережали своё время."
+$$ anim:MOVING_HAND_REV $$
+$$ anim:IDLE_DRIVER $$
+Он улыбается.
+$$ anim:IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "Как и я."
+
+
+=== jonas-theory-knowing-intro
+
+ЙОНАС: "Отличный ответ".
+$$ anim:IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "Главное правило учёного: всегда сомневаться, всегда задавать вопросы и всегда проверять".
+
+
+=== jonas-theory-knowing-allah
+
+ЙОНАС: "Однажды, если атеист скажет, что Аллаха не существует…"
+
+
+=== jonas-theory-knowing-god
+
+ЙОНАС: "Однажды, если атеист заявит, что Бога, Аллаха или кого-то еще не существует…"
+
+
+=== jonas-theory-knowing
+
+ЙОНАС: "Он знает это, потому что нет никаких научных доказательств его существования…"
+ЙОНАС: "Вы знаете, что у него нет истинного научного ума".
+
+
+=== jonas-theory-fear
+
+ЙОНАС: "Понимаю вас."
+$$ anim:LOOKING_DRIVER_REV $$
+$$ anim:IDLE_KEYBOARD $$
+ЙОНАС: "Важно сомневаться. Защищать себя."
+ЙОНАС: "Я такой же."
+Его внезапно охватывает печаль.
+$$ anim:LOOKING_DRIVER $$
+$$ anim:IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "Страх — это главное. Мы эволюционировали как вид, потому что боялись."
+ЙОНАС: "Мы искали защиты, учились защищаться, изготавливать оружие."
+$$ music-control: 60 $$
+ЙОНАС: "Так что... бояться... это правильный ответ."
+
+
+=== jonas-end-bad
+
+$$ tip: none $$
+$$ music-control: 60 $$
+Он ждёт ответа, который не приходит. Вы задерживаете дыхание.
+$$ anim:LOOKING_DRIVER_REV $$
+$$ anim:IDLE_KEYBOARD $$
+ЙОНАС: "Понимаю."
+Он улыбается.
+ЙОНАС: "Больше ничего говорить не нужно."
+$$ movie: lamparo_off, hide_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_int $$
+Он расплачивается. Выходит из машины. Делает несколько шагов. Возвращается.
+ЙОНАС: "Скоро... вы увидите... Вы увидите, что я прав."
+Он исчезает.
+Вы перестаёте задерживать дыхание и уезжаете.
+
+
+=== jonas-end
+
+$$ anim:IDLE_DRIVER $$
+Он смотрит на свое здание.
+ЙОНАС: "Я говорю и говорю и даже не заметил, что мы приехали".
+$$ anim:IDLE_DRIVERKEYBOARD $$
+ЙОНАС: "Искренне благодарю вас за этот разговор."
+ЙОНАС: "Всегда интересно обмениваться идеями, проверять их".
+$$ anim:IDLE_DRIVER $$
+ЙОНАС: "В конце концов, мы готовимся к войне с... человеком или сущностью, которая нас создала."
+$$ movie: lamparo_off, hide_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_int $$
+Он оплачивает проезд и выходит.
+Он быстро исчезает в своем здании, держа под мышкой ноутбук.
+
+
