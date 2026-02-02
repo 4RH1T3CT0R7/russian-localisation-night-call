@@ -1,6 +1,7 @@
 
 === esmeralda-01-start
 
+$$ hide_passenger $$
 $$ reveal: 006_00 $$
 Вы паркуетесь перед улицей, номер которой вам дали в центральном офисе.
 Проходит две минуты... три...
@@ -21,10 +22,12 @@ $$ travel: start $$
 
 === esmeralda-01-firstcall
 
-$$ sfx: !phone_game $$
+$$ sfx: phone_game $$
 Ее телефон внезапно вибрирует. Она отвечает.
-$$ camfocus: passenger, fast $$
+За годы работы вы научились различать приложения, переписку, игры, почту…
+$$ sfx: !phone_game $$
 ЭСМЕРАЛЬДА : "Что ещё?"
+$$ camfocus: passenger, fast $$
 Наступает пауза. На другом конце слышен голос ее матери. Тот же повышенный голос. Тот же акцент.
 ЭСМЕРАЛЬДА : "Да, я знаю".
 Еще одна пауза.
@@ -33,6 +36,7 @@ $$ camfocus: passenger, fast $$
 ЭСМЕРАЛЬДА : "Я сказала "да". Боже, что тебе надо? Отстань от меня".
 Она вешает трубку.
 ЭСМЕРАЛЬДА : "Сумасшедшая старая сука".
+ЭСМЕРАЛЬДА : "Чокнутая старая стерва."
 $$ sfx: phone_game $$
 $$ music-control: 20 $$
 Ее игра снова начинает пищать и щебетать.
@@ -70,6 +74,11 @@ $$ anim: IDLE_SMILE $$
 
 === esmeralda-01-mother
 
+$$ camfocus: default, slow $$
+ЭСМЕРАЛЬДА : "Не обычный таксист, а?"
+$$ anim: SMILING_REV $$
+$$ anim: TURNING_HEAD_REV $$
+$$ anim: IDLE_TELEPHONE $$
 :smile: Эта "сумасшедшая старая сука" — твоя мать?
 "Это немного грубо, не так ли?"
 ЭСМЕРАЛЬДА : "Это правда. Они ненавидят друг друга и ненавидят меня."
@@ -85,6 +94,7 @@ $$ anim: IDLE_SMILE $$
 
 === esmeralda-01-parents
 
+$$ sfx: !phone_game $$
 $$ anim: GETTING_ANGRY $$
 $$ anim: IDLE_ANGRY $$
 ЭСМЕРАЛЬДА : "Вы, наверное, думаете, что я очень грубая..."
@@ -110,6 +120,7 @@ $$ anim: IDLE_TELEPHONE $$
 
 === esmeralda-01-speech-intro
 
+Её взгляд стекленеет, и она снова утыкается в телефон.
 $$ sfx: phone_game $$
 ЭСМЕРАЛЬДА : "Держите свои лекции при себе".
 Ее тон - резкий, бескомпромиссный.
@@ -117,6 +128,8 @@ $$ sfx: phone_game $$
 
 === esmeralda-01-speech
 
+$$ anim: GETTING_ANGRY $$
+$$ anim: IDLE_ANGRY $$
 :silence: (Ничего не говорить.)
 ЭСМЕРАЛЬДА : "Моя мама всё время на меня срывается, превращает мою жизнь в ад, взламывает мой аккаунт в Facebook, чтобы шпионить за мной, ясно?"
 $$ sfx: !phone_game $$
@@ -140,7 +153,7 @@ $$ sfx: phone_game $$
 
 === esmeralda-01-end-intro
 
-8
+Наступает долгая пауза. Вы приближаетесь к площади Насьон.
 $$ travel: stop $$
 Она указывает на свою улицу, и вы останавливаетесь перед зданием.
 $$ music-control: 60 $$
@@ -152,6 +165,7 @@ $$ music-control: 60 $$
 
 === esmeralda-01-end-takecare
 
+$$ sfx: !phone_game $$
 $$ anim: TURNING_HEAD $$
 $$ anim: SMILING $$
 $$ anim: IDLE_SMILE $$
@@ -165,6 +179,10 @@ $$ anim: IDLE_SMILE $$
 
 === esmeralda-01-end
 
+$$ sfx: !phone_game $$
+$$ movie: lamparo_off, hide_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_int $$
+Она протягивает вам купюру и быстро выходит, чтобы присоединиться к мужчине, ожидающему её снаружи.
 $$ tip: low $$
 Они перебрасываются парой слов тихими голосами... Он кладёт руку ей на плечо.
 Вы ничего не слышите, но уверены, что она выиграла пари.
@@ -190,7 +208,7 @@ $$ sfx: phone_game $$
 "ЭСМЕРАЛЬДА: "В Венсен, пожалуйста.""
 $$ travel: start $$
 $$ music-control: 20 $$
-*СОННИ: "Куда? Вообще-то, я никуда не собираюсь." -> esmeralda-02-start-address
+*"Куда едем?" -> esmeralda-02-start-address
 *"Едешь к маме?" -> esmeralda-02-start-mother
 *:silence: (Ничего не говорить.) -> esmeralda-02-start-silence
 
@@ -337,7 +355,7 @@ $$ sfx: phone_game $$
 "Если я сделаю что-нибудь глупое, они меня со свету сживут."
 ЭСМЕРАЛЬДА: " Вы были в тюрьме? "
 *(Сказать правду.) -> esmeralda-02-no02-jailyes
-*Вы улыбаетесь. -> esmeralda-02-no02-jailno
+*(Солгать.) -> esmeralda-02-no02-jailno
 *:silence: (Ничего не говорить.) -> esmeralda-02-no02-jailsilence
 
 
@@ -503,5 +521,4 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Она выходит из машины, не сказав ни слова.
 $$ tip: none $$
 Этим вечером вы точно не приобрели друга.
-
 

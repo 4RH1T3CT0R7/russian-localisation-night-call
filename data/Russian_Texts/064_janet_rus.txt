@@ -80,43 +80,13 @@ $$ anim-link: FUTURE_2_BASIC $$
 
 === janet-01-start
 
-$$ tip: none $$
-$$ reveal: 064_00 $$
-$$ anim: IDLE_BASIC $$
+$$ music-control: 20 $$
+$$ camfocus: passenger, slow $$
 Вы едете по дороге, как вдруг салон заполняет странный запах горелого...
-$$ camfocus: driver, slow $$
 Вы оглядываетесь, принюхиваетесь... это доносится снаружи?
 (Продолжить движение.)
 (Припарковаться.)
 _Driver.Met.Janet=1
-Увидев свободное место, вы останавливаетесь и паркуетесь.
-$$ travel: stop $$
-Вы замираете.
-Что-то...
-Или кто-то... находится в вашем такси.
-Вы продолжаете ехать...
-Запах становится всё сильнее... давящим.
-Вы резко тормозите.
-$$ travel: stop $$
-В такси раздаётся женский голос.
-$$ display_passenger $$
-$$ music-control: 0 $$
-ДЖАНЕТ: "...Я не могу... Мне нужен лучший сигнал..."
-$$ movie: stop $$
-ДЖАНЕТ: "Я здесь... Я здесь..."
-Вы медленно оборачиваетесь. Позади вас... появилась молодая женщина.
-ДЖАНЕТ: "Не кричите."
-ДЖАНЕТ: "Боюсь потерять связь... У меня мало времени."
-В её лице есть что-то... странное... Будто она — несколько разных людей одновременно...
-ДЖАНЕТ: "Слушайте меня внимательно."
-$$ anim-link: BASIC_2_HEART $$
-ДЖАНЕТ: "Я из будущего, и..."
-ДЖАНЕТ: "Вы должны знать, что встретили..."
-$$ anim-link: HEART_2_BASIC $$
-Она застывает, словно компьютерный глюк.
-Так и замирает на месте.
-Затем вдруг снова начинает двигаться.
-$$ travel: start $$
 
 
 === janet-01-hyoga-yes
@@ -218,8 +188,8 @@ $$ music-control: 60 $$
 
 _Alexandre.Lie=1?cop-04-criminal02-lie;;cop-04-criminal03
 ДЖАНЕТ: "Японец?"
-$$ anim-link: BASIC_2_HEART $$
 ДЖАНЕТ: "Нет, я говорю о реальном человеке..."
+$$ anim-link: BASIC_2_HEART $$
 Она вздыхает. Разочарование, гнев, раздражение... всё вместе.
 $$ anim-link: HEART_2_BASIC $$
 
@@ -465,8 +435,8 @@ $$ hide_passenger $$
 Будто одновременно говорит кто-то ещё.
 $$ music-control: 40 $$
 *(Увеличить громкость.) -> janet-04-message-clear-01
-*Он буквально выплёвывает это слово. -> janet-04-message-blocked-01
-*Радио: (Выключить радио.) -> janet-04-message-silence-intro0
+*(Ничего не делать.) -> janet-04-message-blocked-01
+*:radio: (Выключить радио.) -> janet-04-message-silence-intro0
 
 
 === janet-04-message-clear-01
@@ -492,13 +462,12 @@ $$ music-control: 40 $$
 Её голос полностью исчезает.
 Вместо этого вы слышите что-то похожее на литургическое пение на... азиатском языке... на той же частоте.
 *(Оставить.) -> janet-04-message-blocked-02
-*Радио: (Выключить радио.) -> janet-04-message-silence-intro1
+*:radio: (Выключить радио.) -> janet-04-message-silence-intro1
 *(Искать станцию выше.) -> janet-04-message-hub-01-add
 *(Искать станцию ниже.) -> janet-04-message-clear-02
 
 
 === janet-04-message-hub-01-add
-
 
 
 === janet-04-message-clear-02
@@ -537,13 +506,12 @@ $$ dialogspeed: normal $$
 Её голос резко обрывается. Литургическое пение начинается снова. Вы узнаёте язык...
 Вьетнамский.
 *(Оставить.) -> janet-04-message-blocked-03
-*Радио: (Выключить радио.) -> janet-04-message-silence-intro2
+*:radio: (Выключить радио.) -> janet-04-message-silence-intro2
 *(Искать станцию выше.) -> janet-04-message-clear-03
 *(Искать станцию ниже.) -> janet-04-message-hub-02b
 
 
 === janet-04-message-hub-02b
-
 
 
 === janet-04-message-clear-03
@@ -579,13 +547,12 @@ $$ camfocus: driver, slow $$
 Вы слышите новый голос. Глубокий, мощный... На английском.
 Американец, судя по акценту.
 *(Оставить.) -> janet-04-message-blocked-04
-*Радио: (Выключить радио.) -> janet-04-message-silence-intro2
+*:radio: (Выключить радио.) -> janet-04-message-silence-intro2
 *(Искать станцию выше.) -> janet-04-message-hub-03b
 *(Искать станцию ниже.) -> janet-04-message-clear-04
 
 
 === janet-04-message-hub-03b
-
 
 
 === janet-04-message-clear-04
@@ -924,5 +891,4 @@ $$ clue: clue_sand_journal01_01, clue_sand_journal02_01, clue_sand_journal03_01,
 === janet-05-clue-angel
 
 $$ clue: clue_angel_journal01_01, clue_angel_journal02_01, clue_angel_journal03_01, clue_angel_journal04_01, clue_angel_journal05_01, clue_angel_journal06_01, clue_angel_journal07_01, clue_angel_journal08_01, clue_angel_journal09_01, clue_angel_journal10_01 $$
-
 

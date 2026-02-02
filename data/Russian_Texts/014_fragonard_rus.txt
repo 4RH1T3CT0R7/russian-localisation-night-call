@@ -577,7 +577,7 @@ $$ music-control: 80 $$
 Тишина.
 Он смотрит вам в глаза.
 *:positive: "Да." -> frag-01-cry-yes
-*:negative: карло-ли+=1 -> frag-01-cry-no
+*:negative: "Нет." -> frag-01-cry-no
 *:silence: (Ничего не говорить.) -> frag-01-cry-silence
 
 
@@ -618,8 +618,8 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 === customer-newspaper-04
 
 Вы берёте её и убираете.
-$$ newspaper: 1 $$
 Может пригодиться.
+$$ newspaper: 1 $$
 Вы поворачиваете ключ в замке зажигания и уезжаете.
 
 
@@ -1324,7 +1324,7 @@ $$ anim:IDLE_DRIVER_SMOKE $$
 ФРАГОНАРД: "В тот момент она пошла к своему начальнику. Он сказал ей: "Ничего страшного". "
 ФРАГОНАРД: "Четыре раза. "
 ФРАГОНАРД: "Пять раз. "
-ФРАГОНАРД: "Шесть раз. "
+ФРАГОНАРД : "Шесть раз."
 $$ anim:MOVING_HEAD_SMOKE $$
 $$ anim:IDLE_DRIVER_SMOKE $$
 Снова щелкает языком.
@@ -1339,7 +1339,7 @@ $$ anim:IDLE_DRIVER_SMOKE $$
 $$ anim:MOVING_HEAD_SMOKE $$
 $$ anim:IDLE_WINDOW_SMOKE $$
 ФРАГОНАРД: "Семь раз. "
-ФРАГОНАРД: "Восемь раз. "
+ФРАГОНАРД : "Восемь раз."
 ФРАГОНАРД: "Девять раз. "
 $$ anim:MOVING_HEAD_SMOKE $$
 $$ anim:IDLE_DRIVER_SMOKE $$
@@ -1496,10 +1496,10 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 
 === customer-newspaper
 
-Вы хватаете его и убираете.
+Вы берёте её и убираете.
 $$ newspaper: 1 $$
 Может пригодиться.
-Потом вы заводите машину... И снова все по новой.
+Вы уезжаете.
 
 
 === frag-04-start
@@ -1546,10 +1546,10 @@ $$ anim-link: WINDOW_2_KNEE $$
 Вдали от расследования.
 Но ты не можешь сказать правду.
 $$ anim-link: KNEE_2_WINDOW $$
-*:smile: Вы улыбаетесь. -> frag-04-question-family
-*:irony: Вы улыбаетесь. -> frag-04-question-you
-*:love: Вы улыбаетесь. -> frag-04-question-girlfriend
-*:smoking: Вы улыбаетесь. -> frag-04-question-friends
+*:smile: (Солгать.) -> frag-04-question-family
+*:irony: (Солгать.) -> frag-04-question-you
+*:love: (Солгать.) -> frag-04-question-girlfriend
+*:smoking: (Солгать.) -> frag-04-question-friends
 
 
 === frag-04-question-family
@@ -2002,7 +2002,7 @@ $$ anim-link: MOUTH_2_KNEEWINDOW $$
 Он смотрит вам прямо в глаза.
 ФРАГОНАРД: "Как вы думаете, что вы возьмете с собой в могилу? "
 *(Сказать правду.) -> frag-06-word-truth
-*Вы улыбаетесь. -> frag-06-word-lie
+*(Солгать.) -> frag-06-word-lie
 *:negative: (Отказ от ответа.) -> frag-06-word-refuse
 *:silence: (Ничего не говорить.) -> frag-06-word-silence
 
@@ -2326,7 +2326,7 @@ $$ music-control: 40 $$
 $$ dialogspeed: normal $$
 *"Э-э... Простите?" -> frag-08-showdown-excuseme
 *"Бюссе?" -> frag-08-showdown-excuseme
-*Я не понимаю, о чем вы говорите. " -> frag-08-showdown-excuseme
+*:puzzled: "Я не знаю, о чём вы говорите." -> frag-08-showdown-excuseme
 *(Сказать правду.) -> frag-08-showdown-truth
 
 
@@ -2350,7 +2350,7 @@ $$ music-control: 60 $$
 $$ movie: stop $$
 ФРАГОНАРД: "Но я устал от всех этих игр... от всей этой чертовой лжи. Куда они приказали тебе отвезти меня? "
 *"Они ничего не приказывали." -> frag-08-showdown-orders
-*Вы улыбаетесь. -> frag-08-showdown-lie2
+*(Солгать.) -> frag-08-showdown-lie2
 *(Сказать правду.) -> frag-08-showdown-truth
 *:silence: (Ничего не говорить.) -> frag-08-showdown-lie2
 
@@ -2362,7 +2362,7 @@ $$ movie: stop $$
 $$ anim-link: DRIVERGUN_2_DEFIANCEGUN $$
 ФРАГОНАРД : " Ответьте на вопрос... ГДЕ? "
 $$ anim-link: DEFIANCEGUN_2_DRIVERGUN $$
-*Вы улыбаетесь. -> frag-08-showdown-lie2
+*(Солгать.) -> frag-08-showdown-lie2
 *(Сказать правду.) -> frag-08-showdown-truth
 *:silence: (Ничего не говорить.) -> frag-08-showdown-lie2
 
@@ -2645,7 +2645,7 @@ $$ anim-link: WINDOWGUN_2_DRIVERGUN $$
 
 ФРАГОНАРД: "О нет, не беспокойтесь об этом... Она поймет. "
 *"Ладно." -> frag-08-story-newdirection
-*карло-ли+=1 -> frag-08-story-no
+*"Нет." -> frag-08-story-no
 
 
 === frag-08-story-no
@@ -2807,7 +2807,7 @@ $$ movie: KillerArrest_Loop $$
 *:violence: " Ты убийца. " -> frag-08-garage-no
 *:positive: (Согласен.) -> frag-08-garage-yes
 *:negative: (Качая головой "нет"). -> frag-08-garage-no
-*Он практически выплюнул это слово. -> frag-08-garage-no
+*(Ничего не делать.) -> frag-08-garage-no
 
 
 === frag-08-garage-yes
@@ -2836,5 +2836,4 @@ $$ reveal: 999_02 $$
 === frag-08-reveal2-intro
 
 $$ movie: FragonardGun_Loop $$
-
 

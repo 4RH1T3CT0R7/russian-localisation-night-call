@@ -43,6 +43,8 @@ $$ clue: clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_
 
 === customer-add-clue-outro
 
+$$ anim-link: PHONE_2_SAD $$
+
 *"Хороший вечер?" -> myriam-00-evening
 *(Оставить ее в покое.) -> myriam-00-silence
 
@@ -52,8 +54,6 @@ $$ clue: clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_
 "Хороший вечер?"
 Она поднимает голову.
 МИРИАМ : "Да... Да."
-Она снова замолкает. Тишина длится несколько секунд.
-(Оставить ее в покое.)
 
 
 === myriam-00-silence
@@ -72,8 +72,6 @@ $$ camfocus: default, normal $$
 МИРИАМ : "Мы... э... мы с вами уже разговаривали."
 МИРИАМ : "Вы, возможно, не помните, но я работала няней в одной иранской семье и..."
 Она не заканчивает фразу.
-:negative: "Нет, извините."
-:silence: (Промолчать.)
 *:positive: " Конечно… " -> myriam-00-question-yes
 *:negative: "Нет, извините." -> myriam-00-question-no
 *:silence: (Ничего не говорить.) -> myriam-00-question-silence
@@ -81,6 +79,7 @@ $$ camfocus: default, normal $$
 
 === myriam-00-question-yes
 
+$$ anim: ROLLING_EYES $$
 $$ anim: IDLE_DRIVER $$
 Она улыбается... хотя ее глаза говорят, что она не совсем уверена, что вы говорите правду.
 
@@ -88,7 +87,7 @@ $$ anim: IDLE_DRIVER $$
 === myriam-00-question-no
 
 МИРИАМ : "Вы вмешались."
-Вы понятия не имеете, о чем она говорит, но все равно улыбаетесь ей.
+Вы понятия не имеете, о чём она говорит, но всё равно улыбаетесь ей.
 
 
 === myriam-00-question-silence
@@ -99,8 +98,8 @@ $$ anim: IDLE_DRIVER $$
 
 === myriam-00-end
 
+$$ reveal: 073_01 $$
 МИРИАМ : "Это совсем другая ситуация, в любом случае."
 МИРИАМ : "Это... новые клиенты..."
 $$ anim: IDLE_WINDOW $$
-
 

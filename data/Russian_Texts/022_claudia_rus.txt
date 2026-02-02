@@ -376,7 +376,7 @@ $$ reveal: 022_00 $$
 КЛАУДИЯ: "Да, это очень красиво. "
 Она делает паузу.
 КЛАУДИЯ: "Хотя прошло уже... много лет с тех пор, как я вернулась. "
-*Он делает глубокий вдох. -> claudia-accent-why
+*"Почему?" -> claudia-accent-why
 *"Какая жалость." -> claudia-accent-toobad
 *:silence: (Ничего не говорить.) -> claudia-intro
 
@@ -576,7 +576,7 @@ $$ anim-link: SMILE_2_BASIC $$
 КЛАУДИЯ: "Во-вторых... Я не хочу говорить о работе."
 КЛАУДИЯ: "Я судмедэксперт. Знаешь, что это такое?"
 *"Да." -> claudia-rules-yes
-*карло-ли+=1 -> claudia-rules-no
+*"Нет." -> claudia-rules-no
 
 
 === claudia-rules-yes
@@ -837,7 +837,7 @@ $$ anim-link: BASIC_2_BREAKDOWN $$
 КЛАУДИЯ: "Но ты находишь меня привлекательной?"
 Она ждёт ответа.
 *"Да." -> claudia-part3-silence-yes
-*карло-ли+=1 -> claudia-part3-silence-no
+*"Нет." -> claudia-part3-silence-no
 *" Я не знаю." -> claudia-part3-silence-knowing
 
 

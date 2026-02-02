@@ -5,7 +5,6 @@ $$ movie: lamparo_on, display_passenger $$
 $$ sfx: sfx_gameplay_car_openclose_from_ext $$
 $$ anim: IDLE_DRIVER $$
 Она рухнула на заднее сиденье и пробормотала адрес на другом конце города.
-Она рухнула на заднее сиденье и пробормотала адрес на другом конце города.
 $$ travel: start $$
 $$ reveal: 073_00 $$
 "Идиот... Замок. Ты думаешь, мы будем там спать?"
@@ -28,6 +27,7 @@ $$ anim: IDLE_DRIVER $$
 
 === customer-add-clue-outro
 
+$$ anim-link: PHONE_2_SAD $$
 
 
 === myriam-00-evening
@@ -46,7 +46,6 @@ $$ anim: IDLE_DRIVER $$
 
 За окном Париж только начинает засыпать.
 Время от времени вы ловите её взгляд, как будто она тоже вас узнаёт…
-Проходит несколько минут, прежде чем она решается нарушить молчание.
 Проходит несколько минут, прежде чем она решается нарушить молчание.
 $$ camfocus: default, normal $$
 "Забудьте о том "друге", который выглядит так же, как я..."
@@ -88,41 +87,21 @@ $$ anim: IDLE_WINDOW $$
 
 === myriam-01-start
 
-$$ sfx: sfx_gameplay_car_openclose_from_ext $$
-$$ anim: IDLE_DRIVER $$
 У вашей следующей пассажирки тот самый усталый вид, который присущ многим молодым парижанам.
+$$ music-control: 0 $$
+$$ reveal: 073_02 $$
 Она рухнула на заднее сиденье и пробормотала адрес на другом конце города.
-$$ travel: start $$
-$$ reveal: 073_00 $$
 Вы начинаете движение.
-$$ camfocus: passenger, normal $$
+$$ anim: IDLE_DRIVER $$
 Вы незаметно наблюдаете за ней в зеркало заднего вида.
-$$ anim: IDLE_WINDOW $$
 Ее лицо... кажется знакомым.
 Может быть, она знаменита? Может быть, вы водили ее раньше?
 Через несколько минут вы решаете, что это, должно быть, няня: молодая, не обязательно богатая, на лице выражение полнейшей скуки.
+$$ music-control: 20 $$
 Такие часто встречаются, особенно в хороших районах.
-$$ anim: IDLE_DRIVER $$
 Вы чувствуете, что ваша пассажирка хочет поговорить об убийце. Все просто: после первого убийства все думают, что им что-то известно.
 Каждый думает, что он что-то видел.
-И эта пассажирка... не исключение...
 _Killer.Is.Judge=1?customer-add-clue-judge;;_Killer.Is.Sandman=1?customer-add-clue-sandman;;_Killer.Is.Angel=1?customer-add-clue-angel;;customer-add-clue-outro
-$$ clue: clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_customer_rumor_03, clue_angel_customer_rumor_04, clue_angel_customer_rumor_05, clue_angel_customer_rumor_06, clue_angel_customer_rumor_07, clue_angel_customer_rumor_08, clue_angel_customer_rumor_09, clue_angel_customer_rumor_10, clue_angel_customer_rumor_11, clue_angel_customer_rumor_12, clue_angel_customer_rumor_13, clue_angel_customer_rumor_14 $$
-Проходит несколько минут, прежде чем она решается нарушить молчание.
-МИРИАМ: "Могу я спросить вас кое о чем?"
-$$ camfocus: default, normal $$
-Она слегка наклоняется вперед.
-МИРИАМ: "Мы... э-э... мы с вами уже говорили."
-МИРИАМ: "Возможно, вы не помните, но я работала няней в одной иранской семье и..."
-Она не договаривает фразу.
-$$ anim: IDLE_DRIVER $$
-Она улыбается... хотя ее глаза говорят о том, что она не совсем уверена в том, что вы говорите правду.
-МИРИАМ: "Вы втянулись."
-Вы понятия не имеете, о чем она говорит, но тем не менее улыбаетесь ей.
-МИРИАМ: "Ну что ж..."
-МИРИАМ: "В любом случае, это совсем не та же ситуация."
-МИРИАМ: "Это... новые клиенты..."
-$$ anim: IDLE_WINDOW $$
 *"Что она сказала?" -> myriam-01-story01-introB
 *(Пусть продолжает.) -> myriam-01-story01-introA
 
@@ -315,9 +294,9 @@ $$ anim: IDLE_DRIVER $$
 МИРИАМ: "Но если я это сделаю и ошибусь… мне конец."
 МИРИАМ: "Может, они ещё и в суд на меня подадут… За клевету или что-то такое."
 "Верно, для вас это может плохо кончиться…"
-*Но... -> myriam-01-police-but
+*"Но…" -> myriam-01-police-but
 *"Вам нужно защитить себя." -> myriam-01-police-yourself
-*Он исчезает в ночи. Секунду вы сидите в тишине. -> myriam-01-police-silence
+*(Больше ничего не говорить.) -> myriam-01-police-silence
 
 
 === myriam-01-police-but
@@ -351,13 +330,10 @@ $$ anim: IDLE_DRIVER $$
 === myriam-01-choice-1
 
 
-
 === myriam-01-choice-2
 
 
-
 === myriam-01-choice-3
-
 
 
 === myriam-01-changeofheart
@@ -426,6 +402,7 @@ $$ reveal: 073_04 $$
 Время от времени молодая женщина открывает рот… вдыхает…
 Но не издаёт ни звука.
 Ни единого звука.
+Ни звука.
 $$ travel: stop $$
 $$ music-control: 60 $$
 $$ anim: MOVING_GUN $$
@@ -487,7 +464,7 @@ $$ movie $$
 МИРИАМ: "Поэтому я оставила ему записку сегодня вечером."
 $$ music-control: 40 $$
 *"Записку?" -> myriam-02-love-message
-*Даже если это не моя работа... -> myriam-02-love-how
+*"Как?" -> myriam-02-love-how
 *:silence: (Ничего не говорить.) -> myriam-02-love-silence
 
 
@@ -564,7 +541,6 @@ $$ movie $$
 === myriam-02-invisible-intro-silence
 
 
-
 === myriam-02-invisible-intro
 
 МИРИАМ: " Но… "
@@ -594,7 +570,7 @@ $$ anim: ROLLING_EYES $$
 $$ anim: IDLE_DRIVER $$
 МИРИАМ: "Мне должно быть стыдно, не так ли?"
 Ее глаза наполнены слезами. Она немного трясется. По тону ее голоса слышно, что она в панике.
-*Нет... -> myriam-02-arrival-no
+*"Нет…" -> myriam-02-arrival-no
 *"Да." -> myriam-02-shame
 *"Трудно сказать…" -> myriam-02-arrival-shame
 *:silence: (Ничего не говорить.) -> myriam-02-arrival-silence
@@ -655,7 +631,6 @@ $$ music-control: 80 $$
 
 
 === myriam-02-end-final
-
 
 
 === myriam-03-start
@@ -806,7 +781,7 @@ $$ anim: IDLE_DRIVER $$
 МИРИАМ: "Они знают, что их сын другой."
 МИРИАМ: "Извините, я не это хотел сказать… но…"
 Вы улыбаетесь.
-МИРИАМ: "Но он ненормальный… Что-то в нем… извращенное… что-то злое…"
+МИРИАМ : "Но он ненормальный… В нём есть что-то… извращённое… что-то порочное…"
 
 
 === myriam-03-story04
@@ -825,11 +800,11 @@ $$ travel: stop $$
 $$ anim: ROLLING_EYES $$
 $$ anim: IDLE_DRIVER $$
 карло-ли+=1
-$$ anim: IDLE_WINDOW $$
 МИРИАМ: "Вы когда-нибудь видели такое поведение? Такое… злое?"
+$$ anim: IDLE_WINDOW $$
 $$ anim: IDLE_DRIVER $$
 *(Сказать правду.) -> myriam-03-story04-truth
-*Вы улыбаетесь. -> myriam-03-story04-lie
+*(Солгать.) -> myriam-03-story04-lie
 *(Подумать.) -> myriam-03-story04-think
 
 
@@ -840,7 +815,7 @@ $$ anim: IDLE_DRIVER $$
 Это было в его характере. Как будто он родился волком, а вы — овцой.
 Но что-то в глубине души подсказывает вам, что этой девушке нужна ваша поддержка.
 *(Сказать правду.) -> myriam-03-story04-truth
-*Вы улыбаетесь. -> myriam-03-story04-lie
+*(Солгать.) -> myriam-03-story04-lie
 
 
 === myriam-03-story04-truth
@@ -908,5 +883,4 @@ $$ reveal: 073_07 $$
 === myriam-02-end-revealno
 
 $$ reveal: 073_06 $$
-
 

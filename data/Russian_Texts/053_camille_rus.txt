@@ -355,7 +355,7 @@ $$ music-control: 0 $$
 Вы трогаетесь. Она оглядывает такси и делает пометки.
 *:smile: "Как проходит ваш вечер?" -> camille-01-test-introA
 *:irony: "Могу я вам чем-то помочь?" -> camille-01-test-introA
-*:silence: Она быстро выходит из такси. -> camille-01-test-introB
+*:silence: (Оставить её.) -> camille-01-test-introB
 
 
 === camille-01-test-introA
@@ -377,9 +377,9 @@ $$ reveal: 053_01 $$
 Нюхает ремень безопасности...
 Открывает и закрывает окно снова и снова...
 $$ music-control: 20 $$
-*КАРЛО: "Да, да... Я здесь." -> camille-01-start-shout
+*"Эй!" -> camille-01-start-shout
 *"Могу я вам чем-то помочь?" -> camille-01-start-shout
-*Она делает глубокий вдох. -> camille-01-question1-introA
+*(Дать ей продолжить.) -> camille-01-question1-introA
 
 
 === camille-01-start-shout
@@ -630,7 +630,7 @@ $$ camfocus: driver, slow $$
 *"Это уже существует..." -> camille-01-idea-good-name
 *"Мобильный дом?" -> camille-01-idea-good-name
 *(Кивнуть.) -> camille-01-idea-good-ok
-*Он буквально выплёвывает это слово. -> camille-01-idea-good-silence
+*(Ничего не делать.) -> camille-01-idea-good-silence
 
 
 === camille-01-idea-good-name
@@ -698,7 +698,7 @@ $$ anim-link: WINDOW_2_DRIVER $$
 КАМИЛЬ: "Через десять лет вы будете не нужны."
 КАМИЛЬ: "Так что, если бы я была на вашем месте..."
 *:silence: (Держать себя в руках.) -> camille-01-end-badidea3
-*Гнев: (Выбросить её из такси.) -> camille-01-getout1
+*:anger: (Выгнать её из такси.) -> camille-01-getout1
 
 
 === camille-01-end-badidea3

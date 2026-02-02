@@ -1,6 +1,7 @@
 
 === shinji-01-start
 
+$$ movie: black $$
 $$ hide_passenger $$
 Ваш следующий пассажир ждет на тротуаре, рядом с ним лежит огромный чемодан.
 $$ movie: black $$
@@ -21,6 +22,7 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 
 === shinji-01-silence1
+
 *" Смотрите, кто прощается. " -> shinji-01-eiffel-intro
 *" Эйфелева башня! " -> shinji-01-eiffel
 *(Ничего не говорить.) -> shinji-01-eiffel-notunderstanding
@@ -46,7 +48,7 @@ $$ anim-link: WINDOW_2_DESPAIR_2_WINDOW $$
 СИНДЗИ : "おぞましい。とても醜いよ。
 Его тон наводит на мысль, что он считает ее уродливой.
 *"Вам не нравится?" -> shinji-01-eiffel-notunderstanding
-*Вам кажется, что вы узнали... название аэропорта. -> shinji-01-eiffel-notunderstanding
+*"Я не понимаю…" -> shinji-01-eiffel-notunderstanding
 *:puzzled: (Сказать что-нибудь по-английски.) -> shinji-01-eiffel-english
 *:silence: (Ничего не говорить.) -> shinji-01-anger-intro
 
@@ -59,7 +61,6 @@ $$ anim-link: WINDOW_2_DESPAIR_2_WINDOW $$
 === shinji-01-eiffel-notunderstanding
 
 (Ничего не говорить.)
-"Я не понимаю..."
 
 
 === shinji-01-anger-intro
@@ -69,6 +70,7 @@ $$ anim-link: WINDOW_2_DESPAIR_2_WINDOW $$
 
 === shinji-01-anger
 
+$$ anim-link: WINDOW_2_DRIVER $$
 Его голос откровенный, с нотками усталости.
 СИНДЗИ : "放っておいてくれ。
 СИНДЗИ : "うんざりだ。
@@ -82,9 +84,9 @@ $$ anim-link: WINDOW_2_DESPAIR_2_WINDOW $$
 $$ anim-link: DRIVER_2_WINDOW $$
 Вам кажется, что вы узнали... название аэропорта.
 *"Хотите что-нибудь поесть?" -> shinji-01-anger-nounderstanding
-*Он и раньше издавал этот звук. -> shinji-01-anger-airport
-*Он бормочет все дальше и дальше. -> shinji-01-anger-nounderstanding
-*Вам кажется, что вы узнали... название аэропорта. -> shinji-01-anger-annoyed
+*"Аэропорт?" -> shinji-01-anger-airport
+*"Я не понимаю." -> shinji-01-anger-nounderstanding
+*:silence: (Игнорировать его.) -> shinji-01-anger-annoyed
 
 
 === shinji-01-anger-nounderstanding
@@ -99,7 +101,6 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 === shinji-01-anger-airport
 
-"Аэропорт?"
 $$ anim-link: WINDOW_2_DRIVER $$
 СИНДЗИ : "そう！ そのとおり！ 空港だ！"
 "Аэропорт!"
@@ -140,6 +141,7 @@ $$ anim-link: WINDOW_2_DESPAIR_2_WINDOW $$
 СИНДЗИ : "重い。
 СИНДЗИ : "重すぎる。こってりしてて、胃にもたれる。
 Он бормочет все дальше и дальше.
+Он бормочет без остановки.
 $$ anim-link: WINDOW_2_DRIVER $$
 СИНДЗИ : "どれくらい脂肪をとったか考えると、気が滅入ってくるな。
 СИНДЗИ : "朝食のクロワッサン..."
@@ -156,32 +158,35 @@ $$ music-control: 40 $$
 СИНДЗИ : "まあ... ベルサイユは良かったが！"
 Вы сразу узнаете это слово!
 *"Версаль?" -> shinji-01-versailles
-*Вам кажется, что вы узнали... название аэропорта. -> shinji-01-ignore
+*:silence: (Игнорировать его.) -> shinji-01-ignore
 
 
 === shinji-01-versailles
 
+$$ anim-link: WINDOW_2_DRIVER $$
 СИНДЗИ : "ベルサイユ！"
 Он разразился хохотом.
 СИНДЗИ : "あれはすばらしかった！"
 СИНДЗИ : "荘厳で... 精巧で... 卓越したセンスだ！"
 СИНДЗИ : "でもベルサイユはどこにでも... 共産党がいるんだよな...。
 Он смотрит на вас.
-СИНДЗИ : "共産党か？
+СИНДЗИ : "共産党か？"
+Он бросает на вас взгляд.
 
 
 === shinji-01-communists
 
 СИНДЗИ : "パリは醜い。
-СИНДЗИ : "ほら、一緒に。パリは、醜い。
+СИНДЗИ : "ほら、一緒に。パリは、醜い。"
 $$ anim-link: DRIVER_2_WINDOW $$
 Создается впечатление, что он хочет... хочет, чтобы вы повторяли его слова.
 *(Повторить.) -> shinji-01-repeat
-*Вам кажется, что вы узнали... название аэропорта. -> shinji-01-ignore
+*:silence: (Игнорировать его.) -> shinji-01-ignore
 
 
 === shinji-01-repeat
 
+$$ anim-link: WINDOW_2_DRIVER $$
 СИНДЗИ : "パリ... は... 醜い..."
 "パリ..."
 Он кивает.
@@ -193,7 +198,7 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 === shinji-01-ignore
 
-СИНДЗИ : "いや、なんでもない。
+СИНДЗИ : "いや、なんでもない。"
 
 
 === shinji-01-sleep
@@ -207,12 +212,12 @@ $$ anim-link: DRIVER_2_WINDOW $$
 Деловые люди. Хорошо одетые старшеклассники. Эти японские мафиози...
 Как они называются?
 *(Спросить его.) -> shinji-01-yakuza
-*:silence: Его уверенность внезапно исчезает. Он срывается. -> shinji-01-drive
+*:silence: (Оставить его в покое.) -> shinji-01-drive
 
 
 === shinji-01-yakuza
 
-0
+"Как там называется японская мафия?"
 Он не шевелится... но издает стон.
 "Мафия?"
 Стон.
@@ -236,10 +241,15 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 === shinji-01-drive
 
+Вы продолжаете ехать.
+$$ anim-link: DRIVER_2_WINDOW $$
+Вы думаете о фильме, который смотрели в больнице.
+$$ movie: PlaneInSky_Loop $$
 :silence: (Оставить его в покое.)
 \"Да, мафия.\"
 Вы вспоминаете фильм, который смотрели во время пребывания в больнице.
 Какой позор - не понимать его! Не иметь возможности поговорить с ним об этом.
+Вы вздыхаете.
 Вы вздыхаете.
 
 
@@ -247,11 +257,14 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 Наверное, это сложно - не тот же самый алфавит. Не те же буквы. Но, с другой стороны, ваши родители могли читать по-арабски и писать по-французски.
 Значит, вы тоже можете?
-Да... позже... у вас будет время.
+Да… потом… у вас будет время.
+Да… потом… у вас ещё будет время.
 
 
 === shinji-01-arrival
 
+$$ movie: stop $$
+И вот… вы в аэропорту. Куча рамп и туннелей приводит вас к зоне высадки.
 $$ travel: stop $$
 $$ tip: medium $$
 Вы останавливаетесь, и ваш клиент просыпается.
@@ -277,6 +290,8 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 === shinji-01-outside
 
+$$ movie: lamparo_off, hide_passenger $$
+$$ sfx: sfx_gameplay_car_openclose_from_int $$
 $$ movie: black $$
 Вы выходите из такси и помогаете ему достать чемодан из багажника.
 Он весит целую тонну.
@@ -287,7 +302,7 @@ $$ movie: black $$
 $$ music-control: 60 $$
 *:negative: "Нет, спасибо." -> shinji-01-story-introB
 *:smile: "Я тоже." -> shinji-01-story-introB
-*Он весит целую тонну. -> shinji-01-story-introA
+*"Я. Не. Понимаю." -> shinji-01-story-introA
 *(Ничего не говорить.) -> shinji-01-story-introB
 
 
@@ -299,11 +314,11 @@ $$ music-control: 60 $$
 === shinji-01-story-introB
 
 :smile: "Я тоже."
-(Ничего не говорить.)
 
 
 === shinji-01-story
 
+$$ camfocus: driver, fast $$
 Когда он снова начинает говорить, его голос монотонен и совершенно лишен эмоций.
 СИНДЗИ : "クリスマスに息子が亡くなったんだ。
 Что-то внутри вас резонирует, как будто вы поняли, что он только что сказал.
@@ -327,10 +342,10 @@ $$ music-control: 60 $$
 === shinji-01-exit-yakuza
 
 yakuza=1?shinji-01-exit-yakuza;;shinji-01-exit-intro
-$$ dialogspeed: slow $$
 СИНДЗИ : "ヤクザ！"
-$$ dialogspeed: normal $$
+$$ dialogspeed: slow $$
 Вы практически подпрыгиваете - он только что произнес слово "якудза"!
+$$ dialogspeed: normal $$
 *:smile: "Якудза!" -> shinji-01-exit-yakuza-laugh
 *(Помахать.) -> shinji-01-exit-yakuza-sign
 *:taxi: (Вернуться в такси.) -> shinji-01-exit-intro
@@ -338,7 +353,7 @@ $$ dialogspeed: normal $$
 
 === shinji-01-exit-yakuza-laugh
 
-Он заходит в аэропорт...
+Он заходит в аэропорт…
 
 
 === shinji-01-exit-yakuza-sign
@@ -353,16 +368,19 @@ $$ dialogspeed: normal $$
 
 === shinji-01-exit
 
+Раздвижные стеклянные двери закрываются за ним.
+$$ movie: black $$
 Женщина, которая, должно быть, в другой жизни была викингом, проводит восковой машинкой по плитке в прихожей, чуть ниже вентиляционных отверстий.
 Другой таксист машет вам рукой, выезжая из зоны высадки.
 В небе появляется самолет - возможно, первый за день.
+Самолёт — возможно, первый за день — появляется в небе.
 
 
 === shine-01-end
 
 $$ movie: stop $$
+$$ sfx: sfx_gameplay_car_openclose_from_ext $$
 Вы садитесь обратно в такси.
 В течение минуты вы растираете замерзшие руки, чтобы согреть их.
 Всего несколько секунд... перед тем, как уехать.
-
 

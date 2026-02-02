@@ -658,9 +658,8 @@ $$ anim-link: COMFY_2_COLD $$
 $$ travel: stop $$
 Спасибо.
 ЭРВЕ: "Спасибо".
-Он смотрит в окно.
 $$ dialogspeed: fast $$
-ЭРВЕ: "Да, кажется, это он..."
+Он смотрит в окно.
 $$ dialogspeed: normal $$
 *"Кто?" -> herve-02-stop2
 *"Все в порядке?" -> herve-02-time
@@ -1445,5 +1444,4 @@ $$ music-control: 80 $$
 *"Ты не ревнуешь?" -> herve-03-story2-jealous
 *"Как ты узнал?" -> herve-03-story2-howdoyouknow
 *:silence: (Ничего не говорить.) -> herve-03-story2-silence
-
 

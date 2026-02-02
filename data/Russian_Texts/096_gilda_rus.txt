@@ -712,19 +712,19 @@ $$ movie: stop $$
 === gilda-01-silence2
 
 ГИЛЬДА: "Иногда я не понимаю..."
-ДЖИЛЬДА : " ... "
+ГИЛЬДА : " ... "
 ГИЛЬДА: "Но все же..."
-ДЖИЛЬДА : " ... "
+ГИЛЬДА : " ... "
 ГИЛЬДА: "Я не думаю, что это правильный путь... Посмотри на папу... Он прекрасно справится. "
-ДЖИЛЬДА : " ... "
+ГИЛЬДА : " ... "
 ГИЛЬДА: "Нет..."
 $$ anim-link: JESUS_2_DRIVER $$
 Она звонко смеётся.
 ГИЛЬДА: "Я этого не знала... Как вы узнали? "
 $$ anim-link: DRIVER_2_JESUS $$
-ДЖИЛЬДА : " ... "
+ГИЛЬДА : " ... "
 ГИЛЬДА: "Серьезно? "
-ДЖИЛЬДА : " ... "
+ГИЛЬДА : " ... "
 ГИЛЬДА: "Ты неисправим. "
 В их разговоре наступает пауза.
 *"Извините... вы с кем-то разговаривали?" -> gilda-01-catacombs-friend
@@ -808,7 +808,7 @@ $$ camfocus: driver, slow $$
 $$ music-control: 60 $$
 Вы поднимаете голову. Дверь хлопает. Ваш пассажир уже снаружи.
 *(Позвоните ей.) -> gilda-01-end-call
-*Такси: (Уезжает.) -> gilda-01-end-start
+*:taxi: (Уехать.) -> gilda-01-end-start
 
 
 === gilda-01-end-call
@@ -892,7 +892,7 @@ $$ anim-link: SMILE_2_DRIVER $$
 $$ anim-link: DRIVER_2_WINDOW $$
 И всё же... вы думаете, что да. И вам нужно быть осторожным.
 $$ music-control: 20 $$
-*СОННИ: "Куда? Вообще-то, я никуда не собираюсь." -> gilda-02-intro-destination
+*"Куда едем?" -> gilda-02-intro-destination
 *"Хороший вечер?" -> gilda-02-intro-goodevening
 *(Кивок.) -> gilda-02-intro-silence
 
@@ -1136,7 +1136,7 @@ $$ anim-link: KNIFE_DRIVER_2_ANGER $$
 === gilda-02-crisis-what
 
 ГИЛЬДА: "Иисус сказал мне, что "Бюссе" слушает нас. Кто такой Бюссе? "
-ДЖИЛЬДА: "КТО ТАКОЙ БЮССЕ? "
+ГИЛЬДА: "КТО ТАКОЙ БЮССЕ? "
 Вас трясёт от страха.
 *:angry: " Я не понимаю, о чём вы говорите! " -> gilda-02-crisis-dontknow
 *"Она полицейский…" -> gilda-02-crisis-cop
@@ -1271,14 +1271,14 @@ $$ anim-link: KNIFE_JESUS_2_DRIVER $$
 
 *:love: "Я знаю о вашей маме." -> gilda-02-joker
 *:positive: "Да." -> gilda-02-speech02-yes
-*:negative: карло-ли+=1 -> gilda-02-speech02-no
+*:negative: "Нет." -> gilda-02-speech02-no
 *:puzzled: " Я не знаю." -> gilda-02-speech02-no
 
 
 === gilda-02-speech02-hub
 
 *:positive: "Да." -> gilda-02-speech02-yes
-*:negative: карло-ли+=1 -> gilda-02-speech02-no
+*:negative: "Нет." -> gilda-02-speech02-no
 *:puzzled: " Я не знаю." -> gilda-02-speech02-no
 
 
@@ -1504,7 +1504,7 @@ $$ camfocus: driver, slow $$
 У вас проблемы с дыханием.
 ГИЛЬДА: "Ответь мне..."
 *(Сказать правду.) -> gilda-02-gameover-truth
-*Вы улыбаетесь. -> gilda-02-gameover-lie
+*(Солгать.) -> gilda-02-gameover-lie
 *:violence: "Пошла на хер…" -> gilda-02-gameover-fuckyou
 *:silence: (Ничего не говорить.) -> gilda-02-gameover-silence
 

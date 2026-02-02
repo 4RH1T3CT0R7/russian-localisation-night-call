@@ -28,16 +28,8 @@ $$ music-control: 0 $$
 
 === leia-01-start
 
-$$ movie: lamparo_on, display_passenger $$
-$$ sfx: sfx_gameplay_car_openclose_from_ext $$
-$$ anim: IDLE_BASIC $$
-$$ reveal: 013_00 $$
+$$ anim-link: BASIC_2_HEADFUCK $$
 Ваша следующая пассажирка не просто садится, она бросается внутрь.
-Энергичная, живая, болтливая, она выглядит так, будто никогда не останавливается.
-Она дает вам свой адрес и тяжело вздыхает.
-$$ travel: start $$
-$$ music-control: 0 $$
-Вы начинаете движение.
 *" Все в порядке?" -> leia-01-shock
 *"О, у меня нет никаких претензий... но он недоволен вами." -> leia-01-shock
 
@@ -341,7 +333,7 @@ $$ anim-link: SMILE_2_BASIC $$
 === leia-02-start
 
 ЛЕЯ: "О боже, чувак… чувак! Иисус."
-*Вы киваете. -> leia-02-beginning
+*"Что случилось?" -> leia-02-beginning
 *:silence: (Ничего не говорить.) -> leia-02-beginning
 
 
@@ -406,7 +398,7 @@ $$ anim-link: BASIC_2_ANGRY $$
 $$ anim-link: ANGRY_2_SMILE $$
 ЛЕЯ: "А ты? Вам нравятся динозавры?"
 *"Да." -> leia-02-dino-yes
-*карло-ли+=1 -> leia-02-dino-no
+*"Нет." -> leia-02-dino-no
 *:silence: (Ничего не говорить.) -> leia-02-dino-silence
 
 
@@ -915,7 +907,6 @@ $$ music-control: 20 $$
 === leia-05-start-honest
 
 
-
 === leia-05-start-ok
 
 $$ anim-link: BASIC_2_SMILE $$
@@ -1195,7 +1186,7 @@ $$ music-control: 20 $$
 *"И что ты имеешь в виду…?" -> leia-06-question-what
 *"Да, думаю, да…" -> leia-06-answer
 *"Это возможно." -> leia-06-answer
-*карло-ли+=1 -> leia-06-question-no
+*"Нет." -> leia-06-question-no
 
 
 === leia-06-question-what
@@ -1208,7 +1199,7 @@ $$ anim-link: ANGRY_2_BASIC $$
 ЛЕЯ: "Как будто они… выражают свою индивидуальность на лице."
 *"Да, я так думаю…" -> leia-06-answer
 *"Это возможно." -> leia-06-answer
-*карло-ли+=1 -> leia-06-question-no
+*"Нет." -> leia-06-question-no
 
 
 === leia-06-question-no
@@ -1395,7 +1386,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 $$ anim-link: BASIC_2_SMILE $$
 Этим вечером лицо вашего пассажира озаряется широкой улыбкой.
 ЛЕЯ: "Я тебе говорю. Невероятный."
-*Вы киваете. -> leia-07-start-what
+*"Что случилось?" -> leia-07-start-what
 *"Есть проблема?" -> leia-07-start-problem
 *:silence: (Ничего не говорить.) -> leia-07-start-what
 
@@ -1463,7 +1454,7 @@ $$ dialogspeed: normal $$
 Она замолкает и устраивается на заднем сиденье.
 *"Настоящая индейка!" -> leia-07-waste-intro
 *" Ты в порядке?" -> leia-07-oprhan-areyouok
-*Она быстро выходит из такси. -> leia-07-oprhan-leaveheralone
+*(Оставить её.) -> leia-07-oprhan-leaveheralone
 
 
 === leia-07-waste-intro
@@ -1487,7 +1478,7 @@ $$ anim-link: SMILE_2_BASIC $$
 Она смотрит на проезжую улицу.
 *:puzzled: " Сколько фильмов вы смотрите в неделю? " -> leia-07-movies
 *:smile: " Ты в порядке?" -> leia-07-oprhan-areyouok
-*:silence: Она быстро выходит из такси. -> leia-07-question-intro
+*:silence: (Оставить её.) -> leia-07-question-intro
 
 
 === leia-07-oprhan-areyouok
@@ -1729,7 +1720,7 @@ $$ anim-link: ANGRY_2_BASIC $$
 
 *"Это моя работа." -> leia-07-after-work
 *"Почему ты грустила раньше?" -> leia-07-after-sad
-*Он качает головой. Он должен был прийти с кем-то... -> leia-07-after-welcome
+*"Не за что." -> leia-07-after-welcome
 *:silence: (Ничего не говорить.) -> leia-07-after-silence
 
 
@@ -1781,6 +1772,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 
 
 === leia-08-start
+
 *" Что-то не так? " -> leia-08-movie-introA
 *" Что случилось? " -> leia-08-movie-introA
 *:silence: (Дать ей говорить.) -> leia-08-movie-introB
@@ -1940,7 +1932,7 @@ $$ dialogspeed: fast $$
 ЛЕЯ: "Но, черт возьми, это принесло мне пользу…"
 ЛЕЯ: "Думаешь, это сводит меня с ума?"
 $$ dialogspeed: normal $$
-*карло-ли+=1 -> leia-08-meaning-no
+*"Нет." -> leia-08-meaning-no
 *"Да." -> leia-08-meaning-yes
 *:silence: (Ничего не говорить.) -> leia-08-meaning-silence
 
@@ -1990,7 +1982,7 @@ $$ travel: stop $$
 ЛЕЯ: "Вы, наверное, думаете, что я совсем спятила, да?"
 *"Да… но мне нравится." -> leia-08-festival-good
 *"Безусловно." -> leia-08-festival-crazy
-*карло-ли+=1 -> leia-08-festival-no
+*"Нет." -> leia-08-festival-no
 *:silence: (Ничего не говорить.) -> leia-08-festival-silence-hub
 
 
@@ -2046,5 +2038,4 @@ $$ music-control: 60 $$
 $$ movie:lamparo_off, hide_passenger $$
 $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Она выпрыгивает из такси и исчезает.
-
 

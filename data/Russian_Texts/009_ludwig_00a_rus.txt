@@ -15,8 +15,6 @@ $$ display_passenger $$
 $$ anim-link: 2DRIVER $$
 $$ music-control: 0 $$
 "Не будете ли вы так любезны подвезти меня?"
-:anger: "Убирайся..."
-:silence: (Промолчать.)
 *"Куда?" -> ludwig-00a-good
 *:anger: "Убирайся..." -> ludwig-00a-bad
 *:silence: (Ничего не говорить.) -> ludwig-00a-good
@@ -47,5 +45,4 @@ $$ display_passenger $$
 На заднем сиденье за вами мальчик медленно появляется вновь.
 $$ travel: start $$
 Вы начинаете движение.
-
 

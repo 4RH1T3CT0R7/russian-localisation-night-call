@@ -28,17 +28,11 @@ $$ music-control: 0 $$
 
 === francois-01-start
 
-$$ movie: lamparo_on, display_passenger $$
-$$ anim: IDLE_THINKING $$
-$$ sfx: sfx_gameplay_car_openclose_from_ext $$
 Вы сразу узнаёте следующего пассажира, садящегося в ваше такси.
 Вы никогда не смотрите телевизор, редко слушаете радио, не читаете газет, и всё же...
 Вы знаете Франсуа де ла Нере в лицо. Полемист. Новеллист. Колумнист. И политик тоже - думаете вы.
 Ваш пассажир рассеянно называет вам свой адрес.
-$$ travel: start $$
-$$ music-control: 0 $$
-$$ reveal: 018_00 $$
-Вы начинаете движение.
+$$ anim: IDLE_TAPTAP $$
 *"Главный вопрос в этом случае: почему я не позвонил жене?" -> francois-01-ok
 *:silence: (Ничего не говорить.) -> francois-01-silence
 
@@ -246,7 +240,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Глаза у него вылезают…
 $$ anim: IDLE_TAPTAP $$
 ФРАНСУА: "Я не могу в это поверить. "
-*Вы киваете. -> francois-02-internetisguilty
+*"Что случилось?" -> francois-02-internetisguilty
 *:silence: (Ничего не говорить.) -> francois-02-tweet
 
 
@@ -297,7 +291,6 @@ $$ anim: IDLE_THINKING $$
 
 
 === francois-02-rapisbad2-silence
-
 
 
 === francois-02-rapisbad2
@@ -495,7 +488,6 @@ $$ anim: IDLE_THINKING $$
 === francois-02-end-silence
 
 
-
 === francois-02-end
 
 ФРАНСУА: "Она вела сайт, на котором демонстрировалась очень, очень частная коллекция."
@@ -523,6 +515,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 === customer-newspaper
 
 Вы хватаете его и убираете.
+Вы берёте её и убираете.
 $$ newspaper: 1 $$
 Может пригодиться.
 Потом вы заводите машину... И снова все по новой.
@@ -570,7 +563,7 @@ $$ anim: IDLE_TAPTAP $$
 ФРАНСУА : " Мишлин практически свободно ходит! ХОДИТ! СВОБОДНО! "
 $$ music-control: 40 $$
 $$ anim: IDLE_THINKING $$
-*Кто такая Мишлин? " -> francois-03-micheline-who
+*:puzzled: "Кто такая Мишлин?" -> francois-03-micheline-who
 *"Можете, пожалуйста, не орать?" -> francois-03-micheline-stopshouting
 *:silence: (Пусть говорит.) -> francois-03-micheline-silence
 
@@ -1021,7 +1014,7 @@ $$ anim: IDLE_TAPTAP $$
 $$ anim: IDLE_THINKING $$
 *"Может, цена слишком высокая?" -> francois-06-studio-tooexpensive
 *"В каком она районе?" -> francois-06-studio-where
-*Ирония судьбы: "Они упускают большую выгоду..." -> francois-06-studio-missingout
+*:irony: "Они многое теряют…" -> francois-06-studio-missingout
 *:silence: (Ничего не говорить.) -> francois-06-studio-silence
 
 
@@ -1498,7 +1491,6 @@ $$ dialoguespeed: normal $$
 === francois-04-agreed-silence
 
 
-
 === francois-04-agreed
 
 ФРАНСУА: "Возьмем, к примеру, Соединенные Штаты. У них нет права на забастовку! Это "сделай или умри"! "
@@ -1717,7 +1709,7 @@ $$ anim-link: ANGRY_2_THINKING $$
 ФРАНСУА: "А как насчет вас? Хотели бы вы иметь бесшумный автомобиль? "
 $$ focus: default, slow $$
 *:positive: "Да." -> francois-07-yes
-*:negative: карло-ли+=1 -> francois-07-no
+*:negative: "Нет." -> francois-07-no
 *:silence: (Ничего не говорить.) -> francois-07-hate
 
 
@@ -1844,5 +1836,4 @@ $$ anim: IDLE_THINKING $$
 === francois-04-end-intro-reveal
 
 $$ reveal: 018_07 $$
-
 
