@@ -14,7 +14,9 @@ $$ time: 1 $$
 Час спустя вы расплачиваетесь с заправщиком за услугу.
 Вы потеряли время. Ваш бак наполовину полон.
 Вы снова готовы отправиться в путь, несмотря на ухмылку на лице служащего...
-_Running.Out.Gas=1?gasstation-gas-ending1;;_Running.Out.Gas=2?gasstation-gas-ending2;;gasstation-gas-ending3
+-> _Running.Out.Gas = 1 ? gasstation-gas-ending1
+-> _Running.Out.Gas = 2 ? gasstation-gas-ending2
+-> gasstation-gas-ending3
 
 
 
