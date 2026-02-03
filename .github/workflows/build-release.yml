@@ -29,6 +29,8 @@ jobs:
       - name: Prepare data folder
         shell: pwsh
         run: |
+          # Ensure plugins directory exists (git doesn't track empty dirs)
+          New-Item -ItemType Directory -Path "data/BepInEx/plugins" -Force | Out-Null
           # Copy built DLL into data/BepInEx/plugins/
           Copy-Item "src/Mod/bin/Release/net46/NightCallRussian.dll" "data/BepInEx/plugins/NightCallRussian.dll" -Force
 
