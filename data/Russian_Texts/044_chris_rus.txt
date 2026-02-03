@@ -476,7 +476,7 @@ $$ anim-link: SMILING_2_WARM $$
 Он прерывается и смотрит на свою промежность.
 *"Что именно ты предлагаешь?" -> chris-01-proposition-what
 *"Стой, хватит!" -> chris-01-proposition-now
-*"Остановите такси! Остановите!" -> chris-01-proposition-park
+*(Остановить такси.) -> chris-01-proposition-park
 
 
 === chris-01-proposition-what
@@ -505,7 +505,7 @@ $$ camfocus: default, slow $$
 
 *"Сколько тебе лет?" -> chris-01-age
 *"Ты часто так делаешь?" -> chris-01-often
-*"Остановите такси! Остановите!" -> chris-01-proposition-park
+*(Остановить такси.) -> chris-01-proposition-park
 
 
 === chris-01-age
@@ -536,13 +536,13 @@ $$ music-control: 40 $$
 
 === chris-01-dilemma-hub1
 
-*:taxi: "Остановите такси! Остановите!" -> chris-01-proposition-park
+*:taxi: (Остановить такси.) -> chris-01-proposition-park
 *(Припарковаться.) -> chris-01-keepdriving
 
 
 === chris-01-dilemma-hub2
 
-*:taxi: "Остановите такси! Остановите!" -> chris-01-proposition-park
+*:taxi: (Остановить такси.) -> chris-01-proposition-park
 *(Припарковаться.) -> chris-01-keepdriving
 *:love: (Рассказать о Каролине.) -> chris-01-keepdriving-carolina
 

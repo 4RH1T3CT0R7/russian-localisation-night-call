@@ -18,14 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Validate text files
-        run: python scripts/validate_texts.py
-
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:

@@ -343,7 +343,7 @@ $$ music-control: 20 $$
 "Я должна знать, кто вы?"
 ПЬЕРЕТТА: "Я Пьеретта Мандерас."
 :silence: (Пусть продолжает говорить.)
-ПЬЕРЕТТА: "Я шеф-повар в "La Pierre"."
+ПЬЕРЕТТА: "Я шеф-повар в "La Pierre."
 Вы киваете.
 
 
@@ -633,7 +633,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Она начинает двигаться по кухне.
 ПЬЕРЕТТА: "Хочешь чего-нибудь выпить?"
 *:positive: (Принять.) -> pierrette-01-end-upstairs-wine
-*:negative: "Нет." -> pierrette-01-end-upstairs-nowine
+*:negative: (Отказаться.) -> pierrette-01-end-upstairs-nowine
 
 
 === pierrette-01-end-upstairs-nowine

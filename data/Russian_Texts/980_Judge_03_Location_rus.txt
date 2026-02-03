@@ -184,7 +184,7 @@ $$ music-control: 40 $$
 %% В качестве подсказки используется текст "ВРЕМЯ ВЫШЛО".
 $$ clue: clue_judge_embassy_01 $$
 { _Found.Clue.Today = 1 }
-ХАЙМЕ: "Я прочитал в газете, что убийца написал мелом послание: "Время вышло". Это был лозунг конца хунты"." %% je ne sais pas s'il faut utiliser un terme specifique ici. Je n'ai pas trouvé de slogan de la junta.
+ХАЙМЕ: "Я прочитал в газете, что убийца написал мелом послание: "Время вышло". Это был лозунг конца хунты"." %% je ne sais pas s'il faut utiliser un terme specifique ici. Je n'ai pas trouvé de slogan de la junta."
 ХАЙМЕ: "Что-то вроде лозунга оппозиции. Мол, время хунты истекло."
 ХАЙМЕ: "Вы поняли?"
 Вы киваете.
