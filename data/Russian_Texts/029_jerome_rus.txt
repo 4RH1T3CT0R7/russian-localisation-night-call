@@ -258,7 +258,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Вы наблюдаете, как ваш пассажир подходит к двери, вводит код, снова вводит его, нетерпеливо ждет...
 *:taxi: (Уехать.) -> jerome-01-end01-leave
 *(Посигналить.) -> jerome-01-end01-klaxon
-*(Подождите.) -> jerome-01-end01-wait
+*(Подождать.) -> jerome-01-end01-wait
 
 
 === jerome-01-end01-leave
@@ -464,7 +464,7 @@ $$ anim-link: SMILE_2_DRIVER $$
 Он понимает, что зашел слишком далеко в своем маленьком анекдоте, что все потеряно. Спасти его честь невозможно.
 $$ anim-link: DRIVER_2_BASIC $$
 *:puzzled: "Куда вы едете?" -> jerome-02-destination-savedB
-*(Удерживайте его взгляд.) -> jerome-02-sickness5
+*(Удерживать его взгляд.) -> jerome-02-sickness5
 
 
 === jerome-02-sickness5
@@ -638,7 +638,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 $$ camfocus: driver, slow $$
 Вы смотрите, как он звонит в дверь, коротко разговаривает со старухой… Потом разворачивается и переходит улицу…
 Он заходит в неприметный дом с заросшим садом. Листья в канаве черные. Они лежат там уже давно...
-*(Вздремните.) -> jerome-02-wait-sleep
+*(Вздремнуть.) -> jerome-02-wait-sleep
 *(Ничего не делать.) -> jerome-02-wait-nothing
 
 
@@ -1197,7 +1197,7 @@ $$ anim-link: BASIC_2_STRESSED $$
 Его хихиканье постепенно переходит в смех.
 $$ anim-link: STRESSED_2_BASIC $$
 Он явно очень гордится собой…
-*(Предупредите его.) -> jerome-03-warning
+*(Предупредить его.) -> jerome-03-warning
 *:silence: (Ничего не говорить.) -> jerome-03-end-staysilent
 
 
@@ -1326,7 +1326,7 @@ $$ anim-link: BASIC_2_DRIVER $$
 *"Удачи вам." -> jerome-03-end-wish
 *"Удачи." -> jerome-03-end-goodluck
 *:irony: "Удачи..." -> jerome-03-end-goodluck
-*(Верните ему улыбку.) -> jerome-03-end-smile
+*(Вернуть ему улыбку.) -> jerome-03-end-smile
 
 
 === jerome-03-end-wish

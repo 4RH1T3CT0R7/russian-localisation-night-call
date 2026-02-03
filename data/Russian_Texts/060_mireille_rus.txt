@@ -444,7 +444,7 @@ $$ anim: IDLE_BAG $$
 МИРЕЙ: "Первая дочь его жены находится там, чуть дальше."
 МИРЕЙ: "А видите вон ту скульптуру? Это один из президентов Французской Республики."
 *"А, понятно." -> mireille-01-part2-cemetary2
-*(Спросите об Александре.) -> mireille-01-part2-cemetary-which
+*(Спросить об Александре.) -> mireille-01-part2-cemetary-which
 *"Вы часто сюда приходите?" -> mireille-01-part2-cemetary-often
 *:silence: (Ничего не говорить.) -> mireille-01-part2-cemetary2
 

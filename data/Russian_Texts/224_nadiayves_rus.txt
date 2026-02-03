@@ -82,7 +82,7 @@ $$ music-control: 40 $$
 НАДЯ : "Ты можешь это понять?"
 *(Раскрыться.) -> ny-01-serious-open
 *"Да, думаю, что так." -> ny-01-serious-02
-*(Улыбается.) -> ny-01-serious-02
+*(Улыбнуться.) -> ny-01-serious-02
 
 
 === ny-01-serious-open
@@ -90,7 +90,7 @@ $$ music-control: 40 $$
 НАДЯ : "Что вы имеете в виду?"
 *"Я предпочитаю женщин постарше." -> ny-01-serious-olderwomen
 *"Я понимаю, через что вы проходите." -> ny-01-serious-open-outro
-*(Улыбается.) -> ny-01-serious-open-outro
+*(Улыбнуться.) -> ny-01-serious-open-outro
 
 
 === ny-01-serious-olderwomen

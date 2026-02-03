@@ -656,7 +656,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Это прекрасный повод немного покопаться… но ты боишься оставить ее одну.
 *"Не возражаете, если я осмотрюсь?" -> pierrette-01-end-upstairs2-visit
 *"Где твоя ванная?" -> pierrette-01-end-upstairs2-toilets
-*(Смотрите на нее.) -> pierrette-01-end-upstairs2-watch
+*(Смотреть на нее.) -> pierrette-01-end-upstairs2-watch
 
 
 === pierrette-01-end-upstairs2-visit

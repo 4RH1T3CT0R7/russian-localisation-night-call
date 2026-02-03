@@ -405,7 +405,7 @@ $$ anim-link: KNEE_2_FACE $$
 $$ dialogspeed: normal $$
 По позвоночнику пробегает холодок... Что, если... вы не смогли найти подходящий бар?
 $$ anim-link: FACE_2_KNEE $$
-*(Подумайте о местах.) -> apollonie-proposition-hub
+*(Подумать о местах.) -> apollonie-proposition-hub
 *(Отказаться от помощи.) -> apollonie-proposition-no
 
 
@@ -418,7 +418,7 @@ $$ anim-link: FACE_2_KNEE $$
 На ум приходит одно место... Фуриоза. Электрическая атмосфера. Много накачанных детей.
 Кажется, именно то, что она ищет…
 *(Упоминание "Фуриозы".) -> apollonie-goto-furiosa
-*(Продолжайте думать.) -> apollonie-proposition-furiosa-hub
+*(Продолжать думать.) -> apollonie-proposition-furiosa-hub
 
 
 === apollonie-proposition-furiosa-hub
@@ -429,7 +429,7 @@ $$ anim-link: FACE_2_KNEE $$
 
 Есть такое место, оно называется... У Напо. Уютный бар и подвал с хорошей музыкой.
 *(Упоминание "Napo's") -> apollonie-goto-napo
-*(Продолжайте думать.) -> apollonie-proposition-napo-hub
+*(Продолжать думать.) -> apollonie-proposition-napo-hub
 
 
 === apollonie-proposition-napo-hub
@@ -441,7 +441,7 @@ $$ anim-link: FACE_2_KNEE $$
 Есть место под названием Солилес, довольно претенциозный винный бар, о котором вы слышали.
 Не такой уж молодой, мало танцующий, но это может сработать.
 *(Упоминание "Солилеса"). -> apollonie-goto-soliles
-*(Продолжайте думать.) -> apollonie-proposition-carter
+*(Продолжать думать.) -> apollonie-proposition-carter
 
 
 === apollonie-proposition-carter
@@ -449,7 +449,7 @@ $$ anim-link: FACE_2_KNEE $$
 Единственное, о чем вы можете думать, это Картер, ночной клуб в Сент-Уэне, о котором вы знаете уже много лет.
 Возможно, это не то, что она ищет… но определенно молодая публика и отличная атмосфера.
 *(Упоминание "Картер"). -> apollonie-goto-carter
-*(Сдается.) -> apollonie-goto-belvedere-intro
+*(Сдаться.) -> apollonie-goto-belvedere-intro
 
 
 === apollonie-goto-furiosa

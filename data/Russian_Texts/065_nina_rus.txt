@@ -375,5 +375,5 @@ $$ reveal: 065_05 $$
 
 $$ camfocus: driver, normal $$
 *:taxi: (Начать движение.) -> Nina-01-end
-*(Подождите немного.) -> Nina-01-end-memory
+*(Подождать немного.) -> Nina-01-end-memory
 

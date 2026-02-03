@@ -604,7 +604,7 @@ $$ music-control: 40 $$
 КРИСТОФ: "Если... если это будет мальчик, конечно."
 *(Принять. Назвать вымышленное имя.) -> chris-04-name-fake
 *(Отказаться.) -> chris-04-name-silence
-*(Примите. Назовите свое настоящее имя.) -> chris-04-name-real
+*(Принять. Назвать свое настоящее имя.) -> chris-04-name-real
 
 
 === chris-04-name-fake
@@ -783,7 +783,7 @@ $$ dialogspeed: normal $$
 КРИСТОФ : "Люди часто болтают о своей жизни?"
 *"Постоянно." -> christophe-01-confessional-intro1
 *"Иногда." -> christophe-01-confessional-intro2
-*(Улыбается.) -> christophe-01-confessional
+*(Улыбнуться.) -> christophe-01-confessional
 
 
 === christophe-01-confessional-intro1

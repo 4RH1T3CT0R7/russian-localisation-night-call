@@ -1,8 +1,0 @@
-C:\Users\artem\NightCallRussian\src\Mod\obj\Release\net46\NightCallRussian.csproj.AssemblyReference.cache
-C:\Users\artem\NightCallRussian\src\Mod\obj\Release\net46\NightCallRussian.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\artem\NightCallRussian\src\Mod\obj\Release\net46\NightCallRussian.csproj.CoreCompileInputs.cache
-C:\Users\artem\NightCallRussian\src\Mod\obj\Release\net46\NightCallRussian.sourcelink.json
-C:\Users\artem\NightCallRussian\src\Mod\bin\Release\net46\NightCallRussian.dll
-C:\Users\artem\NightCallRussian\src\Mod\bin\Release\net46\NightCallRussian.pdb
-C:\Users\artem\NightCallRussian\src\Mod\obj\Release\net46\NightCallRussian.dll
-C:\Users\artem\NightCallRussian\src\Mod\obj\Release\net46\NightCallRussian.pdb

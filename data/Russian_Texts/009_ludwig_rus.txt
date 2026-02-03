@@ -265,7 +265,7 @@ $$ hide_passenger $$
 
 ЛЮДВИГ: "Елисейский дворец."
 $$ music-control: 20 $$
-*(Смеется.) -> ludwig-04-joke
+*(Смеяться.) -> ludwig-04-joke
 *"Опоздал в гости…" -> ludwig-04-late
 *:silence: (Ничего не говорить.) -> ludwig-04-drive
 

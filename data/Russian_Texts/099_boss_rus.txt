@@ -22,7 +22,7 @@ $$ music-control: 0 $$
 === boss-01-listening-yes
 
 БОСС : "Иногда мне интересно, что у тебя в голове. Ты всегда кажешься таким отрешённым…"
-*Вы киваете утвердительно. -> boss-01-listening-yes2
+*(Кивнуть утвердительно.) -> boss-01-listening-yes2
 *" Извини..." -> boss-01-listening-sorry
 *:silence: (Не реагировать.) -> boss-01-listening-silence
 

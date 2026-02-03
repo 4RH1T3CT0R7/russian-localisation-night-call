@@ -1,4 +1,37 @@
+# Dev tools and scripts
 scripts/
 _dev/
 __pycache__/
 *.pyc
+*.py
+*.bak
+
+# Build outputs
+bin/
+obj/
+src/Installer/bin/
+src/Installer/obj/
+src/Mod/bin/
+src/Mod/obj/
+
+# Executables
+*.exe
+
+# Compiled DLLs (built by CI)
+data/BepInEx/plugins/NightCallRussian.dll
+bin/RussianLocalization.dll
+
+# Debug symbols
+*.pdb
+
+# Generated archives
+src/Installer/data.zip
+NightCallRussian-Data.zip
+
+# Scan/analysis results
+data/scan_results.txt
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

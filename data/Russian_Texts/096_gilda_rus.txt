@@ -807,7 +807,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 $$ camfocus: driver, slow $$
 $$ music-control: 60 $$
 Вы поднимаете голову. Дверь хлопает. Ваш пассажир уже снаружи.
-*(Позвоните ей.) -> gilda-01-end-call
+*(Позвонить ей.) -> gilda-01-end-call
 *:taxi: (Уехать.) -> gilda-01-end-start
 
 

@@ -10,7 +10,7 @@ $$ reveal: 011_00 $$
 Она ничего не говорит и смотрит на вас. Вы выжидаете мгновение.
 $$ music-control: 0 $$
 *"Куда едем?" -> ariane-01-crisis-intro1
-*(Подождите.) -> ariane-01-crisis-intro2
+*(Подождать.) -> ariane-01-crisis-intro2
 
 
 === ariane-01-crisis-intro1
@@ -26,42 +26,42 @@ $$ music-control: 20 $$
 
 (Подождать.)
 *"Куда вы едете?" -> ariane-01-crisis-intro1
-*(Подождите.) -> ariane-01-crisis-intro2b
+*(Подождать.) -> ariane-01-crisis-intro2b
 
 
 === ariane-01-crisis-intro2b
 
 Вы задаётесь вопросом, дышит ли она вообще — её ноздри неподвижны.
 *"Куда вас отвезти?" -> ariane-01-crisis-intro1
-*(Подождите.) -> ariane-01-crisis-intro2c
+*(Подождать.) -> ariane-01-crisis-intro2c
 
 
 === ariane-01-crisis-intro2c
 
 (Подождать.)
 *"Вы куда-то едете?" -> ariane-01-crisis-intro1
-*(Подождите.) -> ariane-01-crisis-intro2d
+*(Подождать.) -> ariane-01-crisis-intro2d
 
 
 === ariane-01-crisis-intro2d
 
 Зеркало заднего вида мягко вибрирует. Ваша пассажирка остаётся совершенно неподвижной.
 *"Всё в порядке, мадам?" -> ariane-01-crisis-intro1
-*(Подождите.) -> ariane-01-crisis-intro2e
+*(Подождать.) -> ariane-01-crisis-intro2e
 
 
 === ariane-01-crisis-intro2e
 
 (Подождать.)
 *(Подождать.) -> ariane-01-crisis-intro1
-*(Подождите.) -> ariane-01-crisis-intro2f
+*(Подождать.) -> ariane-01-crisis-intro2f
 
 
 === ariane-01-crisis-intro2f
 
 У вас горят глаза.
 *"Вы призрак?" -> ariane-01-crisis-intro1
-*(Подождите.) -> ariane-01-crisis-intro2g
+*(Подождать.) -> ariane-01-crisis-intro2g
 
 
 === ariane-01-crisis-intro2g

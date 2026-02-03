@@ -408,7 +408,7 @@ $$ anim-link: DRIVER_2_THINK $$
 МАТЬЁ: "Его главное достижение."
 *"Это прекрасно." -> mathieu-02-father2-great
 *"Он сильно страдал?" -> mathieu-02-father2-pain
-*(Улыбается.) -> mathieu-02-father2-smile
+*(Улыбнуться.) -> mathieu-02-father2-smile
 *(Ничего не делать.) -> mathieu-02-father2-silence
 
 
@@ -780,7 +780,7 @@ $$ travel: stop $$
 $$ music-control: 80 $$
 Остановитесь на обочине, как только сможете.
 *:silence: (Ничего не говорить.) -> mathieu-02-end-tears2
-*(Извиняется.) -> mathieu-02-end-tears-excuse
+*(Извиниться.) -> mathieu-02-end-tears-excuse
 
 
 === mathieu-02-end-tears-excuse
@@ -1230,7 +1230,7 @@ $$ music-control: 60 $$
 $$ movie: lamparo_off, hide_passenger $$
 $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Ваш пассажир выходит и хватает переноску за ручку. Он закрывает дверь ногой.
-*(Следите за ним в зеркало заднего вида.) -> mathieu-03-end-retro
+*(Следить за ним в зеркало заднего вида.) -> mathieu-03-end-retro
 *:taxi: (Начать движение.) -> mathieu-03-end-OK
 
 
@@ -1269,7 +1269,7 @@ $$ music-control: 20 $$
 === mathieu-04-start-empty
 
 Вы думаете о том, когда вы в последний раз водили его, когда вам казалось, что перевозчик пуст.
-*(Скажите что-нибудь о перевозчике). -> mathieu-04-emptycoffin
+*(Сказать что-нибудь о перевозчике). -> mathieu-04-emptycoffin
 *:silence: (Не говорите ничего.) -> mathieu-04-start-empty2
 
 
@@ -1733,8 +1733,8 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Дождь не прекратился, поэтому он пытается укрыть ребёнка от дождя своим пальто.
 Он уходит в ночь...
 $$ music-control: 60 $$
-*(Продолжайте наблюдать за ним.) -> mathieu-04-mask2-client
-*(Посмотрите на носитель.) -> mathieu-04-mask2-baby
+*(Продолжать наблюдать за ним.) -> mathieu-04-mask2-client
+*(Посмотреть на носитель.) -> mathieu-04-mask2-baby
 *:taxi: (Уехать.) -> mathieu-04-mask2-drive
 
 

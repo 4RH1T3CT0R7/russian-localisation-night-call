@@ -287,7 +287,7 @@ $$ anim: IDLE_THINKING $$
 *"Отсутствие." -> myrtille-02-answer-absence
 *"Пустота." -> myrtille-02-answer-void
 *"Тишина." -> myrtille-02-answer-silence
-*(Сделайте вид, что угадываете.) -> myrtille-02-answer-fake
+*(Сделать вид, что угадываете.) -> myrtille-02-answer-fake
 
 
 === myrtille-02-answer-absence

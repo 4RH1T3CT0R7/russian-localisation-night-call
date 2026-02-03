@@ -1,3 +1,0 @@
-C:\Users\artem\NightCallRussian\src\Installer\bin\Release\net472\publish\NightCallRussian-Setup.exe
-C:\Users\artem\NightCallRussian\src\Installer\bin\Release\net472\publish\NightCallRussian-Setup.exe.config
-C:\Users\artem\NightCallRussian\src\Installer\bin\Release\net472\publish\NightCallRussian-Setup.pdb

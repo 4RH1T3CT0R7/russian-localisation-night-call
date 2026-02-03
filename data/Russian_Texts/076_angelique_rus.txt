@@ -753,7 +753,7 @@ $$ anim-link: TIC05 $$
 $$ anim-link: TIC01 $$
 *:puzzled: "Сиськи?" -> angel-03-otherday-insult
 *"Понятно." -> angel-03-callback
-*(Улыбается.) -> angel-03-otherday-smile
+*(Улыбнуться.) -> angel-03-otherday-smile
 *(Кивок.) -> angel-03-otherday-smile
 
 

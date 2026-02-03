@@ -101,7 +101,7 @@ $$ anim-link: SMILE_2_CHAT $$
 АНТУАН : "А когда выпью лишнего… позволяю себе поездку на такси."
 *:smile: "Хорошая жизнь." -> antoine-01-smalltalk-outro2-dolcevita
 *"Надеюсь сделать то же самое, когда выйду на пенсию." -> antoine-01-smalltalk-outro2-retirement-intro
-*(Улыбается.) -> antoine-01-smalltalk-outro2-smile
+*(Улыбнуться.) -> antoine-01-smalltalk-outro2-smile
 
 
 === antoine-01-smalltalk-outro2-dolcevita

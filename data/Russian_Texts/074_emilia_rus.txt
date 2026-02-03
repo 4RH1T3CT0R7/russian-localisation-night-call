@@ -76,7 +76,7 @@ $$ anim-link: WINDOW_HEAD $$
 ЭМИЛИЯ: "Удивительно, ведь он знает это место..."
 Она одаривает вас улыбкой.
 *:silence: (Ничего не говорить.) -> emilia-01-catsname
-*(Улыбается.) -> emilia-01-firstcall
+*(Улыбнуться.) -> emilia-01-firstcall
 
 
 === emilia-01-catsname

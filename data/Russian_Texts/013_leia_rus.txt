@@ -485,7 +485,7 @@ $$ anim-link: BASIC_2_ANGRY $$
 ЛЕЯ: "Это два часа моей жизни, которые я не верну…"
 Но, конечно...
 $$ dialogspeed: fast $$
-ЛЕЯ : "Я вижу мёртвых людей." Заткнись, тупой ребёнок!"
+ЛЕЯ : "«Я вижу мёртвых людей.» Заткнись, тупой ребёнок!"
 ЛЕЯ : "Может, ты видишь ФИЛЬМЫ, которые мертвы. Боже!"
 $$ dialogspeed: normal $$
 $$ anim-link: ANGRY_2_BASIC $$
@@ -1150,8 +1150,8 @@ $$ reveal: 013_05 $$
 
 $$ anim-link: BASIC_2_ANGRY $$
 ЛЕЯ: "Не могли бы вы включить немного музыки?"
-*(Выберите станцию "хиты"). -> leia-06-radio-young
-*(Выберите "культурную" станцию). -> leia-06-radio-culture
+*(Выбрать станцию "хиты"). -> leia-06-radio-young
+*(Выбрать "культурную" станцию). -> leia-06-radio-culture
 
 
 === leia-06-radio-young
@@ -1654,7 +1654,7 @@ $$ camfocus: default, slow $$
 $$ anim-link: SMILE_2_BASIC $$
 *(Сказать правду.) -> leia-07-last-truth
 *(Не говорите правду.) -> leia-07-last-lie
-*(Избегайте этой темы.) -> leia-07-last-avoid
+*(Избегать этой темы.) -> leia-07-last-avoid
 
 
 === leia-07-last-truth

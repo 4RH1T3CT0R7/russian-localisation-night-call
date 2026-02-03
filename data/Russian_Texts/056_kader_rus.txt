@@ -117,7 +117,7 @@ $$ anim-link: WINDOW_2_DRIVER $$
 КАДЕР: "Это моя... э-э-э... девушка подарила мне его."
 *"Что ещё она рекомендовала?" -> kader-01-woman-others
 *"Ей нравится Дюма?" -> kader-01-woman-dumas
-*(Улыбается.) -> kader-01-woman-others
+*(Улыбнуться.) -> kader-01-woman-others
 *:silence: (Ничего не говорить.) -> kader-01-woman-others
 
 
@@ -142,7 +142,7 @@ $$ anim-link: DRIVER_2_WINDOW $$
 $$ anim-link: WINDOW_2_DRIVER $$
 КАДЕР: "Лучше не попадаться копам с этой штукой в кармане."
 *(Смех.) -> kader-01-woman-laugh
-*(Улыбается.) -> kader-01-woman-smile
+*(Улыбнуться.) -> kader-01-woman-smile
 *:silence: (Ничего не говорить.) -> kader-01-woman-nothing
 
 

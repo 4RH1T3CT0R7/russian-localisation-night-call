@@ -1,9 +1,0 @@
-C:\Users\artem\NightCallRussian\src\Installer\bin\Release\net472\win-x64\NightCallRussian-Setup.exe.config
-C:\Users\artem\NightCallRussian\src\Installer\bin\Release\net472\win-x64\NightCallRussian-Setup.exe
-C:\Users\artem\NightCallRussian\src\Installer\bin\Release\net472\win-x64\NightCallRussian-Setup.pdb
-C:\Users\artem\NightCallRussian\src\Installer\obj\Release\net472\win-x64\Installer.csproj.AssemblyReference.cache
-C:\Users\artem\NightCallRussian\src\Installer\obj\Release\net472\win-x64\Installer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\artem\NightCallRussian\src\Installer\obj\Release\net472\win-x64\Installer.csproj.CoreCompileInputs.cache
-C:\Users\artem\NightCallRussian\src\Installer\obj\Release\net472\win-x64\Installer.sourcelink.json
-C:\Users\artem\NightCallRussian\src\Installer\obj\Release\net472\win-x64\NightCallRussian-Setup.exe
-C:\Users\artem\NightCallRussian\src\Installer\obj\Release\net472\win-x64\NightCallRussian-Setup.pdb
