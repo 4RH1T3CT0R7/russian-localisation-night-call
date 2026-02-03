@@ -310,6 +310,7 @@ $$ anim-link: EXPLAIN_2_DRIVER $$
 
 === amelie-01-inquiry-men
 
+АМЕЛИ : "Мужчины?"
 
 *"Нет." -> amelie-01-inquiry-outroA-short
 *:silence: (Ничего не говорить.) -> amelie-01-inquiry-bi

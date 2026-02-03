@@ -50,6 +50,7 @@ $$ music-control: 40 $$
 
 === jim-drive-hungry
 
+ДЖИМ : "Слушай, я немного голоден. А ты?"
 
 *(Ничего не говорить.) -> jim-drive-hungry-silence
 *"Нет… Я только с перерыва." -> jim-drive-hungry-nope
@@ -310,6 +311,7 @@ $$ anim: IDLE $$
 
 === jim-heat-club-silence
 
+Вы почти добрались до пункта назначения.
 
 
 

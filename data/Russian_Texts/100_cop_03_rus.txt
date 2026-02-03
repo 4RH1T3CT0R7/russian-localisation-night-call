@@ -126,6 +126,7 @@ $$ anim-link: DRIVER_2_LOW $$
 
 === cop-03-why-agree
 
+БЮССЕ : "Хорошо. По крайней мере, мы сходимся хотя бы в чём-то."
 
 joke=1?cop-03-trial-joke;;cop-03-trial02
 

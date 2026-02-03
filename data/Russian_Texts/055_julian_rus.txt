@@ -34,6 +34,7 @@ $$ music-control: 20 $$
 
 === julian-01-whathappened-intro
 
+ЖЮЛЬЕН : "Я…"
 
 
 

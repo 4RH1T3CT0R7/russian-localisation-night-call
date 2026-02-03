@@ -60,6 +60,7 @@ $$ anim-link: WINDOW_2_DESPAIR_2_WINDOW $$
 
 === shinji-01-eiffel-notunderstanding
 
+Он продолжает смотреть на вас с раздражённым выражением лица. Он явно не понимает.
 
 
 
@@ -91,6 +92,7 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 === shinji-01-anger-nounderstanding
 
+Он качает головой. Это не то, что он хотел услышать.
 
 
 
@@ -304,6 +306,7 @@ $$ music-control: 60 $$
 
 === shinji-01-story-introB
 
+Он медленно осматривает вас с головы до ног.
 
 
 
