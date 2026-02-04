@@ -231,7 +231,7 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 === pauline-01-love4
 
-choice=1
+{ choice = 1 }
 ПОЛИН: "Действительно ли мне нужны эти деньги?"
 ПОЛИН: "Это деньги, которые я накопила, чтобы навестить семью... но когда я там... я чувствую себя не на своем месте..."
 ПОЛИН: "Как будто я... задыхаюсь..."
@@ -305,10 +305,10 @@ $$ reveal: 063_03 $$
 
 === pauline-01-love5-dontcare-choice
 
-choice=1?pauline-01-love5-dontcare-choice;;pauline-01-love5-dontcare2
 ПОЛИН: "Только не после вашей маленькой речи о выборе..."
 
 
+-> choice=1?pauline-01-love5-dontcare-choice;;pauline-01-love5-dontcare2
 === pauline-01-love5-dontcare2
 
 Тишина.
@@ -383,12 +383,12 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 === pauline-01-driver-killer-question
 
-*"Мне нужна ваша помощь..." -> pauline-01-driver-helpme
-*:silence: (Ничего не говорить.) -> pauline-01-driver-killer-question-end
 
 Ваша пассажирка смотрит на вас с интересом.
 
 
+*"Мне нужна ваша помощь..." -> pauline-01-driver-helpme
+*:silence: (Ничего не говорить.) -> pauline-01-driver-killer-question-end
 === pauline-01-driver-helpme
 
 $$ reveal: 063_04 $$
@@ -414,11 +414,11 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 === pauline-01-driver-helpme-killer1
 
-_Killer.Is.Angel=1?pauline-01-driver-helpme-killer1;;_Killer.Is.Judge=1?pauline-01-driver-helpme-killer2;;_Killer.Is.Sandman=1?pauline-01-driver-helpme-killer3;;pauline-01-driver-killer-question-end
 Она хмыкает.
 ПОЛИН: "Это имя такое странное."
 
 
+-> _Killer.Is.Angel=1?pauline-01-driver-helpme-killer1;;_Killer.Is.Judge=1?pauline-01-driver-helpme-killer2;;_Killer.Is.Sandman=1?pauline-01-driver-helpme-killer3;;pauline-01-driver-killer-question-end
 === pauline-01-driver-helpme-killer2
 
 ПОЛИН: "Но между нами... Это рискованно."

@@ -65,15 +65,15 @@ $$ music-control: 40 $$
 
 === jim-drive-hungry-nope
 
-*"Я ем легко по ночам." -> jim-hungry-eatlight
-*"Тогда просто кофе." -> jim-hungry-coffee
-*:positive: "Да, уверен." -> jim-hungry-annoyed
 
 "Понятия не имею."
 А может… голод?
 Пассажир слегка склоняет голову набок, в его глазах забавный огонёк.
 
 
+*"Я ем легко по ночам." -> jim-hungry-eatlight
+*"Тогда просто кофе." -> jim-hungry-coffee
+*:positive: "Да, уверен." -> jim-hungry-annoyed
 === jim-hungry-restaurant
 
 "Могу я вас куда-нибудь подбросить?"
@@ -145,7 +145,7 @@ $$ anim: IDLE $$
 
 "Нет, я никогда не ем со своими клиентами."
 А что, если…?
-Сжимая трость, он пристально смотрит на тебя в зеркало заднего вида. Тебя охватывает внезапное чувство страха.
+Сжимая трость, он пристально смотрит на вас в зеркало заднего вида. Вас охватывает внезапное чувство страха.
 *"Послушайте… я сказал нет." -> jim-disappoint
 *"В такое время? Э-э..." -> jim-disappoint
 *"Я всего лишь таксист." -> jim-hungry-coffee
@@ -336,10 +336,10 @@ $$ anim: IDLE $$
 
 === jim-end-restaurant-coffee
 
-drink=1?jim-end-restaurant-drink;;coffee=1?jim-end-restaurant-coffee;;jim-end-restaurant-nothing
 Именно такой кофе вы любите.
 
 
+-> drink=1?jim-end-restaurant-drink;;coffee=1?jim-end-restaurant-coffee;;jim-end-restaurant-nothing
 === jim-end-restaurant-nothing
 
 ДЖИМ : "Ничего для моего друга."

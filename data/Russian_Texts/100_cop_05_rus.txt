@@ -27,7 +27,6 @@ $$ anim-link: SMILE_2_HAND $$
 
 === cop-06-intro-judge
 
-_Killer.Is.Judge=1?cop-06-intro-judge;;_Killer.Is.Sandman=1?cop-06-intro-sandman;;_Killer.Is.Angel=1?cop-06-intro-angel;;cop-06-mic
 Она останавливается, прочищает горло.
 $$ anim-link: HAND_2_WINDOW $$
 БЮССЕ : "Позже этой ночью мы заставим Фрагонара выйти из дома и найдём способ посадить его в твоё такси."
@@ -45,6 +44,7 @@ $$ focus: passenger, slow $$
 БЮССЕ : "Сегодня ночью мы возьмём Фрагонара…"
 
 
+-> _Killer.Is.Judge=1?cop-06-intro-judge;;_Killer.Is.Sandman=1?cop-06-intro-sandman;;_Killer.Is.Angel=1?cop-06-intro-angel;;cop-06-mic
 === cop-06-intro-sandman
 
 Она смотрит на часы.
@@ -107,18 +107,18 @@ $$ anim-link: HAND_2_SMILE $$
 
 === cop-06-mic-judge-hub
 
-_Killer.Is.Judge=1?cop-06-mic-judge-hub;;_Killer.Is.Sandman=1?cop-06-mic-sandman-hub;;_Killer.Is.Angel=1?cop-06-mic-angel-hub;;cop-06-gotit
 БЮССЕ : "Он полицейский. Он знает, как мы работаем. Никто никогда не посылал таксиста арестовывать."
 БЮССЕ : "Он не будет сопротивляться."
 $$ anim-link: SMILE_2_HAND $$
 
 
+-> _Killer.Is.Judge=1?cop-06-mic-judge-hub;;_Killer.Is.Sandman=1?cop-06-mic-sandman-hub;;_Killer.Is.Angel=1?cop-06-mic-angel-hub;;cop-06-gotit
 === cop-06-mic-judge-met
 
-_Driver.Met.Fragonard=1?cop-06-mic-judge-met;;cop-06-mic-judge-unknown
 БЮССЕ : "Пусть он чувствует себя в безопасности... Выслушайте его..."
 
 
+-> _Driver.Met.Fragonard=1?cop-06-mic-judge-met;;cop-06-mic-judge-unknown
 === cop-06-mic-judge-unknown
 
 БЮССЕ : "Недалеко от больницы, куда он ходит на процедуры, есть строящийся переулок. Там не будет гражданских, только мы и он..."

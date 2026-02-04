@@ -86,7 +86,6 @@ $$ anim-link: SMILE_2_CHAT $$
 
 === antoine-01-smalltalk-outro-told-concierge
 
-told-concierge=0?antoine-01-smalltalk-outro-told-concierge;;antoine-01-smalltalk-outro2
 АНТУАН : "Невероятная профессия… необычная… Вы постоянно встречаете людей, помогаете им. Мне это всегда нравилось."
 $$ anim-link: WINDOW_2_CHAT $$
 Он хмыкает. Смех затихает, пока он пытается вспомнить, о чём говорил минуту назад.
@@ -96,6 +95,7 @@ $$ anim-link: SMILE_2_CHAT $$
 АНТУАН : "Ах, конечно… да."
 
 
+-> told-concierge=0?antoine-01-smalltalk-outro-told-concierge;;antoine-01-smalltalk-outro2
 === antoine-01-smalltalk-outro2
 
 АНТУАН : "А когда выпью лишнего… позволяю себе поездку на такси."
@@ -384,10 +384,10 @@ $$ dialogspeed: normal $$
 === antoine-01-old-restaurant
 
 $$ anim-link: WINDOW_2_CHAT $$
-wish-restaurant=1?antoine-01-old-restaurant;;wish-spenditall=1?antoine-01-old-spenditall;;wish-friends=1?antoine-01-old-friends;;wish-goaway=1?antoine-01-old-goaway;;antoine-01-old-friends
 Вы почти чувствуете, как он вам подмигивает.
 
 
+-> wish-restaurant=1?antoine-01-old-restaurant;;wish-spenditall=1?antoine-01-old-spenditall;;wish-friends=1?antoine-01-old-friends;;wish-goaway=1?antoine-01-old-goaway;;antoine-01-old-friends
 === antoine-01-old-spenditall
 
 $$ anim-link: CHAT_2_SMILE $$
@@ -479,7 +479,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 === antoine-01-smalltalk-killer-judge
 
 АНТУАН : "Судья, верно?"
-_Killer.Is.Judge=1?antoine-01-smalltalk-killer-judge;;_Killer.Is.Sandman=1?antoine-01-smalltalk-killer-sandman;;_Killer.Is.Angel=1?antoine-01-smalltalk-killer-angel;;antoine-01-smalltalk-killer2
+-> _Killer.Is.Judge=1?antoine-01-smalltalk-killer-judge;;_Killer.Is.Sandman=1?antoine-01-smalltalk-killer-sandman;;_Killer.Is.Angel=1?antoine-01-smalltalk-killer-angel;;antoine-01-smalltalk-killer2
 
 
 === antoine-01-smalltalk-clue-judge

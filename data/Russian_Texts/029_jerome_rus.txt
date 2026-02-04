@@ -396,7 +396,7 @@ $$ music-control: 20 $$
 ЖЕРОМ: "Врачи не могли поверить своим… ГЛАЗАМ!"
 $$ anim-link: DRIVER_2_SMILE $$
 Он смеётся.
-*(Смеётся.) -> jerome-02-sickness-laugh
+*(Рассмеяться.) -> jerome-02-sickness-laugh
 *(Не смеяться.) -> jerome-02-sickness-nolaugh
 *(Усмехнуться.) -> jerome-02-destination-savedA
 
@@ -573,7 +573,7 @@ $$ anim-link: STRESSED_2_DRIVER $$
 Он пытается подмигнуть; вы не можете не думать о болезни, о которой он упоминал ранее...
 ЖЕРОМ: "Итак, я связался с некоторыми из своих знакомых, и вот я на пути в хакерский рай."
 *"Вы имеете в виду „хакерство", да?" -> jerome-02-hacking-comment
-*(Не поправляйте его.) -> jerome-02-hacking-outro
+*(Не поправлять его.) -> jerome-02-hacking-outro
 
 
 === jerome-02-hacking-comment

@@ -209,7 +209,7 @@ $$ anim-link: SMILE_2_IDEA $$
 === carlo-01lie-toilet
 
 $$ anim-link: IDEA_2_SMILE $$
-carlo-lie+=3
+{ carlo-lie += 3 }
 "Уронил в унитаз?"
 КАРЛО : "Это точно про меня!"
 $$ anim-link: SMILE_2_IDEA $$
@@ -219,7 +219,7 @@ $$ anim-link: SMILE_2_IDEA $$
 
 === carlo-01lie-outofbattery
 
-carlo-lie+=1
+{ carlo-lie += 1 }
 КАРЛО : "Не уверен, что это удастся... На работе он всегда подключен к сети. Он постоянно заряжен."
 КАРЛО : "Теперь... что может сработать... так это неисправная батарея."
 КАРЛО : "Я уже намекнул ей, что хотел бы получить новый телефон на Рождество. Это может сработать."
@@ -227,7 +227,7 @@ carlo-lie+=1
 
 === carlo-01lie-outro
 
-carlo-lie+=0
+{ carlo-lie += 0 }
 КАРЛО : "Хорошо, мы хорошо поговорили по телефону."
 $$ anim-link: IDEA_2_DRUNK $$
 КАРЛО : "Но мне все равно нужно объяснить, почему я не позвонил..."
@@ -278,7 +278,7 @@ $$ anim-link: SMILE_2_IDEA $$
 === carlo-02lie-star
 
 "Знаменитость?"
-carlo-lie+=1
+{ carlo-lie += 1 }
 Его лицо озаряется.
 КАРЛО : "Матильда Эйприл! Я люблю ее песни, и мне будет легко сплести ложь..."
 Он прячет лицо.
@@ -290,7 +290,7 @@ carlo-lie+=1
 
 === carlo-02lie-star2
 
-carlo-lie+=1
+{ carlo-lie += 1 }
 КАРЛО : "Дорогая, я не мог оторвать от нее глаз. Она села за мой столик и..."
 Он опускает взгляд.
 КАРЛО : "Вот дерьмо. Если я скажу, что встретил Матильду, моя жена будет ревновать."
@@ -327,7 +327,7 @@ $$ anim-link: DRUNK_2_IDEA $$
 === carlo-02lie-friend-right
 
 КАРЛО : "Да, точно. Энтомолог."
-carlo-lie+=2
+{ carlo-lie += 2 }
 
 
 === carlo-02lie-friend-fake
@@ -339,7 +339,7 @@ carlo-lie+=2
 === carlo-02lie-friend-silence
 
 :silence: (Ничего не говорите.)
-carlo-lie+=1
+{ carlo-lie += 1 }
 Он закрывает глаза. Из него вырывается крошечная отрыжка.
 Вы даёте ему немного покипеть в собственном соку.
 КАРЛО : "Черт, я слишком много выпил. Как будто у меня внутри все перевернулось."
@@ -350,7 +350,7 @@ carlo-lie+=1
 
 === carlo-02lie-friend-end
 
-carlo-lie+=1
+{ carlo-lie += 1 }
 КАРЛО : "Да, я скажу ей, что встретил Дэма... Дэниела, и что мы провели вечер, просто разговаривая, что он действительно хороший друг и все такое."
 КАРЛО : "Она не будет против."
 КАРЛО : "Она всегда говорит мне, что мои друзья просто пьяницы, но Дэниел, он настоящий."
@@ -412,7 +412,7 @@ $$ anim-link: DRUNK_2_IDEA $$
 
 $$ anim-link: SLEEP_2_DRUNK $$
 Какой-то странный парень начал преследовать тебя...
-carlo-lie+=1
+{ carlo-lie += 1 }
 Его глаза внезапно открываются.
 $$ anim-link: DRUNK_2_IDEA $$
 КАРЛО : "Чувак, ты крут."
@@ -437,7 +437,7 @@ $$ anim-link: DRUNK_2_IDEA $$
 
 $$ anim-link: SLEEP_2_DRUNK $$
 Твоему водителю нужно было с кем-то поговорить...
-carlo-lie+=3
+{ carlo-lie += 3 }
 Он широко раскрывает глаза.
 КАРЛО : "А?"
 "Да, ты помог таксисту."
@@ -458,7 +458,7 @@ $$ anim-link: IDEA_2_SMILE $$
 
 === carlo-03lie-driver2
 
-carlo-lie+=2
+{ carlo-lie += 2 }
 КАРЛО : "Чувак, ты хитрый."
 КАРЛО : "Это прекрасно, на самом деле."
 Он прислонился к двери и заговорил мягким голосом, готовый очаровать свою жену.
@@ -564,11 +564,11 @@ $$ anim-link: DRUNK_2_IDEA $$
 
 === carlo-recap-02a
 
-carlo-lie-02a=1?carlo-recap-02a;;carlo-lie-02b=1?carlo-recap-02b;;carlo-lie-02c=1?carlo-recap-02c-logic
 КАРЛО : "Он подсаживался к ним, оплачивал напитки и рассказывал невероятные истории!"
 КАРЛО : "Время пролетело незаметно."
 
 
+-> carlo-lie-02a=1?carlo-recap-02a;;carlo-lie-02b=1?carlo-recap-02b;;carlo-lie-02c=1?carlo-recap-02c-logic
 === carlo-recap-02b
 
 КАРЛО : "В её голосе было что-то настолько чарующее, что он потерял счёт времени…"
@@ -606,11 +606,11 @@ $$ anim-link: IDEA_2_DRUNK $$
 
 === carlo-recap-03a
 
-carlo-lie-03a=1?carlo-recap-03a;;carlo-lie-03b=1?carlo-recap-03b;;carlo-lie-03c=1?carlo-recap-03c
 КАРЛО : "Он не боец, но отпугивает хулиганов."
 Он разразился хохотом.
 
 
+-> carlo-lie-03a=1?carlo-recap-03a;;carlo-lie-03b=1?carlo-recap-03b;;carlo-lie-03c=1?carlo-recap-03c
 === carlo-recap-03b
 
 КАРЛО : "Он уверен, что у преследующего его человека плохие намерения!"
@@ -628,7 +628,6 @@ carlo-lie-03a=1?carlo-recap-03a;;carlo-lie-03b=1?carlo-recap-03b;;carlo-lie-03c=
 === carlo-recap-lie-solid
 
 $$ dialogspeed: fast $$
-carlo-lie=9?carlo-recap-lie-solid;;carlo-lie=8?carlo-recap-lie-average;;carlo-lie=7?carlo-recap-lie-average;;carlo-lie=6?carlo-recap-lie-average;;carlo-lie=5?carlo-recap-lie-average;;carlo-lie<=4?carlo-recap-lie-bad
 $$ reveal: 021_03 $$
 КАРЛО : "Знаешь, друг мой, мне кажется, мы создали идеальную ложь."
 КАРЛО : "Она купится на это за секунду, я в этом уверен."
@@ -637,6 +636,7 @@ $$ reveal: 021_03 $$
 $$ dialogspeed: normal $$
 
 
+-> carlo-lie=9?carlo-recap-lie-solid;;carlo-lie=8?carlo-recap-lie-average;;carlo-lie=7?carlo-recap-lie-average;;carlo-lie=6?carlo-recap-lie-average;;carlo-lie=5?carlo-recap-lie-average;;carlo-lie<=4?carlo-recap-lie-bad
 === carlo-recap-lie-average
 
 КАРЛО : "Знаете, мой друг, это совсем неплохо. Думаю, она согласится…"

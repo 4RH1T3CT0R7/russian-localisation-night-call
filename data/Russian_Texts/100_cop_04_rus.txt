@@ -13,11 +13,11 @@ $$ music-control: 0 $$
 
 === cop-04-ending10-intro
 
-_Sandman.Ending=10?cop-04-ending10-intro;;_Sandman.Ending=20?cop-04-ending20-intro;;_Sandman.Ending=30?cop-04-ending30-intro
 БЮССЕ : "Теперь он рассказывает нам все. Каждую деталь каждого преступления. Это ужасно..."
 $$ anim-link: LOW_2_WINDOW $$
 
 
+-> _Sandman.Ending=10?cop-04-ending10-intro;;_Sandman.Ending=20?cop-04-ending20-intro;;_Sandman.Ending=30?cop-04-ending30-intro
 === cop-04-ending20-intro
 
 Полицейские только что позволили вам вернуться в такси.
@@ -74,7 +74,6 @@ $$ dialogspeed: normal $$
 
 === cop-04-criminal02-lie
 
-_Alexandre.Lie=1?cop-04-criminal02-lie;;cop-04-criminal03
 БЮССЕ : "Я имею в виду... было бы лучше не врать ему... сказать, что ты никогда не отбывал срок..."
 $$ anim-link: DRIVER_2_LOW $$
 БЮССЕ : "Это было не так уж и круто."
@@ -82,6 +81,7 @@ $$ anim-link: DRIVER_2_LOW $$
 $$ anim-link: DRIVER_2_WINDOW $$
 
 
+-> _Alexandre.Lie=1?cop-04-criminal02-lie;;cop-04-criminal03
 === cop-04-criminal03
 
 БЮССЕ : "Слушай, ты тут больше не нужен. У нас есть запись… Есть твои показания…"
@@ -90,10 +90,10 @@ $$ anim-link: WINDOW_2_LOW $$
 
 === cop-04-ending10-criminal03
 
-_Sandman.Ending=10?cop-04-ending10-criminal03;;_Sandman.Ending=20?cop-04-ending20-criminal03;;_Sandman.Ending=30?cop-04-ending30-criminal03
 БЮССЕ : "Достаточно, чтобы издать три или четыре тома..."
 
 
+-> _Sandman.Ending=10?cop-04-ending10-criminal03;;_Sandman.Ending=20?cop-04-ending20-criminal03;;_Sandman.Ending=30?cop-04-ending30-criminal03
 === cop-04-criminal04
 
 $$ movie: KillerArrest_Loop $$
@@ -138,12 +138,12 @@ $$ music-control: 80 $$
 
 === cop-04-ending30-end
 
-_Sandman.Ending=10?cop-04-ending10-end;;_Sandman.Ending=20?cop-04-ending20-end;;_Sandman.Ending=30?cop-04-ending30-end
 Ваш лоб покрылся испариной. Вы чувствуете вину за то, что солгали Александру.
 Сквозь стиснутые зубы вы произносите...
 "Он был чёртовым убийцей..."
 
 
+-> _Sandman.Ending=10?cop-04-ending10-end;;_Sandman.Ending=20?cop-04-ending20-end;;_Sandman.Ending=30?cop-04-ending30-end
 === cop-04-criminal-good
 
 "Правда?"

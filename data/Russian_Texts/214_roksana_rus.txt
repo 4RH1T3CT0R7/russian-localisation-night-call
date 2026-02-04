@@ -45,7 +45,6 @@ $$ anim: IDLE_CLOSER $$
 === ludwig-intro
 
 $$ music-control: 40 $$
-_Driver.Met.Ludwig=1?ludwig-intro-known;;ludwig-intro-unknown
 "О чем ты говоришь?"
 РОКСАНА : "Он."
 $$ anim: GETTING_CLOSER_REV $$
@@ -54,6 +53,7 @@ $$ anim: IDLE_DRIVER $$
 РОКСАНА : "Людвиг."
 
 
+-> _Driver.Met.Ludwig=1?ludwig-intro-known;;ludwig-intro-unknown
 === ludwig-chat-known
 
 Она говорит о маленьком привидении, которого иногда видишь на заднем сиденье.
@@ -105,11 +105,11 @@ $$ anim: IDLE_DRIVER $$
 
 === ludwig-chat-silence
 
-_Driver.Met.Ludwig=1?ludwig-chat-known;;ludwig-chat-unknown
 :silence: (Ничего не говорить.)
 (Ничего не говорить.)
 
 
+-> _Driver.Met.Ludwig=1?ludwig-chat-known;;ludwig-chat-unknown
 === roksana-intro
 
 Она чётко произносит каждое слово.
@@ -194,10 +194,10 @@ $$ dialogspeed: normal $$
 
 === roksana-secondadvice-ludwigknown
 
-_Driver.Met.Ludwig=1?roksana-secondadvice-ludwigknown;;roksana-secondadvice-ludwigunknown
 Она молча кивает.
 
 
+-> _Driver.Met.Ludwig=1?roksana-secondadvice-ludwigknown;;roksana-secondadvice-ludwigunknown
 === roksana-secondadvice-ludwigunknown
 
 "А если я поговорю с этим… призраком? Что произойдет?"

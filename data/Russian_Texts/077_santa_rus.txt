@@ -23,15 +23,15 @@ $$ travel: start $$
 
 === santa-01-drive
 
-*" Зачем вам костюм? " -> santa-01-drive-costume
-*" Хороший вечер? " -> santa-01-drive-evening
-*:silence: (Ничего не говорить.) -> santa-01-drive-silence
 
 Вы оглядываетесь на своего пассажира.
-Он что-то бормочет про себя, но ты не можешь разобрать, что он говорит.
+Он что-то бормочет про себя, но вы не можете разобрать, что он говорит.
 "Хорошо провели вечер?"
 
 
+*" Зачем вам костюм? " -> santa-01-drive-costume
+*" Хороший вечер? " -> santa-01-drive-evening
+*:silence: (Ничего не говорить.) -> santa-01-drive-silence
 === santa-01-drive-costume
 
 Он поворачивается к вам с широко раскрытыми глазами.
@@ -338,7 +338,7 @@ $$ camfocus: driver, slow $$
 
 (Остаться ещё немного.)
 $$ reveal: 077_04 $$
-??santa-01-end-sledge|santa-01-end
+-> ??santa-01-end-sledge|santa-01-end
 
 
 === santa-01-end-sledge

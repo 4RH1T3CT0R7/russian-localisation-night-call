@@ -19,7 +19,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_ext $$
 
 === mireille-01-start2
 
-_Driver.Met.Mireille=1
+{ _Driver.Met.Mireille = 1 }
 МИРЕЙ: "На железнодорожный вокзал Берси, пожалуйста..."
 Железнодорожный вокзал Берси - это небольшой неприметный вокзал, в нескольких кварталах от Лионского вокзала, обслуживающий центральную Францию и Италию.
 "Во сколько ваш поезд?"
@@ -95,7 +95,7 @@ $$ hide_passenger $$
 
 === mireille-01-part1-stay
 
-time+=1
+{ time += 1 }
 Когда она поворачивает голову, можно заметить, как шевелятся ее губы.
 Через несколько минут она снова садится в машину.
 
@@ -177,9 +177,6 @@ $$ reveal: 060_02 $$
 === mireille-01-part1-outro
 
 $$ anim: IDLE_BAG $$
-*"Вы едете в отпуск?" -> mireille-01-part1-outro-holiday
-*"Вы уезжаете из Парижа?" -> mireille-01-part1-outro-leaving
-*:silence: (Ничего не говорить.) -> mireille-01-part1-outro-silence
 
 $$ sfx: sfx_gameplay_car_openclose_from_ext $$
 $$ display_passenger $$
@@ -194,6 +191,9 @@ $$ anim-link: BAG_2_SMILE $$
 $$ anim-link: SMILE_2_BAG $$
 
 
+*"Вы едете в отпуск?" -> mireille-01-part1-outro-holiday
+*"Вы уезжаете из Парижа?" -> mireille-01-part1-outro-leaving
+*:silence: (Ничего не говорить.) -> mireille-01-part1-outro-silence
 === mireille-01-part1-outro-holiday
 
 МИРЕЙ: "Нет, совсем нет. На самом деле, мой..."
@@ -309,14 +309,14 @@ $$ anim-link: BAG_2_DRIVER $$
 
 === mireille-01-part2-intro2
 
-part1-out>0?mireille-01-part2-intro-part1-accepted;;part1-out=0?mireille-01-part2-intro-part1-refused
 МИРЕЙ: "Не волнуйтесь, я всегда очень внимательна... Я никогда не пропускаю поезда."
+
+
+-> part1-out>0?mireille-01-part2-intro-part1-accepted;;part1-out=0?mireille-01-part2-intro-part1-refused
 *(Ехать на кладбище.) -> mireille-01-part2-intro2-accept
 *"Вы уверены, что хотите остановиться?" -> mireille-01-part2-intro2-sure
 *"Оно открыто?" -> mireille-01-part2-intro2-why
 *(Сказать нет.) -> mireille-01-part2-intro2-refused
-
-
 === mireille-01-part2-intro2-sure
 
 "Вы уверены, что хотите остановиться?"
@@ -339,7 +339,7 @@ $$ anim-link: SMILE_2_DRIVER $$
 
 === mireille-01-part2-intro2-refuse
 
-time=1?mireille-01-part2-intro2-refuseA;;mireille-01-part2-intro2-refuseB
+-> time=1?mireille-01-part2-intro2-refuseA;;mireille-01-part2-intro2-refuseB
 
 
 === mireille-01-part2-intro2-refuseA
@@ -351,10 +351,10 @@ time=1?mireille-01-part2-intro2-refuseA;;mireille-01-part2-intro2-refuseB
 
 === mireille-01-part2-intro2-refuseB
 
-time=1?mireille-01-part2-intro2-refuseA;;mireille-01-part2-intro2-refuseB
 Она останавливает вас жестом морщинистой руки, испещрённой венами.
 
 
+-> time=1?mireille-01-part2-intro2-refuseA;;mireille-01-part2-intro2-refuseB
 === mireille-01-part2-intro2-refused
 
 
@@ -545,13 +545,13 @@ $$ music-control: 40 $$
 
 === mireille-01-part3-story-intro
 
-*"Куда вы едете?" -> mireille-01-story
-*"Вы едете в отпуск?" -> mireille-01-story
-*:silence: (Ничего не говорить.) -> mireille-01-part4-intro-silence
 
 Вы внимательно наблюдаете за ней. В такие моменты одни люди любят одиночество, другие предпочитают поговорить.
 
 
+*"Куда вы едете?" -> mireille-01-story
+*"Вы едете в отпуск?" -> mireille-01-story
+*:silence: (Ничего не говорить.) -> mireille-01-part4-intro-silence
 === mireille-01-part3-story-outro
 
 
@@ -560,16 +560,16 @@ $$ music-control: 40 $$
 МИРЕЙ: "Я уезжаю только потому, что…"
 Она тихо прочищает горло.
 $$ anim-link: BAG_2_DRIVER $$
-story=1?mireille-01-part3-albatros;;mireille-01-part3-story-intro
 Вы киваете в знак согласия, на ваших губах появляется улыбка.
 Она замолкает.
 МИРЕЙ: "Вот почему дети отправляют меня в дом престарелых."
 МИРЕЙ: "Вся моя жизнь сгорела."
 МИРЕЙ: "Я жила на первом этаже. Мне удалось выбраться. Но я потеряла все свои вещи, одежду и мебель… Все фотографии."
+
+
+-> story=1?mireille-01-part3-albatros;;mireille-01-part3-story-intro
 *"Как начался пожар?" -> mireille-01-part3-albatros-responsible
 *(Спросить об Александре.) -> mireille-01-part3-albatros-alexandre
-
-
 === mireille-01-part3-albatros-responsible
 
 МИРЕЙ: "Это был несчастный случай."
@@ -658,12 +658,12 @@ $$ reveal: 060_07 $$
 === mireille-01-part4-station
 
 $$ travel: stop $$
-time>1?mireille-01-part4-station-late-introA;;time=1?mireille-01-part4-station-late-introB;;mireille-01-part4-station-early
 Мгновение спустя вы подъезжаете к станции. Ваша пассажирка протягивает вам деньги за проезд... Ее рука дрожит, губы сжаты.
+
+
+-> time>1?mireille-01-part4-station-late-introA;;time=1?mireille-01-part4-station-late-introB;;mireille-01-part4-station-early
 *(Промолчать.) -> mireille-01-part4-station-notalk
 *:silence: (Ничего не говорить.) -> mireille-01-part4-station-out
-
-
 === mireille-01-part4-station-notalk
 
 :silence: (Ничего не говорить.)
@@ -721,24 +721,24 @@ $$ camfocus: driver, fast $$
 
 === mireille-01-part4-driverleaving
 
-time=0?mireille-01-part4-driverleaving;;mireille-01-part4-trainleaving
 Вы покидаете платформу, не оглядываясь. Что-то подсказывает вам, что она наблюдает за вами, следит за каждым вашим шагом, за вашим быстрым отступлением.
 
 
+-> time=0?mireille-01-part4-driverleaving;;mireille-01-part4-trainleaving
 === mireille-01-part4-trainleaving
 
-time>0?mireille-01-part4-run;;mireille-01-part4-up
-time>0?mireille-01-part4-backA;;mireille-01-part4-backB
 Он отъезжает от станции со скоростью улитки.
 Уже за полночь. Последние люди на станции исчезают. Вы - единственный человек, оставшийся на платформе. Натриевые лампы высокого давления щиплют глаза.
 
 
+-> time>0?mireille-01-part4-run;;mireille-01-part4-up
+-> time>0?mireille-01-part4-backA;;mireille-01-part4-backB
 === mireille-01-part4-backA
 
 $$ movie: stop $$
 Вернувшись в такси, вы на мгновение переводите дух. Заднее сиденье выглядит странно пустым.
 $$ music-control: 60 $$
-time>0?mireille-01-part4-backA;;mireille-01-part4-backB
+-> time>0?mireille-01-part4-backA;;mireille-01-part4-backB
 
 
 === mireille-01-part4-backB

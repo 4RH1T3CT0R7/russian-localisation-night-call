@@ -125,9 +125,6 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 
 === cop-01-yourjob
-*" Я не полицейский. " -> cop-01-yourjob-outro
-*" Я никогда этого не делал. " -> cop-01-yourjob-outro
-*:silence: (Ничего не говорить.) -> cop-01-yourmine
 
 $$ anim-link: WINDOW_2_LOW $$
 Она наклоняется вперёд, её блестящие кошачьи глаза сужаются.
@@ -139,6 +136,9 @@ $$ anim-link: WINDOW_2_LOW $$
 БЮССЕ : "Допрашивай. Задавай вопросы. Копай."
 
 
+*" Я не полицейский. " -> cop-01-yourjob-outro
+*" Я никогда этого не делал. " -> cop-01-yourjob-outro
+*:silence: (Ничего не говорить.) -> cop-01-yourmine
 === cop-01-yourjob-outro
 
 Она пожимает плечами.
@@ -198,9 +198,6 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 
 === cop-01-refuse
-*" Я ничего общего не имею с этим террористом. " -> cop-01-terrorist
-*:anger: " Я ничего общего не имею с этим ублюдком. " -> cop-01-terrorist
-*:silence: (Ничего не говорить.) -> cop-01-drive
 
 { silence -= 1 }
 $$ anim-link: DRIVER_2_LOW $$
@@ -211,6 +208,9 @@ $$ anim-link: DRIVER_2_LOW $$
 БЮССЕ : "Кстати, ваши фамилии почти одинаковые. Вы могли бы быть братьями, вообще-то."
 
 
+*" Я ничего общего не имею с этим террористом. " -> cop-01-terrorist
+*:anger: " Я ничего общего не имею с этим ублюдком. " -> cop-01-terrorist
+*:silence: (Ничего не говорить.) -> cop-01-drive
 === cop-01-terrorist
 
 Она улыбается.
@@ -226,9 +226,6 @@ $$ anim-link: DRIVER_2_LOW $$
 
 
 === cop-01-drive
-*" Неа... " -> cop-01-drive-yes
-*" Очевидно. " -> cop-01-drive-yes
-*:silence: (Ничего не говорить.) -> cop-01-drive-silence
 
 { silence -= 1 }
 Она принимает серьёзный тон. Деловой.
@@ -237,6 +234,9 @@ $$ anim-link: LOW_2_WINDOW $$
 БЮССЕ : "Я не могу провалить это дело. Понял? И ты тоже, верно?"
 
 
+*" Неа... " -> cop-01-drive-yes
+*" Очевидно. " -> cop-01-drive-yes
+*:silence: (Ничего не говорить.) -> cop-01-drive-silence
 === cop-01-drive-yes
 
 БЮССЕ : "Ну, отлично. Мы понимаем друг друга."

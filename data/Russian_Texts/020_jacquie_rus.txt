@@ -985,7 +985,7 @@ $$ anim-link: NAILS_2_DRIVER $$
 ЖАКИ: "Парень даёт мне свою визитку. Он из полиции… из очень специального отдела, понимаешь, о чём я."
 *"Спецслужба?" -> jacquie-04-story2-secret
 *(Спросить об Александре.) -> jacquie-04-story2-what
-*(Молча кивают.) -> jacquie-04-story3
+*(Молча кивнуть.) -> jacquie-04-story3
 
 
 === jacquie-04-story2-secret
@@ -1013,7 +1013,7 @@ $$ anim-link: WINDOW_2_DRIVER $$
 ЖАКИ: "Потому что всё это здесь — не совсем легально…"
 ЖАКИ: "Я притворяюсь, что понятия не имею, о чём он…"
 $$ anim-link: DRIVER_2_WINDOW $$
-interruptions+=1
+{ interruptions += 1 }
 
 
 === jacquie-04-story4

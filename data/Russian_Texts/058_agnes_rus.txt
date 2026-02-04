@@ -190,15 +190,15 @@ $$ anim-link: SMILE_2_DRIVER $$
 
 === agnes-01-kids-surprise-francois
 
-_Driver.Met.Francois=1?agnes-01-kids-surprise-francois;;agnes-01-kids-surprise-not
 АГНЕС: "Да, это тот самый парень! Он повсюду."
 АГНЕС: "Я его терпеть не могу. Он все ненавидит."
+
+
+-> _Driver.Met.Francois=1?agnes-01-kids-surprise-francois;;agnes-01-kids-surprise-not
 *"Я иногда его подвожу." -> agnes-01-kids-surprise-francois-drive
 *"Он ужасный человек." -> agnes-01-kids-surprise-francois-bad
 *"Он имеет право высказывать своё мнение." -> agnes-01-kids-surprise-francois-freespeech
 *:silence: (Ничего не говорить.) -> agnes-01-kids-surprise-francois-silence
-
-
 === agnes-01-kids-surprise-francois-drive
 
 $$ tip: high $$

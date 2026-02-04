@@ -165,7 +165,7 @@ $$ anim-link: SH_PIERRE_2_SMILE $$
 
 === tps-01-start-yes2
 
-shaine-love+=4
+{ shaine-love += 4 }
 $$ anim-link: SH_DRIVER_2_BOARD $$
 $$ anim-link: SH_BOARD_2_PIERRE $$
 $$ anim-link: PI_DRIVER_2_BASIC $$
@@ -179,7 +179,7 @@ $$ anim-link: SH_PIERRE_2_SMILE $$
 
 === tps-01-start-yes-nomoney
 
-shaine-love+=3
+{ shaine-love += 3 }
 Улыбки не сходят с их лиц.
 $$ anim-link: SH_DRIVER_2_BOARD $$
 $$ anim-link: SH_BOARD_2_PIERRE $$
@@ -195,7 +195,7 @@ $$ anim-link: SH_PIERRE_2_SMILE $$
 
 $$ tip: high $$
 :money: "Давайте сыграем. Сколько вы заплатите?"
-shaine-love+=2
+{ shaine-love += 2 }
 Девушка наклоняется к вам.
 ШЕЙН: "Ладно. Пока мы играем, мы едем… И я заплачу полный тариф в конце. Как вам?"
 ШЕЙН: "Вы принимаете кредитные карты?"
@@ -204,7 +204,7 @@ shaine-love+=2
 
 === tps-01-game-intro
 
-shaine-love+=1
+{ shaine-love += 1 }
 $$ movie $$
 $$ reveal: 066_01 $$
 "Но... вам придется объяснить мне правила."
@@ -276,21 +276,21 @@ $$ anim-link: PI_SHAINE_2_SMILE $$
 === tps-01-game-rules1-whotaughtyou
 
 "Кто же научил вас играть?"
-rules-whotaughtyou=0?tps-01-game-rules1-hub2;;tps-01-game-rules1-hub3
-rules-fouryears=1
+{ rules-fouryears = 1 }
 ШЕЙН: "Есть руководства и Интернет... Я играла в Нью-Йорке, где я жила раньше."
 ПЬЕР: "А когда она пришла в нашу школу, она привела Родольфа и меня!"
 ШЕЙН: "Раньше мы играли с Ингрид..."
 Мальчик вздохнул с сожалением.
 
 
+-> rules-whotaughtyou=0?tps-01-game-rules1-hub2;;tps-01-game-rules1-hub3
 === tps-01-game-rules2-intro
 
 "Давайте начнем?"
-rules-fouryears=0?tps-01-game-rules1-hub1;;tps-01-game-rules1-hub3
-rules-whotaughtyou=1
+{ rules-whotaughtyou = 1 }
 
 
+-> rules-fouryears=0?tps-01-game-rules1-hub1;;tps-01-game-rules1-hub3
 === tps-01-game-rules2
 
 
@@ -440,11 +440,11 @@ $$ anim-link: SH_BOARD_DICE_PIERRE $$
 
 === tps-01-game-corridor1-lock-dice01
 
-??tps-01-game-corridor1-lock-dice01|tps-01-game-corridor1-lock-dice02|tps-01-game-corridor1-lock-dice03|tps-01-game-corridor1-lock-dice04|tps-01-game-corridor1-lock-dice05|tps-01-game-corridor1-lock-dice06
 ШЕЙН: "Он недостаточно высок..."
 $$ anim-link: SH_PIERRE_DICE_BOARD $$
 
 
+-> ??tps-01-game-corridor1-lock-dice01|tps-01-game-corridor1-lock-dice02|tps-01-game-corridor1-lock-dice03|tps-01-game-corridor1-lock-dice04|tps-01-game-corridor1-lock-dice05|tps-01-game-corridor1-lock-dice06
 === tps-01-game-corridor1-lock-dice02
 
 ШЕЙН: "Достаточно..."
@@ -706,13 +706,13 @@ $$ camfocus: passenger, slow $$
 
 "Я медленно двигаюсь к кровати."
 Вы слышите, как мальчик что-то бормочет.
-*"Я осматриваю окрестности." -> tps-01-game-xenofex-entrance-analyse
 ПЬЕР: "Это слишком просто... слишком просто."
+
+
+*"Я осматриваю окрестности." -> tps-01-game-xenofex-entrance-analyse
 *:violence: "Я атакую Ксенофекса." -> tps-01-game-xenofex-entrance-silentattack
 *:silence: (Пусть пассажир решит.) -> tps-01-game-xenofex-entrance-pierreturn
 *:silence: (Пусть пассажир решает.) -> tps-01-game-xenofex-entrance-pierreturn
-
-
 === tps-01-game-xenofex-entrance-analyse
 
 $$ anim-link: SH_DRIVER_2_BOARD $$
@@ -724,7 +724,7 @@ $$ anim-link: SH_BOARD_DICE_PIERRE $$
 
 === tps-01-game-xenofex-entrance-analyse-dice01
 
-??tps-01-game-xenofex-entrance-analyse-dice01|tps-01-game-xenofex-entrance-analyse-dice02|tps-01-game-xenofex-entrance-analyse-dice03|tps-01-game-xenofex-entrance-analyse-dice04|tps-01-game-xenofex-entrance-analyse-dice05|tps-01-game-xenofex-entrance-analyse-dice06
+-> ??tps-01-game-xenofex-entrance-analyse-dice01|tps-01-game-xenofex-entrance-analyse-dice02|tps-01-game-xenofex-entrance-analyse-dice03|tps-01-game-xenofex-entrance-analyse-dice04|tps-01-game-xenofex-entrance-analyse-dice05|tps-01-game-xenofex-entrance-analyse-dice06
 
 
 === tps-01-game-xenofex-entrance-analyse-dice02
@@ -787,13 +787,13 @@ $$ anim-link: SH_BOARD_2_DRIVER $$
 ПЬЕР: "Не бойтесь… Я точно знаю, что нужно делать."
 Тишина.
 (Пусть Сангренат играет.)
-xenofex-bed-illusion=1?tps-01-game-xenofex-entrance-reveal-counterattack;;xenofex-bed-illusion=0?tps-01-game-xenofex-entrance-reveal-nodamage
 ПЬЕР: "Я подхожу к кровати и замахиваюсь топором."
 ПЬЕР: "Бросать ли кубик для получения урона?"
 Гейм-мастеру с трудом удается скрыть садистскую улыбку.
 ШЕЙН: "Нет необходимости."
 
 
+-> xenofex-bed-illusion=1?tps-01-game-xenofex-entrance-reveal-counterattack;;xenofex-bed-illusion=0?tps-01-game-xenofex-entrance-reveal-nodamage
 === tps-01-game-xenofex-entrance-reveal-damage
 
 $$ movie: LightsOnRadio_Loop $$
@@ -813,13 +813,13 @@ $$ movie: stop $$
 
 === tps-01-game-xenofex-entrance-reveal-damage-pierre-A
 
-??tps-01-game-xenofex-entrance-reveal-damage-pierre-A|tps-01-game-xenofex-entrance-reveal-damage-pierre-B|tps-01-game-xenofex-entrance-reveal-damage-pierre-C|tps-01-game-xenofex-entrance-reveal-damage-pierre-D
 Вы видите, как побледнело лицо вашего пассажира.
 ШЕЙН: "У вас было 100 очков жизни... а теперь... 6, 6 и 5... двойное критическое попадание... Добавьте 20, и получится... 27."
 Он громко вздыхает.
 ПЬЕР: "Даже раненое, это ужасное существо впечатляет!"
 
 
+-> ??tps-01-game-xenofex-entrance-reveal-damage-pierre-A|tps-01-game-xenofex-entrance-reveal-damage-pierre-B|tps-01-game-xenofex-entrance-reveal-damage-pierre-C|tps-01-game-xenofex-entrance-reveal-damage-pierre-D
 === tps-01-game-xenofex-entrance-reveal-damage-pierre-B
 
 Результаты не очень хорошие.
@@ -849,11 +849,11 @@ $$ anim-link: SH_BOARD_DICE_PIERRE $$
 
 === tps-01-game-xenofex-entrance-reveal-damage-driver-A
 
-??tps-01-game-xenofex-entrance-reveal-damage-driver-A|tps-01-game-xenofex-entrance-reveal-damage-driver-B|tps-01-game-xenofex-entrance-reveal-damage-driver-C|tps-01-game-xenofex-entrance-reveal-damage-driver-D
 ШЕЙН: "5 и 5! И 5... получается 15."
 ПЬЕР: "У вас осталось 14 очков жизни. Будет трудно, но все еще может случиться."
 
 
+-> ??tps-01-game-xenofex-entrance-reveal-damage-driver-A|tps-01-game-xenofex-entrance-reveal-damage-driver-B|tps-01-game-xenofex-entrance-reveal-damage-driver-C|tps-01-game-xenofex-entrance-reveal-damage-driver-D
 === tps-01-game-xenofex-entrance-reveal-damage-driver-B
 
 ПЬЕР: "Ровно достаточно…"
@@ -908,7 +908,6 @@ $$ movie $$
 
 === tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes
 
-??tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes|tps-01-game-xenofex-entrance-reveal-counterattack-damage-no|tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes|tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes|tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes
 ШЕЙН: "Ладно, удар прошёл…"
 Вы на мгновение смотрите в окно. На заднем сиденье считают очки.
 Он бросает кубики.
@@ -916,14 +915,15 @@ $$ movie $$
 Они обмениваются цифрами, бросаясь незнакомыми словами. Вы чувствуете лёгкую мигрень.
 
 
+-> ??tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes|tps-01-game-xenofex-entrance-reveal-counterattack-damage-no|tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes|tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes|tps-01-game-xenofex-entrance-reveal-counterattack-damage-yes
 === tps-01-game-xenofex-entrance-reveal-counterattack-damage-A
 
-??tps-01-game-xenofex-entrance-reveal-counterattack-damage-A|tps-01-game-xenofex-entrance-reveal-counterattack-damage-B|tps-01-game-xenofex-entrance-reveal-counterattack-damage-C|tps-01-game-xenofex-entrance-reveal-counterattack-damage-D
 ШЕЙН: "Ксенофекс отшатывается назад и кричит."
 "Мальчик поворачивается к вам."
 ПЬЕР: "Он хорошо знает мой топор. Он уже попробовал его на вкус..."
 
 
+-> ??tps-01-game-xenofex-entrance-reveal-counterattack-damage-A|tps-01-game-xenofex-entrance-reveal-counterattack-damage-B|tps-01-game-xenofex-entrance-reveal-counterattack-damage-C|tps-01-game-xenofex-entrance-reveal-counterattack-damage-D
 === tps-01-game-xenofex-entrance-reveal-counterattack-damage-B
 
 ПЬЕР: "Так что получается... 4, 2 и 4... плюс 6 за скрытную атаку! 16 всего."
@@ -1181,10 +1181,10 @@ $$ anim-link: PI_BASIC_2_SHAINE $$
 
 === tps-01-game-xenofex-fight-rules-life-driver-health29
 
-driver-health=29?tps-01-game-xenofex-fight-rules-life-driver-health29;;driver-health=21?tps-01-game-xenofex-fight-rules-life-driver-health21;;driver-health=19?tps-01-game-xenofex-fight-rules-life-driver-health19;;driver-health=17?tps-01-game-xenofex-fight-rules-life-driver-health17;;driver-health=14?tps-01-game-xenofex-fight-rules-life-driver-health14;;tps-01-game-xenofex-fight-rules-life-driver-health-lost
 ШЕЙН: "Хорошо..."
 
 
+-> driver-health=29?tps-01-game-xenofex-fight-rules-life-driver-health29;;driver-health=21?tps-01-game-xenofex-fight-rules-life-driver-health21;;driver-health=19?tps-01-game-xenofex-fight-rules-life-driver-health19;;driver-health=17?tps-01-game-xenofex-fight-rules-life-driver-health17;;driver-health=14?tps-01-game-xenofex-fight-rules-life-driver-health14;;tps-01-game-xenofex-fight-rules-life-driver-health-lost
 === tps-01-game-xenofex-fight-rules-life-driver-health21
 
 ШЕЙН: "Этого должно быть достаточно... если вы умны!"
@@ -1214,7 +1214,6 @@ driver-health=29?tps-01-game-xenofex-fight-rules-life-driver-health29;;driver-he
 
 === tps-01-game-xenofex-fight-rules-life-driver-health14-help
 
-shaine-love>0?tps-01-game-xenofex-fight-rules-life-driver-health14-help;;tps-01-game-xenofex-fight-rules-life-driver-health14-outro
 ШЕЙН: "Змея душит вас... ее клыки впиваются вам в горло... Вы вдруг чувствуете прилив сил."
 $$ anim-link: SH_BOARD_2_DRIVER $$
 Она наклоняется к подруге.
@@ -1223,9 +1222,10 @@ $$ anim-link: SH_BOARD_2_DRIVER $$
 $$ anim-link: SH_DRIVER_2_BOARD $$
 
 
+-> shaine-love>0?tps-01-game-xenofex-fight-rules-life-driver-health14-help;;tps-01-game-xenofex-fight-rules-life-driver-health14-outro
 === tps-01-game-xenofex-fight-rules-life-driver-health14-outro
 
-driver-health+=5
+{ driver-health += 5 }
 ШЕЙН: "Вероятно, вам будет нелегко."
 
 
@@ -1260,7 +1260,6 @@ $$ anim-link: SH_BOARD_DICE_PIERRE $$
 === tps-01-game-xenofex-fight-turn01p-dice-1
 
 $$ anim-link: SH_PIERRE_DICE_BOARD $$
-??tps-01-game-xenofex-fight-turn01p-dice-1|tps-01-game-xenofex-fight-turn01p-dice-2|tps-01-game-xenofex-fight-turn01p-dice-3|tps-01-game-xenofex-fight-turn01p-dice-4|tps-01-game-xenofex-fight-turn01p-dice-5|tps-01-game-xenofex-fight-turn01p-dice-6
 $$ anim-link: SH_BOARD_2_DRIVER $$
 $$ anim-link: PI_BASIC_2_DRIVER $$
 ШЕЙН: "Глаза на дорогу!"
@@ -1273,13 +1272,14 @@ $$ anim-link: SH_BOARD_2_PIERRE $$
 ШЕЙН: "Вы промахнулись мимо цели и попали в Чубакка... Повторный бросок на урон."
 
 
+-> ??tps-01-game-xenofex-fight-turn01p-dice-1|tps-01-game-xenofex-fight-turn01p-dice-2|tps-01-game-xenofex-fight-turn01p-dice-3|tps-01-game-xenofex-fight-turn01p-dice-4|tps-01-game-xenofex-fight-turn01p-dice-5|tps-01-game-xenofex-fight-turn01p-dice-6
 === tps-01-game-xenofex-fight-turn01p-damage-low
 
 $$ anim-link: SH_PIERRE_2_BOARD $$
-??tps-01-game-xenofex-fight-turn01p-damage-low|tps-01-game-xenofex-fight-turn01p-damage-mid|tps-01-game-xenofex-fight-turn01p-damage-high
 Кубики бросаются. Выражение лица мальчика расслабляется.
 
 
+-> ??tps-01-game-xenofex-fight-turn01p-damage-low|tps-01-game-xenofex-fight-turn01p-damage-mid|tps-01-game-xenofex-fight-turn01p-damage-high
 === tps-01-game-xenofex-fight-turn01p-damage-mid
 
 $$ anim-link: SH_PIERRE_2_BOARD $$
@@ -1306,10 +1306,10 @@ $$ anim-link: PI_BASIC_2_SHAINE $$
 
 === tps-01-game-xenofex-fight-turn01p-dice-2
 
-driver-health<1?tps-01-game-xenofex-fight-driver-killed-pierre;;tps-01-game-xenofex-fight-turn01d-intro
 ПЬЕР: "2... плюс 1, получается 3. Я промахнулся."
 
 
+-> driver-health<1?tps-01-game-xenofex-fight-driver-killed-pierre;;tps-01-game-xenofex-fight-turn01d-intro
 === tps-01-game-xenofex-fight-turn01p-dice-3
 
 Мальчик чуть не подпрыгнул со своего места.
@@ -1447,19 +1447,19 @@ $$ anim-link: SH_PIERRE_DICE_BOARD $$
 
 === tps-01-game-xenofex-fight-turn01x-damage-mid
 
-??tps-01-game-xenofex-fight-turn01x-damage-low|tps-01-game-xenofex-fight-turn01x-damage-low|tps-01-game-xenofex-fight-turn01x-damage-mid|tps-01-game-xenofex-fight-turn01x-damage-high
-driver-health-=10
+{ driver-health- = 10 }
 ПЬЕР: "Ой."
 
 
+-> ??tps-01-game-xenofex-fight-turn01x-damage-low|tps-01-game-xenofex-fight-turn01x-damage-low|tps-01-game-xenofex-fight-turn01x-damage-mid|tps-01-game-xenofex-fight-turn01x-damage-high
 === tps-01-game-xenofex-fight-turn01x-damage-high
 
-driver-health<1?tps-01-game-xenofex-fight-xenofex-killed-driver;;tps-01-game-xenofex-fight-turn01x-outro
 ШЕЙН: "Плюс 5... значит... 15. Плюс критическое попадание..."
 Драматическая пауза.
 ПЬЕР: "25. Получается 25 очков урона."
 
 
+-> driver-health<1?tps-01-game-xenofex-fight-xenofex-killed-driver;;tps-01-game-xenofex-fight-turn01x-outro
 === tps-01-game-xenofex-fight-turn01x-outro
 
 Ваши пассажиры выглядят облегченными.
@@ -1472,7 +1472,6 @@ driver-health<1?tps-01-game-xenofex-fight-xenofex-killed-driver;;tps-01-game-xen
 
 === tps-01-game-xenofex-fight-turn02p
 
-driver-health<1?tps-01-game-xenofex-fight-xenofex-killed-driver;;tps-01-game-xenofex-fight-turn01x-outro
 Он одаривает вас смущённой ухмылкой.
 ПЬЕР: "Я воин. Поэтому… я наношу удары."
 ШЕЙН: "Пьер, будет очень жаль, если твой топор обезглавит нашего бедного друга."
@@ -1486,6 +1485,7 @@ $$ anim: IDLE_PIERRE_DRIVER $$
 Пьер и Шайн. Странная пара. Откуда именно они?
 
 
+-> driver-health<1?tps-01-game-xenofex-fight-xenofex-killed-driver;;tps-01-game-xenofex-fight-turn01x-outro
 === tps-01-game-xenofex-fight-turn02p-attack
 
 ШЕЙН: "Эй? Вы меня слышите?"
@@ -1604,7 +1604,6 @@ $$ movie: stop $$
 
 === tps-01-game-xenofex-fight-dem-scene02b
 
-pierre-health<1?tps-01-game-xenofex-fight-dem-scene02b;;tps-01-game-xenofex-fight-dem-scene02-pierre
 (Продолжать вращать.)
 "Я останавливаю его."
 Девушка улыбается.
@@ -1612,10 +1611,11 @@ pierre-health<1?tps-01-game-xenofex-fight-dem-scene02b;;tps-01-game-xenofex-figh
 ШЕЙН: "Последнее, что ты видишь, это... море огня... Твой брат... Ксенофекс... стоит там... один..."
 ШЕЙН: "Он протягивает руку..."
 $$ anim-link: PI_DRIVER_2_BASIC $$
+
+
+-> pierre-health<1?tps-01-game-xenofex-fight-dem-scene02b;;tps-01-game-xenofex-fight-dem-scene02-pierre
 *:love: "Хватаю его за руку." -> tps-01-game-xenofex-fight-dem-scene02-catch
 *"Счастливчик..." -> tps-01-game-xenofex-fight-dem-scene02-letgo
-
-
 === tps-01-game-xenofex-fight-dem-scene02-catch
 
 ШЕЙН: "Вы подходите к нему ближе. Он улыбается вам. Его кожа начинает рассыпаться, как горящая бумага."
@@ -1650,7 +1650,6 @@ $$ anim-link: PI_SMILE_2_SHAINE $$
 $$ movie: SubwayPassingByWithMetro $$
 $$ anim: IDLE_PIERRE_LOOK $$
 $$ anim: IDLE_SHAINE_BOARD $$
-pierre-heatlh>0?tps-01-game-xenofex-pierrealive;;tps-01-end-alldead
 ПЬЕР: "Давай, выкладывай."
 ШЕЙН: "Пьер..."
 ПЬЕР: "Простите."
@@ -1662,6 +1661,7 @@ pierre-heatlh>0?tps-01-game-xenofex-pierrealive;;tps-01-end-alldead
 ШЕЙН: "Ксенофекс наносит удар... но из последних сил."
 
 
+-> pierre-heatlh>0?tps-01-game-xenofex-pierrealive;;tps-01-end-alldead
 === tps-01-game-xenofex-fight-driver-killed-pierre
 
 ШЕЙН: "Плохие новости… Я думаю, ты только что убил Сангрената…"
@@ -1840,10 +1840,10 @@ $$ movie: stop $$
 
 === tps-01-whatnow-brother
 
-xenofex-revealed=1?tps-01-whatnow-brother;;tps-01-end-intro
 Это ваше правило. Не думай о нем. Никогда.
 
 
+-> xenofex-revealed=1?tps-01-whatnow-brother;;tps-01-end-intro
 === tps-01-nogame-intro
 
 ШЕЙН: "Ксенофекс победил."
@@ -1985,10 +1985,10 @@ $$ reveal: 066_03 $$
 
 === tps-01-end-shaine
 
-shaine-love>2?tps-01-end-out-shaine;;tps-01-end-out2
 "Спасибо за игру."
 
 
+-> shaine-love>2?tps-01-end-out-shaine;;tps-01-end-out2
 === tps-01-end
 
 $$ movie: lamparo_off, hide_passenger $$
@@ -2004,12 +2004,12 @@ $$ camfocus: driver, normal $$
 === tps-01-end-brother
 
 $$ reveal: 066_05 $$
-xenofex-revealed=1?tps-01-end-brother;;tps-01-end-outro
 Ксенофекс... был...
 Вы трясете головой. Загоните мрачные мысли обратно. В самую глубину сознания.
 Вы гоните их прочь.
 
 
+-> xenofex-revealed=1?tps-01-end-brother;;tps-01-end-outro
 === tps-01-end-outro
 
 Вы сидите так с минуту, а затем делаете глубокий вдох.
@@ -2018,5 +2018,5 @@ xenofex-revealed=1?tps-01-end-brother;;tps-01-end-outro
 === tps-01-end-dem-used
 
 ПЬЕР: "А ещё мы использовали кольцо ДЕМ. Я месяцами ждал этого момента."
-xenofex-dead=0?tps-01-end-xenofex-alive;;xenofex-dead=1?tps-01-end-xenofex-killed;;dem-used=1?tps-01-end-dem-used;;tps-01-end-out
+-> xenofex-dead=0?tps-01-end-xenofex-alive;;xenofex-dead=1?tps-01-end-xenofex-killed;;dem-used=1?tps-01-end-dem-used;;tps-01-end-out
 

@@ -43,10 +43,6 @@ $$ anim: IDLE_HIDE $$
 === amira-01-story
 
 $$ music-control: 20 $$
-*"Что случилось?" -> amira-01-story-what
-*"Могу я помочь?" -> amira-01-story-help
-*"Вам приходит очень много сообщений." -> amira-01-story-message
-*:silence: (Ничего не говорить.) -> amira-01-story-silence
 
 АМИРА : "Я облажалась."
 $$ anim: looking_driver $$
@@ -58,6 +54,10 @@ $$ anim: IDLE_DRIVER $$
 Вы понимаете, что с тех пор, как вы сели за руль, слышите повторяющийся шум. Телефон вашей пассажирки вибрирует каждые четыре секунды.
 
 
+*"Что случилось?" -> amira-01-story-what
+*"Могу я помочь?" -> amira-01-story-help
+*"Вам приходит очень много сообщений." -> amira-01-story-message
+*:silence: (Ничего не говорить.) -> amira-01-story-silence
 === amira-01-story-what
 
 Она качает головой. Она не знает, с чего начать.
@@ -185,7 +185,6 @@ $$ anim: IDLE_DRIVER $$
 
 === amira-01-story02-outro
 
-china=1?amira-01-story02-outro;;amira-01-story02-china-introB
 Двое мужчин сидят и курят на морозе перед киоском с овощами и фруктами.
 Она переводит дыхание. Закрывает глаза.
 Снаружи все расплывается. Город словно исчезает. Его уносят эмоции, переполняющие вашу пассажирку.
@@ -212,6 +211,7 @@ $$ dialogspeed: normal $$
 АМИРА : "Мне плевать."
 
 
+-> china=1?amira-01-story02-outro;;amira-01-story02-china-introB
 === amira-01-story-silence02
 
 Ты смотришь на дорогу. Мысли кружатся в голове.

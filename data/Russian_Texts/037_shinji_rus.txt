@@ -23,9 +23,6 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 === shinji-01-silence1
 
-*" Смотрите, кто прощается. " -> shinji-01-eiffel-intro
-*" Эйфелева башня! " -> shinji-01-eiffel
-*(Ничего не говорить.) -> shinji-01-eiffel-notunderstanding
 
 Ещё довольно рано для посадки на самолёт… Он, должно быть, из тех, кто любит приезжать заранее.
 Японец? Китаец? Вы не уверены.
@@ -35,6 +32,9 @@ $$ anim-link: DRIVER_2_WINDOW $$
 $$ music-control: 20 $$
 
 
+*" Смотрите, кто прощается. " -> shinji-01-eiffel-intro
+*" Эйфелева башня! " -> shinji-01-eiffel
+*(Ничего не говорить.) -> shinji-01-eiffel-notunderstanding
 === shinji-01-eiffel-intro
 
 Вы указываете на Эйфелеву башню позади вас.
@@ -334,16 +334,16 @@ $$ camfocus: driver, fast $$
 
 === shinji-01-exit-yakuza
 
-yakuza=1?shinji-01-exit-yakuza;;shinji-01-exit-intro
 СИНДЗИ : "ヤクザ！"
 $$ dialogspeed: slow $$
 Вы практически подпрыгиваете - он только что произнес слово "якудза"!
 $$ dialogspeed: normal $$
+
+
+-> yakuza=1?shinji-01-exit-yakuza;;shinji-01-exit-intro
 *:smile: "Якудза!" -> shinji-01-exit-yakuza-laugh
 *(Помахать.) -> shinji-01-exit-yakuza-sign
 *:taxi: (Вернуться в такси.) -> shinji-01-exit-intro
-
-
 === shinji-01-exit-yakuza-laugh
 
 Он заходит в аэропорт…

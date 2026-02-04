@@ -166,7 +166,7 @@ $$ dialogspeed: normal $$
 
 === ludivine-01-story4-crier
 
-interruptions+=1
+{ interruptions += 1 }
 Она тяжело вздыхает.
 ЛЮДИВИН: "Очень смешно. Абсолютно уморительно..."
 Её голос становится всё более агрессивным. Вы чувствуете, как внутри неё бурлит гнев.
@@ -197,12 +197,12 @@ $$ dialogspeed: fast $$
 === ludivine-01-story5-interruption2
 
 $$ dialogspeed: fast $$
-interruptions>3?ludivine-01-story5-interruption2;;ludivine-01-story5-interruptionB
 ЛЮДИВИН: "Может, ты просто... Заткнись! ЭТО Я ГОВОРЮ!"
 $$ dialogspeed: normal $$
 Вы вздыхаете. Ваша голова начинает пульсировать. Ее голос повышается.
 
 
+-> interruptions > 3 ? ludivine-01-story5-interruption2 ;; ludivine-01-story5-interruptionB
 === ludivine-01-story6
 
 $$ dialogspeed: fast $$
@@ -225,7 +225,7 @@ $$ dialogspeed: normal $$
 
 === ludivine-01-story6-interruption
 
-interruptions+=1
+{ interruptions += 1 }
 "И какое это имеет отношение к чему-либо..."
 ЛЮДИВИН: "ВСЁ!"
 
@@ -238,7 +238,6 @@ interruptions+=1
 
 === ludivine-01-story7
 
-interruptions>5?ludivine-01-story6-interruption2;;ludivine-01-story7
 Её голос вдруг заметно стихает... Почти хрупкий.
 $$ dialogspeed: fast $$
 $$ music-control: 40 $$
@@ -253,6 +252,7 @@ $$ dialogspeed: normal $$
 Она делает глубокий вдох.
 
 
+-> interruptions > 5 ? ludivine-01-story6-interruption2 ;; ludivine-01-story7
 === ludivine-01-story8
 
 ЛЮДИВИН: "Но все из-за тебя... из-за твоего такси... все изменилось в ночь на 27 октября..."
@@ -264,7 +264,7 @@ $$ anim-link: ANGER_2_FINGER $$
 ЛЮДИВИН: "И я начала искать тебя..."
 Шея покрывается испариной. Вы чувствуете, как холодные липкие капли вот-вот стекут по позвоночнику.....
 ЛЮДИВИН: "Я начала расспрашивать... Я подкупила одного из ваших коллег, чтобы он дал мне ваш номер."
-"Капельки пота стекают по спине..."
+Капельки пота стекают по спине...
 ЛЮДИВИН: "Тогда я нашла ваш адрес. Ваш первый адрес, то есть."
 Вы вздрагиваете, когда капля достигает ваших боксеров.
 ЛЮДИВИН: "Но это ваше дело... Главное, что я в конце концов узнала ваш другой адрес, настоящий."
@@ -290,11 +290,11 @@ $$ anim-link: ANGER_2_FINGER $$
 
 === ludivine-01-story-outroB
 
-interruptions>4?ludivine-01-story-outroB;;ludivine-01-story-outroA
 ЛЮДИВИН: "Хотя ты не очень хорош в том, чтобы... ВЫКЛАДЫВАТЬСЯ НА ПОЛНУЮ..."
 ЛЮДИВИН: "Не торопись... Подумай, что хочешь сказать... Начни с глубокого вдоха."
 
 
+-> interruptions > 4 ? ludivine-01-story-outroB ;; ludivine-01-story-outroA
 === ludivine-01-story-outro2
 
 Она глубоко вдыхает и... выдыхает.
@@ -381,11 +381,11 @@ $$ anim-link: FINGER_2_MOVED $$
 
 === ludivine-01-excuses-end-classic
 
-excuse-classic>2?ludivine-01-excuses-end-classic;;excuse-real>2?ludivine-01-excuses-end-real;;excuse-toomuch>2?ludivine-01-excuses-end-toomuch;;excuse-quick>2?ludivine-01-excuses-end-quick;;ludivine-01-excuses-end-generic
 ЛЮДИВИН: "Коротко и мило..."
 ЛЮДИВИН: "Эффективно..."
 
 
+-> excuse-classic > 2 ? ludivine-01-excuses-end-classic ;; excuse-real > 2 ? ludivine-01-excuses-end-real ;; excuse-toomuch > 2 ? ludivine-01-excuses-end-toomuch ;; excuse-quick > 2 ? ludivine-01-excuses-end-quick ;; ludivine-01-excuses-end-generic
 === ludivine-01-excuses-end-real
 
 ЛЮДИВИН: "Это был настоящий ты… говорил…"
@@ -455,13 +455,13 @@ excuse-classic>2?ludivine-01-excuses-end-classic;;excuse-real>2?ludivine-01-excu
 
 === ludivine-01-attack-killer-angel
 
-_Killer.Is.Judge=1?ludivine-01-attack-killer-judge;;_Killer.Is.Sandman=1?ludivine-01-attack-killer-sandman;;_Killer.Is.Angel=1?ludivine-01-attack-killer-angel;;ludivine-01-attack2
 "Напал убийца..."
 Она вскрикивает от удивления.
 ЛЮДИВИН: "Ангел смерти."
 "Возможно."
 
 
+-> _Killer.Is.Judge = 1 ? ludivine-01-attack-killer-judge ;; _Killer.Is.Sandman = 1 ? ludivine-01-attack-killer-sandman ;; _Killer.Is.Angel = 1 ? ludivine-01-attack-killer-angel ;; ludivine-01-attack2
 === ludivine-01-attack2
 
 $$ anim-link: MOVED_2_FINGER $$
@@ -519,13 +519,13 @@ $$ reveal: 054_02 $$
 
 === ludivine-01-nextsteps-sheknows
 
-_Ludivine.Knows.Survivor=1?ludivine-01-nextsteps-sheknows;;ludivine-01-nextsteps2
 ЛЮДИВИН: "А потом, когда я приду домой, я уничтожу всю информацию о вас... Хорошо?"
 Вы киваете утвердительно.
 "Спасибо..."
 Это слово на минуту разносится эхом по салону такси. Ваша пассажирка тянется к двери.
 
 
+-> _Ludivine.Knows.Survivor = 1 ? ludivine-01-nextsteps-sheknows ;; ludivine-01-nextsteps2
 === ludivine-01-nextsteps2
 
 ЛЮДИВИН: "Мне нужно научиться…"
@@ -560,8 +560,8 @@ $$ anim-link: FINGER_2_ANGER $$
 
 === ludivine-01-getout-sorry
 
-"Мне очень жаль, но... ты должна уйти."
-ЛЮДИВИН : "Жаль, что всё сложилось иначе. Правда. Я была готова…"
+Она тяжело вздыхает.
+ЛЮДИВИН: "Жаль, что всё сложилось иначе. Правда. Я была готова…"
 Она качает головой.
 
 
@@ -613,6 +613,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Ничего... Лишь смутное ощущение чего-то за спиной... Силуэт убийцы... Мимолётное присутствие...
 Вы качаете головой. Ничего нового. Если бы вы только обернулись, всё было бы проще. Если бы вы увидели лицо... того...
 Вы сразу же заводите машину.
+-> interruption > 3 ? ludivine-01-end-interruptions ;; ludivine-01-end-outro
 
 
 === ludivine-01-end-outro
@@ -621,19 +622,19 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 === ludivine-01-stare3
 
 $$ movie: stop $$
-_Driver.Is.Exhausted=1?ludivine-01-stare2-tired;;_Driver.Is.Smoking=0?ludivine-01-stare2-nosmoking;;ludivine-01-stare2b
 А она: "напряжённая, нервная, практически в бешенстве, явно горящая от сдерживаемой ярости."
 
 
+-> _Driver.Is.Exhausted = 1 ? ludivine-01-stare2-tired ;; _Driver.Is.Smoking = 0 ? ludivine-01-stare2-nosmoking ;; ludivine-01-stare2b
 === ludivine-01-story-killer-angel
 
-_Killer.Is.Judge=1?ludivine-01-story-killer-judge;;_Killer.Is.Sandman=1?ludivine-01-story-killer-sandman;;_Killer.Is.Angel=1?ludivine-01-story-killer-angel;;ludivine-01-story2
 Может ли эта женщина быть... Ангелом Смерти?
 
 
+-> _Killer.Is.Judge = 1 ? ludivine-01-story-killer-judge ;; _Killer.Is.Sandman = 1 ? ludivine-01-story-killer-sandman ;; _Killer.Is.Angel = 1 ? ludivine-01-story-killer-angel ;; ludivine-01-story2
 === ludivine-01-story5-interruption
 
-interruptions+=1
+{ interruptions += 1 }
 $$ dialogspeed: normal $$
 "Я..."
 

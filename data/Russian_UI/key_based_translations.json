@@ -1,6 +1,7 @@
 {
   "UI.STATION.TICKET_CASH": "«Наличные! Наличные! Наличные!»",
   "UI.STATION.TICKET_VERSAILLES": "«Версаль»",
+  "UI.ENDSHIFT.SUMUP.KM.TRAVELED": "км",
   "UI.ENDSHIFT.SUMUP.COMPANYCUT.DESC": "({0}% от тарифов)",
   "UI.ENDSHIFT.SUMUP.BONUS.DESC": "(дальние направления)",
   "UI.ENDSHIFT.SUMUP.SPENDING.DESC": "(аренда, еда, сигареты)",
@@ -693,7 +694,7 @@
   "UI.PAUSE.RESUME": "Продолжить",
   "UI.CAR.DIALOGUE.SKIP": "Далее",
   "UI.TUTORIAL.NEXT": "Далее",
-  "UI.ENDSHIFT.REVEALS.MENU": "Более подробную информацию можно найти в меню Passidex",
+  "UI.ENDSHIFT.REVEALS.MENU": "Более подробную информацию можно найти в меню Пассидекс",
   "UI.LOADING": "Загрузка",
   "clue_angel_journal08_01.title": "Ученые обнаружили, что мы живем в симуляции",
   "UI.STATION.PUMP": "Бензоколонка",

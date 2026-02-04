@@ -36,7 +36,7 @@ $$ music-control: 20 $$
 === vero-01-question-dontknow
 
 Её карие глаза искрятся весельем.
-ВЕРОНИКА: "Прости... Я не хотела..."
+ВЕРОНИКА: "Простите... Я не хотела..."
 $$ anim-link: OUTSIDE_2_SAD $$
 Она отворачивает лицо, очевидно, краснея.
 ВЕРОНИКА: "Дело в том, что я не думаю, что смогу это сделать..."
@@ -85,7 +85,7 @@ $$ music-control: 40 $$
 ВЕРОНИКА: "Я удивлена, вот и все... И сыта по горло."
 Пассажирка вдруг понимает, что переборщила.
 $$ anim-link: SAD_2_OUTSIDE $$
-ВЕРОНИКА: "Прости! Не знаю, зачем я тебе все это рассказываю..."
+ВЕРОНИКА: "Простите! Не знаю, зачем я вам все это рассказываю..."
 *"Не проблема…" -> vero-01-story2
 *"Люди склонны раскрываться ночью." -> vero-01-story-night
 *"Люди обычно открываются по ночам." -> vero-01-story-ok
@@ -127,7 +127,6 @@ $$ dialogspeed: normal $$
 
 === vero-01-story2-message
 
-message=1?vero-01-story2-message;;vero-01-story3
 ВЕРОНИКА: "Думаю... лучше оставить всё как есть."
 Ее голос прерывается.
 ВЕРОНИКА: "...Но лучше оставить все как есть."
@@ -137,11 +136,12 @@ $$ reveal: 045_02 $$
 Она отворачивает лицо, не отрывая глаз от проплывающих мимо пейзажей.
 ВЕРОНИКА: "Угу..."
 $$ camfocus: default, slow $$
+
+
+-> message=1?vero-01-story2-message;;vero-01-story3
 *"Ты надеялась получить эмодзи…" -> vero-01-story2-message-emoji
 *:smile: "Мне жаль..." -> vero-01-story2-message-sorry
 *(Оставить её.) -> vero-01-story2-message-after
-
-
 === vero-01-story2-message-emoji
 
 :smile: "Мне жаль..."
@@ -207,11 +207,11 @@ $$ music-control: 60 $$
 
 === vero-01-end-message
 
-message=1?vero-01-end-message;;vero-01-end-nomessage
 Она улыбается вам и выходит из такси.
 $$ movie: lamparo_off, hide_passenger $$
 
 
+-> message=1?vero-01-end-message;;vero-01-end-nomessage
 === vero-01-end-nomessage
 
 ВЕРОНИКА: "Давай… Ты сможешь это сделать."

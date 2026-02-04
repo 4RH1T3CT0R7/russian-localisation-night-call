@@ -12,7 +12,6 @@
 === maso-01-start-outro
 
 $$ movie: lamparo_on, display_passenger $$
-_Pierrette.Restaurant.Known=1?maso-01-start-restaurantA;;maso-01-start-restaurantB
 $$ sfx: sfx_gameplay_car_openclose_from_ext $$
 Следующие два пассажира очень хорошо одеты... дорого.
 $$ anim-link: MA_WINDOW_2_LOOKING $$
@@ -23,6 +22,7 @@ $$ reveal: 071_00 $$
 Вы начинаете вести машину, пока они беседуют на заднем сиденье. Разговор, наполненный моментами молчания.
 
 
+-> _Pierrette.Restaurant.Known=1?maso-01-start-restaurantA;;maso-01-start-restaurantB
 === maso-01-jeanluc1
 
 СОФИ : "Жан-Люк хочет, чтобы я занималась его коллекцией только чтобы позлить тебя."
@@ -145,7 +145,6 @@ $$ anim-link: MA_WINDOW_2_LOOKING $$
 
 === maso-01-sleeping-sophie
 
-marc=1?maso-01-sleeping-marc;;sophie=1?maso-01-sleeping-sophie
 МАРК : "Для меня это тоже не проблема…"
 СОФИ : "Нет, я пойду в отель."
 Они смотрят друг на друга.
@@ -154,6 +153,7 @@ marc=1?maso-01-sleeping-marc;;sophie=1?maso-01-sleeping-sophie
 $$ anim-link: SO_LOOKING_2_WINDOW $$
 
 
+-> marc=1?maso-01-sleeping-marc;;sophie=1?maso-01-sleeping-sophie
 === maso-01-sleeping-marc
 
 МАРК : "К тому же, так всем будет проще."
@@ -180,7 +180,6 @@ $$ music-control: 40 $$
 
 === maso-01-street-sophie
 
-marc=1?maso-01-street-marc;;sophie=1?maso-01-street-sophie
 СОФИ : "Я позвоню тебе завтра, хорошо?"
 МАРК : "Вы можете позвонить в любое время."
 $$ movie: ClientLeavingTaxiBehind $$
@@ -189,6 +188,7 @@ $$ hide_passenger: 1 $$
 Вы смотрите, как она уходит. Она держит голову прямо и высоко, слегка наклонив ее назад.
 
 
+-> marc=1?maso-01-street-marc;;sophie=1?maso-01-street-sophie
 === maso-01-street-marc
 
 МАРК : "Я позвоню тебе завтра… около 10, чтобы не беспокоить."
@@ -217,16 +217,16 @@ $$ anim-link: MA_WINDOW_2_LOOKING $$
 === maso-01-end-marc
 
 $$ anim-link: MA_WINDOW_2_DRIVER $$
-marc=1?maso-01-end-sophie;;sophie=1?maso-01-end-marc
 $$ anim-link: SO_DRIVER_2_WINDOW $$
 Ваш пассажир платит. Он не торопится, проверяет счетчик, прежде чем отдать вам деньги за проезд.
 Кажется, он утратил свой шик — когда он тянется к двери, его голос срывается.
 МАРК : "Сп… спасибо. И извините… за… ну… вы понимаете…"
+
+
+-> marc=1?maso-01-end-sophie;;sophie=1?maso-01-end-marc
 *:smile: "Надеюсь, вы разберётесь." -> maso-01-end-marc-hope
 *"Без проблем." -> maso-01-end-marc-outro
 *:silence: (Ничего не говорить.) -> maso-01-end-marc-outro
-
-
 === maso-01-end-marc-hope
 
 МАРК : "Это очень любезно с вашей стороны... но, как вы, к сожалению, слышали... наши разногласия непримиримы. Это факт."

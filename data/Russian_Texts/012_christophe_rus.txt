@@ -915,13 +915,13 @@ $$ anim-link: SMI2DRI $$
 
 $$ music-control: 40 $$
 "Я."
-driverstoryfirst=0?christophe-01-driversturn;;driverstoryfirst=1?christophe-01-afterchriststory;;christophe-01-afterchriststory
+-> driverstoryfirst=0?christophe-01-driversturn;;driverstoryfirst=1?christophe-01-afterchriststory;;christophe-01-afterchriststory
 
 
 === christophe-01-driversturn
 
 $$ music-control: 60 $$
-christstoryfirst=0
+{ christstoryfirst = 0 }
 КРИСТОФ : "Ваша очередь..."
 Вы смотрите на него.
 "Моя история... немного похожа на вашу."
@@ -1008,7 +1008,6 @@ $$ anim-link: SMI2DRI $$
 
 :negative: "Нет, невозможно..."
 $$ tip: low $$
-driverstoryfirst=1?christophe-01-christturn;;driverstoryfirst=0?christophe-01-afterdriverstory;;christophe-01-afterdriverstory
 КРИСТОФ : "Простите меня."
 $$ anim-link: SMI2DRI $$
 Он замолкает и остается таким до конца поездки. Время от времени на его лице мелькает разочарование.
@@ -1016,6 +1015,7 @@ $$ anim-link: DRI2WIN $$
 $$ anim-link: WIN2DRI $$
 
 
+-> driverstoryfirst=1?christophe-01-christturn;;driverstoryfirst=0?christophe-01-afterdriverstory;;christophe-01-afterdriverstory
 === christophe-01-end
 
 $$ music-control: 40 $$

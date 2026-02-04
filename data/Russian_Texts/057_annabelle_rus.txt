@@ -41,7 +41,7 @@ $$ music-control: 40 $$
 
 $$ reveal: 057_01 $$
 "Куда вы направляетесь?"
-angry+=1
+{ angry += 1 }
 АННАБЕЛЬ: "Ливия."
 $$ music-control: 40 $$
 *"Куда вы направляетесь?" -> annabelle-01-start-holiday-sorry
@@ -51,7 +51,7 @@ $$ music-control: 40 $$
 === annabelle-01-start-holiday-sorry
 
 
-angry+=1
+{ angry += 1 }
 Проходит секунда или две, прежде чем ваша пассажирка откашляется.
 АННАБЕЛЬ: "Все в порядке... Это... Это я..."
 АННАБЕЛЬ: "В последнее время я была на взводе..."
@@ -63,10 +63,10 @@ angry+=1
 
 $$ reveal: 057_01 $$
 "Идёте в поход?"
-_Driver.Met.Annabelle=1
+{ _Driver.Met.Annabelle = 1 }
 Из нее вырывается небольшой, почти нервный смех.
 $$ music-control: 40 $$
-excuse+=1
+{ excuse += 1 }
 
 
 === annabelle-01-start-where
@@ -86,7 +86,7 @@ $$ music-control: 40 $$
 
 === annabelle-01-greece
 
-silence_intro=1
+{ silence_intro = 1 }
 $$ music-control: 40 $$
 $$ anim-link: PHONE_2_WINDOW $$
 АННАБЕЛЬ: "Я еду в Грецию... чтобы присоединиться к спасательному судну НПО."
@@ -149,10 +149,10 @@ $$ anim-link: SMILE_2_PHONE $$
 
 === annabelle-01-phone-intro-sorry
 
-angry>0?annabelle-01-phone-intro2;;annabelle-01-phone-intro-sorry
 АННАБЕЛЬ: "О, извините, я..."
 
 
+-> angry>0?annabelle-01-phone-intro2;;annabelle-01-phone-intro-sorry
 === annabelle-01-phone-intro2
 
 Когда она смотрит на имя звонящего, ее лицо застывает.
@@ -182,7 +182,7 @@ $$ dialogspeed: normal $$
 === annabelle-01-phone02
 
 :silence: (Ничего не делать.)
-phone=1
+{ phone = 1 }
 АННАБЕЛЬ: "Папа. Всё будет хорошо... Нет, я не хочу говорить с мамой."
 АННАБЕЛЬ: "Я знаю, что она скажет."
 АННАБЕЛЬ: "Я буду в безопасности, я..."
@@ -195,7 +195,7 @@ phone=1
 === annabelle-01-phone03
 
 :silence: (Ничего не делать.)
-phone=2
+{ phone = 2 }
 АННАБЕЛЬ: "Мама!"
 АННАБЕЛЬ: "Ага..."
 АННАБЕЛЬ: "Ух-хух-хух..."
@@ -213,7 +213,7 @@ phone=2
 === annabelle-01-phone04
 
 :silence: (Ничего не делать.)
-phone=3
+{ phone = 3 }
 АННАБЕЛЬ: "Мне нужно идти..."
 АННАБЕЛЬ: "Мам... Нет, я не смогу позвонить тебе из Греции... Но я смогу отправлять электронные письма..."
 АННАБЕЛЬ: "Электронная почта!"
@@ -245,10 +245,10 @@ $$ anim-link: PHONE_2_SMILE $$
 АННАБЕЛЬ: "Мои родители… Они бывают…"
 АННАБЕЛЬ: "Спасибо... Спасибо, что поговорили со мной о моей работе... Это немного меня успокоило."
 $$ anim-link: SMILE_2_WINDOW $$
-job=1?annabelle-01-phone-out-outroA;;annabelle-01-phone-out-outroB
 Она широко улыбается.
 
 
+-> job=1?annabelle-01-phone-out-outroA;;annabelle-01-phone-out-outroB
 === annabelle-01-phone-out-outroB
 
 АННАБЕЛЬ: "Мои родители не... понимают, что я делаю."
@@ -257,15 +257,15 @@ $$ anim-link: SMILE_2_WINDOW $$
 
 === annabelle-01-phone-out-outroB-silence
 
-silence_intro=1?annabelle-01-phone-out-outroB-silence;;annabelle-01-phone-out-outroB-merge
 АННАБЕЛЬ: "Я... простите, что была с вами немногословна... Ваши вопросы меня раздражали и..."
 Она тихонько качает головой.
 АННАБЕЛЬ: "В любом случае..."
 
 
+-> silence_intro=1?annabelle-01-phone-out-outroB-silence;;annabelle-01-phone-out-outroB-merge
 === annabelle-01-phone-out-outroB-merge
 
-job=1
+{ job = 1 }
 АННАБЕЛЬ: "Я фотожурналист..."
 АННАБЕЛЬ: "Я отправляюсь на спасательную операцию в Средиземное море, на лодке, которая помогает беженцам..."
 Ее шаг ускоряется, словно лошадь переходит в галоп.
@@ -419,7 +419,6 @@ $$ anim-link: SMILE_2_WINDOW $$
 
 === annabelle-01-radio-rock3
 
-angry<2?annabelle-01-radio-rock3;;excuse=1?annabelle-01-radio-rock3;;saved=1?annabelle-01-radio-rock3;;annabelle-01-airport
 АННАБЕЛЬ: "Забавно, что эта группа..."
 $$ reveal: 057_06 $$
 АННАБЕЛЬ: "Прошлым летом на фестивале они исполнили песню, которую я никогда раньше не слышала."
@@ -428,6 +427,7 @@ $$ reveal: 057_06 $$
 Она закрывает глаза.
 
 
+-> angry<2?annabelle-01-radio-rock3;;excuse=1?annabelle-01-radio-rock3;;saved=1?annabelle-01-radio-rock3;;annabelle-01-airport
 === annabelle-01-radio-rock-reveal
 
 АННАБЕЛЬ: "Я решила уйти..."
@@ -549,7 +549,6 @@ $$ travel: stop $$
 
 === annabelle-01-gasstation2-job
 
-job=0?annabelle-01-gasstation2-job;;annabelle-01-gasstation2-outro
 Её голос приобретает более глубокие, тёплые тона...
 АННАБЕЛЬ: "Завтра я отправляюсь на спасательном судне, которое помогает беженцам... Ну, знаете, мигрантам, пересекающим Средиземное море."
 Вам удается слабо улыбнуться.
@@ -559,6 +558,7 @@ job=0?annabelle-01-gasstation2-job;;annabelle-01-gasstation2-outro
 АННАБЕЛЬ: "В любом случае, какая разница!"
 
 
+-> job=0?annabelle-01-gasstation2-job;;annabelle-01-gasstation2-outro
 === annabelle-01-gasstation2-outro
 
 АННАБЕЛЬ: "Ты ведь не уйдешь без меня?"
@@ -624,14 +624,13 @@ $$ travel: stop $$
 
 === annabelle-01-airport3
 
-yoga=1?annabelle-01-airport3-yoga;;saved=1?annabelle-01-airport3-saved;;frequency=1?annabelle-01-airport3-frequency;;angry>2?annabelle-01-airport3-angry;;annabelle-01-airport-basic
 Она сидит так еще минуту или две, просто наблюдая за вами.
 
 
+-> yoga=1?annabelle-01-airport3-yoga;;saved=1?annabelle-01-airport3-saved;;frequency=1?annabelle-01-airport3-frequency;;angry>2?annabelle-01-airport3-angry;;annabelle-01-airport-basic
 === annabelle-01-airport3-angry
 
 $$ reveal: 057_02 $$
-yoga=1?annabelle-01-airport3-yoga;;saved=1?annabelle-01-airport3-saved;;frequency=1?annabelle-01-airport3-frequency;;angry>2?annabelle-01-airport3-angry;;annabelle-01-airport-basic
 Она сидит так еще минуту или две, просто наблюдая за вами.
 АННАБЕЛЬ: "Вам... Вам бы впустить в себя побольше мира, знаете ли."
 "Простите?"
@@ -639,6 +638,7 @@ yoga=1?annabelle-01-airport3-yoga;;saved=1?annabelle-01-airport3-saved;;frequenc
 Она обрывает себя на полуслове, открывает дверь и убегает. Всё её снаряжение не мешает ей быстро скрыться.
 
 
+-> yoga=1?annabelle-01-airport3-yoga;;saved=1?annabelle-01-airport3-saved;;frequency=1?annabelle-01-airport3-frequency;;angry>2?annabelle-01-airport3-angry;;annabelle-01-airport-basic
 === annabelle-01-airport3-yoga
 
 $$ anim-link: WINDOW_2_SMILE $$
@@ -662,11 +662,11 @@ $$ anim-link: SMILE_2_WINDOW $$
 
 === annabelle-01-airport3-saved-phone2
 
-phone=3?annabelle-01-airport3-saved-phone3;;phone=2?annabelle-01-airport3-saved-phone2;;phone=1?annabelle-01-airport3-saved-phone1;;annabelle-01-airport3-saved-phone3
 АННАБЕЛЬ: "И это было бы ужасно!"
 АННАБЕЛЬ: "Она уверена, что я начала заниматься фотографией из-за неё..."
 
 
+-> phone=3?annabelle-01-airport3-saved-phone3;;phone=2?annabelle-01-airport3-saved-phone2;;phone=1?annabelle-01-airport3-saved-phone1;;annabelle-01-airport3-saved-phone3
 === annabelle-01-airport3-saved-phone1
 
 АННАБЕЛЬ: "Это могло продолжаться часами..."

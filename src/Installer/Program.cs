@@ -27,7 +27,7 @@ namespace NightCallRussianInstaller
         private Label statusLabel;
         private BackgroundWorker worker;
 
-        private const string ModVersion = "6.1.0";
+        private const string ModVersion = "6.2.0";
 
         public InstallerForm()
         {

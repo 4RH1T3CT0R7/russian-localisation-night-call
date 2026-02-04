@@ -2,9 +2,6 @@
 === shohreh-01-start
 
 $$ hide_passenger $$
-*"Всё в порядке, мадам?" -> shohreh-01-start-ok
-*"С вами хорошо обращались?" -> shohreh-01-start-cops
-*:silence: (Ничего не говорить.) -> shohreh-01-start-silence
 
 $$ anim: IDLE_FEAR $$
 Вы подъезжаете к местному полицейскому участку, чтобы забрать свою следующую пассажирку.
@@ -18,6 +15,9 @@ $$ reveal: 046_00 $$
 $$ music-control: 0 $$
 
 
+*"Всё в порядке, мадам?" -> shohreh-01-start-ok
+*"С вами хорошо обращались?" -> shohreh-01-start-cops
+*:silence: (Ничего не говорить.) -> shohreh-01-start-silence
 === shohreh-01-start-ok
 
 Вы заводите такси.

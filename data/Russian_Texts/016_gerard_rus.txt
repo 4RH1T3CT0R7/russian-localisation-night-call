@@ -209,7 +209,6 @@ $$ reveal: 016_01 $$
 === gerard-01-end
 
 $$ music-control: 60 $$
-silence=0?gerard-01-jailyes-silenceA;;silence=1?gerard-01-jailyes-silenceB;;gerard-01-jailyes-silenceA
 $$ travel: stop $$
 Вы останавливаетесь перед вокзалом Сен-Лазар.
 $$ anim: IDLE $$
@@ -223,3 +222,4 @@ $$ movie: lamparo_off, hide_passenger $$
 $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Он расплачивается с вами, подмигнув на прощание, выходит из такси и идёт к вокзалу.
 
+-> silence=0?gerard-01-jailyes-silenceA;;silence=1?gerard-01-jailyes-silenceB;;gerard-01-jailyes-silenceA

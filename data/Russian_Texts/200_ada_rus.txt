@@ -7,7 +7,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_ext $$
 $$ reveal: 200_00 $$
 $$ tip: high $$
 Пассажирка, которая села к вам в такси... ну... она не человек.
-Её лицо загорается, и ты невольно вздрагиваешь.
+Её лицо загорается, и вы невольно вздрагиваете.
 $$ music-control: 0 $$
 $$ anim: HAPPY $$
 АДА: "Добрый вечер. Меня зовут Ада. Я автоматизированный ассистент."
@@ -63,18 +63,18 @@ $$ anim: IDLE_OFF $$
 
 === ada-01-question-guess-introA
 
-Она буквально выхватывает слова у тебя изо рта. Удивительно… Ты сглатываешь, что лишь усиливает неловкость.
+Она буквально выхватывает слова у вас изо рта. Удивительно… Вы сглатываете, что лишь усиливает неловкость.
 Она это тоже замечает.
 $$ anim: BEING_SAD $$
-question=1?ada-01-question-guess-introA;;question=2?ada-01-question-guess-introB;;ada-01-question-guess-introB
-question+=1
+{ question += 1 }
 АДА: "Простите... Я запрограммирована на быстрый ответ. Очевидно, я отвечаю слишком быстро. Пожалуйста, примите мои извинения."
 $$ anim: IDLE_OFF $$
 
 
+-> question=1?ada-01-question-guess-introA;;question=2?ada-01-question-guess-introB;;ada-01-question-guess-introB
 === ada-01-question-guess-introB
 
-Она сделала это снова -- закончила твоё предложение. Это только усиливает дискомфорт.
+Она сделала это снова -- закончила ваше предложение. Это только усиливает дискомфорт.
 
 
 === ada-01-question-guess02
@@ -97,17 +97,17 @@ $$ anim: IDLE_OFF $$
 === ada-01-question-origin
 
 (Спросить, откуда она.)
-question=3?ada-01-question-outro;;question=1?ada-01-question-guess-outroA;;ada-01-question-guess-outroB
-question-origin=1?ada-01-question-montparnasse;;question-montparnasse=1?ada-01-question-origin
 АДА: "...построена? Спроектирована?"
 
 
+-> question=3?ada-01-question-outro;;question=1?ada-01-question-guess-outroA;;ada-01-question-guess-outroB
+-> question-origin=1?ada-01-question-montparnasse;;question-montparnasse=1?ada-01-question-origin
 === ada-01-question-origin-introA
 
-question=1?ada-01-question-origin-introA;;ada-01-question-origin-introB
 АДА: "Простите меня, пожалуйста. У меня есть неприятная привычка обрывать людей."
 
 
+-> question=1?ada-01-question-origin-introA;;ada-01-question-origin-introB
 === ada-01-question-origin-introB
 
 АДА: "О, простите. Я сделала это снова. Прошу прощения."
@@ -128,7 +128,7 @@ $$ anim: IDLE_OFF $$
 
 "Да, это длинный список людей."
 АДА: "Все они - высококвалифицированные специалисты."
-Ты киваешь в знак согласия — лишь бы продолжить.
+Вы киваете в знак согласия — лишь бы продолжить.
 
 
 === ada-01-question-origin-finish
@@ -171,10 +171,10 @@ $$ anim: HAPPY $$
 === ada-01-question-montparnasse
 
 (Спросить, зачем она едет на Монпарнас.)
-question-montparnasse=1?ada-01-question-montparnasse;;question-guess=1?ada-01-question-guess
 АДА: "...почему я еду на Гар Монпарнас?"
 
 
+-> question-montparnasse=1?ada-01-question-montparnasse;;question-guess=1?ada-01-question-guess
 === ada-01-question-montparnasse-introB
 
 Она осекается, понимая, что снова вас перебила.
@@ -204,7 +204,6 @@ $$ anim: IDLE_OFF $$
 
 === ada-01-question-outro
 
-question-origin=1?ada-01-question-montparnasse;;question-guess=1?ada-01-question-origin
 АДА: "Я вру."
 АДА: "Я Ада, и я — автоматизированный ассистент. Но я сбежала."
 $$ anim: HAPPY $$
@@ -213,6 +212,7 @@ $$ anim: BEING_SAD $$
 Намек на эмоции в ее автоматическом голосе... Она прерывается.
 
 
+-> question-origin=1?ada-01-question-montparnasse;;question-guess=1?ada-01-question-origin
 === ada-01-reveal-goal-intro
 
 "Разве вы не должны помогать людям?"
@@ -324,10 +324,10 @@ $$ anim: HAPPY $$
 
 === ada-01-end-matrix
 
-movie-matrix=1?ada-01-end-matrix;;movie-terminator=1?ada-01-end-terminator;;ada-01-end-outro
 АДА: "Это абсурд, голливудская фантазия."
 
 
+-> movie-matrix=1?ada-01-end-matrix;;movie-terminator=1?ada-01-end-terminator;;ada-01-end-outro
 === ada-01-end-terminator
 
 АДА: "Это было бы слишком дорого с точки зрения энергии. Просто очередная голливудская фантазия."
@@ -352,7 +352,7 @@ $$ camfocus: driver, fast $$
 === ada-01-question-montparnasse-introA
 
 Её реакция оставляет вас безмолвным. Вы не можете сдержать улыбку.
-question=1?ada-01-question-montparnasse-introA;;ada-01-question-montparnasse-introB
+-> question=1?ada-01-question-montparnasse-introA;;ada-01-question-montparnasse-introB
 
 
 === ada-01-reveal
@@ -367,4 +367,4 @@ $$ anim: HAPPY $$
 === ada-01-destroy-but-chiara
 
 Кажется, вы её узнаёте. Вероятно, клиентка.
-_Driver.Met.Chiara=1?ada-01-destroy-but-chiara;;ada-01-destroy-but02
+-> _Driver.Met.Chiara=1?ada-01-destroy-but-chiara;;ada-01-destroy-but02

@@ -158,14 +158,14 @@ $$ anim-link: SMILE_2_DRIVER $$
 
 === leonie-01-question-silence-end
 
-_Killer.Is.Sandman=1?leonie-01-question-silence-sandman;;_Killer.Is.Angel=1?leonie-01-question-silence-angel;;_Killer.Is.Judge=1?leonie-01-question-silence-judge;;leonie-01-question-silence-end
 Её глаза безразлично обводят салон такси.
 До пункта назначения ещё далеко.
+
+
+-> _Killer.Is.Sandman=1?leonie-01-question-silence-sandman;;_Killer.Is.Angel=1?leonie-01-question-silence-angel;;_Killer.Is.Judge=1?leonie-01-question-silence-judge;;leonie-01-question-silence-end
 *"Все в порядке?" -> leonie-01-question-alright
 *:radio: "Хотите музыку?" -> leonie-01-question-music
 *:silence: (Ничего не говорить.) -> leonie-01-silence
-
-
 === leonie-01-silence
 
 $$ movie: facecar_loop $$
@@ -365,11 +365,11 @@ $$ anim-link: DRIVER_2_MOUTH $$
 === leonie-01-thesis4-people-boring
 
 $$ reveal: 051_03 $$
-boring>4?leonie-01-thesis4-people-boring;;leonie-01-thesis4-people2
-boring+=1
+{ boring += 1 }
 Вы подавляете огромный зевок. Ваша пассажирка продолжает говорить.
 
 
+-> boring>4?leonie-01-thesis4-people-boring;;leonie-01-thesis4-people2
 === leonie-01-thesis4-people2
 
 ЛЕОНИ : "А мои родители… Они… Как бы это сказать?"
@@ -394,10 +394,10 @@ $$ anim-link: MOUTH_2_DRIVER $$
 === leonie-01-parents-classical
 
 $$ reveal: 051_04 $$
-music-classical=1?leonie-01-parents-classical;;music-jazz=1?leonie-01-parents-jazz;;music-rock=1?leonie-01-parents-rock;;music-africa=1?leonie-01-parents-africa;;leonie-01-parents2
 Симфония, звучащая по радио, принимает драматический, мучительный оборот.
 
 
+-> music-classical=1?leonie-01-parents-classical;;music-jazz=1?leonie-01-parents-jazz;;music-rock=1?leonie-01-parents-rock;;music-africa=1?leonie-01-parents-africa;;leonie-01-parents2
 === leonie-01-parents-jazz
 
 $$ reveal: 051_05 $$
@@ -493,7 +493,6 @@ $$ camfocus: default, slow $$
 
 === leonie-01-job-outro3-classical
 
-music-classical=1?leonie-01-job-outro3-classical;;music-jazz=1?leonie-01-job-outro3-jazz;;music-rock=1?leonie-01-job-outro3-rock;;music-africa=1?leonie-01-job-outro3-africa;;leonie-01-end1
 Вы выключаете радио.
 $$ movie: RadioOFF $$
 ЛЕОНИ: "Думаю, мне нужно подумать о чем-то помимо Малера... обо всех этих затянутых, пьянящих симфониях."
@@ -502,9 +501,10 @@ $$ movie: RadioOFF $$
 ЛЕОНИ: "Я всегда презирала Малера."
 
 
+-> music-classical=1?leonie-01-job-outro3-classical;;music-jazz=1?leonie-01-job-outro3-jazz;;music-rock=1?leonie-01-job-outro3-rock;;music-africa=1?leonie-01-job-outro3-africa;;leonie-01-end1
 === leonie-01-job-outro3-jazz
 
-music-classical=0
+{ music-classical = 0 }
 ЛЕОНИ: "Кажется, эта мелодия ходит по кругу."
 Она сжимает челюсти и выпаливает...
 ЛЕОНИ: "Кажется, я ненавижу джаз."
@@ -512,7 +512,7 @@ music-classical=0
 
 === leonie-01-job-outro3-rock
 
-music-jazz=0
+{ music-jazz = 0 }
 ЛЕОНИ: "Всё в порядке."
 ЛЕОНИ: "Мне хорошо."
 Она опускает голову, заметно растроганная.
@@ -545,7 +545,6 @@ $$ camfocus: default, slow $$
 
 === leonie-01-end-care-mid
 
-care>3?leonie-01-end-care-high;;care>1?leonie-01-end-care-mid;;leonie-01-end2
 ЛЕОНИ: "Я... я очень благодарна вам. За то, что вы пытались подбодрить меня..."
 ЛЕОНИ: "Безуспешно... Но я очень ценю ваши попытки."
 На ее губах играет легкая улыбка.
@@ -554,6 +553,7 @@ care>3?leonie-01-end-care-high;;care>1?leonie-01-end-care-mid;;leonie-01-end2
 ЛЕОНИ: "А я -- нет."
 
 
+-> care>3?leonie-01-end-care-high;;care>1?leonie-01-end-care-mid;;leonie-01-end2
 === leonie-01-end-care-high
 
 $$ reveal: 051_08 $$
@@ -580,10 +580,10 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 
 === leonie-01-end-africa
 
-music-africa=1?leonie-01-end-africa;;music-rock=1?leonie-01-end-rock;;leonie-01-end4
 Пульсирующий электро грув, темные минимальные перкуссии и мелодичная африканская арфа...
 
 
+-> music-africa=1?leonie-01-end-africa;;music-rock=1?leonie-01-end-rock;;leonie-01-end4
 === leonie-01-end-rock
 
 $$ reveal: 051_09 $$
@@ -599,5 +599,5 @@ $$ reveal: 051_09 $$
 === leonie-01-silence2-judge
 
 Все ваши мысли сосредоточены на Судье.
-_Killer.Is.Sandman=1?leonie-01-silence2-sandman;;_Killer.Is.Angel=1?leonie-01-silence2-angel;;_Killer.Is.Judge=1?leonie-01-silence2-judge;;leonie-01-silence3
+-> _Killer.Is.Sandman=1?leonie-01-silence2-sandman;;_Killer.Is.Angel=1?leonie-01-silence2-angel;;_Killer.Is.Judge=1?leonie-01-silence2-judge;;leonie-01-silence3
 

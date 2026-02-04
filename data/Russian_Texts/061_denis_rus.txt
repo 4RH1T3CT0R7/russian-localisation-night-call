@@ -2,10 +2,6 @@
 === denis-01-start
 
 $$ movie: lamparo_on, display_passenger $$
-*"Да, конечно, месье." -> denis-01-start-yes
-*"Ага." -> denis-01-start-yes
-*"Я там бываю постоянно..." -> denis-01-start-studios
-*(Кивок.) -> denis-01-silence
 
 $$ sfx: sfx_gameplay_car_openclose_from_ext $$
 $$ tip: low $$
@@ -24,6 +20,10 @@ $$ anim-link: ANGRY_2_DRIVER $$
 В его вопросе сквозит недоверие. Вы хорошо знаете таких, как он, - тех, кто называет вас "арабом" и даже глазом не моргнет.
 
 
+*"Да, конечно, месье." -> denis-01-start-yes
+*"Ага." -> denis-01-start-yes
+*"Я там бываю постоянно..." -> denis-01-start-studios
+*(Кивок.) -> denis-01-silence
 === denis-01-start-yes
 
 "Да."
@@ -71,9 +71,9 @@ $$ reveal: 061_01 $$
 $$ anim-link: DRIVER_2_ANGRY $$
 ДЕНИ: "Значит, вы догадались, кто я?"
 Его замечание - и его акцент - возвращают вас в настоящее.
-"Прости?"
+"Простите?"
 ДЕНИ: "Ты узнал меня, да? Так что теперь можешь смеяться надо мной."
-"Смеяться над тобой?"
+"Смеяться над вами?"
 Он пожимает плечами.
 $$ dialogspeed: slow $$
 ДЕНИ: "Да... Как все эти люди делают там, на этой... Твити."
@@ -81,7 +81,7 @@ $$ dialogspeed: normal $$
 $$ anim-link: ANGRY_2_DRIVER $$
 Твити?... Через секунду вы понимаете, что он говорит о социальных сетях.
 *:smile: "Никогда не было возможности." -> denis-01-sorry-intro
-*:puzzled: "Смеяться над тобой?" -> denis-01-sorry
+*:puzzled: "Смеяться над вами?" -> denis-01-sorry
 *:violence: (Ничего не говорить.) -> denis-01-aggressive
 
 
@@ -113,7 +113,7 @@ $$ anim-link: ANGRY_2_DRIVER $$
 === denis-01-sorry-yes
 
 "Да, я знаю."
-drivers-knows-show=1
+{ drivers-knows-show = 1 }
 "В смысле, знаю, да."
 "Какое-то реалити-шоу, да?"
 ДЕНИ: "Именно."
@@ -124,8 +124,8 @@ drivers-knows-show=1
 === denis-01-aggressive
 
 $$ anim-link: DRIVER_2_ANGRY $$
-:violence: "Смеяться над тобой?"
-drivers-knows-show=1
+:violence: "Смеяться над вами?"
+{ drivers-knows-show = 1 }
 ДЕНИ: "Да, ну, давай, посмейся как следует. Это бесплатно, верно? Почему бы и нет?"
 $$ anim-link: ANGRY_2_DRIVER $$
 ДЕНИ: "Посмейся за мой счет... Вот на что я годен, верно?"
@@ -155,10 +155,10 @@ $$ anim-link: SHAME_2_DRIVER $$
 
 === denis-01-show-explained
 
-drivers-knows-show=1?denis-01-show-explained;;denis-01-hell2
 ДЕНИ: "В основном, шесть таких фермеров, как я, хотят найти жену... чтобы жениться."
 
 
+-> drivers-knows-show=1?denis-01-show-explained;;denis-01-hell2
 === denis-01-hell2
 
 ДЕНИ: "Ну, я сказал "да", потому что... потому что моя жена умерла 25 лет назад."
@@ -214,7 +214,7 @@ $$ anim-link: ANGRY_2_DRIVER $$
 
 === denis-01-hell4-plan
 
-"Каков твой план?"
+"Каков ваш план?"
 ДЕНИ: "Я появлюсь в их офисе и устрою скандал, пока они меня не выслушают."
 *"Вы действительно собираетесь это сделать?" -> denis-01-hell4-plan2-intro
 *:silence: (Ничего не говорить.) -> denis-01-hell4-plan2

@@ -69,7 +69,7 @@ $$ anim-link: BEATING $$
 
 === childeric-01-start-dragon
 
-hub-story+=1
+{ hub-story += 1 }
 ЧИЛДЕРИК: "Он был там, возвышаясь над головой... Темный блеск его золотой чешуи был ужасен для глаз..."
 ЧИЛДЕРИК: "Бронза! Металл..."
 ЧИЛДЕРИК: "...Подземного мира!"
@@ -78,7 +78,7 @@ $$ anim-link: HELMET $$
 
 === childeric-01-start-mylord
 
-hub-story+=1
+{ hub-story += 1 }
 ЧИЛДЕРИК: "Ах! Не принимай меня за господина... Ведь я никому не господин!"
 ЧИЛДЕРИК: "Да, я... твой смиренный слуга, как и ты -- мой..."
 $$ anim-link: HELMET $$
@@ -201,7 +201,6 @@ $$ anim-link: HELMET $$
 === childeric-01-hugo
 
 $$ reveal: 052_02 $$
-_Driver.Met.Hugo=1?childeric-01-hugo;;childeric-01-drive1-costume
 Гравия? Это слово звучит знакомо...
 Погодите-ка... Гравиасы, это ведь те кролики с луком и стрелами?
 Рыцарь смотрит на вас.
@@ -219,6 +218,7 @@ $$ anim-link: BEATING $$
 На мгновение вы не можете разобрать, что происходит за шлемом вашего пассажира.
 
 
+-> _Driver.Met.Hugo=1?childeric-01-hugo;;childeric-01-drive1-costume
 === childeric-01-hugo2
 
 Пока не...
@@ -298,10 +298,10 @@ $$ camfocus: driver, slow $$
 
 === childeric-01-end-hugo
 
-_Driver.Met.Hugo=1?childeric-01-end-hugo;;childeric-01-end
 Они с рыцарем приветствуют друг друга, комплименты сыплются быстро и густо.
 
 
+-> _Driver.Met.Hugo=1?childeric-01-end-hugo;;childeric-01-end
 === childeric-01-end
 
 $$ tip: low $$
@@ -311,7 +311,7 @@ $$ tip: low $$
 === childeric-01-start-horns-hub-dragon1
 
 Ещё одна драматическая пауза.
-hub-story=2?childeric-01-start-horns-hub2;;hub-story=0?childeric-01-start-horns-hub1;;dragon=1?childeric-01-start-horns-hub-dragon1;;mount=1?childeric-01-start-horns-hub-mount1;;childeric-01-start-horns-hub1
+-> hub-story=2?childeric-01-start-horns-hub2;;hub-story=0?childeric-01-start-horns-hub1;;dragon=1?childeric-01-start-horns-hub-dragon1;;mount=1?childeric-01-start-horns-hub-mount1;;childeric-01-start-horns-hub1
 *"И куда именно мы пойдём в такой одежде?" -> childeric-01-start-where
 *:puzzled: "Куда путь держишь, милорд?" -> childeric-01-start-mount
 *(Не реагировать.) -> childeric-01-start-where-emergency

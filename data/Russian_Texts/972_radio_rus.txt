@@ -591,10 +591,10 @@ $$ sfx: !sfx_gameplay_car_shohreh_radio $$
 === radio-music-endofsong
 
 Нажав на кнопку, вы выключаете радио и позволяете тишине заполнить салон.
--> END
 %% NEWS
 
 
+-> END
 === radio-menu-news
 
 Вы случайно наткнулись на ночные новости.
@@ -927,17 +927,17 @@ $$ sfx: !sfx_gameplay_car_shohreh_radio $$
 === Radio-News-Killer-Angel-08-test
 
 { killerangel08test = 1 }
--> _Radio.Clue.Angel.08 = 0 ? Radio-News-Killer-Angel-08
--> radio-menu-news-killer-hub-angel
 %% MISC HUB
 
 
+-> _Radio.Clue.Angel.08 = 0 ? Radio-News-Killer-Angel-08
+-> radio-menu-news-killer-hub-angel
 === radio-menu-news-misc-hub
 
--> ??Radio-News-Misc-01 | Radio-News-Misc-02 | Radio-News-Misc-03 | Radio-News-Misc-04 | Radio-News-Misc-05 | Radio-News-Misc-06 | Radio-News-Misc-07 | Radio-News-Misc-08 | Radio-News-Misc-09 | Radio-News-Misc-10
 %% CLIENT HUB
 
 
+-> ??Radio-News-Misc-01 | Radio-News-Misc-02 | Radio-News-Misc-03 | Radio-News-Misc-04 | Radio-News-Misc-05 | Radio-News-Misc-06 | Radio-News-Misc-07 | Radio-News-Misc-08 | Radio-News-Misc-09 | Radio-News-Misc-10
 === Radio-News-Clients-01-test
 
 { client01test = 1 }
@@ -1588,10 +1588,10 @@ $$ clue: clue_sand_radionews_08_01 $$
 === Radio-News-outro
 
 Как только новости заканчиваются, вы выключаете радио, чтобы в салоне снова воцарилась тишина.
--> END
 %% SHOW
 
 
+-> END
 === radio-menu-talkshow
 
 -> _Talkshow.First = 1 ? radio-talkshow-introB

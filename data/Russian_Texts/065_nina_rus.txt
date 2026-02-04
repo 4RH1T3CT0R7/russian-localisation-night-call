@@ -25,7 +25,7 @@ $$ reveal: 065_00 $$
 === Nina-01-start-notheard
 
 "Всё в порядке?"
-heat=1
+{ heat = 1 }
 *(Настоять.) -> Nina-01-story1
 *(Оставить её в покое.) -> Nina-01-start-silence
 
@@ -40,10 +40,10 @@ heat=1
 
 === Nina-01-story1-heat
 
-heat=1?Nina-01-story1-heat;;Nina-01-story2
 "Нет отопления?"
 
 
+-> heat=1?Nina-01-story1-heat;;Nina-01-story2
 === Nina-01-story2
 
 $$ music-control: 20 $$
@@ -84,7 +84,7 @@ $$ anim-link: DRIVER_2_SHAME $$
 === Nina-01-story2-nowed
 
 "Вы не хотите выходить замуж?"
-rage+=1
+{ rage += 1 }
 НИНА: "Нет... В смысле... нет... Я..."
 Она почти замерла. Проходит какое-то время. Она словно застывший кадр, фильм на паузе.
 НИНА: "Я хочу выйти замуж. Я всегда... мечтала о свадьбе... о той жизни..."
@@ -101,7 +101,7 @@ rage+=1
 
 === Nina-01-story3
 
-rage+=1
+{ rage += 1 }
 $$ anim-link: 2_WINDOW $$
 Она быстро оборачивается. Ее голос срывается.
 НИНА: "Я должна вернуться в ресторан. Выйти замуж — это то, о чем я всегда мечтала."
@@ -147,7 +147,7 @@ $$ anim-link: DRIVER_2_SHAME $$
 === Nina-01-story4-ok
 
 
-rage+=1
+{ rage += 1 }
 НИНА: "Правда. Простите... Я не знаю, кто... я... есть..."
 Она сейчас напускает на себя важность.
 
@@ -248,7 +248,7 @@ $$ movie: stop $$
 
 === Nina-01-end-hub
 
-rage>3?Nina-01-end-runaway;;Nina-01-end-restaurant
+-> rage>3?Nina-01-end-runaway;;Nina-01-end-restaurant
 
 
 === Nina-01-end-runaway
@@ -343,12 +343,12 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 === Nina-01-end-restaurant-late
 
 $$ reveal: 065_04 $$
-??Nina-01-end-restaurant-late|Nina-01-end-restaurant-ontime
 Она стоит так минуту, на цыпочках, наклонив голову в сторону столовой.
 Затем она заходит в ресторан.
 Её роза осталась лежать в дверном проёме.
 
 
+-> ??Nina-01-end-restaurant-late|Nina-01-end-restaurant-ontime
 === Nina-01-end-restaurant-ontime
 
 $$ reveal: 065_05 $$

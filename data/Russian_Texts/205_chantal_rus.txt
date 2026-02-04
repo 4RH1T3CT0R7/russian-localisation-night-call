@@ -53,7 +53,7 @@ $$ music-control: 40 $$
 
 ШАНТАЛЬ : "Супер."
 "Ладно."
-Ты улыбаешься.
+Вы улыбаетесь.
 ШАНТАЛЬ : "По часовой стрелке… так, верно?"
 
 
@@ -62,23 +62,23 @@ $$ music-control: 40 $$
 $$ anim: fall_asleep_REV $$
 $$ anim: IDLE_WINDOW $$
 :такси: (Завести такси.)
-seriously=1?seriously;;drive-02
 $$ travel: start $$
 Она устраивается на заднем сиденье. Вы начинаете вести машину.
 Такси покидает место стоянки и едет по проспекту... по бульвару.
 $$ anim: IDLE_TIRED $$
 
 
+-> seriously=1?seriously;;drive-02
 === drive-01
 
-sleep_know=1?drive-02;;drive-01
 На ее лице появляется небольшой зевок.
+
+
+-> sleep_know=1?drive-02;;drive-01
 *"Это не моё дело." -> drive-01-dontcare
 *"Двойник каскадера." -> intro-explain
 *"Могу представить." -> guess-01
 *:silence: (Пожать плечами.) -> drive-01-dontcare
-
-
 === drive-01-dontcare
 
 
@@ -141,7 +141,7 @@ $$ anim: IDLE_TIRED $$
 === guess-02-yes-intro
 
 $$ reveal: 205_01 $$
-ШАНТАЛЬ : "У тебя получилось. Хорошая работа."
+ШАНТАЛЬ : "У вас получилось. Хорошая работа."
 
 
 === guess-02-yes
@@ -247,7 +247,6 @@ $$ dialogspeed: slow $$
 
 === sleep-outro
 
-sleep>3?sleep;;drive-03
 $$ dialogspeed: normal $$
 Она улыбается, закрыв при этом глаза.
 $$ camfocus: default, slow $$
@@ -260,6 +259,7 @@ $$ dialogspeed: normal $$
 Вы качаете головой, пытаясь побороть собственное желание уснуть.
 
 
+-> sleep>3?sleep;;drive-03
 === end-intro
 
 $$ movie: black $$

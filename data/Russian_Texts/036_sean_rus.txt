@@ -303,7 +303,6 @@ $$ movie: stop $$
 === sean-01-end-thanks
 
 $$ tip: high $$
-talk=1?sean-01-end-thanks;;sean-01-end2
 $$ reveal: 036_02 $$
 $$ anim-link: C0LD_2_DRIVER $$
 ...и протягивает к вам руку.
@@ -313,6 +312,7 @@ $$ anim-link: C0LD_2_DRIVER $$
 Вы отвечаете с улыбкой.
 
 
+-> talk=1?sean-01-end-thanks;;sean-01-end2
 === sean-01-end2
 
 $$ movie: lamparo_off, hide_passenger $$

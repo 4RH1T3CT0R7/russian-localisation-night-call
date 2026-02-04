@@ -459,15 +459,15 @@ $$ music_control: 80 $$
 === patricia-02-end-note
 
 $$ camfocus: driver, slow $$
-patricia-telephone>1?patricia-02-end-note;;patricia-02-end-final01
 $$ reveal: 001_01 $$
 $$ movie: black $$
 Заводя такси, вы замечаете что-то на заднем сиденье. Бумажная салфетка.
 Вы изворачиваетесь, чтобы её поднять.
+
+
+-> patricia-telephone>1?patricia-02-end-note;;patricia-02-end-final01
 *(Выбросить.) -> patricia-02-end-note-throw
 *(Прочитать.) -> patricia-02-end-note-read
-
-
 === patricia-02-end-note-throw
 
 Вы засовываете салфетку в пепельницу.
@@ -501,5 +501,5 @@ $$ newspaper: 1 $$
 === patricia-02-charming-cruz
 
 ПАТРИЦИЯ : "Круз — девушка моего сына. Она из Аргентины."
-presentation_cruz=1?patricia-02-charming2;;patricia-02-charming-cruz
+-> presentation_cruz=1?patricia-02-charming2;;patricia-02-charming-cruz
 

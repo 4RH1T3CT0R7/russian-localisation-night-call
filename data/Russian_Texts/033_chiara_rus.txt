@@ -164,7 +164,7 @@ $$ anim-link: HOT_2_SLEEPHOT $$
 
 === chiara-01-silence2-soft
 
-sleep+=1
+{ sleep += 1 }
 $$ reveal: 033_01 $$
 Вы замедляетесь и избегаете резких поворотов.
 Иногда задумываешься об этих самоуправляемых автомобилях.
@@ -182,10 +182,10 @@ $$ anim-link: SLEEPHOT_2_HOT $$
 === chiara-silence2-double
 
 $$ tip: medium $$
-sleep=2?chiara-silence2-double;;chiara-silence2-single
 КЬЯРА : "Ну, как бы то ни было, я выспалась! Спасибо, ты действительно спас день."
 
 
+-> sleep=2?chiara-silence2-double;;chiara-silence2-single
 === chiara-silence2-single
 
 КЬЯРА : "Спасибо, правда. Я знала, что такие старые добрые друзья, как мы, поймут друг друга..."

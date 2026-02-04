@@ -82,7 +82,7 @@ $$ music-control: 20 $$
 $$ camfocus: passenger, slow $$
 Вы едете по дороге, как вдруг салон заполняет странный запах горелого...
 Вы оглядываетесь, принюхиваетесь... это доносится снаружи?
-_Driver.Met.Janet=1
+{ _Driver.Met.Janet = 1 }
 
 
 === janet-01-hyoga-yes

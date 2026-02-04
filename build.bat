@@ -17,7 +17,11 @@
   /nowarn:0618 ^
   "C:\Users\artem\NightCallRussian\src\Mod\RussianLocalization.cs"
 if %errorlevel% equ 0 (
+    echo.
     echo BUILD SUCCEEDED
+    echo Output: C:\Users\artem\NightCallRussian\bin\RussianLocalization.dll
 ) else (
+    echo.
     echo BUILD FAILED
 )
+pause

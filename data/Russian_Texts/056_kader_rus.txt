@@ -184,12 +184,11 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 === kader-01-hub
 
-trust>5?kader-01-woman-high;;trust>2?kader-01-woman-low;;kader-01-end-bad
+-> trust>5?kader-01-woman-high;;trust>2?kader-01-woman-low;;kader-01-end-bad
 
 
 === kader-01-woman-high
 
-trust>5?kader-01-woman-high;;trust>2?kader-01-woman-low;;kader-01-end-bad
 Он вздохнул.
 КАДЕР: "Единственное, что..."
 Он колеблется...
@@ -205,6 +204,7 @@ $$ anim-link: WINDOW_2_DRIVER $$
 Он не заканчивает фразу.
 
 
+-> trust>5?kader-01-woman-high;;trust>2?kader-01-woman-low;;kader-01-end-bad
 === kader-01-woman-low
 
 КАДЕР : "Но всё равно это довольно безумно…"

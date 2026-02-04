@@ -50,13 +50,13 @@ $$ music-control: 20 $$
 
 === cop-03-next-joker
 
-_Angel.Joker.Used=1?cop-03-next-joker;;cop-03-next
 БЮССЕ : "Кстати... откуда вы узнали о ее матери? В ее личном деле этого нет."
 "У меня есть свои источники."
 БЮССЕ : "Нет, серьезно, очень жаль, что у тебя в заднице палка. Ты мог бы стать хорошим копом."
 Она улыбается.
 
 
+-> _Angel.Joker.Used=1?cop-03-next-joker;;cop-03-next
 === cop-03-next
 
 $$ anim-link: DRIVER_2_WINDOW $$
@@ -128,7 +128,7 @@ $$ anim-link: DRIVER_2_LOW $$
 
 БЮССЕ : "Хорошо. По крайней мере, мы сходимся хотя бы в чём-то."
 
-joke=1?cop-03-trial-joke;;cop-03-trial02
+-> joke=1?cop-03-trial-joke;;cop-03-trial02
 
 
 === cop-03-why-angry-understand

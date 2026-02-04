@@ -178,7 +178,6 @@ $$ movie: stop $$
 
 === ca-hotel-perfect
 
-hotel=1?ca-hotel-perfect;;hotel=5?ca-hotel-average;;ca-hotel-average
 Это небольшой отель, не роскошный.
 Тем не менее он производит тёплое и уютное впечатление.
 $$ anim-link: PROTECT2WHISPER $$
@@ -189,9 +188,9 @@ $$ anim-link: PROTECT2WHISPER $$
 На мгновение они замолкают.
 
 
+-> hotel=1?ca-hotel-perfect;;hotel=5?ca-hotel-average;;ca-hotel-average
 === ca-end-great-trust1or3
 
-trust=1?ca-end-great-trust1or3;;trust=3?ca-end-great-trust1or3;;trust=5?ca-end-great-trust5;;ca-end-good-trust1or3
 КАМИЛЬ : "Давай."
 АНТУАН : "Давай."
 $$ movie: lamparo_off, hide_passenger $$
@@ -203,6 +202,7 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 Вы машете рукой, когда пара уходит.
 
 
+-> trust=1?ca-end-great-trust1or3;;trust=3?ca-end-great-trust1or3;;trust=5?ca-end-great-trust5;;ca-end-good-trust1or3
 === ca-end-great-trust5
 
 $$ reveal: 010_02 $$
@@ -231,7 +231,6 @@ $$ anim-link: PROTECT2LOOK $$
 
 === ca-end-good-trust1or3
 
-trust=1?ca-end-good-trust1or3;;trust=3?ca-end-good-trust1or3;;trust=5?ca-end-good-trust5;;ca-end-good-trust1or3
 Она смотрит на своего парня.
 $$ anim-link: LOOK2HUG $$
 АНТУАН : "Давай посмотрим, сколько стоит. Разберёмся на месте."
@@ -244,6 +243,7 @@ $$ tip: low $$
 Они исчезают в отеле... нервно.
 
 
+-> trust=1?ca-end-good-trust1or3;;trust=3?ca-end-good-trust1or3;;trust=5?ca-end-good-trust5;;ca-end-good-trust1or3
 === ca-end-good-trust5
 
 $$ reveal: 010_02 $$

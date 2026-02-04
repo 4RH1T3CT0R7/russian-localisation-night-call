@@ -121,7 +121,7 @@ $$ movie: CarStartingOutside1 $$
 
 === nathalie-01-fakename-alfred
 
-Ты почти съеживаешься от себя. Какое странное имя. Вы не знаете никого по имени Альфред.
+Ты почти съеживаешься. Какое странное имя. Ты не знаешь никого по имени Альфред.
 
 
 === nathalie-01-fakename-jeanpaul
@@ -245,7 +245,6 @@ $$ anim: IDLE_CLOSER $$
 
 
 НАТАЛИ: "Я бы не хотела."
-name-alfred=1?nathalie-01-name-alfred;;name-ali=1?nathalie-01-name-ali;;name-jeanpaul=1?nathalie-01-name-jeanpaul;;name-redwane=1?nathalie-01-name-redwane
 НАТАЛИ : "Все мои друзья говорят, что я любопытная. Простите за это, месье."
 НАТАЛИ : "Знаете, раньше я была авантюристкой."
 НАТАЛИ : "Моя сестра убедила меня попробовать один из этих тестов ДНК."
@@ -262,6 +261,7 @@ $$ anim: IDLE_CLOSER $$
 НАТАЛИ : "Может, поэтому я работаю таксистом? Не знаю."
 
 
+-> name-alfred=1?nathalie-01-name-alfred;;name-ali=1?nathalie-01-name-ali;;name-jeanpaul=1?nathalie-01-name-jeanpaul;;name-redwane=1?nathalie-01-name-redwane
 === nathalie-01-storyA-outro
 
 НАТАЛИ : "Все мои друзья говорят, что я любопытная. Простите за это, месье."
@@ -379,10 +379,10 @@ $$ anim: IDLE_CLOSER $$
 
 === nathalie-01-HerStoryC-03-same-engineer
 
-job-engineer=1?nathalie-01-HerStoryC-03-same-engineer;;job-teacher=1?nathalie-01-HerStoryC-03-same-teacher;;job-spy=1?nathalie-01-HerStoryC-03-same-spy;;job-chef=1?nathalie-01-HerStoryC-03-same-chef;;nathalie-01-HerStoryC-03-same-outroA
 "Аэрокосмический инженер, пожалуйста."
 
 
+-> job-engineer=1?nathalie-01-HerStoryC-03-same-engineer;;job-teacher=1?nathalie-01-HerStoryC-03-same-teacher;;job-spy=1?nathalie-01-HerStoryC-03-same-spy;;job-chef=1?nathalie-01-HerStoryC-03-same-chef;;nathalie-01-HerStoryC-03-same-outroA
 === nathalie-01-HerStoryC-03-same-teacher
 
 НАТАЛИ: "Верно, верно, я об этом забыла."
@@ -459,10 +459,10 @@ $$ movie: stop $$
 
 === nathalie-01-thankyou-jeanpaul
 
-name-alfred=1?nathalie-01-thankyou-alfred;;name-ali=1?nathalie-01-thankyou-ali;;name-jeanpaul=1?nathalie-01-thankyou-jeanpaul;;name-redwane=1?nathalie-01-thankyou-redwane;;nathalie-01-thankyou-houssine
 "Я думаю, это был... Жан-Поль."
 
 
+-> name-alfred=1?nathalie-01-thankyou-alfred;;name-ali=1?nathalie-01-thankyou-ali;;name-jeanpaul=1?nathalie-01-thankyou-jeanpaul;;name-redwane=1?nathalie-01-thankyou-redwane;;nathalie-01-thankyou-houssine
 === nathalie-01-thankyou-redwane
 
 НАТАЛИ: "Я была очень рада… Редуан."

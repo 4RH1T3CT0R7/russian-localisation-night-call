@@ -103,9 +103,6 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 === cop-01-yourjob
 
-*" Я не полицейский. " -> cop-01-yourjob-outro
-*" Я никогда этого не делал. " -> cop-01-yourjob-outro
-*:silence: (Ничего не говорить.) -> cop-01-yourmine
 
 $$ anim-link: WINDOW_2_LOW $$
 Она наклоняется вперёд, её блестящие кошачьи глаза сужаются.
@@ -117,6 +114,9 @@ $$ anim-link: WINDOW_2_LOW $$
 БЮССЕ : "Допрашивай. Задавай вопросы. Копай."
 
 
+*" Я не полицейский. " -> cop-01-yourjob-outro
+*" Я никогда этого не делал. " -> cop-01-yourjob-outro
+*:silence: (Ничего не говорить.) -> cop-01-yourmine
 === cop-01-yourjob-outro
 
 Она пожимает плечами.
@@ -177,9 +177,6 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 === cop-01-refuse
 
-*" Я ничего общего не имею с этим террористом. " -> cop-01-terrorist
-*:anger: " Я ничего общего не имею с этим ублюдком. " -> cop-01-terrorist
-*:silence: (Ничего не говорить.) -> cop-01-drive
 
 { silence -= 1 }
 $$ anim-link: DRIVER_2_LOW $$
@@ -190,6 +187,9 @@ $$ anim-link: DRIVER_2_LOW $$
 БЮССЕ : "Кстати, ваши фамилии почти одинаковые. Вы могли бы быть братьями, вообще-то."
 
 
+*" Я ничего общего не имею с этим террористом. " -> cop-01-terrorist
+*:anger: " Я ничего общего не имею с этим ублюдком. " -> cop-01-terrorist
+*:silence: (Ничего не говорить.) -> cop-01-drive
 === cop-01-terrorist
 
 Она улыбается.
@@ -206,9 +206,6 @@ $$ anim-link: DRIVER_2_LOW $$
 
 === cop-01-drive
 
-*" Неа... " -> cop-01-drive-yes
-*" Очевидно. " -> cop-01-drive-yes
-*:silence: (Ничего не говорить.) -> cop-01-drive-silence
 
 { silence -= 1 }
 Она принимает серьёзный тон. Деловой.
@@ -217,6 +214,9 @@ $$ anim-link: LOW_2_WINDOW $$
 БЮССЕ : "Я не могу провалить это дело. Понял? И ты тоже, верно?"
 
 
+*" Неа... " -> cop-01-drive-yes
+*" Очевидно. " -> cop-01-drive-yes
+*:silence: (Ничего не говорить.) -> cop-01-drive-silence
 === cop-01-drive-yes
 
 БЮССЕ : "Ну, отлично. Мы понимаем друг друга."
@@ -554,13 +554,13 @@ $$ music-control: 20 $$
 
 === cop-03-next-joker
 
-_Angel.Joker.Used=1?cop-03-next-joker;;cop-03-next
 БЮССЕ : "Кстати... откуда ты узнал про её мать? В деле этого нет."
 "У меня есть свои источники."
 БЮССЕ : "Нет, серьёзно, очень жаль, что у тебя палка в заднице. Из тебя вышел бы хороший коп."
 Она улыбается.
 
 
+-> _Angel.Joker.Used=1?cop-03-next-joker;;cop-03-next
 === cop-03-next
 
 $$ anim-link: DRIVER_2_WINDOW $$
@@ -663,7 +663,7 @@ $$ movie: stop $$
 === cop-03-why-agree
 
 
-joke=1?cop-03-trial-joke;;cop-03-trial02
+-> joke=1?cop-03-trial-joke;;cop-03-trial02
 
 
 === cop-03-question-silence
@@ -730,11 +730,11 @@ $$ music-control: 0 $$
 
 === cop-04-ending10-intro
 
-_Sandman.Ending=10?cop-04-ending10-intro;;_Sandman.Ending=20?cop-04-ending20-intro;;_Sandman.Ending=30?cop-04-ending30-intro
 БЮССЕ : "Теперь он рассказывает нам всё. Каждую деталь каждого преступления. Это ужасно..."
 $$ anim-link: LOW_2_WINDOW $$
 
 
+-> _Sandman.Ending=10?cop-04-ending10-intro;;_Sandman.Ending=20?cop-04-ending20-intro;;_Sandman.Ending=30?cop-04-ending30-intro
 === cop-04-ending20-intro
 
 Они не знают, удастся ли его спасти.
@@ -795,7 +795,6 @@ $$ dialogspeed: normal $$
 
 === cop-04-criminal02-lie
 
-_Alexandre.Lie=1?cop-04-criminal02-lie;;cop-04-criminal03
 Она качает головой.
 $$ anim-link: DRIVER_2_LOW $$
 БЮССЕ : "Я имею в виду... было бы лучше не врать ему... сказать, что ты никогда не отбывал срок..."
@@ -804,6 +803,7 @@ $$ anim-link: DRIVER_2_LOW $$
 $$ anim-link: DRIVER_2_WINDOW $$
 
 
+-> _Alexandre.Lie=1?cop-04-criminal02-lie;;cop-04-criminal03
 === cop-04-criminal03
 
 БЮССЕ : "Послушай, ты тут больше не нужен. У нас есть запись... У нас есть твои показания..."
@@ -812,10 +812,10 @@ $$ anim-link: WINDOW_2_LOW $$
 
 === cop-04-ending10-criminal03
 
-_Sandman.Ending=10?cop-04-ending10-criminal03;;_Sandman.Ending=20?cop-04-ending20-criminal03;;_Sandman.Ending=30?cop-04-ending30-criminal03
 БЮССЕ : "Достаточно, чтобы издать три или четыре тома..."
 
 
+-> _Sandman.Ending=10?cop-04-ending10-criminal03;;_Sandman.Ending=20?cop-04-ending20-criminal03;;_Sandman.Ending=30?cop-04-ending30-criminal03
 === cop-04-ending20-criminal03
 
 БЮССЕ : "А если он решит очнуться, мы получим и его показания."
@@ -921,7 +921,6 @@ $$ anim-link: SMILE_2_HAND $$
 
 === cop-06-intro-judge
 
-_Killer.Is.Judge=1?cop-06-intro-judge;;_Killer.Is.Sandman=1?cop-06-intro-sandman;;_Killer.Is.Angel=1?cop-06-intro-angel;;cop-06-mic
 Она кивает. Её выражение лица мрачнеет.
 $$ anim-link: HAND_2_WINDOW $$
 БЮССЕ : "Мне трудно..."
@@ -938,6 +937,7 @@ $$ anim-link: WINDOW_2_HAND $$
 $$ focus: passenger, slow $$
 
 
+-> _Killer.Is.Judge=1?cop-06-intro-judge;;_Killer.Is.Sandman=1?cop-06-intro-sandman;;_Killer.Is.Angel=1?cop-06-intro-angel;;cop-06-mic
 === cop-06-intro-sandman
 
 Она смотрит на часы.
@@ -1012,18 +1012,18 @@ $$ anim-link: HAND_2_SMILE $$
 
 === cop-06-mic-judge-hub
 
-_Killer.Is.Judge=1?cop-06-mic-judge-hub;;_Killer.Is.Sandman=1?cop-06-mic-sandman-hub;;_Killer.Is.Angel=1?cop-06-mic-angel-hub;;cop-06-gotit
 БЮССЕ : "Он полицейский. Он знает, как мы работаем. Никто никогда не посылал таксиста арестовывать."
 БЮССЕ : "Он не станет сопротивляться."
 $$ anim-link: SMILE_2_HAND $$
 
 
+-> _Killer.Is.Judge=1?cop-06-mic-judge-hub;;_Killer.Is.Sandman=1?cop-06-mic-sandman-hub;;_Killer.Is.Angel=1?cop-06-mic-angel-hub;;cop-06-gotit
 === cop-06-mic-judge-met
 
-_Driver.Met.Fragonard=1?cop-06-mic-judge-met;;cop-06-mic-judge-unknown
 БЮССЕ : "Пусть он чувствует себя в безопасности... Выслушай его..."
 
 
+-> _Driver.Met.Fragonard=1?cop-06-mic-judge-met;;cop-06-mic-judge-unknown
 === cop-06-mic-judge-unknown
 
 БЮССЕ : "Недалеко от больницы, где он проходит лечение, есть переулок на реконструкции. Там не будет гражданских, только мы и он…"

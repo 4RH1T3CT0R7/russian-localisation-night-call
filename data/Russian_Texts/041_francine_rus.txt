@@ -61,7 +61,7 @@ $$ music-control: 20 $$
 === francine-seenthecat
 
 Она резко выпрямляется.
-ФРАНСИНА: "Это... это замечательно. Где он? Отведи меня туда."
+ФРАНСИН : "Это... это замечательно. Где он? Отвезите меня туда."
 $$ anim-link: SAD_2_PET $$
 *"Он сел на поезд." -> francine-seenthecat-train
 *(Солгать.) -> francine-seenthecat-idk
@@ -125,7 +125,6 @@ $$ anim-link: WINDOW_2_SAD $$
 === francine-looking
 
 $$ dialogspeed: slow $$
-tell=0?francine-looking;;tell=1?francine-pleasetellme
 ФРАНСИН : "А потом однажды ночью... он исчез."
 ФРАНСИН : "Я думала, что он, как обычно, в своей корзине, но это было чучело."
 $$ dialogspeed: normal $$
@@ -133,6 +132,7 @@ $$ dialogspeed: normal $$
 ФРАНСИН : "Он растворился в воздухе."
 
 
+-> tell=0?francine-looking;;tell=1?francine-pleasetellme
 === francine-homeless
 
 ФРАНСИН : "Так что когда бездомный у подъезда сказал, что видел мою кошку…"
@@ -194,7 +194,6 @@ $$ reveal: 041_01 $$
 
 === francine-lastquestion-truth-left
 
-_Driver.Crouky=0?francine-lastquestion-truth-left;;_Driver.Crouky=1?francine-lastquestion-truth-trainstation
 \"Должна признать... Это довольно глупо...\"
 Ее тон ледяной.
 $$ anim-link: PET_2_SAD $$
@@ -205,6 +204,7 @@ $$ dialogspeed: slow $$
 $$ dialogspeed: normal $$
 
 
+-> _Driver.Crouky=0?francine-lastquestion-truth-left;;_Driver.Crouky=1?francine-lastquestion-truth-trainstation
 === francine-lastquestion-truth-trainstation
 
 "Я отвёз его на Сен-Лазар."

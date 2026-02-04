@@ -56,7 +56,7 @@ $$ reveal: 047_03 $$
 
 === amelie-01-firstcontact-explain
 
-knowher=1
+{ knowher = 1 }
 (Пояснить.)
 
 
@@ -121,10 +121,10 @@ $$ anim-link: DRIVER_2_EXPLAIN $$
 
 === amelie-01-iampornactress-recognize
 
-knowher=1?amelie-01-iampornactress-recognize;;amelie-01-iampornactress2
 У вас внезапно пересохло во рту.
 
 
+-> knowher=1?amelie-01-iampornactress-recognize;;amelie-01-iampornactress2
 === amelie-01-iampornactress2
 
 С таким же успехом она могла бы сказать, что она учительница или дантист.
@@ -224,10 +224,10 @@ $$ dialogspeed: normal $$
 
 === amelie-01-fromtheheart-knowher
 
-lie=1?amelie-01-fromtheheart-lie;;knowher=1?amelie-01-fromtheheart-knowher;;amelie-01-industry
 АМЕЛИ: "Но это не оправдание твоей бестактности..."
 
 
+-> lie=1?amelie-01-fromtheheart-lie;;knowher=1?amelie-01-fromtheheart-knowher;;amelie-01-industry
 === amelie-01-fromtheheart-lie
 
 АМЕЛИ : "Забудьте про эту «подругу», которая так на меня похожа…"
@@ -361,10 +361,10 @@ $$ anim-link: EXPLAIN_2_DRIVER $$
 
 === amelie-01-inquiry-outro-knowher
 
-knowher=1?amelie-01-inquiry-outro-knowher;;amelie-01-end-intro
 Как будто ей было приятно задавать вам все эти вопросы.
 
 
+-> knowher=1?amelie-01-inquiry-outro-knowher;;amelie-01-end-intro
 === amelie-01-silence-intro
 
 $$ movie: Radio_Loop $$
@@ -409,7 +409,6 @@ $$ movie: stop $$
 
 === amelie-01-end-outro
 
-_freeroam=1?amelie-01-end2;;amelie-01-end-outro
 АМЕЛИ : "Я знала одну из жертв… серийного убийцы…"
 АМЕЛИ: "Натали... Я знала ее довольно хорошо, на самом деле. Мы вместе работали и... иногда она нянчилась с моим сыном."
 АМЕЛИ: "Знаете... Она была замечательной девушкой... Это было..."
@@ -418,6 +417,7 @@ $$ movie: lamparo_loop $$
 Кем она была. С кем она встречалась. Как она изменилась перед смертью...
 
 
+-> _freeroam=1?amelie-01-end2;;amelie-01-end-outro
 === amelie-01-end-clue-outro
 
 $$ reveal: 047_05 $$
@@ -438,7 +438,6 @@ $$ sfx: sfx_gameplay_car_openclose_from_int $$
 
 === amelie-01-end2-outro1
 
-_freeroam=1?amelie-01-end2-outro2;;amelie-01-end2-outro1
 $$ movie: black $$
 Боль. Нож в боку.
 Если бы только... вы повернули голову... вы бы увидели лицо нападавшего...
@@ -447,6 +446,7 @@ $$ movie: black $$
 Страх медленно распространяется по вашему телу.
 
 
+-> _freeroam=1?amelie-01-end2-outro2;;amelie-01-end2-outro1
 === amelie-01-firstcontact-insist
 
 $$ anim-link: OUTSIDE_2_DRIVER $$
@@ -460,13 +460,13 @@ $$ anim-link: OUTSIDE_2_DRIVER $$
 === amelie-01-return
 
 Она замыкается в себе, глядя в окно на дорогу.
-knowher=1
+{ knowher = 1 }
 
 
 === amelie-01-inquiry-outroC-happy
 
 АМЕЛИ: "Спасибо в любом случае... И... извините за все эти личные вопросы."
-knowher=1?amelie-01-inquiry-outro-knowher;;amelie-01-end-intro
+-> knowher=1?amelie-01-inquiry-outro-knowher;;amelie-01-end-intro
 
 
 === amelie-01-end-clue-judge

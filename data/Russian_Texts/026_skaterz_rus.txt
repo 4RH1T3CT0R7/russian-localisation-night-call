@@ -141,7 +141,6 @@ $$ anim-link: RED_SIGN_2_IDLE $$
 === ultra-01-start-mission-toodrunk-symbol
 
 $$ dialogspeed: fast $$
-running_symbol=1?ultra-01-start-mission-toodrunk-symbol;;ultra-01-start-mission-toodrunk2
 УЛЬТРА ЗЕЛЕНЫЙ: "ТОШНОТА - ЭТО СИМВОЛ ЖИЗНИ!"
 $$ dialogspeed: normal $$
 $$ anim-link: PINK_IDLE_2_RIGHT $$
@@ -149,6 +148,7 @@ $$ anim-link: PINK_IDLE_2_RIGHT $$
 $$ anim-link: PINK_RIGHT_2_IDLE $$
 
 
+-> running_symbol=1?ultra-01-start-mission-toodrunk-symbol;;ultra-01-start-mission-toodrunk2
 === ultra-01-start-mission-toodrunk2
 
 *:taxi: (Высадить их из такси.) -> ultra-01-start-mission-out
@@ -481,7 +481,7 @@ $$ anim-link: PINK_RIGHT_2_IDLE $$
 
 === ultra-01-park-driveB
 
-Ты вздыхаешь и качаешь головой, надеясь, что скоро с ними покончишь.
+Вы вздыхаете и качаете головой, надеясь, что скоро с ними покончите.
 
 
 === ultra-01-park-drive-outro

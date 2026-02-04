@@ -48,9 +48,6 @@ $$ anim-link: DRIVER_2_WINDOW $$
 
 === emilia-01-destination
 
-*" Ранена? " -> emilia-01-catishurt
-*" Как его зовут? " -> emilia-01-catsname
-*:silence: (Ничего не говорить.) -> emilia-01-firstcall
 
 ЭМИЛИЯ: "Нигде... Вообще-то здесь. Мне нужна ваша помощь... если вы согласны."
 Вы наклоняетесь к ней.
@@ -68,6 +65,9 @@ $$ music-control: 20 $$
 Она открывает окно... порыв ледяного холодного воздуха заполняет кабину.
 
 
+*" Ранена? " -> emilia-01-catishurt
+*" Как его зовут? " -> emilia-01-catsname
+*:silence: (Ничего не говорить.) -> emilia-01-firstcall
 === emilia-01-catishurt
 
 $$ anim-link: WINDOW_HEAD $$
@@ -161,17 +161,17 @@ $$ anim-link: WINDOW_HEAD $$
 
 === emilia-01-truth02
 
-job=1?emilia-01-truth-university;;job=0?emilia-01-truth-student
 ЭМИЛИЯ: "Он... сбежал. И если я его не найду, то получу очень плохую оценку. И придется пересдавать год."
 $$ anim-link: WINDOW_2_DRIVER $$
 ЭМИЛИЯ: "А если мне придется повторять год... мои родители больше не будут платить за школу..."
 ЭМИЛИЯ: "Понимаете, мои мать и отец - очень уважаемые ветеринары. Я не могу их подвести."
 $$ anim-link: DRIVER_2_WINDOW $$
+
+
+-> job=1?emilia-01-truth-university;;job=0?emilia-01-truth-student
 *"Мы его найдём." -> emilia-01-truth-findit
 *(Молчать, смотреть на неё.) -> emilia-01-truth-more
 *:silence: (Ничего не говорить.) -> emilia-01-truth-findit
-
-
 === emilia-01-truth-more
 
 (Ничего не говорить, посмотреть на неё.)
