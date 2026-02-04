@@ -751,7 +751,6 @@ $$ anim-link: SH_BOARD_DICE_PIERRE $$
 === tps-01-game-xenofex-entrance-analyse-dice06
 
 ПЬЕР: "6!"
-ПЬЕР: "6!"
 
 
 === tps-01-game-xenofex-entrance-analyse-dice-fail
@@ -1423,7 +1422,6 @@ $$ anim-link: SH_PIERRE_2_BOARD $$
 Девушке нужна секунда, чтобы понять.
 "Нет. Если я пошевелюсь, он усилит свою... хватку."
 ПЬЕР: "Тогда я перейду в следующий раунд?"
-Вы киваете.
 Вы киваете.
 
 

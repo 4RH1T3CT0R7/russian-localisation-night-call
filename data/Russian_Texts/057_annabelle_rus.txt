@@ -600,7 +600,6 @@ $$ movie: stop $$
 === annabelle-01-airport-frequency
 
 $$ sfx: !sfx_gameplay_car_shohreh_radio $$
-$$ sfx: !sfx_gameplay_car_shohreh_radio $$
 Через минуту вы выключаете радио.
 
 

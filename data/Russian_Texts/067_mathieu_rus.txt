@@ -62,13 +62,13 @@ $$ music-control: 40 $$
 { _Mathieu.Talked.Father = 1 }
 МАТЬЁ: "Ничего серьёзного, надеюсь?"
 Вы качаете головой.
-*"Автомобильная авария." -> mathieu-01-hospital-car accident
+*"Автомобильная авария." -> mathieu-01-hospital-car
 *"Упал с лестницы." -> mathieu-01-hospital-fall
 *"Пневмония." -> mathieu-01-hospital-pneumonia
 *"Нет, ничего серьёзного..." -> mathieu-01-hospital-nothing
 
 
-=== mathieu-01-hospital-car accident
+=== mathieu-01-hospital-car
 
 { _Mathieu_Hospital_CarAccident = 1 }
 Он коротко и невесело смеётся.

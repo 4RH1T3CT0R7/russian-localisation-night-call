@@ -4,6 +4,7 @@ _dev/
 __pycache__/
 *.pyc
 *.py
+!set_version.py
 *.bak
 
 # Build outputs
