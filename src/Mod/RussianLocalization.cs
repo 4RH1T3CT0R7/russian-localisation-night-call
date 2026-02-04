@@ -22,7 +22,6 @@ namespace NightCallRussian
         internal static Dictionary<string, string> Translations = new Dictionary<string, string>();
         internal static Dictionary<string, string> KeyTranslations = new Dictionary<string, string>();
         internal static Dictionary<string, string> DialogueTexts = new Dictionary<string, string>();
-        internal static HashSet<string> LoggedMissing = new HashSet<string>();
         internal static Dictionary<string, string> RuToEngSpeaker = new Dictionary<string, string>();
         internal static bool IsInitialized = false;
 
@@ -1839,9 +1838,6 @@ namespace NightCallRussian
                                             {
                                                 choiceTextField.SetValue(choiceObj, ruTexts[consumed]);
                                                 localConsumed[engLink] = consumed + 1;
-                                                if (replacedObjects < 5)
-                                                    Log.LogInfo(string.Format("[ChoiceLocal] '{0}' link='{1}' '{2}' -> '{3}'",
-                                                        passageTitle, engLink, engText, ruTexts[consumed]));
                                                 continue;
                                             }
                                         }
@@ -2072,13 +2068,6 @@ namespace NightCallRussian
                     string key = string.Format("{0}:{1}", id, currentText);
                     if (processedTextKeys.Contains(key)) continue;
 
-                    // Log what text we found (first time only)
-                    if (!LoggedMissing.Contains("UIText:" + currentText))
-                    {
-                        Log.LogInfo(string.Format("[Found UI.Text] '{0}'", currentText.Length > 50 ? currentText.Substring(0, 50) + "..." : currentText));
-                        LoggedMissing.Add("UIText:" + currentText);
-                    }
-
                     string translation = TranslateText(currentText);
                     if (translation != null)
                     {
@@ -2089,7 +2078,6 @@ namespace NightCallRussian
                         }
                         translated++;
                         processedTextKeys.Add(key);
-                        Log.LogInfo(string.Format("[Scanner] {0} -> {1}", currentText, translation));
                     }
                 }
             }
@@ -2132,13 +2120,6 @@ namespace NightCallRussian
                                 int id = tmp.GetInstanceID();
                                 string key = string.Format("{0}:{1}", id, currentText);
                                 if (processedTextKeys.Contains(key)) continue;
-
-                                // Log first time we see this text
-                                if (!LoggedMissing.Contains("TMP:" + currentText))
-                                {
-                                    Log.LogInfo(string.Format("[Found TMP] '{0}'", currentText.Length > 50 ? currentText.Substring(0, 50) + "..." : currentText));
-                                    LoggedMissing.Add("TMP:" + currentText);
-                                }
 
                                 string translation = TranslateText(currentText);
                                 if (!object.ReferenceEquals(translation, null))
@@ -2185,11 +2166,6 @@ namespace NightCallRussian
                 Log.LogError(string.Format("Error processing TMPro: {0}", e.Message));
             }
 
-            // Log scan results periodically
-            if (foundUIText > 0 || foundTMP > 0)
-            {
-                Log.LogInfo(string.Format("[Scanner] Found {0} UI.Text, {1} TMP components. Translated: {2}", foundUIText, foundTMP, translated));
-            }
         }
 
         void CreateTextOverlay(Component tmpComponent, string text, string overlayName, Color color, float fontSize)
@@ -2239,7 +2215,6 @@ namespace NightCallRussian
                 // Don't block raycasts
                 textComponent.raycastTarget = false;
 
-                Log.LogDebug(string.Format("Created child overlay: {0}", overlayName));
             }
             catch (Exception e)
             {
@@ -3632,16 +3607,6 @@ namespace NightCallRussian
 
             string locKey = __0;
 
-            // Log unique results with their keys
-            string logEntry = "LOCMGR:" + (locKey ?? "") + "=" + __result;
-            if (!LoggedMissing.Contains(logEntry))
-            {
-                Log.LogInfo(string.Format("[LOCMGR] key={0} val={1}",
-                    locKey ?? "null",
-                    __result.Length > 60 ? __result.Substring(0, 60) + "..." : __result));
-                LoggedMissing.Add(logEntry);
-            }
-
             // Phase 1: Try key-based translation (most reliable)
             if (!string.IsNullOrEmpty(locKey))
             {
@@ -4166,6 +4131,9 @@ namespace NightCallRussian
         {
             if (string.IsNullOrEmpty(text)) return null;
 
+            // Skip numeric/currency/time values - don't translate or replace font
+            if (IsCurrencyOrTimeString(text)) return null;
+
             // Strip __ markers if present (game's localization key format)
             string cleanText = text;
             if (cleanText.StartsWith("__") && cleanText.EndsWith("__") && cleanText.Length > 4)
@@ -4243,18 +4211,6 @@ namespace NightCallRussian
             return null;
         }
 
-        internal static void LogMissing(string text, string context)
-        {
-            if (string.IsNullOrEmpty(text)) return;
-            if (text.Length < 2 || text.Length > 200) return;
-
-            string key = context + ":" + text;
-            if (!LoggedMissing.Contains(key))
-            {
-                LoggedMissing.Add(key);
-                Log.LogDebug(string.Format("[MISSING] {0}: {1}", context, text));
-            }
-        }
     }
 
     // ========== TEXT ASSET PATCHES ==========
@@ -4262,25 +4218,12 @@ namespace NightCallRussian
     [HarmonyPatch(typeof(TextAsset))]
     public static class TextAssetPatches
     {
-        private static HashSet<string> LoggedTextAssets = new HashSet<string>();
 
         [HarmonyPatch("get_text")]
         [HarmonyPostfix]
         static void TextAsset_get_text_Postfix(TextAsset __instance, ref string __result)
         {
             if (__instance == null || string.IsNullOrEmpty(__instance.name)) return;
-
-            // Log all TextAsset access (once per name)
-            if (!LoggedTextAssets.Contains(__instance.name))
-            {
-                LoggedTextAssets.Add(__instance.name);
-                bool hasRussian = RussianLocalization.DialogueTexts.ContainsKey(__instance.name);
-                if (RussianLocalization.Log != null)
-                {
-                    RussianLocalization.Log.LogInfo(string.Format("[TEXTASSET ACCESS] {0} (has_russian={1}, len={2})",
-                        __instance.name, hasRussian, __result != null ? __result.Length : 0));
-                }
-            }
 
             string russianText = RussianLocalization.GetDialogueText(__instance.name);
             if (russianText != null)
@@ -4299,7 +4242,6 @@ namespace NightCallRussian
             if (russianText != null)
             {
                 __result = Encoding.UTF8.GetBytes(russianText);
-                if (RussianLocalization.Log != null) RussianLocalization.Log.LogInfo(string.Format("[TEXTASSET BYTES] Replaced: {0}", __instance.name));
             }
         }
     }
@@ -4319,7 +4261,6 @@ namespace NightCallRussian
             string translation = RussianLocalization.TranslateText(value);
             if (translation != null)
             {
-                if (RussianLocalization.Log != null) RussianLocalization.Log.LogDebug(string.Format("[UI.Text] {0} -> {1}", value, translation));
                 value = translation;
 
                 // Replace font with Cyrillic font if available
@@ -4327,10 +4268,6 @@ namespace NightCallRussian
                 {
                     __instance.font = RussianLocalization.CyrillicFont;
                 }
-            }
-            else
-            {
-                RussianLocalization.LogMissing(value, "UI.Text");
             }
         }
 
@@ -4349,7 +4286,6 @@ namespace NightCallRussian
                 {
                     __instance.font = RussianLocalization.CyrillicFont;
                 }
-                if (RussianLocalization.Log != null) RussianLocalization.Log.LogDebug("[UI.Text OnEnable] Translated");
             }
         }
     }
