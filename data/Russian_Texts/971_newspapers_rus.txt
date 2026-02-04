@@ -198,7 +198,7 @@ $$ time: 0.5 $$
 === news-hub-miscA
 
 { news_miscA = 1 }
--> ?? News-Misc-01 | News-Misc-02 | News-Misc-03 | News-Misc-04 | News-Misc-05 | News-Misc-06
+-> ?? News-Misc-01 | News-Misc-02 | News-Misc-03 | News-Misc-05 | News-Misc-06
 
 
 === news-hub-miscB
@@ -216,7 +216,7 @@ $$ time: 0.5 $$
 === news-hub-miscD
 
 { news_miscD = 1 }
--> ?? News-Misc-17 | News-Misc-18 | News-Misc-19 | News-Misc-20 | News-Misc-21
+-> ?? News-Misc-18 | News-Misc-19 | News-Misc-20 | News-Misc-21
 
 
 === news-hub-clients
@@ -1274,6 +1274,11 @@ $$ clue: clue_sand_journal10_01 $$
 -> News-Misc-010203-outro
 
 
+=== News-Misc-04
+
+-> news-logic
+
+
 === News-Misc-010203-outro
 
 Вы с интересом принимаете информацию к сведению. В вашей работе такие вещи всегда могут пригодиться.
@@ -1364,6 +1369,11 @@ $$ clue: clue_sand_journal10_01 $$
 
 Это тот тип незначительных новостей, которые можно прочитать в каждом номере...
 Двое молодых людей были арестованы за нападение на евреев на улице. Статья написана наспех и без эмоций...
+-> news-logic
+
+
+=== News-Misc-17
+
 -> news-logic
 
 

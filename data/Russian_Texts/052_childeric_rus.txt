@@ -51,7 +51,7 @@ $$ anim-link: BEATING $$
 === childeric-01-start-horns-hub2
 
 Еще одна драматическая пауза.
-*"И вообще, куда ты собираешься в таком виде?" -> childeric-01-start-where
+*"И вообще, куда вы собираетесь в таком виде?" -> childeric-01-start-where
 *(Не реагировать.) -> childeric-01-start-where-emergency
 
 

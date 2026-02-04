@@ -67,7 +67,7 @@ $$ anim: IDLE_CHAIN $$
 ПУРВА : "Мои родители выбрали его."
 $$ anim: DROPPING_CHAIN_REV $$
 $$ anim: IDLE_LOOK_DOWN $$
-ПУРВА : "Это безумие, не так ли? Ты в шоке?"
+ПУРВА : "Это безумие, не так ли? Вы в шоке?"
 *"Да." -> purva-husband
 *"Нет." -> purva-husband
 *:silence: (Ничего не говорить.) -> purva-husband

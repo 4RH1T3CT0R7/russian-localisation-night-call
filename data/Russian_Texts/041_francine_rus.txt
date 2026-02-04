@@ -179,7 +179,7 @@ $$ dialogspeed: normal $$
 Она пристально смотрит на вас.
 $$ dialogspeed: slow $$
 $$ anim-link: SAD_2_PET $$
-ФРАНСИН : "Я хочу спросить тебя в последний раз... Ты знаешь, где моя кошка?"
+ФРАНСИН : "Я хочу спросить вас в последний раз... Вы знаете, где моя кошка?"
 $$ dialogspeed: normal $$
 *(Сказать правду.) -> francine-lastquestion-truth-hub
 *(Солгать.) -> francine-lastquestion-lie
@@ -303,7 +303,7 @@ $$ music-control: 60 $$
 
 === francine-end01-moveon
 
-"Тебе нужно двигаться дальше."
+"Вам нужно двигаться дальше."
 
 
 === francine-end01-silence

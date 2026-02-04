@@ -223,7 +223,7 @@ $$ anim-link: SMILE_2_WINDOW $$
 
 === mireille-01-story-fear
 
-МИРЕЙ: "Нет. Мне не страшно. В моём возрасте ты либо до смерти напуган, либо уже ничего не боишься."
+МИРЕЙ: "Нет. Мне не страшно. В моём возрасте либо до смерти напуган, либо уже ничего не боишься."
 
 
 === mireille-01-story-good
@@ -500,7 +500,7 @@ $$ tip: medium $$
 МИРЕЙ: "Ну-ну. Не делайте такое мрачное лицо…"
 *"Такая мрачная?" -> mireille-01-part2-cemetary2-silenceA
 *"Вы скучали по мне?" -> mireille-01-part2-cemetary2-silenceA
-*"Извини…" -> mireille-01-part2-cemetary2-silenceB
+*"Извините…" -> mireille-01-part2-cemetary2-silenceB
 *(Сохранять спокойствие.) -> mireille-01-part2-cemetary2-silenceB
 
 
