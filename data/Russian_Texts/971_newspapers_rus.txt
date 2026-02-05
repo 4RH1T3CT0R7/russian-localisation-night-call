@@ -454,6 +454,7 @@ $$ time: 0.5 $$
 -> test_clue_sand05 = 0 ? News-Killer-Sand-05-test
 -> test_clue_sand07 = 0 ? News-Killer-Sand-07-test
 -> test_clue_sand09 = 0 ? News-Killer-Sand-09-test
+-> news-hub-misc
 
 
 === news-hub-killer-sandmanB
@@ -463,6 +464,7 @@ $$ time: 0.5 $$
 -> test_clue_sand06 = 0 ? News-Killer-Sand-06-test
 -> test_clue_sand08 = 0 ? News-Killer-Sand-08-test
 -> test_clue_sand10 = 0 ? News-Killer-Sand-10-test
+-> news-hub-misc
 
 
 === news-hub-killer-sandmanC
@@ -477,6 +479,7 @@ $$ time: 0.5 $$
 -> test_clue_sand03 = 0 ? News-Killer-Sand-03-test
 -> test_clue_sand02 = 0 ? News-Killer-Sand-02-test
 -> test_clue_sand01 = 0 ? News-Killer-Sand-01-test
+-> news-hub-misc
 
 
 === news-hub-killer-judge
@@ -490,6 +493,7 @@ $$ time: 0.5 $$
 -> test_clue_judge04 = 0 ? News-Killer-Judge-04-Test
 -> test_clue_judge06 = 0 ? News-Killer-Judge-06-Test
 -> test_clue_judge08 = 0 ? News-Killer-Judge-08-Test
+-> news-hub-misc
 
 
 === news-hub-killer-judgeB
@@ -499,6 +503,7 @@ $$ time: 0.5 $$
 -> test_clue_judge05 = 0 ? News-Killer-Judge-05-Test
 -> test_clue_judge07 = 0 ? News-Killer-Judge-07-Test
 -> test_clue_judge09 = 0 ? News-Killer-Judge-09-Test
+-> news-hub-misc
 
 
 === news-hub-killer-judgeC
@@ -512,6 +517,7 @@ $$ time: 0.5 $$
 -> test_clue_judge03 = 0 ? News-Killer-Judge-03-Test
 -> test_clue_judge02 = 0 ? News-Killer-Judge-02-Test
 -> test_clue_judge01 = 0 ? News-Killer-Judge-01-Test
+-> news-hub-misc
 
 
 === news-hub-killer-angel
@@ -526,6 +532,7 @@ $$ time: 0.5 $$
 -> test_clue_angel06 = 0 ? News-Killer-Angel-06-Test
 -> test_clue_angel08 = 0 ? News-Killer-Angel-08-Test
 -> test_clue_angel10 = 0 ? News-Killer-Angel-10-Test
+-> news-hub-misc
 
 
 === news-hub-killer-angelB
@@ -535,6 +542,7 @@ $$ time: 0.5 $$
 -> test_clue_angel05 = 0 ? News-Killer-Angel-05-Test
 -> test_clue_angel07 = 0 ? News-Killer-Angel-07-Test
 -> test_clue_angel09 = 0 ? News-Killer-Angel-09-Test
+-> news-hub-misc
 
 
 === news-hub-killer-angelC
@@ -549,6 +557,7 @@ $$ time: 0.5 $$
 -> test_clue_angel03 = 0 ? News-Killer-Angel-03-Test
 -> test_clue_angel02 = 0 ? News-Killer-Angel-02-Test
 -> test_clue_angel01 = 0 ? News-Killer-Angel-01-Test
+-> news-hub-misc
 
 
 === News-Killer-Sand-01-test

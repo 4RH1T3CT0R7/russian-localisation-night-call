@@ -18,6 +18,10 @@ src/Mod/obj/
 # Executables
 *.exe
 
+# Local scripts
+sync_to_game.bat
+release.bat
+
 # Compiled DLLs (built by CI)
 data/BepInEx/plugins/NightCallRussian.dll
 bin/RussianLocalization.dll
@@ -36,3 +40,7 @@ data/scan_results.txt
 Thumbs.db
 Desktop.ini
 .DS_Store
+nul
+
+# Claude Code
+.claude/
