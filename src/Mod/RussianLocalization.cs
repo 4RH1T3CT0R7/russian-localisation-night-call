@@ -15,7 +15,7 @@ using UnityEngine.UI;
 
 namespace NightCallRussian
 {
-    [BepInPlugin("com.nightcall.russian", "Night Call Russian", "7.4.0")]
+    [BepInPlugin("com.nightcall.russian", "Night Call Russian", "7.5.0")]
     public class RussianLocalization : BaseUnityPlugin
     {
         internal static ManualLogSource Log;
@@ -52,7 +52,7 @@ namespace NightCallRussian
         {
             Instance = this;
             Log = Logger;
-            Log.LogInfo("Night Call Russian Localization v7.4.0 - Starting...");
+            Log.LogInfo("Night Call Russian Localization v7.5.0 - Starting...");
 
             // Load font scale config
             FontScaleConfig = Config.Bind("Font", "FontScale", 1.15f,
