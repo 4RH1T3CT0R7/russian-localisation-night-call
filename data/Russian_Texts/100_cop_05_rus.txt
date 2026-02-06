@@ -64,7 +64,6 @@ $$ focus: passenger, slow $$
 === cop-06-mic
 
 "Какое отношение это имеет ко мне?"
-:silence: (Ничего не говорите.)
 $$ focus: driver, slow $$
 *"Вам нужно признание?" -> cop-06-mic-confession
 *"И ты... заберешь ее." -> cop-06-mic-whattodo
@@ -102,7 +101,6 @@ $$ anim-link: WINDOW_2_HAND $$
 
 $$ music-control: 20 $$
 $$ anim-link: HAND_2_SMILE $$
-:silence: (Ничего не говорите.)
 
 
 === cop-06-mic-judge-hub

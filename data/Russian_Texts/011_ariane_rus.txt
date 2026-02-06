@@ -53,7 +53,7 @@ $$ music-control: 20 $$
 === ariane-01-crisis-intro2e
 
 (Подождать.)
-*(Подождать.) -> ariane-01-crisis-intro1
+*"Мадам?" -> ariane-01-crisis-intro1
 *(Подождать.) -> ariane-01-crisis-intro2f
 
 

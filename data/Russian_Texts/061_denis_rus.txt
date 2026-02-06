@@ -96,7 +96,7 @@ $$ anim-link: ANGRY_2_DRIVER $$
 Вы колеблетесь, прежде чем ответить.
 *"Нет." -> denis-01-sorry-no
 *"Я не смотрю телевизор." -> denis-01-sorry-tv
-*"Я не смотрю телевизор." -> denis-01-sorry-yes
+*"Да, смотрю." -> denis-01-sorry-yes
 
 
 === denis-01-sorry-no
@@ -184,7 +184,6 @@ $$ anim-link: DRIVER_2_ANGRY $$
 
 
 $$ anim-link: ANGRY_2_DRIVER $$
-:silence: (Ничего не говорить.)
 $$ anim-link: DRIVER_2_WINDOW $$
 ДЕНИ: "Поэтому я завел себе аккаунт Tweety... чтобы посмотреть, что обо мне говорят."
 ДЕНИ: "Называют меня девственником и нацистом. Что я еще и своих коров трахаю."
@@ -229,7 +228,6 @@ $$ anim-link: ANGRY_2_DRIVER $$
 
 
 "Не думаю, что они смогут это сделать..."
-:silence: (Ничего не говорить.)
 
 
 === denis-01-ourtimes
@@ -325,7 +323,6 @@ $$ anim-link: SHAME_2_DRIVER $$
 $$ music-control: 40 $$
 $$ movie: lamparo_off, hide_passenger $$
 $$ sfx: sfx_gameplay_car_openclose_from_int $$
-:silence: (Ничего не говорить.)
 
 
 === customer-newspaper

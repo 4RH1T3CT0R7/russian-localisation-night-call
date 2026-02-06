@@ -120,7 +120,6 @@ $$ reveal: 100_07 $$
 === cop-04-criminal04-silence
 
 $$ reveal: 100_08 $$
-:silence: (Ничего не говорить.)
 $$ dialogspeed: slow $$
 Она улыбается. Искренняя. Возможно, вы выиграли последнюю битву.
 $$ dialogspeed: normal $$

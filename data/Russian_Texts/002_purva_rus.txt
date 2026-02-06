@@ -178,7 +178,6 @@ $$ anim: IDLE_LOOK_DRIVER $$
 === purva-silence03
 
 $$ anim: IDLE_LOOK_DOWN $$
-:silence: (Ничего не говорить.)
 $$ anim: DROPPING_CHAIN_REV $$
 $$ anim: IDLE_CHAIN $$
 Аэропорт находится не так далеко.

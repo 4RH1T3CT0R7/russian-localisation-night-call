@@ -181,7 +181,6 @@ $$ music-control: 60 $$
 
 === mathieu-01-contact-silence
 
-:silence: (Ничего не говорить.)
 
 
 === mathieu-01-contact
@@ -245,7 +244,6 @@ $$ anim-link: THINK_2_DRIVER $$
 
 === mathieu-01-ileft-silence
 
-:silence: (Ничего не говорить.)
 $$ anim-link: THINK_2_DRIVER $$
 
 
@@ -926,7 +924,6 @@ $$ anim-link: BABY_2_DRIVER $$
 Мы с его матерью не очень ладим.
 МАТЬЁ: "Понимаю. Сейчас такое часто бывает."
 МАТЬЁ: "Больше половины всех браков, кажется."
-:silence: (Ничего не говорить.)
 МАТЬЁ: "Я имею в виду, лично мне статистика..."
 
 

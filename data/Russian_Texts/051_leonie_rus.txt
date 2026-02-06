@@ -291,7 +291,6 @@ $$ anim-link: MOUTH_2_DRIVER $$
 "Это полезный предмет, не так ли?"
 $$ anim-link: DRIVER_2_WINDOW $$
 Она раздраженно отводит взгляд.
-:silence: (Ничего не говорить.)
 "Уже поздно и…"
 "Мне не нужна ваша жалость."
 $$ anim-link: WINDOW_2_DRIVER $$
@@ -325,7 +324,6 @@ $$ reveal: 051_02 $$
 
 === leonie-01-thesis3-silence
 
-:silence: (Ничего не говорить.)
 ЛЕОНИ : "Но…"
 
 
@@ -377,7 +375,6 @@ $$ reveal: 051_03 $$
 
 === leonie-01-thesis4-silence
 
-:silence: (Ничего не говорить.)
 ЛЕОНИ: "По правде говоря... Я вас не виню. Но эта тема просто скучна."
 $$ anim-link: MOUTH_2_DRIVER $$
 ЛЕОНИ: "Это... смертельно."
@@ -459,7 +456,6 @@ $$ anim-link: DRIVER_2_SMILE $$
 
 === leonie-01-job-silence
 
-:silence: (Ничего не говорить.)
 
 
 === leonie-01-job-outro

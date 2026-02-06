@@ -351,7 +351,6 @@ $$ anim-link: SH_BOARD_2_DRIVER $$
 $$ anim-link: SH_DRIVER_2_BOARD $$
 В задней части кабины нарастает напряжение.
 $$ anim-link: PI_DRIVER_2_BASIC $$
-:silence: (Пусть продолжает говорить.)
 $$ anim-link: SH_BOARD_2_PIERRE $$
 $$ anim-link: PI_BASIC_2_SHAINE $$
 ШЕЙН: "Он владеет волшебным кинжалом под названием "Зуб кобры."
@@ -586,7 +585,6 @@ $$ anim-link: PI_BASIC_2_SHAINE $$
 === tps-01-game-corridor1-secretlock2
 
 $$ anim-link: SH_BOARD_2_DRIVER $$
-:silence: (Пусть продолжает говорить.)
 ШЕЙН: "Чубакк. Этот медальон - волшебный замок. Ты знаешь это, но у тебя нет ключа."
 ПЬЕР: "Что же нам делать, Чубакк? Мы не можем дождаться выхода Ксенофекса Грозного!"
 *(Подыграть.) -> tps-01-game-corridor1-secretlock-act
@@ -666,12 +664,10 @@ $$ anim-link: PI_SHAINE_2_BASIC $$
 
 === tps-01-game-corridor1-secretlock4-outroA
 
-:silence: (Ничего не говорить.)
 
 
 === tps-01-game-corridor1-secretlock4-outroB
 
-:silence: (Ничего не говорить.)
 ШЕЙН: "Ты следуешь за ним, Шубакк, с кинжалом в руке."
 
 
@@ -712,7 +708,6 @@ $$ camfocus: passenger, slow $$
 *"Я осматриваю окрестности." -> tps-01-game-xenofex-entrance-analyse
 *:violence: "Я атакую Ксенофекса." -> tps-01-game-xenofex-entrance-silentattack
 *:silence: (Пусть пассажир решит.) -> tps-01-game-xenofex-entrance-pierreturn
-*:silence: (Пусть пассажир решает.) -> tps-01-game-xenofex-entrance-pierreturn
 === tps-01-game-xenofex-entrance-analyse
 
 $$ anim-link: SH_DRIVER_2_BOARD $$
@@ -982,7 +977,6 @@ $$ movie: stop $$
 === tps-01-game-xenofex-entrance-reveal
 
 $$ movie: black $$
-:silence: (Ничего не говорить.)
 ШЕЙН: "Через несколько секунд Ксенофекс оказывается прижатым спиной к стене."
 ШЕЙН: "Его очертания становятся все четче... За странным, непрозрачным черным дымом вы видите усталое и изможденное тело старика."
 ШЕЙН: "Ксенофекс постарел."
@@ -1504,7 +1498,6 @@ $$ anim-link: PI_DRIVER_2_BASIC $$
 
 === tps-01-game-xenofex-fight-dem-explain
 
-:silence: (Ничего не говорить.)
 ШЕЙН: "Это означает Deus Ex Machina… Но главное — это сокровище…"
 Она выглядит смущённой на мгновение, потом выпаливает…
 
@@ -1554,7 +1547,6 @@ $$ anim-link: PI_DRIVER_2_BASIC $$
 "Как работает кольцо DEM?"
 *:puzzled: "Это кажется опасным…" -> tps-01-game-xenofex-fight-dem-joke
 *:violence: "Я поворачиваю кольцо." -> tps-01-game-xenofex-fight-dem-scene01
-*:violence: "Я вращаю кольцо." -> tps-01-game-xenofex-fight-dem-scene01
 
 
 === tps-01-game-xenofex-fight-dem-joke
@@ -1864,7 +1856,6 @@ $$ camfocus: passenger, slow $$
 
 === tps-01-nogame2
 
-:silence: (Ничего не говорить.)
 "Что вы поете?"
 Вы замечаете, что поток машин исчезает в ночи.
 Молодая женщина присоединяется к своему другу. Они дружно напевают.
@@ -1917,7 +1908,6 @@ $$ anim-link: SH_SMILE_2_PIERRE $$
 
 === tps-01-nogame-song-silence
 
-:silence: (Ничего не говорить.)
 
 
 === tps-01-nogame-song-outro
@@ -1933,7 +1923,6 @@ $$ reveal: 066_02 $$
 $$ anim: IDLE_PIERRE_LOOK $$
 $$ anim: IDLE_SHAINE_LOOK $$
 $$ movie: stop $$
-:silence: (Ничего не говорить.)
 $$ tip: none $$
 Когда вы поворачиваете на площадь Этуаль, ваш пассажир указывает на одно из самых богатых зданий в этом районе.
 ПЬЕР: "Вот сюда, пожалуйста."
@@ -1992,7 +1981,6 @@ $$ reveal: 066_03 $$
 $$ movie: lamparo_off, hide_passenger $$
 $$ sfx: sfx_gameplay_car_openclose_from_int $$
 $$ music-control: 40 $$
-:silence: (Ничего не говорить.)
 Вы наблюдаете за ними, когда они входят в здание.
 Вы сразу же замечаете камеры наблюдения прямо над дверью в вестибюле, который так хорошо освещен, что это не может быть хорошо для окружающей среды.
 $$ camfocus: driver, normal $$

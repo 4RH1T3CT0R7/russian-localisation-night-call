@@ -28,7 +28,7 @@ $$ anim-link: PHONE_2_DRIVER $$
 Ее лицо становится пунцовым.
 ПОЛИН: "Мне... жаль... Я..."
 Она качает головой, извиняется и спотыкается на полуслове.
-*"Всё в порядке?" -> pauline-01-doit-ok
+*"Не волнуйтесь…" -> pauline-01-doit-ok
 *"Всё в порядке?" -> pauline-01-doit-question
 *:silence: (Ничего не говорить.) -> pauline-01-doit-silence
 
@@ -41,7 +41,6 @@ $$ anim-link: PHONE_2_DRIVER $$
 
 === pauline-01-doit-silence
 
-:silence: (Ничего не говорить.)
 
 
 === pauline-01-doit-ok
@@ -110,7 +109,6 @@ $$ reveal: 063_01 $$
 
 === pauline-01-love2-silence
 
-:silence: (Ничего не говорить.)
 ПОЛИН: "Да... Так будет лучше."
 
 
@@ -176,7 +174,6 @@ $$ anim-link: PHONE_2_DRIVER $$
 
 === pauline-01-love3-silence
 
-:silence: (Ничего не говорить.)
 
 
 === pauline-01-love3-choice
@@ -276,7 +273,6 @@ $$ anim-link: ANXIOUS_2_WINDOW $$
 
 === pauline-01-love4-silence
 
-:silence: (Ничего не говорить.)
 Она медленно произносит слово своим теплым голосом...
 
 
@@ -355,7 +351,6 @@ $$ movie: stop $$
 === pauline-01-love8
 
 $$ anim-link: WINDOW_2_DRIVER $$
-:silence: (Ничего не говорить.)
 Она смотрит на вас, на ее губах играет легкая улыбка.
 ПОЛИН: "А вы... как вы?"
 *"Неплохо…" -> pauline-01-driver-ok
@@ -378,7 +373,6 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 === pauline-01-driver-silence
 
-:silence: (Ничего не говорить.)
 
 
 === pauline-01-driver-killer-question
@@ -434,7 +428,6 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 === pauline-01-driver-killer-question-end
 
-:silence: (Ничего не говорить.)
 Ваша пассажирка пристально смотрит на вас...
 Перед вами простирается дорога в аэропорт.
 Фары и уличные фонари слепят глаза.

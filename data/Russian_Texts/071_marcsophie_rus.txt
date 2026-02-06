@@ -240,7 +240,6 @@ $$ music-control: 60 $$
 $$ sfx: sfx_gameplay_car_openclose_from_int $$
 $$ reveal: 071_01 $$
 "Без проблем."
-:silence: (Ничего не говорить.)
 Он одаривает вас жалкой улыбкой и ускользает.
 
 

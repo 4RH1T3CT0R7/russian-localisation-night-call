@@ -97,7 +97,6 @@ $$ dialogspeed: normal $$
 
 === cop-03-question-silence
 
-:silence: (Ничего не говорить.)
 
 
 === cop-03-trial03

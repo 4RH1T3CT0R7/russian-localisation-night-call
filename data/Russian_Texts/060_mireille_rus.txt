@@ -161,7 +161,6 @@ $$ reveal: 060_02 $$
 
 === mireille-01-part1-out-silence
 
-:silence: (Ничего не говорить.)
 Она снова вздрагивает.
 *:love: "Вы простудитесь." -> mireille-01-part1-out-cold
 *:sad: (Ничего не говорить.) -> mireille-01-part1-out-before
@@ -170,7 +169,6 @@ $$ reveal: 060_02 $$
 
 === mireille-01-part1-out-outro
 
-:silence: (Ничего не говорить.)
 Вы оба садитесь в машину.
 
 
@@ -280,7 +278,6 @@ $$ anim-link: WINDOW_2_BAG $$
 === mireille-01-part1-outro-silence
 
 $$ anim-link: WINDOW_2_BAG $$
-:silence: (Ничего не говорить.)
 Поездка проходит в почти религиозной тишине.
 
 
@@ -466,7 +463,6 @@ $$ anim: IDLE_BAG $$
 
 $$ reveal: 060_04 $$
 $$ music-control: 40 $$
-:silence: (Ничего не говорить.)
 МИРЕЙ: "Я любила их обоих одинаково, пока смерть не разлучила нас."
 МИРЕЙ: "Когда мой муж умер в 1986-м, Люк не протянул и двух месяцев."
 *"Это довольно необычно." -> mireille-01-part2-cemetary2-notcommon
@@ -496,7 +492,6 @@ $$ tip: medium $$
 
 === mireille-01-part2-cemetary2-silence
 
-:silence: (Ничего не говорить.)
 МИРЕЙ: "Ну-ну. Не делайте такое мрачное лицо…"
 *"Такая мрачная?" -> mireille-01-part2-cemetary2-silenceA
 *"Вы скучали по мне?" -> mireille-01-part2-cemetary2-silenceA
@@ -666,7 +661,6 @@ $$ travel: stop $$
 *:silence: (Ничего не говорить.) -> mireille-01-part4-station-out
 === mireille-01-part4-station-notalk
 
-:silence: (Ничего не говорить.)
 
 
 === mireille-01-part4-station-out
@@ -675,7 +669,6 @@ $$ movie: black $$
 $$ hide_passenger $$
 $$ sfx: sfx_gameplay_car_openclose_from_int $$
 $$ camfocus: driver, fast $$
-:silence: (Ничего не говорить.)
 
 
 === mireille-01-part4-run

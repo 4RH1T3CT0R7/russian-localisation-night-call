@@ -254,7 +254,6 @@ $$ anim: IDLE_ANGRY $$
 ЖЕРАЛЬДИНА: "И она сказала: "ОК". Попросила меня связаться с ее специалистом."
 $$ movie: stop $$
 $$ anim-link: ANGRY_2_HAPPY $$
-:silence: (Ничего не говорить.)
 $$ anim-link: HAPPY_2_ANGRY $$
 ЖЕРАЛЬДИНА: "Если мой план сработает, Les Confiseries du Marais исчезнут…"
 *:puzzled: "И вас это устраивает?" -> geraldine-01-story4-accept

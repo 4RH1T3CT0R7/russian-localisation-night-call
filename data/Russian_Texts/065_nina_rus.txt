@@ -155,7 +155,6 @@ $$ anim-link: DRIVER_2_SHAME $$
 === Nina-01-start-silence
 
 $$ music-control: 20 $$
-:silence: (Ничего не говорить.)
 
 
 === Nina-01-silence1
@@ -188,7 +187,6 @@ $$ music-control: 40 $$
 
 $$ anim-link: WINDOW_2_DRIVER $$
 "Хотите, чтобы я остановился?"
-:silence: (Ничего не говорить.)
 $$ anim-link: DRIVER_2_SHAME $$
 НИНА: "Я... я..."
 Она делает паузу.

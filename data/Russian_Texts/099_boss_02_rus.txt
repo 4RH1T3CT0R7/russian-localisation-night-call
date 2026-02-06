@@ -28,7 +28,7 @@ $$ display_passenger $$
 $$ music-control: 0 $$
 Он смотрит на вас, не произнося ни слова.
 *:silence: (Ничего не говорить.) -> boss-02-silence
-*:silence: (Ничего не говорить.) -> boss-02-wait
+*" Вы давно ждёте?" -> boss-02-wait
 *" Что-то случилось?" -> boss-02-problem
 
 

@@ -29,7 +29,6 @@ $$ dialogspeed: normal $$
 
 Парень продолжает разговаривать сам с собой, ведя целый воображаемый диалог. Ему не больше двадцати.
 $$ dialogspeed: fast $$
-:silence: (Ничего не говорить.)
 ЮГО : "Вот так… втяни живот."
 $$ dialogspeed: normal $$
 $$ anim-link: SULK_2_DRIVER $$

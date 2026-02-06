@@ -91,7 +91,6 @@ $$ anim-link: SMILE_2_DRIVER $$
 === patricia-02-accident
 
 $$ camfocus: passenger, slow $$
-:silence: (Ничего не говорить.)
 *"Его авария?" -> patricia-02-accident-storyA-introA
 *"Ох, простите…" -> patricia-02-accident-storyB
 *:silence: (Ничего не говорить.) -> patricia-02-accident-storyA-introB
@@ -104,7 +103,6 @@ $$ camfocus: passenger, slow $$
 
 === patricia-02-accident-storyA-introB
 
-:silence: (Ничего не говорить.)
 ПАТРИЦИЯ : "Это было глупо, честно говоря…"
 
 
@@ -139,7 +137,6 @@ $$ anim-link: DRIVER_2_SMILE $$
 
 $$ anim-link: SMILE_2_MELANCHOLY $$
 $$ camfocus: default, slow $$
-:silence: (Ничего не говорить.)
 На лице пассажирки мелькает грустная усмешка.
 ПАТРИЦИЯ : "В любом случае, он уже несколько недель находится в коме..."
 $$ music_control: 40 $$
@@ -200,7 +197,6 @@ $$ anim-link: SMILE_2_MELANCHOLY $$
 
 === patricia-02-age-silence
 
-:silence: (Ничего не говорить.)
 $$ anim-link: MELANCHOLY_2_DRIVER $$
 ПАТРИЦИЯ : "Я собираюсь рассказать вам кое-что забавное..."
 
@@ -396,7 +392,6 @@ $$ anim-link: SMILE_2_MELANCHOLY $$
 $$ tip: low $$
 $$ anim-link: SMILE_2_DRIVER $$
 $$ camfocus: driver, normal $$
-:silence: (Ничего не говорить.)
 Кажется, она немного озадачена вашим молчанием.
 ПАТРИЦИЯ : "Вы, кажется, немного шокированы."
 
@@ -450,7 +445,6 @@ $$ tip: low $$
 
 $$ movie: lamparo_off, hide_passenger $$
 $$ sfx: sfx_gameplay_car_openclose_from_int $$
-:silence: (Ничего не говорить.)
 Она осторожно закрывает дверь и уходит.
 $$ music_control: 80 $$
 Вы следите за ней, пока она поднимается по ступенькам к двери своего дома...

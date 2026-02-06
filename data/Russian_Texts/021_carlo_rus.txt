@@ -175,7 +175,6 @@ $$ anim-link: IDEA_2_DRUNK $$
 
 === carlo-happy-silence
 
-:silence: (Ничего не говорите.)
 КАРЛО : "...собака..."
 КАРЛО : "...съел мой телефон..."
 Вдруг он открывает глаза.
@@ -338,7 +337,6 @@ $$ anim-link: DRUNK_2_IDEA $$
 
 === carlo-02lie-friend-silence
 
-:silence: (Ничего не говорите.)
 { carlo-lie += 1 }
 Он закрывает глаза. Из него вырывается крошечная отрыжка.
 Вы даёте ему немного покипеть в собственном соку.
@@ -477,7 +475,6 @@ $$ anim-link: SMILE_2_IDEA $$
 
 === carlo-03lie-silence
 
-:silence: (Ничего не говорите.)
 
 
 === carlo-03lie-outro
@@ -525,7 +522,6 @@ $$ anim-link: IDEA_2_DRUNK $$
 === carlo-stoplying1-nothing
 
 "Ничего. Не беспокойтесь об этом."
-:silence: (Ничего не говорите.)
 КАРЛО : "Эй, парень, вы должны сказать мне, есть ли у меня сомнительное алиби или нет."
 $$ anim-link: IDEA_2_DRUNK $$
 КАРЛО : "Ладно, давайте..."
@@ -535,7 +531,6 @@ $$ camfocus: passenger, slow $$
 
 === carlo-recap-01-logic
 
-:silence: (Ничего не говорите.)
 
 
 === carlo-recap-01a

@@ -43,7 +43,6 @@ $$ anim: IDLE_FEAR $$
 
 === shohreh-01-start-silence
 
-:silence: (Ничего не говорить.)
 $$ travel: start $$
 
 

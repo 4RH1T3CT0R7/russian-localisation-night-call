@@ -15,7 +15,7 @@ using UnityEngine.UI;
 
 namespace NightCallRussian
 {
-    [BepInPlugin("com.nightcall.russian", "Night Call Russian", "7.5.0")]
+    [BepInPlugin("com.nightcall.russian", "Night Call Russian", "7.6.0")]
     public class RussianLocalization : BaseUnityPlugin
     {
         internal static ManualLogSource Log;
@@ -52,7 +52,7 @@ namespace NightCallRussian
         {
             Instance = this;
             Log = Logger;
-            Log.LogInfo("Night Call Russian Localization v7.5.0 - Starting...");
+            Log.LogInfo("Night Call Russian Localization v7.6.0 - Starting...");
 
             // Load font scale config
             FontScaleConfig = Config.Bind("Font", "FontScale", 1.15f,
@@ -154,7 +154,7 @@ namespace NightCallRussian
         }
 
         // Translate TMP text immediately - this is called by Harmony patch on TMP_Text.text setter
-        public static void TMP_Text_set_text_Prefix(ref string value)
+        public static void TMP_Text_set_text_Prefix(object __instance, ref string value)
         {
             if (string.IsNullOrEmpty(value)) return;
 
@@ -182,11 +182,48 @@ namespace NightCallRussian
             if (!string.IsNullOrEmpty(translated))
             {
                 value = translated;
+                // Remove UpperCase fontStyle if the TMP component forces uppercase
+                // Russian text should not be forced to uppercase by game's styling
+                RemoveTMPUpperCase(__instance, translated);
             }
             else if (cleanText != value)
             {
                 // At least return without __ markers
                 value = cleanText;
+            }
+        }
+
+        // Remove FontStyles.UpperCase from TMP component when displaying Cyrillic text
+        private static void RemoveTMPUpperCase(object tmpInstance, string translatedText)
+        {
+            try
+            {
+                // Check if translated text contains Cyrillic
+                bool hasCyrillic = false;
+                foreach (char c in translatedText)
+                {
+                    if (c >= 0x0400 && c <= 0x04FF)
+                    {
+                        hasCyrillic = true;
+                        break;
+                    }
+                }
+                if (!hasCyrillic) return;
+
+                // Get fontStyle property via reflection
+                var fontStyleProp = tmpInstance.GetType().GetProperty("fontStyle");
+                if (fontStyleProp == null) return;
+
+                int currentStyle = (int)fontStyleProp.GetValue(tmpInstance, null);
+                int upperCaseFlag = 16; // FontStyles.UpperCase = 16
+                if ((currentStyle & upperCaseFlag) != 0)
+                {
+                    fontStyleProp.SetValue(tmpInstance, currentStyle & ~upperCaseFlag, null);
+                }
+            }
+            catch
+            {
+                // Silently ignore - fontStyle removal is best-effort
             }
         }
 

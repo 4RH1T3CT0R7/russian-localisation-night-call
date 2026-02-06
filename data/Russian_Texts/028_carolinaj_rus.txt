@@ -88,7 +88,6 @@ $$ anim-link: BASIC_2_SAD $$
 
 === carolina-offer-silence
 
-:silence: (Молча кивнуть.)
 КАРОЛИНА : "Мой муж тоже был не из разговорчивых… Определённый плюс, на мой взгляд."
 КАРОЛИНА : "Как бы то ни было, когда он умер, он оставил мне здание."
 
@@ -123,7 +122,6 @@ $$ anim-link: LISTEN_2_SAD $$
 
 === carolina-following-silence
 
-:silence: (Ничего не говорить.)
 
 
 === carolina-people

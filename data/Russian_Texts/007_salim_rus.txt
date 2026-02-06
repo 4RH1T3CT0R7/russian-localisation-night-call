@@ -224,7 +224,6 @@ $$ anim-link: LOOK_SURPRISE_LOOK $$
 САЛИМ : "ПОЧЕМУ РАДИ БОГА?"
 $$ dialogspeed: normal $$
 САЛИМ : "Он думал, что сможет списать это, когда попадёт в рай?"
-:silence: (Ничего не говорить.)
 
 
 === salim-sleep3

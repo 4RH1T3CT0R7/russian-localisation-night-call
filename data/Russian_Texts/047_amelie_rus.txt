@@ -276,7 +276,6 @@ $$ dialogspeed: normal $$
 === amelie-01-inquiry
 
 $$ anim-link: DRIVER_2_EXPLAIN $$
-:silence: (Ничего не говорить.)
 Она наклоняется вперед.
 АМЕЛИ : "Об этом можно говорить, знаете…"
 "Я… Это не совсем моё."
@@ -356,7 +355,6 @@ $$ anim-link: EXPLAIN_2_DRIVER $$
 === amelie-01-inquiry-outroB-answers
 
 Ваша пассажирка пожимает плечами.
-:silence: (Ничего не говорить.)
 
 
 === amelie-01-inquiry-outro-knowher

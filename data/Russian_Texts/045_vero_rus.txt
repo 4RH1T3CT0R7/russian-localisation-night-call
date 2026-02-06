@@ -177,7 +177,6 @@ $$ camfocus: default, slow $$
 === vero-01-silence1
 
 $$ anim-link: OUTSIDE_2_SAD $$
-:silence: (Ничего не говорить.)
 $$ anim-link: SAD_2_PHONE $$
 Ваше молчание удивляет пассажирку. Она сидит с минуту, ошеломленная, с приоткрытым ртом.
 

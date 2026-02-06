@@ -49,7 +49,6 @@ $$ music-control: 40 $$
 
 === melchior-01-intro-silence
 
-:silence: (Ничего не говорить.)
 МЕЛЬХИОР : "Давно не ездил на таких. Прошлый парень был поболтливее вас, приятель."
 МЕЛЬХИОР : "Если честно, мне больше нравится ваш подход."
 МЕЛЬХИОР : "Говорить... больно."
@@ -71,7 +70,6 @@ $$ music-control: 40 $$
 
 === melchior-01-scared-intro
 
-:silence: (Ничего не говорить.)
 
 
 === melchior-01-scared-sick
@@ -113,7 +111,6 @@ $$ music-control: 40 $$
 
 === melchior-01-scared-scared
 
-:silence: (Ничего не говорить.)
 *:puzzled: "Что?" -> melchior-01-scared-what
 *"Вы восстанавливаетесь после операции на мозге?" -> melchior-01-scared-recovery
 *"Вам не нужно в больницу?" -> melchior-01-scared-hospital
@@ -142,7 +139,6 @@ $$ music-control: 40 $$
 
 === melchior-01-scared-silence
 
-:silence: (Ничего не говорить.)
 
 
 === melchior-01-procedure
@@ -230,7 +226,6 @@ $$ music-control: 60 $$
 
 === melchior-01-procedure-silentvoice
 
-:silence: (Ничего не говорить.)
 Когда позвонила Аде.
 Действительно ли вы контролировали ситуацию? Это вы принимали решение или что-то другое?
 Вы не хотите об этом думать.
@@ -287,7 +282,6 @@ $$ music-control: 80 $$
 
 === melchior-01-end-silence
 
-:silence: (Ничего не говорить.)
 Когда он говорит, его голос звучит иначе.
 Глубже. Менее обыденно.
 МЕЛЬХИОР : "Мы считаем, что это само по себе ответ."

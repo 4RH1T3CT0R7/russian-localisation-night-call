@@ -271,7 +271,6 @@ $$ movie: stop $$
 
 $$ movie $$
 $$ anim: IDLE_COLD $$
-:silence: (Ничего не говорить.)
 Поездка продолжается в тишине.
 $$ movie: stop $$
 
@@ -286,7 +285,6 @@ $$ movie: stop $$
 
 === sean-01-silence2-gorgeous
 
-:silence: (Ничего не говорить.)
 
 
 === sean-01-end

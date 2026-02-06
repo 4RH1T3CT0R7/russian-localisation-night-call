@@ -29,7 +29,6 @@ $$ anim: HAPPY $$
 
 === ada-01-start-silence
 
-:silence: (Ничего не говорить.)
 
 
 === ada-01-destination
@@ -133,7 +132,6 @@ $$ anim: IDLE_OFF $$
 
 === ada-01-question-origin-finish
 
-:silence: (Дать ей закончить.)
 "Это и правда… очень много людей."
 $$ anim: SMILING $$
 АДА: "И я высоко оцениваю каждого из них. Все они - эксперты в своих областях."
