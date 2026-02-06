@@ -89,7 +89,7 @@ $$ camfocus: driver, normal $$
 
 === ca-questionintrogood
 
-"Вы ищете место для ночлега?"
+КАМИЛЬ : "Итак, нам нужен совет…"
 
 
 === ca-questionintrobad

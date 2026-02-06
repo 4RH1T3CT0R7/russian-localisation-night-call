@@ -26,8 +26,8 @@ $$ travel: start $$
 
 Вы покидаете кладбище и замечаете в зеркале заднего вида другой силуэт, всё ещё стоящий на тротуаре.
 $$ music-control: 20 $$
-*" Кто это был? " -> alex-01-leaving-who-var
-*" Вы в порядке? " -> alex-01-alcohol
+*"Кто это был?" -> alex-01-leaving-who-var
+*"Вы в порядке?" -> alex-01-alcohol
 *:silence: (Промолчать.) -> alex-01-leaving-silence
 
 
@@ -65,7 +65,7 @@ $$ dialogspeed: normal $$
 
 Вы продолжаете ехать в тишине, пока ноздри не начинают зудеть.
 Ваш пассажир… разит перегаром.
-Словно он только что вышел из-под вискового душа.
+Словно он только что вышёл из-под вискового душа.
 Через несколько секунд вы решаете незаметно приоткрыть окно, чтобы немного проветрить такси.
 
 
@@ -77,9 +77,9 @@ $$ anim-link: WINDOW_2_DRIVER $$
 АЛЕКСАНДР : "Это просто… невыносимо…"
 Каждое слово он произносит со стоном, через боль. Его искажённое, почти нечеловеческое лицо вызывает у вас тревогу.
 $$ anim-link: DRIVER_2_SAD $$
-*:puzzled: " Что случилось? " -> alex-01-toohard-grandson
-*" Хотите, остановлюсь? " -> alex-01-toohard-stop
-*" Вы слишком много выпили? " -> alex-01-toohard-alcohol
+*:puzzled: "Что случилось?" -> alex-01-toohard-grandson
+*"Хотите, остановлюсь?" -> alex-01-toohard-stop
+*"Вы слишком много выпили?" -> alex-01-toohard-alcohol
 
 
 === alex-01-toohard-stop
@@ -88,9 +88,9 @@ $$ anim-link: DRIVER_2_SAD $$
 АЛЕКСАНДР : "Мне нужно… мне нужно ехать… спать. Закрыть глаза."
 АЛЕКСАНДР : "Может, сегодня… да… я наберусь… храбрости."
 АЛЕКСАНДР : "Храбрости…"
-*" Храбрости для чего? " -> alex-01-toohard-courage
-*:puzzled: " Что у вас за проблема? " -> alex-01-toohard-grandson
-*:smile: " Вам не стоит столько пить… " -> alex-01-toohard-alcohol
+*"Храбрости для чего?" -> alex-01-toohard-courage
+*:puzzled: "Что у вас за проблема?" -> alex-01-toohard-grandson
+*:smile: "Вам не стоит столько пить…" -> alex-01-toohard-alcohol
 
 
 === alex-01-toohard-alcohol
@@ -98,8 +98,8 @@ $$ anim-link: DRIVER_2_SAD $$
 АЛЕКСАНДР : "Нет, нет… как раз наоборот."
 АЛЕКСАНДР : "Мне надо пить больше."
 АЛЕКСАНДР : "Чтобы забыть. Чтобы набраться храбрости."
-*" Храбрости для чего? " -> alex-01-toohard-courage
-*:puzzled: " Что у вас за проблема? " -> alex-01-toohard-grandson
+*"Храбрости для чего?" -> alex-01-toohard-courage
+*:puzzled: "Что у вас за проблема?" -> alex-01-toohard-grandson
 
 
 === alex-01-toohard-courage
@@ -120,8 +120,8 @@ $$ anim-link: DRIVER_2_SAD $$
 
 === alex-01-story-hub
 
-*" Что произошло? " -> alex-01-story
-*:smile: " Мы почти приехали, сэр. " -> alex-01-almostthere
+*"Что произошло?" -> alex-01-story
+*:smile: "Мы почти приехали, сэр." -> alex-01-almostthere
 *:silence: (Промолчать.) -> alex-01-story-intro
 
 
@@ -170,8 +170,8 @@ $$ dialogspeed: slow $$
 $$ dialogspeed: normal $$
 $$ anim-link: DRIVER_2_SAD $$
 Он опускает голову, весь дрожит. Не может говорить.
-*" Вам холодно? " -> alex-01-story-anger
-*" Киты? " -> alex-01-story-anger
+*"Вам холодно?" -> alex-01-story-anger
+*"Киты?" -> alex-01-story-anger
 *:taxi: (Промолчать и прибавить печку.) -> alex-01-story-heat
 *:silence: (Промолчать.) -> alex-01-story-silence
 
@@ -300,8 +300,8 @@ $$ music-control: 0 $$
 АЛЕКСАНДР : "Планы изменились… Мне нужно на рю де ла Боэси, 122."
 $$ music-control: 20 $$
 Вы поднимаете бровь.
-*:puzzled: " Вы уверены? " -> alexandre-02-start-what
-*:positive: " Понял. " -> alexandre-02-start-yes
+*:puzzled: "Вы уверены?" -> alexandre-02-start-what
+*:positive: "Понял." -> alexandre-02-start-yes
 *:silence: (Кивнуть в знак согласия.) -> alexandre-02-start-yes
 
 
@@ -311,8 +311,8 @@ $$ anim-link: WINDOW_2_DRIVER $$
 Он наконец смотрит на вас. Его голос холоден… почти слишком холоден для человека, от которого так разит алкоголем.
 $$ anim-link: DRIVER_2_WINDOW $$
 АЛЕКСАНДР : "Конечно, уверен… Странный вопрос."
-*" Извините. " -> alexandre-02-start-sorry
-*" Там нет больницы. " -> alexandre-02-start-nohospital
+*"Извините." -> alexandre-02-start-sorry
+*"Там нет больницы." -> alexandre-02-start-nohospital
 *:taxi: (Развернуться.) -> alexandre-02-start-yes
 
 
@@ -339,7 +339,7 @@ $$ anim: IDLE_DRIVER $$
 Это респектабельный район с театром… магазинами… офисными зданиями.
 Вас скручивает изнутри. На рю де ла Боэси есть кое-что ещё…
 Не там ли где-то штаб-квартира "Группы Диамант"?
-"Группа Диамант... компания, виновная в пожаре..."
+Группа Диамант... компания, виновная в пожаре...
 $$ movie: stop $$
 Это не может быть совпадением. Никак. Вы поднимаете глаза к зеркалу заднего вида и встречаете взгляд пассажира.
 
@@ -349,9 +349,9 @@ $$ movie: stop $$
 АЛЕКСАНДР : "Всё в порядке?"
 Его голос чистый. Кристально чистый. Ни малейшей пьяной невнятности.
 $$ music-control: 40 $$
-*" Да, всё нормально. " -> alexandre-02-boetie-intro-alright
-*:puzzled: " Быстро вы протрезвели. " -> alexandre-02-boetie-intro-sober
-*" Холодно сегодня. " -> alexandre-02-boetie-intro-cold
+*"Да, всё нормально." -> alexandre-02-boetie-intro-alright
+*:puzzled: "Быстро вы протрезвели." -> alexandre-02-boetie-intro-sober
+*"Холодно сегодня." -> alexandre-02-boetie-intro-cold
 *(Кивнуть.) -> alexandre-02-boetie-intro-silence
 
 
@@ -388,7 +388,7 @@ $$ dialogspeed: normal $$
 Вы замираете.
 $$ anim-link: DRIVER_2_WINDOW $$
 АЛЕКСАНДР : "Вы мало спали на этой неделе."
-"Вы не смеете обернуться."
+Вы не смеете обернуться.
 АЛЕКСАНДР : "И, кажется, вы слишком глубоко влезли в это расследование."
 $$ anim-link: WINDOW_2_DRIVER $$
 АЛЕКСАНДР : "Давайте заключим сделку? Вы расскажете, что знаете и что они планируют сегодня… а я оставлю вас в живых."
@@ -405,9 +405,9 @@ $$ movie: stop $$
 === alexandre-02-boetie-story01
 
 АЛЕКСАНДР : "На кого вы работаете?"
-*" На полицию. " -> alexandre-02-boetie-story01-cops
-*" Я не понимаю, о чём вы. " -> alexandre-02-boetie-story01-dontknow
-*" На "Группу Диамант". " -> alexandre-02-boetie-story01-groupe
+*"На полицию." -> alexandre-02-boetie-story01-cops
+*"Я не понимаю, о чём вы." -> alexandre-02-boetie-story01-dontknow
+*"На "Группу Диамант"." -> alexandre-02-boetie-story01-groupe
 *:silence: (Промолчать.) -> alexandre-02-boetie-story01-silence
 
 
@@ -421,9 +421,9 @@ $$ movie: stop $$
 === alexandre-02-boetie-story01-dontknow
 
 АЛЕКСАНДР : "Послушайте… я не хочу причинять вам вред… Я просто хочу, чтобы вы ответили на мой вопрос…"
-*" На полицию. " -> alexandre-02-boetie-story01-cops
-*" На "Группу Диамант". " -> alexandre-02-boetie-story01-groupe
-*" Вы однажды на меня напали. " -> alexandre-02-boetie-story01-attacked-intro
+*"На полицию." -> alexandre-02-boetie-story01-cops
+*"На "Группу Диамант"." -> alexandre-02-boetie-story01-groupe
+*"Вы однажды на меня напали." -> alexandre-02-boetie-story01-attacked-intro
 *:silence: (Промолчать.) -> alexandre-02-boetie-story01-dontknow02
 
 
@@ -448,9 +448,9 @@ $$ anim-link: G_DRIVER_2_SAD $$
 $$ anim-link: G_SAD_2_DRIVER $$
 АЛЕКСАНДР : "…была ловушка?"
 Его голос… его голос звучит так мягко. Вы чувствуете, что с ним нужно играть в открытую. Быть честным.
-*:violence: " Они хотят вас арестовать. " -> alexandre-02-boetie-story01-cop-arrest
-*" Они хотят с вами поговорить. " -> alexandre-02-boetie-story01-cop-talk
-*:smile: " Они хотят признание. " -> alexandre-02-boetie-story01-cop-confess
+*:violence: "Они хотят вас арестовать." -> alexandre-02-boetie-story01-cop-arrest
+*"Они хотят с вами поговорить." -> alexandre-02-boetie-story01-cop-talk
+*:smile: "Они хотят признание." -> alexandre-02-boetie-story01-cop-confess
 
 
 === alexandre-02-boetie-story01-cop-arrest
@@ -462,8 +462,8 @@ $$ anim-link: G_SAD_2_DRIVER $$
 АЛЕКСАНДР : "Я думал, у меня ещё есть время. Я думал… я смогу исчезнуть…"
 Он пристально смотрит на вас.
 АЛЕКСАНДР : "Каков был план?… На самом деле?"
-*" Получить признание. " -> alexandre-02-boetie-story01-cop-confess
-*" Жёсткий арест. " -> alexandre-02-boetie-story01-cop-arrest02
+*"Получить признание." -> alexandre-02-boetie-story01-cop-confess
+*"Жёсткий арест." -> alexandre-02-boetie-story01-cop-arrest02
 
 
 === alexandre-02-boetie-story01-cop-arrest02
@@ -486,8 +486,8 @@ $$ anim-link: G_DRIVER_2_WINDOW $$
 АЛЕКСАНДР : "Нет, нет… это чушь. Чего они на самом деле от меня ждут?"
 $$ anim-link: G_WINDOW_2_DRIVER $$
 И он аккуратно покачивает оружием в руке. Словно напоминая о последствиях.
-*" Чтобы вы сдались. " -> alexandre-02-boetie-story01-cop-arrest
-*" Признание. " -> alexandre-02-boetie-story01-cop-confess
+*"Чтобы вы сдались." -> alexandre-02-boetie-story01-cop-arrest
+*"Признание." -> alexandre-02-boetie-story01-cop-confess
 
 
 === alexandre-02-boetie-story01-cop-confess
@@ -502,15 +502,15 @@ $$ reveal: 998_04 $$
 === alexandre-02-boetie-story01-cop-confess-hubA
 
 Вы вспоминаете ночь, когда встретили его. Он жаловался на людей, которые критиковали его дочь. Оскорбляли её. Заставляли чувствовать себя виноватой.
-*:love: " Вы хороший отец… " -> alexandre-02-boetie-story01-cop-joker
-*:smile: " Вы не убийца. " -> alexandre-02-boetie-story01-cop-nokiller
-*:violence: " Я не боюсь умереть. " -> alexandre-02-boetie-story01-cop-notafraid
+*:love: "Вы хороший отец…" -> alexandre-02-boetie-story01-cop-joker
+*:smile: "Вы не убийца." -> alexandre-02-boetie-story01-cop-nokiller
+*:violence: "Я не боюсь умереть." -> alexandre-02-boetie-story01-cop-notafraid
 
 
 === alexandre-02-boetie-story01-cop-confess-hubB
 
-*:smile: " Вы не убийца. " -> alexandre-02-boetie-story01-cop-nokiller
-*:violence: " Я не боюсь умереть. " -> alexandre-02-boetie-story01-cop-notafraid
+*:smile: "Вы не убийца." -> alexandre-02-boetie-story01-cop-nokiller
+*:violence: "Я не боюсь умереть." -> alexandre-02-boetie-story01-cop-notafraid
 
 
 === alexandre-02-boetie-story01-cop-joker
@@ -562,8 +562,8 @@ $$ dialogspeed: normal $$
 Вы чувствуете, как его тело внезапно расслабляется.
 АЛЕКСАНДР : "Хорошо."
 *:taxi: (Поехать.) -> alexandre-02-boetie-cop-outro-drive
-*" Хорошо? " -> alexandre-02-boetie-cop-outro-what
-*" Вы собираетесь сдаться? " -> alexandre-02-boetie-cop-outro-accept
+*"Хорошо?" -> alexandre-02-boetie-cop-outro-what
+*"Вы собираетесь сдаться?" -> alexandre-02-boetie-cop-outro-accept
 
 
 === alexandre-02-boetie-cop-outro-what
@@ -603,8 +603,8 @@ $$ travel: stop $$
 Вы подъезжаете к его адресу и паркуетесь вторым рядом.
 Может, удастся сыграть на его жажде мести, чтобы…
 АЛЕКСАНДР : "Вы знаете, где найти Аниту Вентимилью?"
-*:positive: " Знаю. " -> alexandre-02-killher-yes
-*:negative: " Нет. " -> alexandre-02-killher-no
+*:positive: "Знаю." -> alexandre-02-killher-yes
+*:negative: "Нет." -> alexandre-02-killher-no
 
 
 === alexandre-02-killher-yes
@@ -614,8 +614,8 @@ $$ travel: stop $$
 Вы выдерживаете его взгляд.
 АЛЕКСАНДР : "Честное слово."
 Это золотой шанс… Вы можете заставить его думать, что везёте к жертве, а на самом деле привезти к Бюссе.
-*" Ладно. " -> alexandre-02-killher-deal
-*" Я не могу этого сделать… " -> alexandre-02-killher-no
+*"Ладно." -> alexandre-02-killher-deal
+*"Я не могу этого сделать…" -> alexandre-02-killher-no
 
 
 === alexandre-02-killher-deal
@@ -627,9 +627,9 @@ $$ travel: stop $$
 АЛЕКСАНДР : "Вы хорошо знаете это место? Знаете, как попасть на парковку? В её квартиру?"
 "Да. На парковку."
 АЛЕКСАНДР : "Зачем вы на неё работаете?"
-*" Ради денег. " -> alexandre-02-killher-deal-money
-*" Я ей должен. " -> alexandre-02-killher-deal-owe
-*" У меня не было выбора. " -> alexandre-02-killher-deal-nochoice
+*"Ради денег." -> alexandre-02-killher-deal-money
+*"Я ей должен." -> alexandre-02-killher-deal-owe
+*"У меня не было выбора." -> alexandre-02-killher-deal-nochoice
 
 
 === alexandre-02-killher-deal-money
@@ -690,9 +690,9 @@ $$ anim: IDLE_WINDOW_GUN $$
 === alexandre-02-boetie-story01-lastquestion
 
 АЛЕКСАНДР : "Ну? На кого вы работаете?"
-*" На полицию. " -> alexandre-02-boetie-story01-cops
-*" На "Группу Диамант". " -> alexandre-02-boetie-story01-groupe
-*" Вы однажды на меня напали. " -> alexandre-02-boetie-story01-attacked-intro
+*"На полицию." -> alexandre-02-boetie-story01-cops
+*"На "Группу Диамант"." -> alexandre-02-boetie-story01-groupe
+*"Вы однажды на меня напали." -> alexandre-02-boetie-story01-attacked-intro
 *:silence: (Промолчать.) -> alexandre-02-boetie-story01-dontknow03
 
 
@@ -710,8 +710,8 @@ $$ anim: IDLE_WINDOW_GUN $$
 $$ anim-link: DRIVER_2_SMILE $$
 АЛЕКСАНДР : "И ради чего? Ради денег."
 $$ anim-link: SMILE_2_DRIVER $$
-*" Я знаю… " -> alexandre-02-drivecop-yes
-*" У некоторых не было выбора. " -> alexandre-02-drivecop-choice
+*"Я знаю…" -> alexandre-02-drivecop-yes
+*"У некоторых не было выбора." -> alexandre-02-drivecop-choice
 *(Кивнуть.) -> alexandre-02-drivecop-yes
 
 
@@ -780,8 +780,8 @@ $$ dialogspeed: normal $$
 $$ anim-link: G_SAD_2_DRIVER $$
 АЛЕКСАНДР : "Моя жизнь не меняется, когда я нахожу монетку в канаве, верно?"
 *:silence: (Промолчать.) -> alexandre-02-reveal02-outro
-*" Денег у него было навалом, это точно. " -> alexandre-02-reveal02-rich
-*" Он не сам распоряжался деньгами. " -> alexandre-02-reveal02-notresponsible
+*"Денег у него было навалом, это точно." -> alexandre-02-reveal02-rich
+*"Он не сам распоряжался деньгами." -> alexandre-02-reveal02-notresponsible
 
 
 === alexandre-02-reveal02-rich
@@ -824,9 +824,9 @@ $$ anim-link: SAD_2_DRIVER $$
 АЛЕКСАНДР : "Что скажете?"
 До места назначения осталось несколько минут. Вас начинает подташнивать.
 А если он поймёт, что вы его водите за нос?
-*:positive: " Ладно. " -> alexandre-02-reveal03-groupe-ok
-*" Будьте осторожны… " -> alexandre-02-reveal03-groupe-caught
-*" Отпустите меня. " -> alexandre-02-reveal03-groupe-letmego
+*:positive: "Ладно." -> alexandre-02-reveal03-groupe-ok
+*"Будьте осторожны…" -> alexandre-02-reveal03-groupe-caught
+*"Отпустите меня." -> alexandre-02-reveal03-groupe-letmego
 
 
 === alexandre-02-reveal03-groupe-ok
@@ -852,9 +852,9 @@ $$ anim-link: SAD_2_DRIVER $$
 
 До точки встречи совсем близко… Минута-две… максимум.
 АЛЕКСАНДР : "Знаете, откуда этот пистолет? Ну, до того как попал ко мне?"
-*:puzzled: " Понятия не имею. " -> alexandre-02-reveal03-gun-noidea
-*" Американский? " -> alexandre-02-reveal03-gun-americans
-*" Немецкий? " -> alexandre-02-reveal03-gun-noidea
+*:puzzled: "Понятия не имею." -> alexandre-02-reveal03-gun-noidea
+*"Американский?" -> alexandre-02-reveal03-gun-americans
+*"Немецкий?" -> alexandre-02-reveal03-gun-noidea
 
 
 === alexandre-02-reveal03-gun-noidea
@@ -887,9 +887,9 @@ $$ anim-link: G_SMILE_2_DRIVER $$
 === alexandre-02-reveal03-cop
 
 АЛЕКСАНДР : "Что будет, если я сейчас сбегу?"
-*" Вместо вас арестуют меня. " -> alexandre-02-reveal03-cop-arrest
-*" Они будут за вами охотиться. " -> alexandre-02-reveal03-cop-chase
-*" У меня будут большие проблемы. " -> alexandre-02-reveal03-cop-arrest
+*"Вместо вас арестуют меня." -> alexandre-02-reveal03-cop-arrest
+*"Они будут за вами охотиться." -> alexandre-02-reveal03-cop-chase
+*"У меня будут большие проблемы." -> alexandre-02-reveal03-cop-arrest
 
 
 === alexandre-02-reveal03-cop-arrest

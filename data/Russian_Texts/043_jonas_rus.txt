@@ -110,7 +110,7 @@ $$ camfocus: driver, slow $$
 *(Сказать правду.) -> jonas-question-allah
 *(Не отвечать.) -> jonas-question-noanswer
 *:silence: (Уклониться от темы.) -> jonas-question-avoidanswer
-*:angry: (Обиделся.) -> jonas-question-angryanswer
+*:anger: (Обиделся.) -> jonas-question-angryanswer
 
 
 === jonas-question-allah
@@ -120,8 +120,8 @@ $$ camfocus: driver, slow $$
 ЙОНАС: "Но уже нет?"
 *(Сказать правду.) -> jonas-question-allah2
 *(Не отвечать.) -> jonas-question-allah2-noanswer
-*:silence: (Избегайте этой темы.) -> jonas-question-allah2-avoidanswer
-*:angry: (Обиделся.) -> jonas-question-angryanswer
+*:silence: (Уклониться от темы.) -> jonas-question-allah2-avoidanswer
+*:anger: (Обиделся.) -> jonas-question-angryanswer
 
 
 === jonas-question-allah2
@@ -177,7 +177,7 @@ $$ anim:IDLE_DRIVERKEYBOARD $$
 
 === jonas-reality
 
-ЙОНАС: "Лично… я считаю, что все это…"
+ЙОНАС: "Лично… я считаю, что всё это…"
 $$ anim:IDLE_DRIVER $$
 $$ camfocus: default, slow $$
 Он указывает на окружающий мир.
@@ -191,7 +191,7 @@ $$ anim:MOVING_HAND $$
 $$ anim:IDLE_MIND $$
 $$ movie: stop $$
 Он делает резкую паузу - невозможно понять, нарочно или нет.
-*:puzzled: В последнее время я только об этом и думаю... -> jonas-reality2
+*:puzzled: "В последнее время я только об этом и думаю..." -> jonas-reality2
 *:silence: (Пусть продолжает говорить.) -> jonas-reality2
 
 
@@ -202,7 +202,7 @@ $$ anim:MOVING_HAND_REV $$
 $$ anim:IDLE_DRIVER $$
 Вы чувствуете себя некомфортно.
 $$ clue: clue_angel_customer_jonas_01 $$
-ЙОНАС: "Все это симуляция."
+ЙОНАС: "Всё это симуляция."
 ЙОНАС: "Я искренне в это верю."
 *"Что-что?" -> jonas-simulation-question
 *"Компьютерная… симуляция?" -> jonas-simulation-intro
@@ -322,12 +322,12 @@ $$ dialogspeed: normal $$
 $$ anim:MOVING_HAND_REV $$
 $$ anim:IDLE_DRIVER $$
 Пристально смотрит.
-ЙОНАС: "Каково это — узнавать все это?"
+ЙОНАС: "Каково это — узнавать всё это?"
 ЙОНАС: "Вы злитесь? Разочарованы? Вам грустно? Чувствуете себя побеждённым? Готовы покончить с собой?"
 ЙОНАС: "Я прохожу через все эти фазы... каждый день."
 $$ anim:IDLE_DRIVERKEYBOARD $$
 Он вздыхает.
-ЙОНАС: "Я говорю себе, что мир еще не готов."
+ЙОНАС: "Я говорю себе, что мир ещё не готов."
 ЙОНАС: "И все же наше будущее… открыть нашу реальность."
 Он опускает взгляд.
 $$ travel: stop $$
@@ -369,7 +369,7 @@ $$ anim:IDLE_DRIVERKEYBOARD $$
 
 === jonas-theory-knowing-god
 
-ЙОНАС: "Однажды, если атеист заявит, что Бога, Аллаха или кого-то еще не существует…"
+ЙОНАС: "Однажды, если атеист заявит, что Бога, Аллаха или кого-то ещё не существует…"
 
 
 === jonas-theory-knowing

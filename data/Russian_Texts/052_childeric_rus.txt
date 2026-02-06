@@ -7,7 +7,7 @@ $$ reveal: 052_00 $$
 $$ anim: IDLE_WINDOW $$
 Открывается дверь автомобиля, входит ваш пассажир, одетый в...
 $$ music-control: 0 $$
-Довольно тяжелые на вид латные доспехи. Металлические пластины лязгают, когда он садится.
+Довольно тяжёлые на вид латные доспехи. Металлические пластины лязгают, когда он садится.
 Кажется, что рога находятся в опасной близости от крыши.
 *"Осторожнее с вашим облачением, ладно…" -> childeric-01-start-horns
 *"Куда едем?" -> childeric-01-start-where-intro
@@ -37,7 +37,7 @@ $$ anim-link: BEATING $$
 *"И куда вы направляетесь в таком виде?" -> childeric-01-start-where
 *"Гора… Мужества?" -> childeric-01-start-mount
 *"Блестящие рога… дракон?" -> childeric-01-start-dragon
-*(Не реагировать.) -> childeric-01-start-where-emergency
+*:silence: (Не реагировать.) -> childeric-01-start-where-emergency
 
 
 === childeric-01-start-horns-hub-mount1
@@ -45,14 +45,14 @@ $$ anim-link: BEATING $$
 Довольно драматическая пауза.
 *"Простите, но куда вы собрались в таком виде?" -> childeric-01-start-where
 *:puzzled: "Обгоревшая рыба… дракон?" -> childeric-01-start-dragon
-*(Не реагировать.) -> childeric-01-start-where-emergency
+*:silence: (Не реагировать.) -> childeric-01-start-where-emergency
 
 
 === childeric-01-start-horns-hub2
 
-Еще одна драматическая пауза.
+Ещё одна драматическая пауза.
 *"И вообще, куда вы собираетесь в таком виде?" -> childeric-01-start-where
-*(Не реагировать.) -> childeric-01-start-where-emergency
+*:silence: (Не реагировать.) -> childeric-01-start-where-emergency
 
 
 === childeric-01-start-mount
@@ -167,7 +167,7 @@ $$ anim-link: DRIVER_2_WINDOW $$
 ЧИЛДЕРИК: "Ты скакал всю ночь напролёт?"
 $$ anim-link: BEATING $$
 После минутного колебания вы киваете.
-*(Не реагировать.) -> childeric-01-drive2-intro
+*:silence: (Не реагировать.) -> childeric-01-drive2-intro
 *"Где ваш… конь?" -> childeric-01-drive1-yourhorse
 *"Зачем этот костюм?" -> childeric-01-drive1-costume
 
@@ -242,7 +242,7 @@ $$ anim-link: HELMET $$
 ЧИЛДЕРИК: "Не сейчас."
 ЧИЛДЕРИК: "...вдох-выдох."
 $$ dialogspeed: normal $$
-Когда он снова начинает говорить, его голос все еще неуверен.
+Когда он снова начинает говорить, его голос всё ещё неуверен.
 
 
 === childeric-01-drive1-costume
@@ -312,7 +312,7 @@ $$ tip: low $$
 -> hub-story=2?childeric-01-start-horns-hub2;;hub-story=0?childeric-01-start-horns-hub1;;dragon=1?childeric-01-start-horns-hub-dragon1;;mount=1?childeric-01-start-horns-hub-mount1;;childeric-01-start-horns-hub1
 *"И куда именно мы пойдём в такой одежде?" -> childeric-01-start-where
 *:puzzled: "Куда путь держишь, милорд?" -> childeric-01-start-mount
-*(Не реагировать.) -> childeric-01-start-where-emergency
+*:silence: (Не реагировать.) -> childeric-01-start-where-emergency
 
 
 === childeric-01-end-reveal

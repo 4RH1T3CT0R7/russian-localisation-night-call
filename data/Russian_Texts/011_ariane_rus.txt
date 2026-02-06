@@ -25,6 +25,7 @@ $$ music-control: 20 $$
 === ariane-01-crisis-intro2
 
 (Подождать.)
+Она смотрит на вас. Вы смотрите на неё. Так проходит мгновение.
 *"Куда вы едете?" -> ariane-01-crisis-intro1
 *(Подождать.) -> ariane-01-crisis-intro2b
 
@@ -39,6 +40,7 @@ $$ music-control: 20 $$
 === ariane-01-crisis-intro2c
 
 (Подождать.)
+Мир вокруг, кажется, замирает. Вы задерживаете дыхание.
 *"Вы куда-то едете?" -> ariane-01-crisis-intro1
 *(Подождать.) -> ariane-01-crisis-intro2d
 
@@ -53,6 +55,7 @@ $$ music-control: 20 $$
 === ariane-01-crisis-intro2e
 
 (Подождать.)
+Её взгляд буравит вас.
 *"Мадам?" -> ariane-01-crisis-intro1
 *(Подождать.) -> ariane-01-crisis-intro2f
 
@@ -109,7 +112,7 @@ $$ anim-link: WINDOW2DRIVER $$
 
 === ariane-01-daughter
 
-АРИАНА: "Эсмеральда. Абсолютная красавица. Всегда играет со своим телефоном!"
+АРИАНА : "Эсмеральда. Абсолютная красавица. Всегда играет со своим телефоном!"
 *"Я знаю, о ком вы говорите…" -> ariane-01-daughteryes
 *"Я не знаю, о ком вы говорите…" -> ariane-01-daughterno
 *:silence: (Ничего не говорить.) -> ariane-01-silence
@@ -164,6 +167,7 @@ $$ anim-link: WINDOW2DRIVER $$
 
 $$ anim-link: WINDOW2DRIVER $$
 "Выслушайте меня."
+АРИАНА : "Где моя дочь? Посмотрите мне прямо в глаза и скажите."
 
 
 === ariane-01-explain

@@ -1,0 +1,459 @@
+==============================================================================
+  Night Call Russian Localization - Deep Quality Audit v1
+==============================================================================
+
+Parsing English passage dump...
+  Found 200 objects, 5399 total passages.
+
+Found 155 Russian text files.
+
+==============================================================================
+  CATEGORY 1: Duplicate Consecutive Lines (copy-paste errors)
+==============================================================================
+
+  No duplicate consecutive lines found.
+
+==============================================================================
+  CATEGORY 2: Potentially Untranslated English Text
+  (Lines where >70% of alphabetic characters are Latin A-Z;
+   may also flag intentional foreign language quotes)
+==============================================================================
+
+  FILE: 018_francois_rus.txt, Line 364 (100% Latin):
+    ФРАНСУА: "“Bis peccare in bello non licet.”"
+
+  FILE: 018_francois_rus.txt, Line 368 (100% Latin):
+    ФРАНСУА: "“Bis peccare in bello non licet.”"
+
+  >> Total: 2 potentially untranslated line(s) found.
+
+==============================================================================
+  CATEGORY 3: Broken Speaker Format
+==============================================================================
+
+  No broken speaker formats found.
+
+==============================================================================
+  CATEGORY 4: Orphaned / Mismatched Echo Lines
+==============================================================================
+
+  FILE: 001_patricia_rus.txt
+    Passage: patricia-02-story-what (from patricia-02-story)
+    Choice   (line 345): (Улыбнуться.)
+    Echo     (line 359):   (Смех.)
+
+  FILE: 008_vincent_rus.txt
+    Passage: vincent-next-intro (from vincent-party)
+    Choice   (line 75): "И что потом?"
+    Echo     (line 82):   "Я не могу..."
+
+  FILE: 010_camilleantoine_rus.txt
+    Passage: ca-questionintrogood (from ca-whispers-question)
+    Choice   (line 86): "Да?"
+    Echo     (line 92):   "Вы ищете место для ночлега?"
+
+  FILE: 012_christophe_rus.txt
+    Passage: christophe-01-confessional-intro1 (from christophe-01-cold)
+    Choice   (line 782): "Постоянно."
+    Echo     (line 789):   "Иногда."
+
+  FILE: 014_fragonard_rus.txt
+    Passage: frag-04-question-girlfriend (from frag-04-question)
+    Choice   (line 1245): (Солгать.)
+    Echo     (line 1270):   "С моей девушкой."
+
+  FILE: 014_fragonard_rus.txt
+    Passage: frag-04-question-friends (from frag-04-question)
+    Choice   (line 1246): (Солгать.)
+    Echo     (line 1277):   "С друзьями…"
+
+  FILE: 016_gerard_rus.txt
+    Passage: gerard-01-truth (from gerard-01-jailyes)
+    Choice   (line 158): (Сказать правду.)
+    Echo     (line 165):   "Убийство... Грубый парень, который бил слишком часто."
+
+  FILE: 016_gerard_rus.txt
+    Passage: gerard-01-lie (from gerard-01-jailyes)
+    Choice   (line 159): (Солгать.)
+    Echo     (line 170):   "Убийство. Драка, вышедшая из-под контроля. Я защищался, и другой парень упал на тротуар."
+
+  FILE: 019_herve_rus.txt
+    Passage: herve-01-coldnot (from herve-01-start)
+    Choice   (line 101): "Нет, все нормально."
+    Echo     (line 108):   "Ну что ж, тебе повезло, дружок."
+
+  FILE: 020_jacquie_rus.txt
+    Passage: jacquie-03-cooking-outroA (from jacquie-03-cooking-hub00)
+    Choice   (line 758): "Надо будет как-нибудь заглянуть на ужин."
+    Echo     (line 810):   "Мне придется зайти и попробовать…"
+
+  FILE: 024_alicehyoga_rus.txt
+    Passage: alicehyoga-please-play (from alicehyoga-please)
+    Choice   (line 132): "Играть в футбол."
+    Echo     (line 175):   "И посмотрите, к чему это привело."
+
+  FILE: 024_alicehyoga_rus.txt
+    Passage: alicehyoga-driveaway (from alicehyoga-end3)
+    Choice   (line 239): (Игнорировать его.)
+    Echo     (line 253):   (Не обращать на него внимания.)
+
+  FILE: 026_skaterz_rus.txt
+    Passage: ultra-01-start-mission-toodrunk3 (from ultra-01-start-mission-toodrunk2)
+    Choice   (line 155): (Настоять на своём.)
+    Echo     (line 161):   "Хорошо, но остыньте с выпивкой после!"
+
+  FILE: 028_carolinaj_rus.txt
+    Passage: carolina-story-intro (from carolina-offer)
+    Choice   (line 72): "Я слушаю…"
+    Echo     (line 79):   "По-моему, это довольно подозрительно..."
+
+  FILE: 029_jerome_rus.txt
+    Passage: jerome-01-end01-klaxon (from jerome-01-end01)
+    Choice   (line 258): (Посигналить.)
+    Echo     (line 274):   (Гудок.)
+
+  FILE: 029_jerome_rus.txt
+    Passage: jerome-03-story03-yes (from jerome-03-story03)
+    Choice   (line 1120): "Да..."
+    Echo     (line 1127):   "Но… Вы знаете, что…"
+
+  FILE: 029_jerome_rus.txt
+    Passage: jerome-03-story03-no (from jerome-03-story03)
+    Choice   (line 1121): "Нет..."
+    Echo     (line 1132):   "Но… я думаю, вы делаете…"
+
+  FILE: 036_sean_rus.txt
+    Passage: sean-01-paris-silence (from sean-01-paris)
+    Choice   (line 224): (Ничего не говорить.)
+    Echo     (line 239):   "Нельзя влюбиться в каждого."
+
+  FILE: 041_francine_rus.txt
+    Passage: francine-nocat-sorry (from francine-nocat)
+    Choice   (line 79): "Никогда не было возможности."
+    Echo     (line 163):   "Мне очень жаль."
+
+  FILE: 054_ludivine_rus.txt
+    Passage: ludivine-01-story5-interruption (from ludivine-01-story5)
+    Choice   (line 186): (Перебить её.)
+    Echo     (line 639):   "Я..."
+
+  FILE: 056_kader_rus.txt
+    Passage: kader-01-woman-laugh (from kader-01-woman-others)
+    Choice   (line 142): (Смех.)
+    Echo     (line 149):   (Улыбнуться.)
+
+  FILE: 057_annabelle_rus.txt
+    Passage: annabelle-01-start-where (from annabelle-01-start)
+    Choice   (line 23): "Идёте в поход?"
+    Echo     (line 74):   "Куда вы направляетесь?"
+
+  FILE: 057_annabelle_rus.txt
+    Passage: annabelle-01-gasstation2-place (from annabelle-01-gasstation2)
+    Choice   (line 527): "Здесь совершенно безопасно."
+    Echo     (line 534):   (Ничего не делать.)
+
+  FILE: 060_mireille_rus.txt
+    Passage: mireille-01-part1-out2-lie (from mireille-01-part1-out2)
+    Choice   (line 121): (Солгать.)
+    Echo     (line 127):   (Сказать правду.)
+
+  FILE: 060_mireille_rus.txt
+    Passage: mireille-01-part1-out-cold (from mireille-01-part1-out3)
+    Choice   (line 143): "Вам стоит вернуться в машину."
+    Echo     (line 159):   "Вам пора возвращаться."
+
+  FILE: 060_mireille_rus.txt
+    Passage: mireille-01-part1-out-cold (from mireille-01-part1-out-silence)
+    Choice   (line 165): "Вы простудитесь."
+    Echo     (line 159):   "Вам пора возвращаться."
+
+  FILE: 060_mireille_rus.txt
+    Passage: mireille-01-part3-albatros-responsible-no (from mireille-01-part3-albatros-responsible)
+    Choice   (line 580): "Нет, не совсем..."
+    Echo     (line 587):   "Почему бы и нет?"
+
+  FILE: 061_denis_rus.txt
+    Passage: denis-01-start-yes (from denis-01-start)
+    Choice   (line 23): "Да, конечно, месье."
+    Echo     (line 29):   "Да."
+
+  FILE: 061_denis_rus.txt
+    Passage: denis-01-start-yes (from denis-01-start)
+    Choice   (line 24): "Ага."
+    Echo     (line 29):   "Да."
+
+  FILE: 061_denis_rus.txt
+    Passage: denis-01-hell4-plan2-intro (from denis-01-hell4-plan)
+    Choice   (line 218): "Вы действительно собираетесь это сделать?"
+    Echo     (line 224):   "Вы действительно собираетесь..."
+
+  FILE: 066_tps_rus.txt
+    Passage: tps-01-game-rules2-intro (from tps-01-game-rules1-hub0)
+    Choice   (line 247): "Начнём?"
+    Echo     (line 292):   "Давайте начнем?"
+
+  FILE: 066_tps_rus.txt
+    Passage: tps-01-game-rules2-intro (from tps-01-game-rules1-hub1)
+    Choice   (line 254): "Начнём?"
+    Echo     (line 292):   "Давайте начнем?"
+
+  FILE: 066_tps_rus.txt
+    Passage: tps-01-game-rules2-intro (from tps-01-game-rules1-hub2)
+    Choice   (line 261): "Начнём?"
+    Echo     (line 292):   "Давайте начнем?"
+
+  FILE: 066_tps_rus.txt
+    Passage: tps-01-game-rules2-intro (from tps-01-game-rules1-hub3)
+    Choice   (line 266): "Начнём?"
+    Echo     (line 292):   "Давайте начнем?"
+
+  FILE: 066_tps_rus.txt
+    Passage: tps-01-game-corridor1-secretlock-straight (from tps-01-game-corridor1-secretlock2)
+    Choice   (line 594): (Держаться на расстоянии.)
+    Echo     (line 610):   "Может, у меня есть что-нибудь, чем можно вскрыть замок?"
+
+  FILE: 066_tps_rus.txt
+    Passage: tps-01-game-xenofex-fight-xenofex-killed-driver-toobad (from tps-01-game-xenofex-fight-xenofex-killed-driver)
+    Choice   (line 1698): "Как жаль вот так внезапно остановиться…"
+    Echo     (line 1705):   "Ок."
+
+  FILE: 066_tps_rus.txt
+    Passage: tps-01-game-xenofex-fight-xenofex-killed-driver-goodluck (from tps-01-game-xenofex-fight-xenofex-killed-driver)
+    Choice   (line 1700): "Плюс 5... значит... 15. Плюс критическое попадание..."
+    Echo     (line 1710):   "Удачи..."
+
+  FILE: 066_tps_rus.txt
+    Passage: tps-01-end-shaine (from tps-01-end-out2)
+    Choice   (line 1971): "Доберитесь домой благополучно…"
+    Echo     (line 1978):   "Спасибо за игру."
+
+  FILE: 066_tps_rus.txt
+    Passage: tps-01-end-shaine (from tps-01-end-out2)
+    Choice   (line 1972): "Удачи..."
+    Echo     (line 1978):   "Спасибо за игру."
+
+  FILE: 070_antoine_rus.txt
+    Passage: antoine-01-whatif-truth (from antoine-01-whatif-ifiwin-spenditall)
+    Choice   (line 255): (Сказать правду.)
+    Echo     (line 261):   "Ладно. По правде… мне бы хотелось… уехать."
+
+  FILE: 071_marcsophie_rus.txt
+    Passage: maso-01-heatA (from maso-01-heat)
+    Choice   (line 57): (Включить отопление.)
+    Echo     (line 63):   (Включить нагрев на полную мощность.)
+
+  FILE: 071_marcsophie_rus.txt
+    Passage: maso-01-heatB (from maso-01-heat)
+    Choice   (line 58): (Включить отопление на максимум.)
+    Echo     (line 68):   (Включить нагрев на полную мощность.)
+
+  FILE: 073_myriam_rus.txt
+    Passage: myriam-01-advice-timetotime (from myriam-01-advice)
+    Choice   (line 259): "Время от времени."
+    Echo     (line 267):   "Часто?"
+
+  FILE: 073_myriam_rus.txt
+    Passage: myriam-01-advice-timetotime (from myriam-01-advice)
+    Choice   (line 260): "Иногда."
+    Echo     (line 267):   "Часто?"
+
+  FILE: 075_henri_rus.txt
+    Passage: henri-01-yourtone-out-introA (from henri-01-yourtone)
+    Choice   (line 57): (Вежливо выставить его.)
+    Echo     (line 66):   (Выгнать его.)
+
+  FILE: 099_boss_01_rus.txt
+    Passage: boss-01-listening-sorry (from boss-01-start)
+    Choice   (line 37): " Извини..."
+    Echo     (line 57):   "Я просто хочу, чтобы всё вернулось в норму. Очистить голову. Перестать думать обо всём этом."
+
+  FILE: 099_boss_01_rus.txt
+    Passage: boss-01-listening-sorry (from boss-01-listening-yes)
+    Choice   (line 46): " Извини..."
+    Echo     (line 57):   "Я просто хочу, чтобы всё вернулось в норму. Очистить голову. Перестать думать обо всём этом."
+
+  FILE: 099_boss_rus.txt
+    Passage: boss-01-listening-sorry (from boss-01-start)
+    Choice   (line 37): " Извини..."
+    Echo     (line 57):   "Я просто хочу, чтобы всё вернулось в норму. Очистить голову. Перестать думать обо всём этом."
+
+  FILE: 099_boss_rus.txt
+    Passage: boss-01-listening-sorry (from boss-01-listening-yes)
+    Choice   (line 46): " Извини..."
+    Echo     (line 57):   "Я просто хочу, чтобы всё вернулось в норму. Очистить голову. Перестать думать обо всём этом."
+
+  FILE: 100_cop_03_rus.txt
+    Passage: cop-03-why-angry-help (from cop-03-why-angry)
+    Choice   (line 176): "Ни слова. Никому. Ты слышишь меня?"
+    Echo     (line 81):   "Она могла бы получить помощь."
+
+  FILE: 100_cop_03_rus.txt
+    Passage: cop-03-why-angry-help (from cop-03-question)
+    Choice   (line 184): "Ни слова. Никому. Ты слышишь меня?"
+    Echo     (line 81):   "Она могла бы получить помощь."
+
+  FILE: 100_cop_04_rus.txt
+    Passage: cop-04-criminal-good (from cop-04-criminal)
+    Choice   (line 49): "Он думал, что поступает правильно."
+    Echo     (line 149):   "Правда?"
+
+  FILE: 100_cop_05_rus.txt
+    Passage: cop-06-intro-sandman-let (from cop-06-intro-sandman)
+    Choice   (line 54): "Примерно через... два часа мы заставим его покинуть свое место."
+    Echo     (line 61):   "Он позволит тебе?"
+
+  FILE: 100_cop_05_rus.txt
+    Passage: cop-06-intro-sandman-how (from cop-06-intro-sandman)
+    Choice   (line 53): "Как?"
+    Echo     (line 221):   "Он позволит тебе?"
+
+  FILE: 100_cop_05_rus.txt
+    Passage: cop-06-mic-confession (from cop-06-mic)
+    Choice   (line 68): "Вам нужно признание?"
+    Echo     (line 226):   "Что мне делать?"
+
+  FILE: 100_cop_rus.txt
+    Passage: cop-03-why-angry-help (from cop-03-question)
+    Choice   (line 580): "Ни слова. Никому. Ты слышишь меня?"
+    Echo     (line 630):   "Она могла бы получить помощь."
+
+  FILE: 100_cop_rus.txt
+    Passage: cop-03-why-angry-help (from cop-03-why-angry)
+    Choice   (line 613): "Ни слова. Никому. Ты слышишь меня?"
+    Echo     (line 630):   "Она могла бы получить помощь."
+
+  FILE: 100_cop_rus.txt
+    Passage: cop-04-criminal-good (from cop-04-criminal)
+    Choice   (line 762): "Он думал, что поступает правильно."
+    Echo     (line 769):   "Правда?"
+
+  FILE: 100_cop_rus.txt
+    Passage: cop-06-intro-sandman-how (from cop-06-intro-sandman)
+    Choice   (line 942): "Как?"
+    Echo     (line 950):   "Он позволит тебе?"
+
+  FILE: 100_cop_rus.txt
+    Passage: cop-06-intro-sandman-let (from cop-06-intro-sandman)
+    Choice   (line 943): "Примерно через... два часа мы заставим его покинуть свое место."
+    Echo     (line 955):   "Он позволит тебе?"
+
+  FILE: 100_cop_rus.txt
+    Passage: cop-06-mic-confession (from cop-06-mic)
+    Choice   (line 977): "Вам нужно признание?"
+    Echo     (line 985):   "Что мне делать?"
+
+  FILE: 200_ada_rus.txt
+    Passage: ada-01-start-hello (from ada-01-start)
+    Choice   (line 14): "Добрый вечер, Ада."
+    Echo     (line 22):   "Робот?"
+
+  FILE: 200_ada_rus.txt
+    Passage: ada-01-start-hello (from ada-01-start)
+    Choice   (line 15): "Привет."
+    Echo     (line 22):   "Робот?"
+
+  FILE: 200_ada_rus.txt
+    Passage: ada-01-reveal-goal-intro (from ada-01-reveal)
+    Choice   (line 360): "Конечная цель?"
+    Echo     (line 216):   "Разве вы не должны помогать людям?"
+
+  FILE: 206_amira_rus.txt
+    Passage: amira-01-intro-concert (from amira-01-intro)
+    Choice   (line 23): (Ничего не говорить.)
+    Echo     (line 35):   "Это концерт?"
+
+  FILE: 206_amira_rus.txt
+    Passage: amira-01-story02-china-introA (from amira-01-story02)
+    Choice   (line 116): "И что именно происходит в Китае?"
+    Echo     (line 123):   "И как это связано с вашей игрой?"
+
+  FILE: 206_amira_rus.txt
+    Passage: amira-01-story02-game-introA (from amira-01-story02)
+    Choice   (line 117): "Мне платят за то, что я играю в видеоигру."
+    Echo     (line 141):   "И как это связано с вашей игрой?"
+
+  FILE: 206_amira_rus.txt
+    Passage: amira-01-story02-game01-silence (from amira-01-story02-game01)
+    Choice   (line 155): (Ничего не говорить.)
+    Echo     (line 173):   (Оставить ее в покое.)
+
+  FILE: 206_amira_rus.txt
+    Passage: amira-01-outro-goodevening (from amira-01-outro-story-hub)
+    Choice   (line 239): "Спасибо."
+    Echo     (line 262):   "Приятного вечера."
+
+  FILE: 206_amira_rus.txt
+    Passage: amira-01-outro-goodevening (from amira-01-outro-storyno-hub)
+    Choice   (line 245): "Добрый вечер."
+    Echo     (line 262):   "Приятного вечера."
+
+  FILE: 207_lola_rus.txt
+    Passage: frexit-admission-leave (from frexit-admission)
+    Choice   (line 363): "Вы голосовали за выход?"
+    Echo     (line 370):   "Но... ваш партнер - француз..."
+
+  FILE: 217_alph_rus.txt
+    Passage: alph-01-question02-expensive (from alph-01-question02)
+    Choice   (line 170): (Пожимает плечами.)
+    Echo     (line 187):   "Это слишком дорого."
+
+  FILE: 219_nathalie_rus.txt
+    Passage: nathalie-01-YourStoryB (from nathalie-01-storyA-outro)
+    Choice   (line 267): "Да."
+    Echo     (line 273):   "Вроде того. Это сложно."
+
+  FILE: 219_nathalie_rus.txt
+    Passage: nathalie-01-HerStoryC-03-silence (from nathalie-01-HerStoryC-03)
+    Choice   (line 365): (Коснуться её плеча.)
+    Echo     (line 419):   (Прикасается к ее плечу.)
+
+  FILE: 221_jim_rus.txt
+    Passage: jim-hungry-restaurant (from jim-drive-hungry-silence)
+    Choice   (line 62): "Я уже поел."
+    Echo     (line 79):   "Могу я вас куда-нибудь подбросить?"
+
+  FILE: 221_jim_rus.txt
+    Passage: jim-hungry-alone (from jim-drive-hungry-silence)
+    Choice   (line 63): "Может, подвезти вас куда-нибудь?"
+    Echo     (line 132):   "Могу я вас куда-нибудь подбросить?"
+
+  FILE: 224_nadiayves_rus.txt
+    Passage: ny-01-end-money-refuse (from ny-01-end-lastoption)
+    Choice   (line 242): (Отказаться от денег.)
+    Echo     (line 280):   "Нет. Ни за что. Нет шансов."
+
+  FILE: 982_Sandman_01_Location_rus.txt
+    Passage: 982-01-intel-lie-friend (from 982-01-intel-lie)
+    Choice   (line 142): "Близкий друг..."
+    Echo     (line 163):   "Моей близкой подруге нужно узнать об этом побольше, но она не знает, где спросить."
+
+  FILE: 990_ending_rus.txt
+    Passage: 990-ending-call-hangup (from 990-ending-call02)
+    Choice   (line 122): (Положить трубку.)
+    Echo     (line 162):   "Позже..."
+
+  >> Total: 79 mismatched echo line(s) found.
+
+==============================================================================
+  CATEGORY 5: Passage Count Discrepancies (Russian vs English)
+==============================================================================
+
+  FILE: 090_houssine_rus.txt
+    Russian passages: 91
+    English passages: 68  (from: 090_houssine_01, 090_houssine_02, 090_houssine_03, 090_houssine_04, 090_houssine_05, 090_houssine_06)
+    Difference: +23 (MORE)
+    Extra in Russian:   houssine-00a-firsttime, houssine-00a-start, houssine-00b-endA, houssine-00b-endB, houssine-00b-endC, houssine-00b-endZ, houssine-00b-final, houssine-00b-insultA, houssine-00b-insultB, houssine-00b-insultC
+
+  >> Total: 1 discrepancy(ies) found.
+
+==============================================================================
+  AUDIT SUMMARY
+==============================================================================
+  1. Duplicate consecutive lines:   0
+  2. Untranslated English text:      2
+  3. Broken speaker format:          0
+  4. Mismatched echo lines:          79
+  5. Passage count discrepancies:    1
+  ─────────────────────────────────
+  TOTAL FINDINGS:                    82
+==============================================================================

@@ -2,7 +2,7 @@
 Предприниматель. Наследник четвертой жертвы.
 Молодой, подтянутый, в хорошей физической форме.
 Проблемы с управлением гневом. Напала на полицейского в день первого убийства.
-Никогда не арестовывали. Размытое прошлое. Живет в студии, принадлежащей ее семье... и Groupe Diamant.
+Никогда не арестовывали. Размытое прошлое. Живёт в студии, принадлежащей её семье... и Groupe Diamant.
 Рост = 1м79.
 Генеральный директор Groupe Diamant (владелец здания Albatros).
 Отличное физическое состояние.
@@ -340,7 +340,7 @@ $$ anim-link: WINDOW_2_DRIVER $$
 
 === camille-01-idea-good-ok
 
-"Я знала, что вам понравится."
+КАМИЛЬ: "Я знала, что вам понравится."
 КАМИЛЬ: "Я была в этом уверена."
 
 
@@ -404,7 +404,7 @@ $$ anim-link: WRITING_2_DRIVER $$
 Вы вспоминаете одну конкретную ночь. Кровь на ваших руках. Вашу рану.
 Зона комфорта.
 *:silence: (Промолчать.) -> camille-01-end-badidea4
-*:angry: (Припарковаться.) -> camille-01-getout1
+*:anger: (Припарковаться.) -> camille-01-getout1
 
 
 === camille-01-end-badidea4
@@ -453,7 +453,6 @@ $$ music-control: 60 $$
 $$ camfocus: default, slow $$
 
 
--> hub-story=2?childeric-01-start-horns-hub2;;hub-story=0?childeric-01-start-horns-hub1;;dragon=1?childeric-01-start-horns-hub-dragon1;;mount=1?childeric-01-start-horns-hub-mount1;;childeric-01-start-horns-hub1
 *"И что же это за... кое-что?" -> camille-01-getout2-outroA
 *:silence: (Промолчать.) -> camille-01-getout2-outroB
 *:anger: "Убирайтесь к чёрту из моего такси." -> camille-01-getout-now

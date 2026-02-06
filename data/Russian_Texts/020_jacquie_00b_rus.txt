@@ -110,7 +110,7 @@ $$ movie: black $$
 Связь очевидна…
 $$ anim-link: DRIVER_2_WINDOW $$
 $$ clue: clue_judge_customer_rumor_01, clue_judge_customer_rumor_02, clue_judge_customer_rumor_03, clue_judge_customer_rumor_04, clue_judge_customer_rumor_05, clue_judge_customer_rumor_06, clue_judge_customer_rumor_07, clue_judge_customer_rumor_08, clue_judge_customer_rumor_09, clue_judge_customer_rumor_10, clue_angel_customer_rumor_01, clue_angel_customer_rumor_02, clue_angel_customer_rumor_03, clue_angel_customer_rumor_04, clue_angel_customer_rumor_05, clue_angel_customer_rumor_06, clue_angel_customer_rumor_07, clue_angel_customer_rumor_08, clue_angel_customer_rumor_09, clue_angel_customer_rumor_10, clue_angel_customer_rumor_11, clue_angel_customer_rumor_12, clue_angel_customer_rumor_13, clue_angel_customer_rumor_14, clue_sand_customer_rumor_01, clue_sand_customer_rumor_02, clue_sand_customer_rumor_03, clue_sand_customer_rumor_04, clue_sand_customer_rumor_05, clue_sand_customer_rumor_06, clue_sand_customer_rumor_07, clue_sand_customer_rumor_08, clue_sand_customer_rumor_09, clue_sand_customer_rumor_10 $$
-"Не уверена, поможет ли тебе это."
+"Не уверен, поможет ли тебе это."
 "Ещё как поможет."
 Она улыбается вам.
 
