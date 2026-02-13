@@ -1,4 +1,4 @@
-# Night Call — Русификатор
+# Night Call - Русификатор
 
 Полная русская локализация для игры **Night Call** (Monkey Moon / Raw Fury).
 
