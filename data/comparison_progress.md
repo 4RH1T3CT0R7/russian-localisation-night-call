@@ -63,24 +63,34 @@
 | 100 | cop | 🔧 | ты/вы fix: "Твоя последняя ночь"→"Ваша" (both cop_rus and cop_05_rus) |
 | 208 | myrtille | 🔧 | ты/вы fix: "твою улыбку"→"вашу" |
 
-### Compared via agent (output lost, no issues detected in spot checks)
+### Session 13 (re-compared files with lost agent output)
 | # | Character | Status | Notes |
 |---|-----------|--------|-------|
-| 016 | gerard | 🤖 | Agent completed, output empty |
-| 017 | grace | 🤖 | Agent completed, output empty |
-| 021 | carlo | 🤖 | Agent completed, output empty |
-| 024 | alicehyoga | 🤖 | Agent completed, output empty |
-| 027 | lucieemilie | 🤖 | Agent completed, output empty |
-| 034 | phil | 🤖 | Agent completed, output empty |
-| 037 | shinji | 🤖 | Agent completed, output empty |
-| 041 | francine | 🤖 | Agent completed, output empty |
-| 042 | djena | 🤖 | Agent completed, output empty |
-| 045 | vero | 🤖 | Agent completed, output empty |
-| 047 | amelie | 🤖 | Agent completed, output empty |
-| 051 | leonie | 🤖 | Agent completed, output empty |
-| 052 | childeric | 🤖 | Agent completed, output empty |
-| 056 | kader | 🤖 | Agent completed, output empty |
-| 058 | agnes | 🤖 | Agent completed, output empty |
+| 016 | gerard | 🔧 | 3 fixes: fabricated choice, fabricated narration, extra directive+echo |
+| 017 | grace | 🔧 | 1 fix: choice echo in grace-01-advert |
+| 024 | alicehyoga | 🔧 | 3 fixes: missing quotes+narration (boy laughing), anim order+missing narration (mother rolls eyes), missing narration (flings bill) |
+| 027 | lucieemilie | 🔧 | 6 fixes: 2 choice echoes, wrong choice text, wrong speaker+missing narration, missing driver speech, wrong dialogue order in le-01-end |
+| 042 | djena | 🔧 | 1 fix: missing narration "She blinks hard" in djena-01-reveal |
+| 045 | vero | 🔧 | 9 fixes: wrong choice text, 3 choice echoes, wrong line order, fabricated content, missing narrations, wrong passage content |
+| 071 | marcsophie | 🔧 | 5 fixes: fabricated MARC line, 2 ты/вы fixes, missing narration, duplicate SOPHIE line |
+| 074 | emilia | 🔧 | 20 fixes: 10 choice echoes, 4 extra WINDOW_HEAD, 2 dialogspeed placement, 2 missing quotes, 2 mistranslations, missing content in start-shame |
+| 077 | santa | 🔧 | 3 fixes: wrong choice text, wrong line order, narration format |
+| 090 | houssine | 🔧 | 2 fixes: movie directive placement+ты→вы, narration format |
+| 096 | gilda | 🔧 | 14 fixes: fabricated content, gender errors, mistranslations, missing driver lines, wrong reference |
+| 097 | alexandre | 🔧 | 4 fixes: missing quotes on driver speech |
+
+### Session 14 (final re-comparison of all remaining 🤖 files)
+| # | Character | Status | Notes |
+|---|-----------|--------|-------|
+| 021 | carlo | 🔧 | 2 fixes: choice echoes in carlo-03lie-weird and carlo-03lie-driver |
+| 034 | phil | ✅ | Clean (customer-add-clue is shared passage with consistent translation across 6 files) |
+| 037 | shinji | 🔧 | 1 fix: choice echo in shinji-01-eiffel-english |
+| 041 | francine | ✅ | Clean |
+| 047 | amelie | 🔧 | 8 fixes: missing line+wrong order (insist-intro), missing AMÉLIE line (firstcontact-sorry), missing driver speech (firstcontact-explain), missing AMÉLIE line (return-depends), missing line+wrong order (iampornactress-uncommun), wrong content (inquiry-outroB-answers), missing narration (end-outro), spurious reveal (end-clue-outro) |
+| 051 | leonie | 🔧 | 4 fixes: missing driver line (tribalhouse), 3 choice echoes (thesis-precise, thesis4-somethingelse, thesis4-people) |
+| 052 | childeric | 🔧 | 2 fixes: wrong line order (drive1-yawnyes), choice echo (drive1-yourhorse) |
+| 056 | kader | 🔧 | 5 fixes: choice echo (cops-ok), missing КАДЕР line (cops), wrong content (book-why: 2 lines), choice echo (woman-smile) |
+| 058 | agnes | 🔧 | 8 fixes: 7 choice echoes (beard-courage, beard-why, beard-likeit, kids-reaction, kids-scared, kids-surprise-francois-bad, kids-surprise-francois-freespeech), 1 fabricated line (beard-likeit2) |
 
 ## Metadata Files (no dialogue)
 | # | Character | Notes |
@@ -111,15 +121,35 @@ Sweep agent reported 68 issues in 12 files. Manual verification found only 8 rea
 - 100_cop_05 + 100_cop: 1 fix each ("Твоя последняя ночь")
 - All other flagged lines were false positives (dialogue in quotes, generic/impersonal ты, etc.)
 
+### Session 15-16 (2xx friend/NPC files)
+| # | Character | Status | Notes |
+|---|-----------|--------|-------|
+| 200 | ada | 🔧 | 5 fixes: choice echo (robot), 3 fabricated choice-label narrations, fabricated content+misplaced redirect |
+| 203 | milo | 🔧 | 3 fixes: missing grin line, вы→ты (company), wrong speaker tag (мафиози) |
+| 203_00a | milo variant | 🔧 | 10 ты/вы register fixes (Milo uses ты from first meeting) |
+| 205 | chantal | 🔧 | 21 fixes: major reconstruction - wrong passage contents, choice echoes, missing lines, misplaced redirects across 17 passages |
+| 206 | amira | 🔧 | 5 fixes: 2 wrong choice texts, choice echo, wrong passage content, ты/вы+gender |
+| 207 | lola | 🔧 | 30 fixes via agent: fabricated intro, 10 choice echoes, 4 wrong choices, 3 duplicates, missing lines, wrong gender |
+| 208 | myrtille | 🔧 | 30 fixes: 8 em-dashes, 6 ты/вы, 5 missing lines, 2 wrong order, 2 mistranslations, wrong gender, wrong speaker, grammar, standalone silence bug |
+| 208_00a | myrtille variant | 🔧 | 6 fixes: wrong name Мюртий→Миртиль (x2), граммофон→фонограф, 3 ты/вы fixes |
+| 210 | xavier | 🔧 | 29 fixes via agent: 13 choice echoes, 7 wrong choices, 8 missing lines, fabricated choices/lines |
+| 214 | roksana | 🔧 | 5 fixes: fabricated line, missing ROKSANA dialogue, duplicate narration→laughter, extra dialogspeed, extra tip directive |
+| 217 | alph | 🔧 | 30 fixes via agent: 10 choice echoes, 3 wrong choices, 11 missing lines, fabricated lines |
+| 219 | nathalie | 🔧 | 34 fixes via agent: 5 choice echoes, 5 wrong content, 8 missing lines, 5 wrong speaker tags, 3 ты/вы |
+| 221 | jim | 🔧 | 22 fixes via agent: 14 choice echoes, 5 wrong choices, 10 missing lines, fabricated lines |
+| 222 | melchior | 🔧 | 23 fixes via agent: 8 choice echoes, 8 missing lines, fabricated lines, mistranslation |
+| 223 | berenice | 🔧 | 7 fixes: 2 empty passages filled, missing speaker prefix, missing line, wrong line order, missing ё, wrong duplicate content |
+| 224 | nadiayves | 🔧 | 5 fixes (previous session) |
+
 ## Summary
-- **Total passenger files**: ~75
-- **Fully compared**: ~46 (including 9 metadata, 2 English too short)
-- **Compared via agent (output lost)**: 15
-- **Not yet started**: ~4 (pierrette already compared in prev session, herve ты/вы already noted)
-- **Files with fixes this session**: mireille(060), denis(061), pauline(063), cop(100), myrtille(208), jacquie(020), ade(025), tps(066)
-- **No commit made yet** - all changes need committing
+- **Total passenger files**: ~75 (001-068) + ~16 (2xx friend/NPC files)
+- **Fully compared & fixed**: ~80 (including 9 metadata, 2 English too short, all 2xx files)
+- **Session 13 fixes**: 12 files fixed with 71 total fixes
+- **Session 14 fixes**: 7 files fixed with 30 total fixes
+- **Session 15-16 fixes**: 16 files fixed with ~265 total fixes (2xx friend/NPC batch)
+- **ALL FILES COMPARED** - translation comparison complete
 
 ## Next Steps
-1. **Commit all changes** - many files modified across sessions 10-12
-2. **Sync to game folder**
-3. Agent-compared files (🤖) could benefit from manual re-check if time permits
+1. **Commit all changes** and build new DLL version
+2. Sync all changed files to game folder
+3. In-game testing

@@ -72,7 +72,7 @@ $$ anim: IDLE_DRIVER $$
 
 === ludwig-chat-known-seehim
 
-Она останавливается и смотрит на вас.
+РОКСАНА : "По причинам, которые я не могу объяснить..."
 Она вдруг заговорила глубоким, почти мучительным голосом.
 РОКСАНА : "Но, отвечая на ваш вопрос, нет. Нет, я его не вижу. Я никогда его не видела."
 -> roksana-intro
@@ -80,7 +80,6 @@ $$ anim: IDLE_DRIVER $$
 
 === ludwig-chat-unknown
 
-РОКСАНА: "Может быть, сейчас это имя и не прозвучит… но скоро…"
 Она останавливается.
 *"Скоро что?" -> ludwig-chat-unknown-soon
 *"Призраков не существует." -> ludwig-chat-unknown-dontexist
@@ -116,10 +115,9 @@ $$ anim: IDLE_DRIVER $$
 -> roksana-intro
 
 
--> _Driver.Met.Ludwig=1?ludwig-chat-known;;ludwig-chat-unknown
 === roksana-intro
 
-Она чётко произносит каждое слово.
+Раздаётся смех.
 $$ dialogspeed: slow $$
 $$ anim: LOOKING_WINDOW $$
 $$ anim: IDLE_WINDOW $$
@@ -154,14 +152,12 @@ $$ anim: IDLE_CLOSER $$
 
 === ludwig-ghosts
 
-"Призраки существуют?"
 РОКСАНА : "Напротив..."
 -> ludwig-poor-intro
 
 
 === ludwig-mad
 
-"Вы сумасшедшая."
 Она давит вас взглядом, полным осуждения.
 РОКСАНА : "Мне абсолютно всё равно, что вы обо мне думаете. Честно."
 -> ludwig-poor-intro
@@ -199,7 +195,6 @@ $$ dialogspeed: normal $$
 
 === roksana-secondadvice
 
-$$ dialogspeed: slow $$
 РОКСАНА : "Не злите его. Выслушайте его. Помогайте ему. Подружитесь с ним."
 $$ dialogspeed: normal $$
 
@@ -236,7 +231,6 @@ $$ music-control: 60 $$
 
 === roksana-exit-money
 
-$$ tip: none $$
 Она делает паузу, с трудом сдерживая смех.
 РОКСАНА : "Вы просто невероятные люди."
 "Какие люди? Французы?"

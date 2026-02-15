@@ -147,7 +147,8 @@ $$ dialogspeed: fast $$
 $$ dialogspeed: normal $$
 ХЁГА : "Вау! Очень круто!"
 АЛИСА : "Сэр, пожалуйста... Не поощряйте его!"
-Его клыки были желтыми, а изо рта пахло старым вонючим сыром.
+"Его клыки были желтыми, а изо рта пахло старым вонючим сыром."
+Мальчик разражается смехом.
 
 
 === alicehyoga-silence-end
@@ -162,8 +163,9 @@ $$ music-control: 60 $$
 Она берёт сдачу.
 АЛИСА : "Спасибо. Скажи спасибо водителю Хёге."
 Мальчик немного посмеивается и говорит:
-$$ anim: IDLE_ROLLEYES $$
 ХЁГА : "До свидания, водитель Хёга."
+$$ anim: IDLE_ROLLEYES $$
+Его мать закатывает глаза.
 *:smile: (Смех.) -> alicehyoga-silence-end-werewolf
 *(Не обращать на него внимания.) -> alicehyoga-silence-end-werewolf
 *:silence: (Ничего не говорить.) -> alicehyoga-end3
@@ -220,6 +222,7 @@ $$ music-control: 60 $$
 
 === alicehyoga-end2
 
+Пассажирка швыряет вам купюру.
 АЛИСА : "Сдачи не надо."
 $$ movie: Pharmacie_Loop $$
 $$ sfx: sfx_gameplay_car_open_from_int $$

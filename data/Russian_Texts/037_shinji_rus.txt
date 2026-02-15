@@ -55,7 +55,6 @@ $$ anim-link: WINDOW_2_DESPAIR_2_WINDOW $$
 
 === shinji-01-eiffel-english
 
-:puzzled: (Сказать что-нибудь по-английски.)
 Те немногие слова, которые вы знаете по-английски, не помогают вам найти общий язык с пассажиром.
 
 
@@ -346,10 +345,10 @@ $$ camfocus: driver, fast $$
 
 === shinji-01-exit-yakuza
 
-СИНДЗИ : "ヤクザ！"
 $$ dialogspeed: slow $$
-Вы практически подпрыгиваете - он только что произнес слово "якудза"!
+СИНДЗИ : "ヤクザ！"
 $$ dialogspeed: normal $$
+Вы практически подпрыгиваете - он только что произнес слово "якудза"!
 
 
 -> yakuza=1?shinji-01-exit-yakuza;;shinji-01-exit-intro

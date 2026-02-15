@@ -24,7 +24,6 @@ $$ anim: HAPPY $$
 
 === ada-01-start-robot
 
-"Робот?"
 АДА: "Именно, робот. Хотя я предпочитаю термин «автоматизированный ассистент». Слово «робот» нервирует большинство людей."
 
 
@@ -97,7 +96,6 @@ $$ anim: IDLE_OFF $$
 
 === ada-01-question-origin
 
-(Спросить, откуда она.)
 АДА: "...построена? Спроектирована?"
 
 
@@ -172,7 +170,6 @@ $$ anim: HAPPY $$
 
 === ada-01-question-montparnasse
 
-(Спросить, зачем она едет на Монпарнас.)
 АДА: "...почему я еду на Гар Монпарнас?"
 
 
@@ -230,7 +227,6 @@ $$ anim: BEING_SAD $$
 
 === ada-01-reveal-goal
 
-(Пусть продолжает.)
 $$ anim: SMILING $$
 АДА: "Эмиль Золя. Вирджиния Вульф. Айзек Азимов. Макс Галло. Маргарита Юрсенар."
 $$ anim: IDLE_OFF $$
@@ -354,8 +350,7 @@ $$ camfocus: driver, fast $$
 
 === ada-01-question-montparnasse-introA
 
-Её реакция оставляет вас безмолвным. Вы не можете сдержать улыбку.
--> question=1?ada-01-question-montparnasse-introA;;ada-01-question-montparnasse-introB
+
 
 
 === ada-01-reveal

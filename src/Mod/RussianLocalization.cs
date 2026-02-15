@@ -15,7 +15,7 @@ using UnityEngine.UI;
 
 namespace NightCallRussian
 {
-    [BepInPlugin("com.nightcall.russian", "Night Call Russian", "7.7.0")]
+    [BepInPlugin("com.nightcall.russian", "Night Call Russian", "7.8.0")]
     public class RussianLocalization : BaseUnityPlugin
     {
         internal static ManualLogSource Log;
@@ -52,7 +52,7 @@ namespace NightCallRussian
         {
             Instance = this;
             Log = Logger;
-            Log.LogInfo("Night Call Russian Localization v7.7.0 - Starting...");
+            Log.LogInfo("Night Call Russian Localization v7.8.0 - Starting...");
 
             // Load font scale config
             FontScaleConfig = Config.Bind("Font", "FontScale", 1.15f,
@@ -3500,50 +3500,15 @@ namespace NightCallRussian
                 injectedKeySet.Add(key);
             }
 
-            // Phase 2: VALUE-based injection (fallback for keys not in KeyTranslations)
-            var translationsLower = new Dictionary<string, string>();
-            foreach (var kvp in Translations)
-            {
-                string keyLower = kvp.Key.ToLowerInvariant();
-                if (!translationsLower.ContainsKey(keyLower))
-                {
-                    translationsLower[keyLower] = kvp.Value;
-                }
-            }
-
+            // Phase 2: VALUE-based injection DISABLED
+            // Previously this translated _dict values by matching English text from
+            // full_translation_mapping.json. However, this is dangerous because the game
+            // uses some _dict values as program logic (e.g., "Windowed"/"Fullscreen" for
+            // display mode, "On"/"Off" for toggles). Translating these values breaks
+            // game functionality (key_not_found errors, UI panels failing to render).
+            // The TMP_Text interceptor and LocalizationPostfix still handle visual
+            // translation, so text appears in Russian without modifying _dict values.
             int injectedByValue = 0;
-            foreach (var key in keysToUpdate)
-            {
-                // Skip if already replaced by key
-                if (injectedKeySet.Contains(key)) continue;
-
-                string value = dict[key];
-                if (string.IsNullOrEmpty(value)) continue;
-
-                // Check if already Cyrillic
-                bool hasCyrillic = false;
-                foreach (char c in value)
-                {
-                    if (c >= 0x0400 && c <= 0x04FF) { hasCyrillic = true; break; }
-                }
-                if (hasCyrillic) continue;
-
-                // Try exact match
-                if (Translations.ContainsKey(value))
-                {
-                    dict[key] = Translations[value];
-                    injectedByValue++;
-                    continue;
-                }
-
-                // Try case-insensitive match
-                string valueLower = value.ToLowerInvariant();
-                if (translationsLower.ContainsKey(valueLower))
-                {
-                    dict[key] = translationsLower[valueLower];
-                    injectedByValue++;
-                }
-            }
 
             // Log uninjected entries to file for debugging
             int uninjected = 0;
@@ -3635,6 +3600,17 @@ namespace NightCallRussian
 
         // Postfix for LocalizationManager.GetLocalizedString
         // __0 captures the first argument (the localization key)
+        //
+        // IMPORTANT: Some localization keys return values that the game uses for
+        // program logic (e.g. display mode toggle, VSync toggle). Translating these
+        // return values breaks game functionality. The TMP_Text interceptor handles
+        // visual translation for display, so we skip these keys here.
+        private static readonly HashSet<string> LogicKeys = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            "FULLSCREEN", "WINDOWED", "ON", "OFF",
+            "ENG", "GER", "FRA", "JAP"
+        };
+
         static void LocalizationPostfix(ref string __result, string __0)
         {
             if (string.IsNullOrEmpty(__result))
@@ -3643,6 +3619,19 @@ namespace NightCallRussian
             }
 
             string locKey = __0;
+
+            // Log key_not_found errors for debugging
+            if (__result.Contains("key_not_found") || __result.Contains("KEY_NOT_FOUND"))
+            {
+                Log.LogWarning(string.Format("[LOC_ERROR] key='{0}' result='{1}'", locKey, __result));
+            }
+
+            // Skip keys whose values are used for game logic (display mode, toggles, language)
+            // Visual translation is handled by TMP_Text interceptor instead
+            if (!string.IsNullOrEmpty(locKey) && LogicKeys.Contains(locKey))
+            {
+                return;
+            }
 
             // Phase 1: Try key-based translation (most reliable)
             if (!string.IsNullOrEmpty(locKey))
