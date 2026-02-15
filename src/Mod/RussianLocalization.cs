@@ -158,38 +158,45 @@ namespace NightCallRussian
         {
             if (string.IsNullOrEmpty(value)) return;
 
-            // Fix encoding corruption (é -> missing char, etc.)
-            if (value.Contains("Al\u00A0sia") || value.Contains("Al sia"))
+            try
             {
-                value = value.Replace("Al\u00A0sia", "Al\u00E9sia").Replace("Al sia", "Al\u00E9sia");
-            }
+                // Fix encoding corruption (é -> missing char, etc.)
+                if (value.Contains("Al\u00A0sia") || value.Contains("Al sia"))
+                {
+                    value = value.Replace("Al\u00A0sia", "Al\u00E9sia").Replace("Al sia", "Al\u00E9sia");
+                }
 
-            // Replace "km" with "км" in distance strings (e.g. "4.68 km")
-            if (value.EndsWith(" km") || value.EndsWith(" km "))
-            {
-                value = value.Replace(" km", " км");
-            }
+                // Replace "km" with "км" in distance strings (e.g. "4.68 km")
+                if (value.EndsWith(" km") || value.EndsWith(" km "))
+                {
+                    value = value.Replace(" km", " км");
+                }
 
-            // Strip __ markers if present
-            string cleanText = value;
-            if (cleanText.StartsWith("__") && cleanText.EndsWith("__") && cleanText.Length > 4)
-            {
-                cleanText = cleanText.Substring(2, cleanText.Length - 4);
-            }
+                // Strip __ markers if present
+                string cleanText = value;
+                if (cleanText.StartsWith("__") && cleanText.EndsWith("__") && cleanText.Length > 4)
+                {
+                    cleanText = cleanText.Substring(2, cleanText.Length - 4);
+                }
 
-            // Try to translate
-            string translated = TranslateTextDirect(cleanText);
-            if (!string.IsNullOrEmpty(translated))
-            {
-                value = translated;
-                // Remove UpperCase fontStyle if the TMP component forces uppercase
-                // Russian text should not be forced to uppercase by game's styling
-                RemoveTMPUpperCase(__instance, translated);
+                // Try to translate
+                string translated = TranslateTextDirect(cleanText);
+                if (!string.IsNullOrEmpty(translated))
+                {
+                    value = translated;
+                    // Remove UpperCase fontStyle if the TMP component forces uppercase
+                    // Russian text should not be forced to uppercase by game's styling
+                    RemoveTMPUpperCase(__instance, translated);
+                }
+                else if (cleanText != value)
+                {
+                    // At least return without __ markers
+                    value = cleanText;
+                }
             }
-            else if (cleanText != value)
+            catch (Exception e)
             {
-                // At least return without __ markers
-                value = cleanText;
+                if (Log != null) Log.LogWarning(string.Format("[TMP_Prefix] Exception for '{0}': {1}", value, e.Message));
             }
         }
 
@@ -3608,6 +3615,7 @@ namespace NightCallRussian
         private static readonly HashSet<string> LogicKeys = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
         {
             "FULLSCREEN", "WINDOWED", "ON", "OFF",
+            "NO", "YES", "KEY", "BUY",
             "ENG", "GER", "FRA", "JAP"
         };
 
@@ -3618,44 +3626,51 @@ namespace NightCallRussian
                 return;
             }
 
-            string locKey = __0;
-
-            // Log key_not_found errors for debugging
-            if (__result.Contains("key_not_found") || __result.Contains("KEY_NOT_FOUND"))
+            try
             {
-                Log.LogWarning(string.Format("[LOC_ERROR] key='{0}' result='{1}'", locKey, __result));
-            }
+                string locKey = __0;
 
-            // Skip keys whose values are used for game logic (display mode, toggles, language)
-            // Visual translation is handled by TMP_Text interceptor instead
-            if (!string.IsNullOrEmpty(locKey) && LogicKeys.Contains(locKey))
-            {
-                return;
-            }
-
-            // Phase 1: Try key-based translation (most reliable)
-            if (!string.IsNullOrEmpty(locKey))
-            {
-                string keyTranslation;
-                if (KeyTranslations.TryGetValue(locKey, out keyTranslation))
+                // Log key_not_found errors for debugging
+                if (__result.Contains("key_not_found") || __result.Contains("KEY_NOT_FOUND"))
                 {
-                    __result = keyTranslation;
+                    Log.LogWarning(string.Format("[LOC_ERROR] key='{0}' result='{1}'", locKey, __result));
+                }
+
+                // Skip keys whose values are used for game logic (display mode, toggles, language)
+                // Visual translation is handled by TMP_Text interceptor instead
+                if (!string.IsNullOrEmpty(locKey) && LogicKeys.Contains(locKey))
+                {
                     return;
                 }
-                // Case-insensitive fallback
-                if (KeyTranslations.TryGetValue(locKey.ToUpperInvariant(), out keyTranslation) ||
-                    KeyTranslations.TryGetValue(locKey.ToLowerInvariant(), out keyTranslation))
+
+                // Phase 1: Try key-based translation (most reliable)
+                if (!string.IsNullOrEmpty(locKey))
                 {
-                    __result = keyTranslation;
-                    return;
+                    string keyTranslation;
+                    if (KeyTranslations.TryGetValue(locKey, out keyTranslation))
+                    {
+                        __result = keyTranslation;
+                        return;
+                    }
+                    // Case-insensitive fallback
+                    if (KeyTranslations.TryGetValue(locKey.ToUpperInvariant(), out keyTranslation) ||
+                        KeyTranslations.TryGetValue(locKey.ToLowerInvariant(), out keyTranslation))
+                    {
+                        __result = keyTranslation;
+                        return;
+                    }
+                }
+
+                // Phase 2: Try value-based translation (fallback)
+                string translation = TranslateText(__result);
+                if (!object.ReferenceEquals(translation, null))
+                {
+                    __result = translation;
                 }
             }
-
-            // Phase 2: Try value-based translation (fallback)
-            string translation = TranslateText(__result);
-            if (!object.ReferenceEquals(translation, null))
+            catch (Exception e)
             {
-                __result = translation;
+                if (Log != null) Log.LogWarning(string.Format("[LOC_Postfix] Exception for key='{0}': {1}", __0, e.Message));
             }
         }
 
@@ -4285,16 +4300,23 @@ namespace NightCallRussian
             if (!RussianLocalization.IsInitialized) return;
             if (string.IsNullOrEmpty(value)) return;
 
-            string translation = RussianLocalization.TranslateText(value);
-            if (translation != null)
+            try
             {
-                value = translation;
-
-                // Replace font with Cyrillic font if available
-                if (RussianLocalization.CyrillicFont != null && __instance != null)
+                string translation = RussianLocalization.TranslateText(value);
+                if (translation != null)
                 {
-                    __instance.font = RussianLocalization.CyrillicFont;
+                    value = translation;
+
+                    // Replace font with Cyrillic font if available
+                    if (RussianLocalization.CyrillicFont != null && __instance != null)
+                    {
+                        __instance.font = RussianLocalization.CyrillicFont;
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                if (RussianLocalization.Log != null) RussianLocalization.Log.LogWarning(string.Format("[Text_Prefix] Exception for '{0}': {1}", value, e.Message));
             }
         }
 
@@ -4305,14 +4327,21 @@ namespace NightCallRussian
             if (!RussianLocalization.IsInitialized) return;
             if (__instance == null || string.IsNullOrEmpty(__instance.text)) return;
 
-            string translation = RussianLocalization.TranslateText(__instance.text);
-            if (translation != null)
+            try
             {
-                __instance.text = translation;
-                if (RussianLocalization.CyrillicFont != null)
+                string translation = RussianLocalization.TranslateText(__instance.text);
+                if (translation != null)
                 {
-                    __instance.font = RussianLocalization.CyrillicFont;
+                    __instance.text = translation;
+                    if (RussianLocalization.CyrillicFont != null)
+                    {
+                        __instance.font = RussianLocalization.CyrillicFont;
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                if (RussianLocalization.Log != null) RussianLocalization.Log.LogWarning(string.Format("[Text_OnEnable] Exception: {0}", e.Message));
             }
         }
     }
