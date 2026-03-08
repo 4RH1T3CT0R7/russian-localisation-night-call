@@ -509,6 +509,3 @@ $$ movie: lamparo_off, hide_passenger $$
 
 === emilia-01-end-drive
 
-:taxi: (Начать движение.)
-"Какая дерьмовая ночь…"
-

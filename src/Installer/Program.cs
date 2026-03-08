@@ -27,7 +27,7 @@ namespace NightCallRussianInstaller
         private Label statusLabel;
         private BackgroundWorker worker;
 
-        private const string ModVersion = "8.0.0";
+        private const string ModVersion = "8.1.0";
 
         public InstallerForm()
         {
@@ -391,8 +391,7 @@ namespace NightCallRussianInstaller
                     "Russian_UI\\full_translation_mapping.json",
                     "Russian_UI\\key_based_translations.json",
                     "Fonts_Cyrillic\\PTSans-Regular.ttf",
-                    "Generated_SDF\\PTSans_SDF_atlas.png",
-                    "passage_dump.txt"
+                    "Generated_SDF\\PTSans_SDF_atlas.png"
                 };
 
                 bool ok = true;
